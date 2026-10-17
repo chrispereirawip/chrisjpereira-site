@@ -279,6 +279,8 @@ h1 .en{display:block;font-size:.3em;font-weight:500;letter-spacing:.06em;color:v
 .langsw:hover{color:var(--red);border-color:var(--red)}
 .wxacct{font-family:var(--display);font-weight:600}
 @media (max-width:380px){.mark{font-size:14.5px;gap:6px}.seal{font-size:11.5px;padding:4px 5px 4px 6px}.bar .langsw{padding:4px 8px}.bar .langsw+.btn{padding:7px 11px}}
+#em a{color:inherit;text-decoration:none}
+#em a:hover{color:var(--red)}
 </style>
 </head>
 <body>
@@ -417,7 +419,7 @@ h1 .en{display:block;font-size:.3em;font-weight:500;letter-spacing:.06em;color:v
           <div class="row"><button class="btn sm" type="button" data-copy="short">复制简介</button></div>
         </div>
         <div class="contact" id="contact">
-          <div><span class="k">邮箱</span><div class="emailrow"><span class="v" id="em">chris@impact5r.com</span><button class="btn sm" type="button" data-copy="em">复制</button></div></div>
+          <div><span class="k">邮箱</span><div class="emailrow"><span class="v" id="em">inquiries [at] chrisjpereira.com</span><button class="btn sm" type="button" data-copy="em">复制</button></div></div>
           <div><span class="k">微信公众号</span><span class="v">美讯彭家荣</span></div>
           <div class="socials"><a href="https://www.linkedin.com/in/chrisjpereira" target="_blank" rel="noopener">领英 ↗</a><a href="https://insightsfromchina.substack.com" target="_blank" rel="noopener">Substack ↗</a><a href="https://www.youtube.com/@OutsideLookingWest" target="_blank" rel="noopener">YouTube ↗</a><a href="https://baike.baidu.com/item/%E5%BD%AD%E5%AE%B6%E8%8D%A3/57120710" target="_blank" rel="noopener">百度百科 ↗</a></div>
         </div>
@@ -446,5 +448,6 @@ fetch("/index.html",{cache:"no-cache"}).then(function(r){return r.text()}).then(
 }).catch(function(){document.getElementById("writing-list").innerHTML='<li><a href="/#writing">查看英文页面</a></li>';document.getElementById("media-list").innerHTML='<li><a href="/#media">查看英文页面</a></li>'});
 document.querySelectorAll("button[data-copy]").forEach(function(b){b.addEventListener("click",function(){var el=document.getElementById(b.dataset.copy),text=el.innerText.trim(),label=b.textContent;function done(m){b.textContent=m;setTimeout(function(){b.textContent=label},1600)}function fallback(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);done("已选中")}try{navigator.clipboard.writeText(text).then(function(){done("已复制")},fallback)}catch(e){fallback()}})});
 </script>
+<script>(function(){var u="inquiries",d="chrisjpereira.com",a=u+"@"+d,e=document.getElementById("em");if(e){e.innerHTML='<a href="mailto:'+a+'">'+a+'</a>'}})();</script>
 </body>
 </html>

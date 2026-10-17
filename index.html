@@ -285,6 +285,8 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
 .langsw{font-family:var(--zh);font-size:14px;font-weight:500;color:var(--ink);text-decoration:none;border:1px solid var(--hair);border-radius:999px;padding:6px 12px;white-space:nowrap}
 .langsw:hover{color:var(--red);border-color:var(--red)}
 @media (max-width:380px){.mark{font-size:14.5px;gap:6px}.seal{font-size:11.5px;padding:4px 5px 4px 6px}.bar .langsw{padding:4px 8px}.bar .langsw+.btn{padding:7px 11px}}
+#em a{color:inherit;text-decoration:none}
+#em a:hover{color:var(--red)}
 </style>
 </head>
 <body>
@@ -430,7 +432,7 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
 
         </div>
         <div class="contact" id="contact">
-          <div><span class="k">Email</span><div class="emailrow"><span class="v" id="em">chris@impact5r.com</span><button class="btn sm" type="button" data-copy="em">Copy</button></div></div>
+          <div><span class="k">Email</span><div class="emailrow"><span class="v" id="em">inquiries [at] chrisjpereira.com</span><button class="btn sm" type="button" data-copy="em">Copy</button></div></div>
           <div class="socials"><a href="https://www.linkedin.com/in/chrisjpereira" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://insightsfromchina.substack.com" target="_blank" rel="noopener">Substack ↗</a><a href="https://www.youtube.com/@OutsideLookingWest" target="_blank" rel="noopener">YouTube ↗</a></div>
         </div>
       </div>
@@ -731,5 +733,6 @@ document.querySelectorAll("button[data-copy]").forEach(function(b){
   });
 });
 </script>
+<script>(function(){var u="inquiries",d="chrisjpereira.com",a=u+"@"+d,e=document.getElementById("em");if(e){e.innerHTML='<a href="mailto:'+a+'">'+a+'</a>'}})();</script>
 </body>
 </html>
