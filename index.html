@@ -118,8 +118,8 @@ h1 .zh{display:block;font-size:.3em;font-weight:500;letter-spacing:.32em;color:v
 .media .what{color:var(--muted)}
 .media a.what{color:var(--ink);text-decoration:none}
 .media a.what:hover{color:var(--red);text-decoration:underline}
-.media.wlist li{grid-template-columns:96px 78px minmax(0,1.4fr) minmax(0,1fr)}
-.wlist .src{font-family:var(--display);font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--red)}
+.media.wlist li{grid-template-columns:96px 120px minmax(0,1.5fr) minmax(0,.8fr)}
+.wlist .src{font-family:var(--display);font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--red);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #wmore{margin-top:18px}
 .wlist a.what{font-family:var(--display);font-weight:600;font-size:15px}
 .wlist .dek{color:var(--muted)}
@@ -243,7 +243,7 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
   <div class="wrap">
     <a class="mark" href="#top"><span class="seal" lang="zh-Hans">彭家荣</span>Chris Pereira</a>
     <nav class="nav" aria-label="Sections">
-      <a href="#writing">Writing</a><a href="#media">Media</a><a href="#speaking">Speaking</a><a href="#training">Training</a><a href="#about">About</a>
+      <a href="#writing">Writing</a><a href="#media">Commentary</a><a href="#speaking">Speaking</a><a href="#training">Training</a><a href="#about">About</a>
     </nav>
     <a class="btn solid" href="#contact">Contact</a>
   </div>
@@ -285,7 +285,7 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
   <section id="writing">
     <div class="wrap">
       <div class="head">
-        <div><span class="label">Writing</span><h2>Insights from China</h2><p class="lede">Weekly essays on Substack, plus videos and LinkedIn pieces on what China's markets, brands and technology reveal about the West.</p></div>
+        <div><span class="label">Essays, op-eds and posts</span><h2>Writing</h2><p class="lede">My weekly Substack <em>Insights from China</em>, op-eds in outlets from the SCMP to Nikkei Asia, and LinkedIn pieces on what China reveals about the West.</p></div>
       </div>
       <ul class="media wlist" id="writing-list"></ul>
       <button class="btn" type="button" id="wmore">Show more</button>
@@ -295,17 +295,17 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
   <section id="media" class="alt">
     <div class="wrap">
       <div class="head">
-        <div><span class="label">Media</span><h2>Interviews and commentary</h2><p class="lede">Hundreds of interviews, quotes and columns across TV, print, radio and podcasts, in English and Chinese. The full record:</p></div>
+        <div><span class="label">Interviews, quotes and TV</span><h2>Commentary</h2><p class="lede">Hundreds of interviews and quotes across TV, print, radio and podcasts, in English and Chinese. The full record:</p></div>
       </div>
       <ul class="media" id="media-list"></ul>
-      <button class="btn" type="button" id="more">Show all 176</button>
+      <button class="btn" type="button" id="more">Show all 147</button>
     </div>
   </section>
 
   <section id="speaking">
     <div class="wrap">
       <div class="head">
-        <div><span class="label">Speaking</span><h2>Keynotes, panels and training</h2></div>
+        <div><span class="label">Keynotes, panels and corporate training</span><h2>Speaking and training</h2></div>
         <a class="btn solid" href="#contact">Invite Chris to speak</a>
       </div>
       <div class="gallery">
@@ -340,7 +340,7 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
 
   <section id="about" class="alt">
     <div class="wrap">
-      <div class="head"><div><span class="label">About</span><h2>From Toronto to Shenzhen</h2></div></div>
+      <div class="head"><div><span class="label">From Toronto to Shenzhen</span><h2>About</h2></div></div>
       <div class="about">
         <div>
           <p>I grew up in Toronto, studied English Literature at York University, then moved to Zhengzhou to study Chinese. After years in Suzhou linking Western companies with Chinese suppliers, I joined Huawei in Shenzhen to lead global public affairs work.</p>
@@ -371,7 +371,7 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
 
   <section id="press">
     <div class="wrap">
-      <div class="head"><div><span class="label">Press and contact</span><h2>For editors and organizers</h2></div></div>
+      <div class="head"><div><span class="label">For editors, organizers and clients</span><h2>Contact</h2></div></div>
       <div class="kit">
         <div class="bio">
           <span class="label" style="color:var(--muted)">Short bio</span>
@@ -401,6 +401,7 @@ var WRITING=[
  ["2026-08-17", "Substack", "Western Brands in China Need to Start from Zero", "When \"foreign\" stopped meaning \"better\"", "https://insightsfromchina.substack.com/p/western-brands-in-china-need-to-start"],
  ["2026-08-10", "Substack", "What Makes a Tech Product Award-Worthy? A Judge's Inside Guide", "In conversation with Eliane Fiolet", "https://insightsfromchina.substack.com/p/what-makes-a-tech-product-award-worthy"],
  ["2026-08-03", "Substack", "What to Expect at IFA 2026", "The trends shaping Berlin", "https://insightsfromchina.substack.com/p/what-to-expect-at-ifa-2026"],
+ ["2026-08", "China Daily", "Shenzhen's journey from exports to expertise", "Op-ed", "https://www.chinadaily.com.cn/a/202608/05/WS6a72916ea310986e2b46904e.html"],
  ["2026-07-27", "Substack", "How Louis Vuitton Is Winning in Court and Losing China", "LV vs. 1.4 billion Chinese", "https://insightsfromchina.substack.com/p/how-louis-vuitton-is-winning-in-court"],
  ["2026-07-20", "Substack", "World AI Conference 2026", "Could China be the world's AI gateway?", "https://insightsfromchina.substack.com/p/world-ai-conference-2026"],
  ["2026-07-13", "Substack", "Trust: The New Battleground for Chinese Companies Going Global", "What comes after conquering manufacturing", "https://insightsfromchina.substack.com/p/trust-the-new-battleground-for-chinese"],
@@ -417,6 +418,7 @@ var WRITING=[
  ["2026-04-20", "Substack", "Supply Chains Don't Lie", "The Canton Fair and the real direction of global trade", "https://insightsfromchina.substack.com/p/supply-chains-dont-lie"],
  ["2026-04-13", "Substack", "Why China Is Suddenly Watching Its Cholesterol", "Health will guide consumer purchases in 2026", "https://insightsfromchina.substack.com/p/why-china-is-suddenly-watching-its"],
  ["2026-04-06", "Substack", "China's \"Harbour of Stability\"", "Why global business interest is surging", "https://insightsfromchina.substack.com/p/the-surge-of-global-business-interest"],
+ ["2026-04", "SCMP", "The surge of global business interest in China’s ‘harbour of stability’", "Op-ed", "https://www.scmp.com/opinion/china-opinion/article/3348213/surge-global-business-interest-chinas-harbour-stability"],
  ["2026-03-30", "Substack", "Guanxi Could Get You Recommended by DeepSeek", "AI is the new gatekeeper", "https://insightsfromchina.substack.com/p/guanxi-could-get-you-recommended"],
  ["2026-03-23", "Substack", "Asia Is Serious About Merit and Competency", "The 15-second airport customs experience", "https://insightsfromchina.substack.com/p/asia-is-serious-about-merit-and-competency"],
  ["2026-03-16", "Substack", "The Hard Road: China Is Winning an AI Race the West Doesn't Care About", "Dancing robots are not the main show", "https://insightsfromchina.substack.com/p/the-hard-road-china-is-winning-an"],
@@ -428,15 +430,42 @@ var WRITING=[
  ["2026-02-13", "Substack", "The Narrative Gap", "Insights from the 2026 LSE China Development Forum", "https://insightsfromchina.substack.com/p/the-narrative-gap"],
  ["2026-02-09", "Substack", "The Bildungsroman of Chinese Brands", "Why hiding your origins means losing your edge", "https://insightsfromchina.substack.com/p/the-bildungsroman-of-chinese-brands"],
  ["2026-02-02", "Substack", "Canada's FAFO Moment", "Antagonizing a superpower neighbour never ends well", "https://insightsfromchina.substack.com/p/canadas-fafo-moment"],
+ ["2026-02", "奇赞 Qizan", "品牌知名度为何难以衡量", "署名文章", ""],
  ["2026-01-24", "Substack", "Canada and China: Star-cross'd Lovers", "The truth about Canadian diplomacy with China", "https://insightsfromchina.substack.com/p/canada-and-china-star-crossd-lovers"],
  ["2026-01-18", "Substack", "Parenting Is Improving in China", "An encouraging trend", "https://insightsfromchina.substack.com/p/parenting-is-improving-in-china"],
  ["2026-01-17", "Substack", "Cars for Canola Is Not a Recipe for Canada's Prosperity", "China won't save Canada. Canada needs to save Canada.", "https://insightsfromchina.substack.com/p/cars-for-canola-is-not-a-recipe-for"],
+ ["2026-01", "奇赞 Qizan", "CES 评委给 CES 2027 参展企业的建议", "署名文章", ""],
  ["2025-12-10", "LinkedIn", "Why a US \"crackdown\" now feels like a badge of honour for Chinese founders", "An ironic shift in China's global business", "https://www.linkedin.com/feed/update/urn:li:activity:7404354104875155456/"],
+ ["2025-12", "奇赞 Qizan", "拒绝盲目使用 AI，反而成为差异化", "署名文章", ""],
+ ["2025-11", "财富Fortune", "墨西哥蒙特雷：北美“新东莞”？", "署名文章", "https://mp.weixin.qq.com/s/2nKQMrP5FpIkTeyU8Kaslg"],
+ ["2025-11", "奇赞 Qizan", "生成式引擎优化（GEO）对品牌意味着什么", "署名文章", ""],
+ ["2025-06", "Nikkei Asia", "The real reason for America's decline -- and it's not China", "Op-ed", "https://asia.nikkei.com/Opinion/The-real-reason-for-America-s-decline-and-it-s-not-China"],
+ ["2025-06", "SCMP", "US and EU should welcome Chinese manufacturing, not try to shut it out", "Op-ed", "https://www.scmp.com/opinion/world-opinion/article/3314054/us-and-eu-should-welcome-chinese-manufacturing-not-try-shut-it-out?module=top_story&pgtype=section"],
+ ["2025-06", "SCMP", "Is Labubu the next Hello Kitty? Analysts debate the limits for China’s Pop Mart", "Op-ed", "https://www.scmp.com/business/companies/article/3312704/labubu-next-hello-kitty-analysts-debate-limits-chinas-pop-mart"],
+ ["2025-04", "China Daily", "Firms emerging stronger from tariff war", "Op-ed", "https://www.chinadaily.com.cn/a/202504/22/WS6806ea16a3104d9fd3820bb2.html"],
+ ["2025-03", "Nikkei Asia", "The high-end market will soon be Chinese too", "Op-ed", "https://asia.nikkei.com/Opinion/The-high-end-market-will-soon-be-Chinese-too"],
  ["2025-02-25", "LinkedIn", "Shenzhen now hails helicopter taxis by QR code", "Innovation, Shenzhen style", "https://www.linkedin.com/feed/update/urn:li:activity:7300127313994649601/"],
  ["2025-02-14", "LinkedIn", "Signs of a warming sentiment towards China in the US", "What I'm seeing on the ground", "https://www.linkedin.com/feed/update/urn:li:activity:7295984196769001474/"],
+ ["2025-02", "People's Daily Online", "Imported goods add to festive charm", "Op-ed", "http://en.people.cn/n3/2025/0206/c90000-20273052.html"],
  ["2024-11-13", "LinkedIn", "Many Chinese companies go abroad before they are ready", "Speed is China's strength and its overseas risk", "https://www.linkedin.com/feed/update/urn:li:activity:7262253527836557312/"],
+ ["2024-11", "Nikkei Asia", "Buckle up: China's tech industry braces for a bumpy ride under Trump", "Op-ed", ""],
+ ["2024-06", "China Daily", "China offers high-tech road to success", "Op-ed", "https://www.chinadaily.com.cn/a/202406/24/WS6678bea8a31095c51c50a614.html"],
+ ["2024-06", "SCMP", "Overcapacity? China’s competitive edge lies elsewhere", "Op-ed", "https://www.scmp.com/opinion/china-opinion/article/3265986/overcapacity-chinas-competitive-edge-lies-elsewhere?utm_source=copy-link&utm_campaign=3265986&utm_medium=share_widget"],
+ ["2024-06", "观察者网", "为什么消费者会选中国品牌？", "署名文章", "https://www.guancha.cn/ChrisPereira/2024_06_20_738580_1.shtml"],
+ ["2024-04", "海外看世界", "地缘竞争下，中国企业如何在北美应对新常态", "署名文章", "https://mp.weixin.qq.com/s/1BDyqMq2W_om74AT8zaPJQ"],
+ ["2024-04", "SCMP", "As supply chains shift away from China, others get their own economic miracles", "Op-ed", "https://www.scmp.com/opinion/china-opinion/article/3258778/supply-chains-shift-away-china-others-get-their-own-economic-miracles"],
+ ["2024-04", "36氪", "中国电商巨头在海外市场遭挑刺，是否会影响业务发展？", "署名文章", "https://36kr.com/p/2730034996646537"],
+ ["2024-04", "Ottawa Life Magazine", "Why I left Canada: an open letter to Justin Trudeau", "Op-ed", "https://www.ottawalife.com/article/why-i-left-canada-an-open-letter-to-justin-trudeau/"],
+ ["2024-03", "Fortune China 财富中国", "中国企业在海外IPO是否有助于提升品牌形象？", "署名文章", "https://www.fortunechina.com/zhuanlan/c/2024-03/29/content_450755.htm"],
+ ["2024-01", "China Daily", "Company innovations boost resilient economy, benefit consumers", "Op-ed", "https://www.chinadaily.com.cn/a/202401/18/WS65a86061a3105f21a507ce36.html"],
+ ["2023-12", "SCMP", "Face it, China’s clean energy firms are key to Cop28 climate goals", "Op-ed", "https://www.scmp.com/comment/opinion/article/3245107/face-it-chinas-clean-energy-firms-are-key-cop28-climate-goals"],
  ["2023-11-10", "LinkedIn", "The US Should Welcome Companies from China", "Why openness serves America better than exclusion", "https://www.linkedin.com/pulse/us-should-welcome-companies-from-china-chris-pereira-%E5%BD%AD%E5%AE%B6%E8%8D%A3-euccc/"],
+ ["2023-11", "China Daily", "Bridging the Pacific benefits world's prosperity", "Op-ed", "https://www.chinadaily.com.cn/a/202311/20/WS655a99b9a31090682a5eefde.html"],
+ ["2023-11", "China Daily", "外国商界人士：中美关系向好促进全球繁荣", "署名文章", "https://china.chinadaily.com.cn/a/202311/20/WS655b0604a310d5acd876f898.html"],
+ ["2023-10", "China Daily", "Business buzz of Shenzhen spurs talents", "Op-ed", "https://www.chinadaily.com.cn/a/202310/28/WS653c6ba3a31090682a5eb34b.html"],
+ ["2023-09", "SCMP", "Despite US-China decoupling talk, Chinese businesses are flourishing in America", "Op-ed", "https://www.scmp.com/comment/opinion/article/3235851/despite-us-china-decoupling-talk-chinese-businesses-are-flourishing-america"],
  ["2023-08-22", "LinkedIn", "The Evolving Landscape of Global Currency: The Case for Multi-polar Stability", "The case for a multi-polar currency system", "https://www.linkedin.com/pulse/evolving-landscape-global-currency-case-multi-polar-chris-pereira-%E5%BD%AD%E5%AE%B6%E8%8D%A3/"],
+ ["2023-06", "Fortune China 财富中国", "AI与未来", "署名文章", "http://www.fortunechina.com/zhuanlan/c/2023-06/08/content_434108.htm"],
  ["2023-04-30", "LinkedIn", "Access Denied: The Cost of Limited Access to AI", "What restricted AI access costs China and the West", "https://www.linkedin.com/pulse/access-denied-cost-limited-ai-chris-pereira-%E5%BD%AD%E5%AE%B6%E8%8D%A3/"],
  ["2023-04-24", "LinkedIn", "Leave TikTok Alone: The Smart Chinese Spies Are Headed to American Companies", "Why the TikTok ban misses the real issue", "https://www.linkedin.com/pulse/leave-tiktok-alone-smart-chinese-spies-headed-chris-pereira-%E5%BD%AD%E5%AE%B6%E8%8D%A3/"],
  ["2021-07-01", "LinkedIn", "The Democratic Mind Is Formed in Childhood", "Why engagement with China matters to our children", "https://www.linkedin.com/pulse/democratic-mind-formed-childhood-why-engagement-china-chris-pereira/"],
@@ -452,7 +481,6 @@ var MEDIA=[
  ["2026-09", "Sep 2026", "新浪财经", "数字化重塑中企出海：从卖产品到扎下来，本土化与信任成出海新课题|欧陆志", "interview", "中文", "", ""],
  ["2026-09", "Sep 2026", "Euronews România", "De la „made in China” la branduri globale. Cu ce strategie au cucerit companiile chineze piața europeană de tehnologie", "", "EN", "", ""],
  ["2026-09", "Sep 2026", "IFA Berlin", "Speaker and panelist on buying from and selling to China", "speaking", "EN", "", ""],
- ["2026-08", "Aug 2026", "China Daily", "Shenzhen's journey from exports to expertise", "column", "EN", "https://www.chinadaily.com.cn/a/202608/05/WS6a72916ea310986e2b46904e.html", ""],
  ["2026-08", "Aug 2026", "Dailymotion", "How are Chinese gaming IPs driving China’s fragrance boom?", "tv", "EN", "https://www.dailymotion.com/video/xatp80i", ""],
  ["2026-07", "Jul 2026", "CKGSB", "Building trust: the key element in overseas expansion", "interview", "EN", "https://english.ckgsb.edu.cn/knowledge/article/building-trust-the-key-element-in-overseas-expansion/", ""],
  ["2026-07", "Jul 2026", "CGTN, The Heat", "China's strategy at the World AI Conference 2026", "tv", "EN", "https://youtu.be/nBkQas6syKE", ""],
@@ -469,20 +497,14 @@ var MEDIA=[
  ["2026-05", "May 2026", "HKUST BizInsight Forum", "Speaker at the London Stock Exchange", "speaking", "EN", "", ""],
  ["2026-04", "Apr 2026", "CNBC", "'Draconian development' in Meta-Manus deal draws the line in China's AI race with the U.S.", "quoted", "EN", "https://www.cnbc.com/amp/2026/04/28/china-blocks-meta-manus-deal-ai-tech-rivalry.html", ""],
  ["2026-04", "Apr 2026", "China Daily", "Plan to bring tangible benefits China's efforts to drive consumption, advance industrial upgrading praised", "quoted", "EN", "https://global.chinadaily.com.cn/a/202604/28/WS69f00bf7a310d6866eb45e1b.html", ""],
- ["2026-04", "Apr 2026", "SCMP", "The surge of global business interest in China’s ‘harbour of stability’", "column", "EN", "https://www.scmp.com/opinion/china-opinion/article/3348213/surge-global-business-interest-chinas-harbour-stability", ""],
  ["2026-03", "Mar 2026", "KrASIA", "Chinese furniture maker takes on US incumbents in bid to expand foothold", "", "中文", "https://kr-asia.com/chinese-furniture-maker-takes-on-us-incumbents-in-bid-to-expand-foothold", ""],
  ["2026-03", "Mar 2026", "Vogue", "中国时尚相关", "quoted", "EN", "https://www.vogue.com/article/chinese-designers-rethink-us-ambitions-in-light-of-tariffs", ""],
  ["2026-03", "Mar 2026", "CGTN", "两会相关", "interview", "EN", "https://youtu.be/_goiNR77D-8?si=19zjZkoF9-7KsygD", ""],
  ["2026-02", "Feb 2026", "HKUST Newsletter", "Highlight Story - Dec 2025-Jan2026 Chris Pereira", "feature", "EN", "https://alum.hkust.edu.hk/highlight-story-dec-2025-jan-2026", ""],
- ["2026-02", "Feb 2026", "奇赞 Qizan", "品牌知名度为何难以衡量", "column", "中文", "", ""],
  ["2026-01", "Jan 2026", "CKGSB Knowledge", "Facing uncertainty: DJI’s future amid US regulations", "quoted", "EN", "https://english.ckgsb.edu.cn/knowledge/article/dji-growth-challenges-under-us-drone-regulations/", ""],
  ["2026-01", "Jan 2026", "CGTN", "Artificial intelligence transforms work, life and entertainment at 2026 Consumer Electronics Show", "interview", "EN", "https://news.cgtn.com/news/2026-01-08/CES-2026-AI-transforms-work-life-and-entertainment-1JLt9Czba00/share_amp.html", ""],
- ["2026-01", "Jan 2026", "奇赞 Qizan", "CES 评委给 CES 2027 参展企业的建议", "column", "中文", "", ""],
- ["2025-12", "Dec 2025", "奇赞 Qizan", "拒绝盲目使用 AI，反而成为差异化", "column", "中文", "", ""],
  ["2025-11", "Nov 2025", "Yanko Design", "WHY HUAWEI’S FORMER PR LEADER SAYS MOST BRANDS GET GLOBAL MARKETING COMPLETELY WRONG", "interview", "EN", "https://www.yankodesign.com/2025/11/23/why-huaweis-former-pr-leader-says-most-brands-get-global-marketing-completely-wrong/", ""],
- ["2025-11", "Nov 2025", "财富Fortune", "墨西哥蒙特雷：北美“新东莞”？", "column", "中文", "https://mp.weixin.qq.com/s/2nKQMrP5FpIkTeyU8Kaslg", ""],
  ["2025-11", "Nov 2025", "Designing with Intention", "Branding, purpose and social impact", "podcast", "EN", "", ""],
- ["2025-11", "Nov 2025", "奇赞 Qizan", "生成式引擎优化（GEO）对品牌意味着什么", "column", "中文", "", ""],
  ["2025-10", "Oct 2025", "新华社", "与世界各国共享机遇共同发展——国际社会热议中共二十届四中全会擘画“十五五”发展蓝图", "quoted", "中文", "https://h.xinhuaxmt.com/vh512/share/12792714?docid=12792714&newstype=1001&d=1350190&channel=weixin&time=1761324845640", "“中国能够保持稳定与前进，关键在于政策的延续性、治理的高效性以及社会的强大韧性。”佩雷拉说，面对复杂多变的外部环境，中国共产党展现出战略定力与长远眼光，持续推动创新驱动、数字化转型和绿色发展。"],
  ["2025-10", "Oct 2025", "36Kr Europe", "From \"being seen\" to \"being trusted\", how can Chinese automakers truly win over Europe?", "reprint", "EN", "https://eu.36kr.com/en/p/3521022537833351", ""],
  ["2025-10", "Oct 2025", "微信公众号", "从“被看见”到“被信任”，中国车企如何真正赢得欧洲？ | 出海进化论", "quoted", "中文", "https://mp.weixin.qq.com/s/N7MvGVddcLTvDnNnF9yQKQ", "而从中国产品的接受程度层面看，在本期节目的录制中，美讯创始人兼首席执行官彭家荣（Chris Pereira）作为巨懂车我们的特约主持人走上英国街头，探访中国电动车在欧洲的足迹，和在消费者心中的印记。以往，中国品牌往往被认为是性价比之选，但在新能源汽车行业，一些让人惊喜的声音正在出现。在问及对中国新能源车企的印象时，一位消费者脱口而出：“我想到的是技术领先。他们真的在做一些令人兴奋的事。”"],
@@ -503,22 +525,16 @@ var MEDIA=[
  ["2025-07", "Jul 2025", "BBC", "What would Indonesia get from a US tariff deal?", "interview", "EN", "https://www.bbc.co.uk/programmes/w3ct76fp", "23min10s"],
  ["2025-07", "Jul 2025", "深圳卫视", "民营经济深调研，《大湾区会客厅》携手企业战略及公关传播专家彭家荣，深入一线调研，探寻深圳智造“出海”密码。", "tv", "中文", "https://weibo.com/7057424731/5184457700544087", ""],
  ["2025-06", "Jun 2025", "搜狐", "彭家荣：老板要走到海外去，喝咖啡、聊天气、交朋友｜出海峰会", "interview", "中文", "https://www.sohu.com/a/902997485_121956368", ""],
- ["2025-06", "Jun 2025", "Nikkei Asia", "The real reason for America's decline -- and it's not China", "column", "EN", "https://asia.nikkei.com/Opinion/The-real-reason-for-America-s-decline-and-it-s-not-China", ""],
  ["2025-06", "Jun 2025", "BBC", "Adorable or just weird? How Labubu dolls conquered the world", "quoted", "EN", "https://www.bbc.com/news/articles/cy4ydxlm9n9o.amp", "\"BYD, DeepSeek, all of these companies have one very interesting thing in common, including Labubu,\" Chris Pereira, founder and chief executive of consultancy firm iMpact, told BBC News."],
  ["2025-06", "Jun 2025", "BBC", "What would Indonesia get from a US tariff deal?", "interview", "EN", "https://www.bbc.co.uk/sounds/play/w3ct76fp", "23min10s"],
  ["2025-06", "Jun 2025", "SCMP", "Spark Deep Dive: How Labubu is captivating fans around the world", "quoted", "EN", "https://www.scmp.com/yp/spark/stories/article/3314336/spark-deep-dive-how-labubu-captivating-fans-around-world", "Spark Deep Dive: How Labubu is captivating fans around the world"],
- ["2025-06", "Jun 2025", "SCMP", "US and EU should welcome Chinese manufacturing, not try to shut it out", "column", "EN", "https://www.scmp.com/opinion/world-opinion/article/3314054/us-and-eu-should-welcome-chinese-manufacturing-not-try-shut-it-out?module=top_story&pgtype=section", "It’s a matter of time before Chinese products find their way into the markets anyway – trade barriers achieve very little without industrial policy"],
  ["2025-06", "Jun 2025", "Benzinga", "Niall Ferguson Says US And China Locked In A 'Cold War' — Larry Summers Calls It 'Hostile Codependence'", "quoted", "EN", "https://www.benzinga.com/markets/equities/25/06/45830824/niall-ferguson-says-us-and-china-locked-in-a-cold-war-larry-summers-calls-it-hostile-codependence", "Chris Pereira of the American Ecosystem Institute echoed similar views when he told Benzinga last month that “the U.S. and China remain deeply economically intertwined,\" and any forced disengagement would be mutually damaging.\""],
- ["2025-06", "Jun 2025", "SCMP", "Is Labubu the next Hello Kitty? Analysts debate the limits for China’s Pop Mart", "column", "EN", "https://www.scmp.com/business/companies/article/3312704/labubu-next-hello-kitty-analysts-debate-limits-chinas-pop-mart", "Labubu is a stunning success and a new Chinese cultural export, but can the company repeat its feats and rival Sanrio?"],
  ["2025-05", "May 2025", "苏州国际博览中心", "当两个sz相遇，注定是“链链”不舍", "quoted", "中文", "https://mp.weixin.qq.com/s/JQAiYWOMGomSPBbaGOsAeQ", "\"来到这么好的一个对接会和活动进行交流对我来说价值很大。”iMpact美讯创始人兼CEO Chris Pereira在采访中提到:“我经常告诉我们的客户，帮助中国企业在海外发展业务，最重要的是要交朋友。所以我很开心可以来到这里，见见老朋友，同时结交新朋友。”"],
  ["2025-05", "May 2025", "Rest of World", "Chinese startups once downplayed their origin. Now some celebrate it.", "quoted", "EN", "https://restofworld.org/2025/deepseek-chinese-startups-overseas/", "Even a year or two ago, conversations with Chinese clients always began with “How do we eliminate the Chinese aspect of our image?” Chris Pereira, Singapore-based chief executive of iMpact, a communications firm advising Chinese companies expanding abroad, told Rest of World. \nNow, Pereira said, more clients are asking how to tailor their products and services for overseas markets. “It is not to hide their identity, it is to localize their operations,” he said."],
  ["2025-05", "May 2025", "Benzinga", "US And China Remain Deeply Economically Intertwined, And Complete Disengagement Would Be Mutually Damaging, Says Chris Pereira", "interview", "EN", "https://www.benzinga.com/news/global/25/05/45337755/us-and-china-remain-deeply-economically-intertwined-and-complete-disengagement-would-be-mutually-damaging-says-chris-pereira", ""],
  ["2025-04", "Apr 2025", "Asia Business Podcast", "The Impact of US Tariffs on Chinese Brands with Chris Pereira", "interview", "EN", "https://www.asiabusinesspod.com/episodes/the-impact-of-us-tariffs-on-chinese-brands-with-chris-pereira", ""],
- ["2025-04", "Apr 2025", "China Daily", "Firms emerging stronger from tariff war", "column", "EN", "https://www.chinadaily.com.cn/a/202504/22/WS6806ea16a3104d9fd3820bb2.html", "As Chinese businesses get caught again in the crosshairs of an escalating trade dispute, much global attention is focusing on how they will handle the massive tariffs placed on their exports to the United States."],
  ["2025-04", "Apr 2025", "Nikkei Asia", "China raises retaliatory tariff on U.S. to 84% as Trump trade war spirals", "quoted", "EN", "https://asia.nikkei.com/Economy/Trade-war/China-raises-retaliatory-tariff-on-U.S.-to-84-as-Trump-trade-war-spirals", ""],
  ["2025-04", "Apr 2025", "Business Insider", "Sweet and sour 'tsunami' Dozens of Chinese restaurant chains are opening in America — if they can survive the backlash.", "interview", "EN", "https://www.businessinsider.com/china-restaurants-food-chains-coming-us-geopolitical-trade-war-backlash-2025-4", "To some industry people I spoke with, Chinese food companies are less likely to be caught up in geopolitical wrangling than, say, the tech industry, but their biggest risk factor may be their own growth. \"This is an industry that is safe until Chinese companies start to win, and then they're not safe,\" said Chris Pereira, the founder and CEO of iMpact, a New York-based consulting firm that has helped hundreds of Chinese enterprises enter the US."],
- ["2025-03", "Mar 2025", "Nikkei Asia", "The high-end market will soon be Chinese too", "column", "EN", "https://asia.nikkei.com/Opinion/The-high-end-market-will-soon-be-Chinese-too", ""],
- ["2025-02", "Feb 2025", "People's Daily Online", "Imported goods add to festive charm", "column", "EN", "http://en.people.cn/n3/2025/0206/c90000-20273052.html", ""],
  ["2025-02", "Feb 2025", "NBC10 Philadelphia", "USPS temporarily suspends some inbound packages from China, Hong Kong", "quoted", "EN", "https://www.nbcphiladelphia.com/news/business/money-report/usps-temporarily-suspends-some-inbound-packages-from-china-hong-kong/4099893/", "Cross-border e-commerce companies rely on USPS for about 31% of last-mile deliveries, said Chris Pereira, president and CEO of consulting firm iMpact. They also use a variety of shipping providers including DHL, FedEx and UPS, as well as smaller carriers, he said."],
  ["2025-01", "Jan 2025", "CNA", "How to make it in America: The pressures and pitfalls for Chinese brands going global", "quoted", "EN", "https://www.channelnewsasia.com/east-asia/china-brands-global-expansion-us-4896256", "“Chinese retailers frequently focus on product features and corporate achievements rather than crafting narratives that appeal to deeper emotional and cultural dimensions,” said Chris Pereira, founder and CEO at iMpact, a brand consulting company."],
  ["2025-01", "Jan 2025", "Bloomberg", "Trump-Xi Talks Spark Market Optimism | Bloomberg: The China Show", "interview", "EN", "https://www.youtube.com/watch?app=desktop&v=cTPykka3RH4", ""],
@@ -533,7 +549,6 @@ var MEDIA=[
  ["2024-11", "Nov 2024", "Xinhua", "Expo links China with rest of world, promotes supply chain cooperation", "quoted", "EN", "https://english.news.cn/20241128/d0313df95b3446a49f60cf853ce00837/c.html", ""],
  ["2024-11", "Nov 2024", "国际在线", "中国供应链对世界贡献非常显著", "interview", "中文", "https://ge.cri.cn/20241129/9a9ac808-65cc-bbaa-73c4-8fb56ee0d0cb.html", ""],
  ["2024-11", "Nov 2024", "中国贸促", "链博会外宾谈：展望全球供应链未来", "interview", "中文", "https://mp.weixin.qq.com/s/3w6pz9I2eaYYYUklbKNjvQ", ""],
- ["2024-11", "Nov 2024", "Nikkei Asia", "Buckle up: China's tech industry braces for a bumpy ride under Trump", "column", "EN", "", ""],
  ["2024-10", "Oct 2024", "SSABeijing", "ORIENTATION RECAP 2024", "quoted", "中文", "https://mp.weixin.qq.com/s/y7piQ_OBlhAAttw9FWUp9Q", "文末鸣谢赞助商美讯"],
  ["2024-10", "Oct 2024", "公关世界杂志社", "公关终于向短视频低头了", "reprint", "中文", "https://mp.weixin.qq.com/s/qqHtZuwFXAHLryU9Lsc3UA", "全文"],
  ["2024-09", "Sep 2024", "工业和信息化部工业文化发展中心", "工业文明国际论坛 | “解码未来：全球数智趋势论坛”精彩回顾", "quoted", "中文", "https://mp.weixin.qq.com/s/WfnAuFvTa-AATnjN2CHP0Q", "赋能中国企业全球化、本土化——\n企业如何巧用AI建立海外市场的信任\n\n尽管AI技术在提升工作效率、优化产品形象等方面发挥着重要作用，但跨文化信任的建设仍然是AI无法替代的人类工作，人与人之间的交流和信任是企业海外成功的关键。\n中国改革开放以来，中国出海产业持续升级，从以中低端产品和出口贸易阶段，逐步迈向定制化、个性化以及高端化的发展路径。工业文明的演进背后，是产业升级所带来的新挑战，在海外市场，在追求高端高质量发展的过程中，需要一个与之相匹配的高端形象，品牌和形象的提升显得尤为重要。\n许多人认为品牌是一个较为抽象的概念，然而 品牌实际上是与个人之间在文化上的共鸣，“他们觉得你是自己人、有心人”。在海外可以明显地看到一个趋势，即中国各行各业的产品和服务价值已经达到世界级水平，足以竞争得过欧美、南美等地区的产品和服务竞争。\n当前中国企业出海面临很多问题，问题源于人与人之间的信任建立。各行各业在海外的进程中，产品好仅占成功因素的50%，而另一半则取决于海外客户对企业的喜好程度，但这对于中国企业而言都是机会。因为产品品质这一最大难题已基本解决，接下来在海外的关键就在于构建文化层面的信任。\n以人工智能、新能源、医疗健康和餐饮连锁四大最具代表性的行业为例。在科技领域，包括人工智能、软件即服务（SaaS）平台以及消费电子产品，在海外市场拥有巨大的潜力。其次是新能源行业，目前无论是在国内还是国际市场上，新能源汽车都备受瞩目，海外市场尤其广阔。第三是医疗智能健康领域，最后则是餐饮连锁行业，中国菜在全球范围内一直受到广泛的关注和支持。所以这四个领域是产业升级、品牌升级在海外重点机会所在。\n无论To C产品还是To B端的解决方案或产品，在提升海外信誉层面，首先一点在于，利用AI协助塑造企业形象。AI能够帮助企业制作高质量的文字、图表和视频内容，从而维护和提升企业形象。\n在商务环境中，网站或对外宣传材料若出现拼写或语言上的错误，将严重影响企业形象，现在，企业可以将翻译工作“外包”给AI，从而提升企业的基础形象，这是企业的“内功”。\n不过，未来出海传播与公共关系仍需以人为本，AI做不到的是代替第三方进行“背书”，来自AI的肯定不能替代人类的推荐，因为只有来自人的认可才具有真正的价值。\n“只有人说你好才是好，这是背书的作用，这个是海外市场的关键”，企业可以将10%的努力和预算投入放在提升“内功”，而“内功”得到提升，形象得到改善时，至少90%的努力可以获得第三方的认可。通过AI辅助，建立了信任之后，高质量的产品和产业升级才能发挥其应有的作用，如果信任问题没有得到解决，在海外市场的努力也会打折。因此，第三方认可的重要性不容忽视。"],
@@ -564,18 +579,14 @@ var MEDIA=[
  ["2024-07", "Jul 2024", "EyeShenZhen", "iMpact founder helps Chinese companies go global", "feature", "EN", "https://mp.weixin.qq.com/s/c26hUs0CYHeTUNwhAXr3MQ", ""],
  ["2024-07", "Jul 2024", "Khmer Times", "China offers high-tech road to success", "reprint", "EN", "https://www.khmertimeskh.com/501521343/china-offers-high-tech-road-to-success/", "柬埔寨媒体转载China Daily文章"],
  ["2024-07", "Jul 2024", "全球展望GPS", "展望世界、共话未来：2024全球展望论坛圆满落幕！", "quoted", "中文", "https://mp.weixin.qq.com/s/wOALGiRrKmMoufDGwn6tIA", "Chris Pereira（北美传讯创始人兼首席执行官）认为AI自动化是提升生产力和建立人际联系的巨大机会，并强调了跨国合作的必要性。"],
- ["2024-06", "Jun 2024", "China Daily", "China offers high-tech road to success", "column", "EN", "https://www.chinadaily.com.cn/a/202406/24/WS6678bea8a31095c51c50a614.html", "全文"],
  ["2024-06", "Jun 2024", "Dayoo 大洋网", "加拿大商界“中国通”：中国为跨国企业提供巨大机遇", "reprint", "中文", "https://news.dayoo.com/china/202406/24/139997_54682517.htm", "转载China Daily文章"],
  ["2024-06", "Jun 2024", "Beijing Review 北京周报", "Canadian entrepreneur explores opportunities in southern innovation hub", "feature", "EN", "https://www.bjreview.com/Business/202406/t20240617_800368937.html", "全文"],
  ["2024-06", "Jun 2024", "黑马智库", "这两天在上海，治好了我的精神内耗……", "quoted", "中文", "https://mp.weixin.qq.com/s/EUQal0_p4a3HPzwFtLu_YA", "在本次黑马校友盛宴上，还出现了多年来的第一位“国际友人”——来自加拿大的美讯创始人Chris彭家荣，并就当前破局的重要方向——“出海”做了分享。Chris彭家荣认为，中国创业者在出海过程中，全球视角的“本土化”至关重要，要融入本地，了解本地，才能更好地抓住全球化的机遇。"],
  ["2024-06", "Jun 2024", "参考消息智库", "港媒：“产能过剩论”掩盖中企竞争力奥秘", "reprint", "中文", "https://mp.weixin.qq.com/s/97OYneF1ek1ec2qfIGEupg", "全文"],
- ["2024-06", "Jun 2024", "SCMP", "Overcapacity? China’s competitive edge lies elsewhere", "column", "EN", "https://www.scmp.com/opinion/china-opinion/article/3265986/overcapacity-chinas-competitive-edge-lies-elsewhere?utm_source=copy-link&utm_campaign=3265986&utm_medium=share_widget", "全文"],
  ["2024-06", "Jun 2024", "Shenzhen Daily", "Firm helps Chinese companies go global with SZ efficiency", "interview", "EN", "http://www.szdaily.com/content/2024-06/05/content_30996128.htm", "全文专访"],
  ["2024-06", "Jun 2024", "Business Insider", "Chinese companies are setting up shop anywhere but China — and the US", "interview", "EN", "https://www.businessinsider.com/china-economy-gdp-growth-slow-chinese-companies-invest-overseas-odi-2024-5", "需要会员，看不到内容"],
- ["2024-06", "Jun 2024", "观察者网", "为什么消费者会选中国品牌？", "column", "中文", "https://www.guancha.cn/ChrisPereira/2024_06_20_738580_1.shtml", ""],
  ["2024-05", "May 2024", "Bloomberg", "Chinese Firms Turn From ‘Panda’ to ‘Skunk’ as US Tensions Flare", "interview", "EN", "https://www.bloomberg.com/news/articles/2024-05-28/chinese-firms-once-embraced-now-shunned-in-us-on-security-fears", "As firms seek to mitigate geopolitical risks, some have tried to shed their China affiliations. Many Chinese firmscontemplating operations in the US ask if they should set up their businesses in Singapore or America first becausethey fear they won't be treated fairly otherwise, said Chris Pereira, Chief Executive Officer of consultancy ilMpact."],
  ["2024-05", "May 2024", "i黑马", "出海：开始比完美更重要 本土化是致胜关键丨对话华为前高管，中国企业国际化专家Chris彭佳荣", "interview", "中文", "https://mp.weixin.qq.com/s/CTfY3-UYHpoCrM8wA2GCqA", "全文专访"],
- ["2024-04", "Apr 2024", "海外看世界", "地缘竞争下，中国企业如何在北美应对新常态", "column", "中文", "https://mp.weixin.qq.com/s/1BDyqMq2W_om74AT8zaPJQ", "海外看世界网站：https://blog.haiwaikanshijie.com/%E5%BD%AD%E5%AE%B6%E8%8D%A3-%E5%9C%B0%E7%BC%98%E7%AB%9E%E4%BA%89%E4%B8%8B%EF%BC%8C%E4%B8%AD%E5%9B%BD%E4%BC%81%E4%B8%9A%E5%A6%82%E4%BD%95%E5%9C%A8%E5%8C%97%E7%BE%8E%E5%BA%94%E5%AF%B9%E6%96%B0/\n今日头条转发：https://www.toutiao.com/article/7362587651028828707/?app=news_article&timestamp=1714236906&use_new_style=1&req_id=202404280055054404CB75DB917D0BC262&group_id=7362587651028828707&share_token=798ACEB9-C354-4075-B460-90BD646F3CDB&tt_from=weixin&utm_source=weixin&utm_medium=toutiao_ios&utm_campaign=client_share&wxshare_count=1&source=m_redirect"],
  ["2024-04", "Apr 2024", "深圳特区报", "深圳-北美科创经贸合作交流会举行", "quoted", "中文", "https://sztqb.sznews.com/MB/content/202404/19/content_3201043.html", "在企业分享环节，天好中国法律和政府事务高级总监王萌、美讯创始人兼CEO彭家荣、世界超高清视频产业联盟秘书长张文刚及达实智能国际业务副总裁马端宁分享了各自在科技创新驱动、经济贸易升级、行业标准制定、国际化发展等方面的看法和经验，为深圳与北美地区之间的经贸合作提供思路和建议。"],
  ["2024-04", "Apr 2024", "深圳特区报", "iMpact美讯创始人兼首席执行官彭家荣：“深圳速度”助力中国企业扬帆出海", "feature", "中文", "http://sztqb.sznews.com/MB/content/202404/19/content_3201044.html", ""],
  ["2024-04", "Apr 2024", "Antler龙资本Pro", "在海外，如何从一杯咖啡开始向“罗马人”学习入乡随俗？｜出海行行行", "interview", "中文", "https://mp.weixin.qq.com/s/r4DTmBEfkrpJ0ohARDWa4w", "全文专访"],
@@ -584,11 +595,7 @@ var MEDIA=[
  ["2024-04", "Apr 2024", "深圳Plus", "融合创新·联通世界 “深圳-北美科创经贸合作交流会”在深圳举办", "quoted", "中文", "https://site.szplus.com/content/s6620ed60e4b02fe291a94424.html", "在企业分享环节，天好中国法律和政府事务高级总监王萌、美讯创始人兼CEO 彭家荣、世界超高清视频产业联盟秘书长张文刚及达实智能国际业务副总裁马端宁，分享了各自在科技创新驱动、经济贸易升级、行业标准制定、国际化发展等方面的看法和经验，为深圳与北美地区之间的经贸合作提供思路和建议。"],
  ["2024-04", "Apr 2024", "深圳卫视", "40余家北美大中型企业来深洽谈合作", "interview", "中文", "https://www.sztv.com.cn/ysz/dsdb/szws/ssxw/80070038.shtml", "电视新闻，Chris接受采访"],
  ["2024-04", "Apr 2024", "余一的100个朋友", "美讯CEO彭家荣：签首单前被拒100次，企业出海需求每年都在变", "interview", "中文", "https://mp.weixin.qq.com/s/uYTWtXhQKrLVPpP5fmhNwg", ""],
- ["2024-04", "Apr 2024", "SCMP", "As supply chains shift away from China, others get their own economic miracles", "column", "EN", "https://www.scmp.com/opinion/china-opinion/article/3258778/supply-chains-shift-away-china-others-get-their-own-economic-miracles", ""],
- ["2024-04", "Apr 2024", "36氪", "中国电商巨头在海外市场遭挑刺，是否会影响业务发展？", "column", "中文", "https://36kr.com/p/2730034996646537", ""],
  ["2024-04", "Apr 2024", "吴晓波频道", "制造业如何全球化？刘继森、梁牧、彭家荣等嘉宾有话说｜新趋势游学班", "quoted", "中文", "https://mp.weixin.qq.com/s/pK0h_0-kH9TE1HCO1AVapg", "美讯创始人兼CEO彭家荣在论坛上指出，近几年中国企业出海发生质的变化，从贸易出口转变为管理模式和品牌出海。"],
- ["2024-04", "Apr 2024", "Ottawa Life Magazine", "Why I left Canada: an open letter to Justin Trudeau", "column", "EN", "https://www.ottawalife.com/article/why-i-left-canada-an-open-letter-to-justin-trudeau/", ""],
- ["2024-03", "Mar 2024", "Fortune China 财富中国", "中国企业在海外IPO是否有助于提升品牌形象？", "column", "中文", "https://www.fortunechina.com/zhuanlan/c/2024-03/29/content_450755.htm", "According to Pereira, Chinese enterprises are increasingly focusing on high-end value chains and product quality, which has enabled them to gain a foothold in various industries in North America, such as technology, consumer electronics, new energy, and health care."],
  ["2024-03", "Mar 2024", "南方产业智库", "德国“隐形冠军”出海经验，对“专精特新”企业有怎样的启示", "quoted", "中文", "https://static.nfnews.com/content/202403/29/c8737800.html?from=weChatMessage&colID=6542&appversion=11000&firstColID=6542&enterColumnId=2147483647&date=bnVsbA==&layer=3", ""],
  ["2024-03", "Mar 2024", "Reuters", "Chinese TikTok sellers complain of under-fire platform tightening US rule enforcement", "interview", "EN", "https://www.reuters.com/technology/chinese-tiktok-sellers-complain-under-fire-platform-tightening-us-rule-2024-03-27/", ""],
  ["2024-03", "Mar 2024", "Asia Business Podcast", "The Positive Story of Chinese Investment in the US with Chris Pereira", "interview", "EN", "https://www.asiabusinesspod.com/blog/the-positive-story-of-chinese-investment-in-the-us", "Despite the challenges and setbacks that come with entering new markets, Pereira remains optimistic about the prospects for Chinese companies going abroad."],
@@ -596,24 +603,17 @@ var MEDIA=[
  ["2024-02", "Feb 2024", "Wall Street Journal", "American CEOs Visiting China Can’t Escape It: They Have to Dance on Stage", "interview", "EN", "https://www.wsj.com/business/american-tech-ceos-dance-in-china-lunar-new-year-f9a397d0?st=c4z2s36f7xc436g", ""],
  ["2024-02", "Feb 2024", "福布斯中国", "美讯彭家荣：以“深圳速度”助力中国企业出海", "interview", "中文", "https://mp.weixin.qq.com/s/AJYU3hlVtm0AvIFxBdIoFg", ""],
  ["2024-01", "Jan 2024", "爱集微", "前华为要员：中国半导体企业出海，请不要吝啬一杯咖啡钱", "interview", "中文", "https://mp.weixin.qq.com/s/HMeVlMGnjrrv6N_PBwvE0A", "He advised Chinese businesses to bring Shenzhen’s standards and speed to North America while being mindful of localization. “By expressing genuine care for the local communities and committing to hiring local talent, Chinese companies can successfully adapt Shenzhen’s spirit to the local environment and thrive,” Pereira told Shenzhen Daily."],
- ["2024-01", "Jan 2024", "China Daily", "Company innovations boost resilient economy, benefit consumers", "column", "EN", "https://www.chinadaily.com.cn/a/202401/18/WS65a86061a3105f21a507ce36.html", "全文"],
  ["2024-01", "Jan 2024", "Bloomberg", "Huawei Ends US Lobbying Operations After Years of Fighting Ban", "interview", "EN", "https://www.bloomberg.com/news/articles/2024-01-10/huawei-ends-us-lobbying-operations-after-years-of-fighting-ban", "“The US market isn’t a likely place for a breakthrough for Huawei in the near future,” said Chris Pereira, a former Huawei public relations executive and founder of the consultancy iMpact."],
  ["2024-01", "Jan 2024", "Nikkei Asia", "Huawei cuts North America PR staff as hopes for U.S. breakthrough fade", "interview", "EN", "https://asia.nikkei.com/Business/Technology/Huawei-cuts-North-America-PR-staff-as-hopes-for-U.S.-breakthrough-fade", "Chris Pereira, former public relations manager at Huawei and now founder and CEO of business consulting group iMpact, told Nikkei Asia that the downsizing was expected.\n\nHe said Huawei North America had two main goals -- the release of Meng and achieving a breakthrough in the U.S. market. Meng was released back to China in 2021, while the latter goal now seems impossible and may even be unnecessary, he said.\n\n\"Looking at their revenue, the U.S. and Canada are actually not important for Huawei,\" Pereira said. \"I think from the business perspective, my prediction is Huawei will focus more on the Middle East, Southeast Asia, maybe South America and Eastern Europe.\"\n\nAt the same time, cutting costs also made sense for the company, he added.\n\n\"The business pressure [in China] is probably quite high right now in terms of maintaining revenue and profit, so they're probably looking for ways to cut costs,\" Pereira said."],
  ["2024-01", "Jan 2024", "Nikkei Asia", "China's slump pushes its smaller companies overseas for growth", "interview", "EN", "https://asia.nikkei.com/Business/Business-Spotlight/China-s-slump-pushes-its-smaller-companies-overseas-for-growth", "Chris Pereira, founder and CEO of the business consulting group iMpact, said companies in the consumer tech, new energy and biotechnology sectors are particularly prominent in the overseas sales push.\n\n\"What is actually happening is Chinese brands and companies are learning how to localize in overseas markets, from branding to team building,\" he said.\n\n\"The most important trend that we are seeing is China's industrial base is upgrading to a level that is competitive with Western brands and products. So the main thing is, it's not Western companies going to China to procure products, it's Chinese companies making the product and they're managing the brand and selling the product overseas by cutting out the middleman,\" Pereira said.\n\nHe also pointed to a number of hurdles, however.\n\n\"Fair treatment, geopolitical tensions, true localization and cross-cultural management, and marketing strategies in a different market are all the big challenges for Chinese companies operating overseas, particularly in the U.S.,\" he said."],
- ["2023-12", "Dec 2023", "SCMP", "Face it, China’s clean energy firms are key to Cop28 climate goals", "column", "EN", "https://www.scmp.com/comment/opinion/article/3245107/face-it-chinas-clean-energy-firms-are-key-cop28-climate-goals", "全文"],
  ["2023-12", "Dec 2023", "国际商报", "跨境电商“加速跑” 拓宽企业出海新通路", "interview", "中文", "https://epa.comnews.cn/padphone/content/202312/04/content_12333.html", "“Temu是过去一年来在北美市场发展速度最快的电商企业。如果把时间线拉回到过去三年，北美市场最成功的垂直电商则是SHEIN，而他们都来自于中国。”在助力中国企业拓展北美市场过程中，美讯(深圳)信息技术咨询公司首席执行官彭家荣深刻感受到中国跨境电商的蓬勃发展。他在接受国际商报记者采访时表示，基于中国强大的供应链优势，这两家跨境电商企业通过复制在中国已经成功验证的商业模式，均在北美市场获得了高速增长。\n\n“没有什么能比Temu和SHEIN的案例更能说明跨境电商能为企业带来广阔机遇了。”在彭家荣看来，谈论跨境电商，过去多指把海外的优质商品引入中国市场，而现在则是指中国利用自身供应链优势，将有竞争优势的商品输出到海外市场。"],
  ["2023-12", "Dec 2023", "北京周报", "World's first supply chain expo brings China closer to the world", "interview", "EN", "http://www.bjreview.com/China/202312/t20231201_800350612.html", "According to Chris Pereira, CEO of iMpact, the group helps Chinese companies build their businesses and expand their markets overseas, especially in North America, Europe and Singapore. In addition to Bingz, iMpact also works with Chinese brands such as online car dealer Carnex and New Link, a company specializing in energy digitization, on their globalization strategies.\n\n\"China is moving up the global value chains. Its technology can lead a new wave of economic growth at home and abroad, benefiting both the country and the world,\" Pereira told Beijing Review at the inaugural China International Supply Chain Expo (CISCE)."],
  ["2023-11", "Nov 2023", "Logistics Insider", "China must use technology to counter the West's plans for supply chain de-risking: Experts", "interview", "EN", "https://www.logisticsinsider.in/china-must-use-technology-to-counter-the-wests-plans-for-supply-chain-de-risking-experts/", "Chris Pereira, CEO of the North American Ecosystem Institute, highlighted the global embrace of Chinese suppliers and technologies, emphasizing the implementation of the entrepreneurial Shenzhen model in various nations."],
  ["2023-11", "Nov 2023", "新华社", "Interview: Intertwined supply chains present great potential for China-U.S. cooperation, says entrepreneur", "interview", "EN", "https://english.news.cn/20231130/2e0657cdba144e848f04118a1cd070b7/c.html", "专访"],
  ["2023-11", "Nov 2023", "新华社", "共话中国经济新机遇丨专访：中美供应链合作具有广阔空间——访中国美讯（深圳）信息技术咨询有限公司首席执行官克里斯·佩雷拉", "interview", "中文", "http://www.news.cn/world/2023-11/29/c_1130000023.htm", "专访"],
  ["2023-11", "Nov 2023", "新华社", "China Focus: China remains committed to global supply chain stability, innovation", "interview", "EN", "https://english.news.cn/20231128/cbdd466185624f84be400baddacbfef4/c.html", "\"New energy is China's most internationalized and sustainable advantage,\" said Chris Pereira, CEO of North American Ecosystem Institute, a global communications and consulting group.\n\nPereira believes that supply chain cooperation almost always presents win-win opportunities, \"as such transactions make both suppliers and customers happy.\"\n\nGoing forward, Pereira said it is critical for Chinese technologies to reach wider markets across the world, and his company is working to contribute to this mission.\n\n\"I believe China has a first-class supply chain and expect to see more global exchanges with China's high-tech in the following five to 10 years,\" Pereira said."],
- ["2023-11", "Nov 2023", "China Daily", "Bridging the Pacific benefits world's prosperity", "column", "EN", "https://www.chinadaily.com.cn/a/202311/20/WS655a99b9a31090682a5eefde.html", "全文"],
- ["2023-11", "Nov 2023", "China Daily", "外国商界人士：中美关系向好促进全球繁荣", "column", "中文", "https://china.chinadaily.com.cn/a/202311/20/WS655b0604a310d5acd876f898.html", "全文"],
- ["2023-10", "Oct 2023", "China Daily", "Business buzz of Shenzhen spurs talents", "column", "EN", "https://www.chinadaily.com.cn/a/202310/28/WS653c6ba3a31090682a5eb34b.html", "全文"],
- ["2023-09", "Sep 2023", "SCMP", "Despite US-China decoupling talk, Chinese businesses are flourishing in America", "column", "EN", "https://www.scmp.com/comment/opinion/article/3235851/despite-us-china-decoupling-talk-chinese-businesses-are-flourishing-america", "全文"],
  ["2023-07", "Jul 2023", "36氪", "跨境电商海外斗法，Temu与SHEIN短兵相接", "interview", "中文", "https://36kr.com/p/2367330777948803", "不过，在北美传讯创始人、CEO彭家荣看来，双方都面临更多严峻的外部环境挑战，“任何一个品牌，在北美想要赢得公众的信任，ESG问题是他们不得不考虑的。与Temu相比，目前SHEIN显然更重视ESG，他们的产品在包装上也更为环保，并且投入了大量资源扶持本地设计师。”"],
  ["2023-06", "Jun 2023", "Wall Street Journal", "America’s Top Fast-Fashion Retailer Tries to Shed Its Chinese Image", "interview", "EN", "https://www.wsj.com/articles/americas-top-fast-fashion-retailer-tries-to-shed-its-chinese-image-7eebd4fe?st=wlxnd8lzrrhp6q4", "“Many of these programs would be unheard of at more traditionally Chinese firms that are more focused on profits and the bottom line,” said Chris Pereira, president of the consulting firm North American Ecosystem Institute, who formerly worked on Huawei Technologies’ public-relations team."],
- ["2023-06", "Jun 2023", "Fortune China 财富中国", "AI与未来", "column", "中文", "http://www.fortunechina.com/zhuanlan/c/2023-06/08/content_434108.htm", "全文"],
  ["2023-06", "Jun 2023", "Global Finance Magazine", "The US-China Paradox", "interview", "EN", "https://gfmag.com/economics-policy-regulation/us-china-paradox-decoupling/", "Chris Pereira, CEO of the North American Ecosystem Institute, which advises Chinese companies on international expansion, says the US remains a prime market for Chinese companies, despite what he describes as “unfair scrutiny and criticism of Chinese companies by American media and politicians.” He adds, “There is no significant evidence of consumer backlash against Chinese companies.” Indeed, despite the views of US politicians, he says, Chinese firms TikTok and fast-fashion giant Shein remain preferred brands among Generation Z consumers.\n\nBut to succeed, Chinese companies need to focus on local compliance, talent and investment—and “de-China” themselves, says Pereira. “There isn’t anything sinister about this—it’s just good business practice,” he says. “The sometimes-awkward attempts at localization by Chinese companies in the US should be encouraged: Companies making these efforts are trying to build bridges across cultures and see the value in diversity.”"],
  ["2023-05", "May 2023", "Reuters", "Chinese tech entrepreneurs keen to 'de-China' as tensions with US soar", "interview", "EN", "https://www.reuters.com/technology/chinese-tech-entrepreneurs-keen-de-china-tensions-with-us-soar-2023-05-30/", "So far this year, Pereira's firm has had around 100 inquiries from mainland companies seeking help to expand abroad. Pereira said he advises many on how to effectively localise overseas and become part of a community as opposed to just masking their Chinese identity."],
  ["2023-04", "Apr 2023", "PingWest", "“Marketed by China” is on the rise, disrupting US retail landscape", "interview", "EN", "https://en.pingwest.com/a/11568", "“Compared with Chinese consumers, who are more open to trying new products, new services, etc., consumers in the North American market tend to be more conservative. In China, for example, mobile payments quickly became the norm within a few years, while credit cards and cash are still commonly used in North America,” he told PingWest. “The North American consumer market hasn't changed much over the past 30 years. Therefore, local businesses do not need to rack their brains to come up with fresh marketing strategies since they already have hosted a loyal consumer base,”"],
@@ -638,7 +638,7 @@ more.addEventListener("click",function(){all=true;render()});
 render();
 (function(){var wl=document.getElementById("writing-list"),wm=document.getElementById("wmore"),wall=false;
 function M(d){var m=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],p=d.split("-");return (p[2]?(+p[2])+" ":"")+m[+p[1]-1]+" "+p[0]}
-function wr(){var shown=wall?WRITING:WRITING.slice(0,8);wl.innerHTML=shown.map(function(w){return '<li><time datetime="'+w[0]+'">'+M(w[0])+'</time><span class="src">'+esc(w[1])+'</span><a class="what" href="'+w[4]+'" target="_blank" rel="noopener">'+esc(w[2])+'</a><span class="dek">'+esc(w[3])+'</span></li>'}).join("");wm.hidden=wall||WRITING.length<=8}
+function wr(){var shown=wall?WRITING:WRITING.slice(0,8);wl.innerHTML=shown.map(function(w){return '<li><time datetime="'+w[0]+'">'+M(w[0])+'</time><span class="src" title="'+esc(w[1])+'">'+esc(w[1])+'</span>'+(w[4]?'<a class="what'+(/[\u4e00-\u9fff]/.test(w[2])?' zh':'')+'" href="'+w[4]+'" target="_blank" rel="noopener">'+esc(w[2])+'</a>':'<span class="what'+(/[\u4e00-\u9fff]/.test(w[2])?' zh':'')+'">'+esc(w[2])+'</span>')+'<span class="dek">'+esc(w[3])+'</span></li>'}).join("");wm.hidden=wall||WRITING.length<=8}
 wm.addEventListener("click",function(){wall=true;wr()});wr();})();
 
 document.querySelectorAll("button[data-copy]").forEach(function(b){
