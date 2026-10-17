@@ -287,6 +287,8 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
 @media (max-width:380px){.mark{font-size:14.5px;gap:6px}.seal{font-size:11.5px;padding:4px 5px 4px 6px}.bar .langsw{padding:4px 8px}.bar .langsw+.btn{padding:7px 11px}}
 #em a{color:inherit;text-decoration:none}
 #em a:hover{color:var(--red)}
+.sum p.wxnote{margin:10px 0 0;padding-top:8px;border-top:1px solid var(--hair);font-family:var(--display);font-size:13.5px;color:var(--muted)}
+.sum p.wxnote a{font-size:inherit}
 </style>
 </head>
 <body>
@@ -720,7 +722,7 @@ more.addEventListener("click",function(){var wasAll=all;all=!all;render();if(was
 render();
 (function(){var wl=document.getElementById("writing-list"),wm=document.getElementById("wmore"),wall=false;
 function M(d){var m=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],p=d.split("-");return (p[2]?(+p[2])+" ":"")+m[+p[1]-1]+" "+p[0]}
-function wr(){var shown=wall?WRITING:WRITING.slice(0,8);wl.innerHTML=shown.map(function(w){var zh=/[\u4e00-\u9fff]/.test(w[2])?' zh':'';var t=w[4]?'<a class="what'+zh+'" href="'+w[4]+'" target="_blank" rel="noopener">'+esc(w[2])+'</a>':'<span class="what'+zh+'">'+esc(w[2])+'</span>';if(w[6])t='<span class="tcell">'+t+'<span class="en">'+esc(w[6])+'</span></span>';var b=w[5]?'<button type="button" class="sumbtn" aria-expanded="false">Short summary</button>':'<span></span>';var sm=w[5]?'<div class="sum" hidden><p>'+esc(w[5])+'</p>'+(w[4]?'<a href="'+w[4]+'" target="_blank" rel="noopener">Read the full article ↗</a>':'')+'</div>':'';return '<li><time datetime="'+w[0]+'">'+M(w[0])+'</time><span class="src" title="'+esc(w[1])+'">'+esc(w[1])+'</span>'+t+'<span class="dek">'+esc(w[3])+'</span>'+b+sm+'</li>'}).join("");wm.hidden=WRITING.length<=8;wm.textContent=wall?"Show less":"Show more"}
+function wr(){var shown=wall?WRITING:WRITING.slice(0,8);wl.innerHTML=shown.map(function(w){var zh=/[\u4e00-\u9fff]/.test(w[2])?' zh':'';var t=w[4]?'<a class="what'+zh+'" href="'+w[4]+'" target="_blank" rel="noopener">'+esc(w[2])+'</a>':'<span class="what'+zh+'">'+esc(w[2])+'</span>';if(w[6])t='<span class="tcell">'+t+'<span class="en">'+esc(w[6])+'</span></span>';var b=w[5]?'<button type="button" class="sumbtn" aria-expanded="false">Short summary</button>':'<span></span>';var sm=w[5]?'<div class="sum" hidden><p>'+esc(w[5])+'</p>'+(w[4]?'<a href="'+w[4]+'" target="_blank" rel="noopener">Read the full article ↗</a>':(w[1]==="WeChat"?'<p class="wxnote">WeChat does not allow its articles to be linked from outside the app. For the full article, please <a href="#contact">contact me</a>.</p>':''))+'</div>':'';return '<li><time datetime="'+w[0]+'">'+M(w[0])+'</time><span class="src" title="'+esc(w[1])+'">'+esc(w[1])+'</span>'+t+'<span class="dek">'+esc(w[3])+'</span>'+b+sm+'</li>'}).join("");wm.hidden=WRITING.length<=8;wm.textContent=wall?"Show less":"Show more"}
 wl.addEventListener("click",function(e){var t=e.target.closest(".sumbtn");if(!t)return;var sm=t.parentNode.querySelector(".sum"),open=sm.hidden;sm.hidden=!open;t.setAttribute("aria-expanded",open?"true":"false");t.textContent=open?"Hide summary":"Short summary"});
 wm.addEventListener("click",function(){var was=wall;wall=!wall;wr();if(was)document.getElementById("writing").scrollIntoView({behavior:"smooth"})});wr();})();
 
