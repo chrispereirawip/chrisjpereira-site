@@ -11,6 +11,8 @@
 <meta name="theme-color" content="#A40706">
 <link rel="canonical" href="https://chrisjpereira.com/">
 <link rel="alternate" hreflang="en" href="https://chrisjpereira.com/">
+<link rel="alternate" hreflang="zh-CN" href="https://chrisjpereira.com/zh/">
+<link rel="alternate" hreflang="zh" href="https://chrisjpereira.com/zh/">
 <link rel="alternate" hreflang="x-default" href="https://chrisjpereira.com/">
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="Chris Pereira 彭家荣">
@@ -240,6 +242,8 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
   .herocap{display:none}
   .bar .wrap{flex-wrap:wrap;row-gap:0}
   .bar .btn{margin-left:auto}
+  .bar .langsw{margin-left:auto}
+  .bar .langsw+.btn{margin-left:0}
   .nav{order:3;width:100%;margin-left:0;gap:22px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;font-size:14.5px;padding:2px 0 10px}
   .nav::-webkit-scrollbar{display:none}
   section,[id]{scroll-margin-top:112px}
@@ -255,6 +259,10 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
   section{padding-block:40px}
 }
 @media (max-width:600px){
+  .bar .wrap{column-gap:10px}
+  .mark{gap:8px;font-size:16px}
+  .langsw{margin-left:auto;padding:5px 9px;font-size:13px}
+  .bar .langsw+.btn{margin-left:0;padding:8px 14px;font-size:13.5px}
   .herobg{aspect-ratio:auto;max-height:460px;object-position:50% 0%}
   .nav{gap:18px;font-size:14px}
   .seen .label{display:none}
@@ -268,6 +276,9 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
   .lead{padding:26px}
   .facts div.f{padding:20px 14px}
 }
+.langsw{font-family:var(--zh);font-size:14px;font-weight:500;color:var(--ink);text-decoration:none;border:1px solid var(--hair);border-radius:999px;padding:6px 12px;white-space:nowrap}
+.langsw:hover{color:var(--red);border-color:var(--red)}
+@media (max-width:380px){.mark{font-size:14.5px;gap:6px}.seal{font-size:11.5px;padding:4px 5px 4px 6px}.bar .langsw{padding:4px 8px}.bar .langsw+.btn{padding:7px 11px}}
 </style>
 </head>
 <body>
@@ -277,6 +288,7 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
     <nav class="nav" aria-label="Sections">
       <a href="#writing">Writing</a><a href="#media">Commentary</a><a href="#speaking">Speaking</a><a href="#training">Training</a><a href="#about">About</a>
     </nav>
+    <a class="langsw" href="/zh/" hreflang="zh-CN" lang="zh-CN">中文</a>
     <a class="btn solid" href="#contact">Contact</a>
   </div>
 </header>
