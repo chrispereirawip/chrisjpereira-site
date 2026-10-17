@@ -129,11 +129,11 @@ h1 .zh{display:block;font-size:.3em;font-weight:500;letter-spacing:.32em;color:v
 .topics li::before{content:"";flex:none;width:8px;height:8px;margin-top:9px;background:var(--red);border-radius:50%}
 .venues{font-size:17px;color:var(--ink);margin-top:10px!important}
 
-.gallery{display:grid;grid-template-columns:1.7fr 1.1fr .75fr;gap:14px;margin-bottom:40px}
+.gallery{display:grid;grid-template-columns:1.62fr 1fr;gap:16px;margin-bottom:40px}
 .gallery figure{margin:0;min-width:0}
-.gallery img{width:100%;height:360px;object-fit:cover;border-radius:8px}
-.gallery .g3 img{object-position:50% 70%}
-.gallery .g2 img{object-position:14% 50%}
+.gallery img{width:100%;height:400px;object-fit:cover;border-radius:8px}
+.gallery .g1 img{object-position:70% 50%}
+.gallery .g2 img{object-position:40% 60%}
 .gallery figcaption,.aboutphoto figcaption{font-family:var(--display);font-size:13px;color:var(--muted);margin-top:8px}
 .aboutphoto{margin:0 0 6px}
 .aboutphoto img{width:100%;height:auto;border-radius:8px}
@@ -193,10 +193,8 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
   .facts div.f:nth-child(3){border-left:0}
   .facts div.f:nth-child(n+3){border-top:1px solid var(--hair)}
   .writing,.speak,.about,.kit{grid-template-columns:1fr;gap:36px}
-  .gallery{grid-template-columns:1fr 1fr}
-  .gallery .g1{grid-column:1/-1}
-  .gallery img{height:240px}
-  .gallery .g1 img{height:auto}
+  .gallery{grid-template-columns:1fr}
+  .gallery img{height:auto;max-height:340px}
   section{padding-block:64px}
 }
 @media (max-width:600px){
@@ -297,9 +295,8 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
         <a class="btn solid" href="#contact">Invite Chris to speak</a>
       </div>
       <div class="gallery">
-        <figure class="g1"><img src="img/panel-hkust-byd.webp" width="1400" height="933" alt="Chris Pereira speaking on a panel with BYD's Li Yunfei at the HKUST BizInsight Forum in Shenzhen"><figcaption>With BYD's Li Yunfei, HKUST BizInsight Forum, Shenzhen 2025</figcaption></figure>
-        <figure class="g2"><img src="img/stage-cidpex.webp" width="1366" height="912" alt="Chris Pereira giving a keynote at CIDPEX"><figcaption>Keynote at CIDPEX</figcaption></figure>
-        <figure class="g3"><img src="img/partnerboost.webp" width="800" height="1200" alt="Chris Pereira in conversation on stage at a PartnerBoost and Rakuten Advertising event"><figcaption>PartnerBoost × Rakuten Advertising</figcaption></figure>
+        <figure class="g1"><img src="img/panel-hkust-byd.webp" width="1100" height="682" alt="Chris Pereira speaking on a panel with BYD's Li Yunfei at the HKUST BizInsight Forum in Shenzhen"><figcaption>With BYD's Li Yunfei, HKUST BizInsight Forum, Shenzhen</figcaption></figure>
+        <figure class="g2"><img src="img/partnerboost.webp" width="800" height="637" alt="Chris Pereira in conversation on stage at a PartnerBoost and Rakuten Advertising event"><figcaption>Fireside chat, PartnerBoost × Rakuten Advertising</figcaption></figure>
       </div>
       <div class="speak">
         <div>
