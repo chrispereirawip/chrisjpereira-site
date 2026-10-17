@@ -105,14 +105,16 @@ h1 .zh{display:block;font-size:.3em;font-weight:500;letter-spacing:.32em;color:v
 .yt a{font-weight:600}
 
 /* media */
-.media{list-style:none;margin:0;padding:0;border-top:1px solid var(--hair)}
-.media li{display:grid;grid-template-columns:100px minmax(0,220px) minmax(0,1fr);gap:4px 24px;padding:16px 0;border-bottom:1px solid var(--hair);align-items:baseline}
-.media time{font-family:var(--display);font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
-.media .outlet{font-family:var(--display);font-weight:600;font-size:16.5px;color:var(--ink);text-decoration:none}
-.media a.outlet:hover{color:var(--red)}
-.media a.outlet::after{content:" ↗";font-size:12px;color:var(--red)}
-.media .what{color:var(--muted);font-size:16px}
-#more{margin-top:24px}
+.media{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink);font-size:15px;line-height:1.4}
+.media li{display:grid;grid-template-columns:76px 210px minmax(0,1fr);gap:0 18px;padding:7px 0;border-bottom:1px solid var(--hair);align-items:baseline}
+.media li:nth-child(even){background:rgba(0,0,0,.018)}
+.media time{font-family:var(--display);font-size:13.5px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.media .outlet{font-family:var(--display);font-weight:600;font-size:14.5px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.media .what{color:var(--muted)}
+.media a.what{color:var(--ink);text-decoration:none}
+.media a.what:hover{color:var(--red);text-decoration:underline}
+.media a.what::after{content:" ↗";font-size:12px;color:var(--red)}
+#more{margin-top:18px}
 
 /* speaking */
 .speak{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:48px;align-items:center}
@@ -196,7 +198,8 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
   section{padding-block:64px}
 }
 @media (max-width:600px){
-  .media li{grid-template-columns:1fr;gap:2px}
+  .media li{grid-template-columns:64px minmax(0,1fr);gap:0 12px}
+  .media .what{grid-column:2}
   .lead{padding:26px}
   .facts div.f{padding:20px 14px}
 }
@@ -402,18 +405,18 @@ var MEDIA=[
  ["2024-04","Apr 2024","Ottawa Life Magazine","Why I left Canada: an open letter to Justin Trudeau","column","EN","https://www.ottawalife.com/article/why-i-left-canada-an-open-letter-to-justin-trudeau/"],
  ["2024-03","Mar 2024","Reuters","Chinese TikTok sellers complain of tightening US rule enforcement","quoted","EN","https://www.reuters.com/technology/chinese-tiktok-sellers-complain-under-fire-platform-tightening-us-rule-2024-03-27/"],
  ["2024-03","Mar 2024","Asia Business Podcast","The positive story of Chinese investment in the US","podcast","EN",""],
- ["2024-02","Feb 2024","The Wire China","Chinese consumer tech brands are going global","quoted","EN",""],
+ ["2024-02","Feb 2024","The Wire China","Chinese consumer tech brands are going global","quoted","EN","https://www.thewirechina.com/2024/02/18/chinese-consumer-tech-brands-are-going-global/"],
  ["2024-01","Jan 2024","Financial Times","China's slump pushes smaller companies overseas for growth","quoted","EN","https://www.ft.com/content/37384212-7181-455d-8a78-cad1b7aa0198"],
  ["2024-01","Jan 2024","Bloomberg","Huawei ends US lobbying operations after years of fighting ban","quoted","EN",""]
 ];
 var list=document.getElementById("media-list"),more=document.getElementById("more"),all=false;
 function esc(s){var d=document.createElement("div");d.textContent=s;return d.innerHTML}
 function render(){
-  var shown=all?MEDIA:MEDIA.slice(0,6);
+  var shown=all?MEDIA:MEDIA.slice(0,10);
   list.innerHTML=shown.map(function(m){
-    var o=m[6]?'<a class="outlet" href="'+m[6]+'" target="_blank" rel="noopener">'+esc(m[2])+'</a>':'<span class="outlet">'+esc(m[2])+'</span>';
     var zh=m[5]==="中文"?' zh':'';
-    return '<li><time datetime="'+m[0]+'">'+m[1]+'</time>'+o+'<span class="what'+zh+'">'+esc(m[3])+'</span></li>';
+    var d=m[6]?'<a class="what'+zh+'" href="'+m[6]+'" target="_blank" rel="noopener">'+esc(m[3])+'</a>':'<span class="what'+zh+'">'+esc(m[3])+'</span>';
+    return '<li><time datetime="'+m[0]+'">'+m[1]+'</time><span class="outlet" title="'+esc(m[2])+'">'+esc(m[2])+'</span>'+d+'</li>';
   }).join("");
   more.hidden=all;
 }
