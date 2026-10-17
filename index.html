@@ -78,12 +78,15 @@ h1 .zh{display:block;font-size:.3em;font-weight:500;letter-spacing:.32em;color:v
 .facts div.f{padding:26px 22px;min-width:0}
 .facts div.f+div.f{border-left:1px solid var(--hair)}
 .facts strong{display:block;font-family:var(--display);font-weight:600;font-size:clamp(24px,2.6vw,30px);line-height:1.1;color:var(--red);letter-spacing:-.01em}
+.facts .nw{white-space:nowrap;display:inline;margin:0}
 .facts strong .zh{display:inline;font-size:.62em;font-weight:500;margin-left:4px;white-space:nowrap}
 .facts span{display:block;margin-top:6px;font-family:var(--display);font-size:14px;color:var(--muted);line-height:1.35}
 
 /* featured */
-.seen{padding-block:14px;border-bottom:1px solid var(--hair);background:var(--surface)}
-.seen .wrap{display:flex;align-items:baseline;gap:8px 28px;flex-wrap:wrap}
+.facts{border-bottom:0}
+.seen{background:var(--surface);border-bottom:1px solid var(--hair)}
+.seen .wrap{border-top:1px solid var(--hair);padding-block:16px 18px}
+.seen .wrap{display:flex;align-items:baseline;gap:8px 28px;flex-wrap:wrap;padding-inline:max(42px,env(safe-area-inset-left,0px))}
 .seen .label{font-size:11.5px}
 .seen .label{color:var(--muted)}
 .outlets{display:flex;flex-wrap:wrap;gap:6px 22px;font-family:var(--display);font-weight:600;font-size:15.5px;color:var(--ink);opacity:.78}
@@ -190,7 +193,8 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
   .nav{display:none}
   .bar .btn{margin-left:auto}
   .facts .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .facts div.f:nth-child(3){border-left:0}
+  .facts div.f:nth-child(3){border-left:0!important}
+  .seen .wrap{padding-inline:34px}
   .facts div.f:nth-child(n+3){border-top:1px solid var(--hair)}
   .writing,.speak,.about,.kit{grid-template-columns:1fr;gap:36px}
   .gallery{grid-template-columns:1fr}
@@ -219,11 +223,6 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
 </header>
 
 <main id="top">
-  <div class="seen">
-    <div class="wrap">
-      <span class="label">Featured and quoted in</span>
-      <div class="outlets"><span>Financial Times</span><span>Wall Street Journal</span><span>BBC</span><span>Bloomberg</span><span>Reuters</span><span>CNBC</span><span>Nikkei Asia</span><span>SCMP</span><span>CCTV</span><span>Phoenix TV</span><span>Xinhua</span></div>
-    </div>
   </div>
   <section class="hero">
     <picture><source media="(max-width:900px)" srcset="img/hero-stage-mobile.jpg"><img class="herobg" src="img/hero-stage.jpg" width="1366" height="652" alt="Chris Pereira giving a keynote at CIDPEX on strategies for Chinese companies going global"></picture>
@@ -246,8 +245,13 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
     <div class="wrap">
       <div class="f"><strong>20+ years</strong><span>living and working in China</span></div>
       <div class="f"><strong>Top 30</strong><span>Forbes China, brand globalization pioneers</span></div>
-      <div class="f"><strong>2 books</strong><span>Trust 《信任》 and Rebuild 《新出海》</span></div>
+      <div class="f"><strong>2 books</strong><span><span class="nw">Trust 《信任》</span> and <span class="nw">Rebuild 《新出海》</span></span></div>
       <div class="f"><strong>500+</strong><span>leading brands worked with</span></div>
+    </div>
+  <div class="seen">
+    <div class="wrap">
+      <span class="label">Featured and quoted in</span>
+      <div class="outlets"><span>Financial Times</span><span>Wall Street Journal</span><span>BBC</span><span>Bloomberg</span><span>Reuters</span><span>CNBC</span><span>Nikkei Asia</span><span>SCMP</span><span>CCTV</span><span>Phoenix TV</span><span>Xinhua</span></div>
     </div>
   </div>
 
