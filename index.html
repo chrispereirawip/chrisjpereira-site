@@ -229,13 +229,16 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
 @media (max-width:900px){
   .outlets{flex-wrap:wrap;justify-content:flex-start;gap:4px 16px}
   .hero{display:block;min-height:0}
-  .herobg{position:relative;height:auto;max-height:440px;object-position:50% 100%}
+  .herobg{position:relative;height:auto;max-height:none;aspect-ratio:860/520;object-position:50% 50%}
   .hero::after{display:none}
   .hero .wrap{display:block}
   .hero .copy{padding-block:36px 8px}
   .herocap{display:none}
-  .nav{display:none}
+  .bar .wrap{flex-wrap:wrap;row-gap:0}
   .bar .btn{margin-left:auto}
+  .nav{order:3;width:100%;margin-left:0;gap:22px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;font-size:14.5px;padding:2px 0 10px}
+  .nav::-webkit-scrollbar{display:none}
+  section,[id]{scroll-margin-top:112px}
   .facts .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
   .facts div.f:nth-child(3){border-left:0!important}
   .seen .wrap{padding-inline:34px}
@@ -248,6 +251,8 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
   section{padding-block:40px}
 }
 @media (max-width:600px){
+  .herobg{aspect-ratio:auto;max-height:460px;object-position:50% 0%}
+  .nav{gap:18px;font-size:14px}
   .seen .label{display:none}
   .outlets{font-size:13.5px;gap:4px 14px;flex-wrap:wrap;justify-content:flex-start}
   .media li{grid-template-columns:64px minmax(0,1fr);gap:0 12px}
@@ -274,7 +279,7 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
 
 <main id="top">
   <section class="hero">
-    <picture><source media="(max-width:900px)" srcset="img/hero-stage-mobile.jpg"><img class="herobg" src="img/hero-stage.jpg" width="1366" height="652" alt="Chris Pereira giving a keynote at CIDPEX on strategies for Chinese companies going global"></picture>
+    <picture><source media="(max-width:600px)" srcset="img/hero-stage-mobile.jpg"><source media="(max-width:900px)" srcset="img/hero-stage-tablet.jpg"><img class="herobg" src="img/hero-stage.jpg" width="1366" height="652" alt="Chris Pereira giving a keynote at CIDPEX on strategies for Chinese companies going global"></picture>
     <div class="wrap">
       <div class="copy">
         <span class="label">Founder and CEO, iMpact 美讯</span>
