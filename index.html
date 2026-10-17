@@ -118,7 +118,9 @@ h1 .zh{display:block;font-size:.3em;font-weight:500;letter-spacing:.32em;color:v
 .media .what{color:var(--muted)}
 .media a.what{color:var(--ink);text-decoration:none}
 .media a.what:hover{color:var(--red);text-decoration:underline}
-.wlist li{grid-template-columns:96px minmax(0,1.3fr) minmax(0,1fr)}
+.wlist li{grid-template-columns:96px 78px minmax(0,1.4fr) minmax(0,1fr)}
+.wlist .src{font-family:var(--display);font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--red)}
+#wmore{margin-top:18px}
 .wlist a.what{font-family:var(--display);font-weight:600;font-size:15px}
 .wlist .dek{color:var(--muted)}
 .media a.what::after{content:" ↗";font-size:12px;color:var(--red)}
@@ -210,7 +212,7 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
   .media li{grid-template-columns:64px minmax(0,1fr);gap:0 12px}
   .media .what,.media .dek{grid-column:2}
   .wlist li{grid-template-columns:1fr;gap:2px}
-  .wlist .what,.wlist .dek{grid-column:1}
+  .wlist .what,.wlist .dek,.wlist .src{grid-column:1}
   .wlist time{font-size:12.5px}
   .lead{padding:26px}
   .facts div.f{padding:20px 14px}
@@ -264,19 +266,10 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
   <section id="writing">
     <div class="wrap">
       <div class="head">
-        <div><span class="label">Writing</span><h2>Insights from China</h2><p class="lede">A weekly essay on what China's markets, brands and technology reveal about the West.</p></div>
+        <div><span class="label">Writing</span><h2>Insights from China</h2><p class="lede">Weekly essays on Substack, plus videos and LinkedIn pieces on what China's markets, brands and technology reveal about the West.</p></div>
       </div>
-      <ul class="media wlist">
-          <li><time datetime="2026-08-17">17 Aug 2026</time><a class="what" href="https://insightsfromchina.substack.com/p/western-brands-in-china-need-to-start" target="_blank" rel="noopener">Western Brands in China Need to Start from Zero</a><span class="dek">When “foreign” stopped meaning “better”</span></li>
-          <li><time datetime="2026-08-10">10 Aug 2026</time><a class="what" href="https://insightsfromchina.substack.com/p/what-makes-a-tech-product-award-worthy" target="_blank" rel="noopener">What Makes a Tech Product Award-Worthy? A Judge's Inside Guide</a><span class="dek">In conversation with tech journalist Eliane Fiolet</span></li>
-          <li><time datetime="2026-08-03">3 Aug 2026</time><a class="what" href="https://insightsfromchina.substack.com/p/what-to-expect-at-ifa-2026" target="_blank" rel="noopener">What to Expect at IFA 2026</a><span class="dek">The trends and technologies shaping Berlin</span></li>
-          <li><time datetime="2026-07-27">27 Jul 2026</time><a class="what" href="https://insightsfromchina.substack.com/p/how-louis-vuitton-is-winning-in-court" target="_blank" rel="noopener">How Louis Vuitton Is Winning in Court and Losing China</a><span class="dek">LV vs. 1.4 billion Chinese</span></li>
-          <li><time datetime="2026-07-20">20 Jul 2026</time><a class="what" href="https://insightsfromchina.substack.com/p/world-ai-conference-2026" target="_blank" rel="noopener">World AI Conference 2026</a><span class="dek">Could China be the world's AI gateway?</span></li>
-          <li><time datetime="2026-07-13">13 Jul 2026</time><a class="what" href="https://insightsfromchina.substack.com/p/trust-the-new-battleground-for-chinese" target="_blank" rel="noopener">Trust: The New Battleground for Chinese Companies Going Global</a><span class="dek">What comes after conquering manufacturing</span></li>
-      </ul>
-      <div class="after">
-        <span class="yt">All essays on <a href="https://insightsfromchina.substack.com" target="_blank" rel="noopener">Substack</a> · Also on YouTube: <a href="https://www.youtube.com/@OutsideLookingWest" target="_blank" rel="noopener">Outside Looking West</a></span>
-      </div>
+      <ul class="media wlist" id="writing-list"></ul>
+      <button class="btn" type="button" id="wmore">Show more</button>
     </div>
   </section>
 
@@ -371,6 +364,53 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
 <footer><div class="wrap"><span>Chris Pereira <span class="zh" lang="zh-Hans">彭家荣</span> · Shenzhen and Singapore</span><span>Updated October 2026</span></div></footer>
 
 <script>
+var WRITING=[
+ ["2026-10-06", "Substack", "Starbucks and America's Strange Logic of Isolating Xinjiang", "First cotton, then red dates. Now lattes.", "https://insightsfromchina.substack.com/p/starbucks-and-americas-strange-logic"],
+ ["2026-09-29", "Substack", "This Performative Marketing Has to Stop", "Only authentic brand building wins consumer trust", "https://insightsfromchina.substack.com/p/this-performative-marketing-has-to"],
+ ["2026-09-21", "Substack", "China's Consumers Have Seen It All", "A conversation with Olivia Plotnick", "https://insightsfromchina.substack.com/p/chinas-consumers-have-seen-it-all"],
+ ["2026-09-15", "Substack", "Shenzhen's Civil War Has Moved to Berlin", "We took 60 Chinese tech brands to IFA", "https://insightsfromchina.substack.com/p/shenzhens-civil-war-has-moved-to"],
+ ["2026-08-31", "Substack", "The West Needs A Renaissance", "China's cultural pride, and the West's lack of it", "https://insightsfromchina.substack.com/p/the-west-needs-a-renaissance"],
+ ["2026-08-24", "Substack", "Business Across Borders", "A conversation with Dennis Zhu", "https://insightsfromchina.substack.com/p/business-across-borders-a-conversation"],
+ ["2026-08-17", "Substack", "Western Brands in China Need to Start from Zero", "When \"foreign\" stopped meaning \"better\"", "https://insightsfromchina.substack.com/p/western-brands-in-china-need-to-start"],
+ ["2026-08-10", "Substack", "What Makes a Tech Product Award-Worthy? A Judge's Inside Guide", "In conversation with Eliane Fiolet", "https://insightsfromchina.substack.com/p/what-makes-a-tech-product-award-worthy"],
+ ["2026-08-03", "Substack", "What to Expect at IFA 2026", "The trends shaping Berlin", "https://insightsfromchina.substack.com/p/what-to-expect-at-ifa-2026"],
+ ["2026-07-27", "Substack", "How Louis Vuitton Is Winning in Court and Losing China", "LV vs. 1.4 billion Chinese", "https://insightsfromchina.substack.com/p/how-louis-vuitton-is-winning-in-court"],
+ ["2026-07-20", "Substack", "World AI Conference 2026", "Could China be the world's AI gateway?", "https://insightsfromchina.substack.com/p/world-ai-conference-2026"],
+ ["2026-07-13", "Substack", "Trust: The New Battleground for Chinese Companies Going Global", "What comes after conquering manufacturing", "https://insightsfromchina.substack.com/p/trust-the-new-battleground-for-chinese"],
+ ["2026-07-06", "Substack", "You Need to Visit China. Now.", "On history and China's relationship with the West", "https://insightsfromchina.substack.com/p/you-need-to-visit-china-now"],
+ ["2026-06-29", "Substack", "Lenovo at the FIFA World Cup 2026", "Scoring points where it matters most", "https://insightsfromchina.substack.com/p/lenovo-at-the-fifa-world-cup-2026"],
+ ["2026-06-22", "Substack", "What Are Western Incubators Incubating?", "China builds companies, Canada hosts wellness workshops", "https://insightsfromchina.substack.com/p/what-are-western-incubators-incubating"],
+ ["2026-06-15", "Substack", "Europe: Answer Your Damn Emails.", "China's competitive edge begins with a reply", "https://insightsfromchina.substack.com/p/europe-answer-your-damn-emails"],
+ ["2026-06-08", "Substack", "The New Wave Is Coming", "Why foreign companies are looking at China again", "https://insightsfromchina.substack.com/p/the-new-wave-is-coming"],
+ ["2026-05-25", "Substack", "Stop Reading About China. Come and See It.", "Shenzhen, APEC and Global Connect Show", "https://insightsfromchina.substack.com/p/stop-reading-about-china-come-and"],
+ ["2026-05-18", "Substack", "Carl Sagan Has a Message for Trump and Xi", "A cosmic perspective", "https://insightsfromchina.substack.com/p/carl-sagan-has-a-message-for-trump"],
+ ["2026-05-11", "Substack", "Western Companies Are Terrible at Customer Service in China", "Slack left China. Chinese users will remember how.", "https://insightsfromchina.substack.com/p/western-companies-are-terrible-at"],
+ ["2026-05-04", "Substack", "From Exporters to Ecosystem Builders", "How Chinese B2B firms are reshaping European industry", "https://insightsfromchina.substack.com/p/from-exporters-to-ecosystem-builders"],
+ ["2026-04-27", "Substack", "Law as Liberty", "Why Chinese society might be more \"free\" than the West", "https://insightsfromchina.substack.com/p/law-as-liberty"],
+ ["2026-04-20", "Substack", "Supply Chains Don't Lie", "The Canton Fair and the real direction of global trade", "https://insightsfromchina.substack.com/p/supply-chains-dont-lie"],
+ ["2026-04-13", "Substack", "Why China Is Suddenly Watching Its Cholesterol", "Health will guide consumer purchases in 2026", "https://insightsfromchina.substack.com/p/why-china-is-suddenly-watching-its"],
+ ["2026-04-06", "Substack", "China's \"Harbour of Stability\"", "Why global business interest is surging", "https://insightsfromchina.substack.com/p/the-surge-of-global-business-interest"],
+ ["2026-03-30", "Substack", "Guanxi Could Get You Recommended by DeepSeek", "AI is the new gatekeeper", "https://insightsfromchina.substack.com/p/guanxi-could-get-you-recommended"],
+ ["2026-03-23", "Substack", "Asia Is Serious About Merit and Competency", "The 15-second airport customs experience", "https://insightsfromchina.substack.com/p/asia-is-serious-about-merit-and-competency"],
+ ["2026-03-16", "Substack", "The Hard Road: China Is Winning an AI Race the West Doesn't Care About", "Dancing robots are not the main show", "https://insightsfromchina.substack.com/p/the-hard-road-china-is-winning-an"],
+ ["2026-03-11", "LinkedIn", "Trust is the biggest challenge for Chinese companies going global", "Lessons from 500+ companies expanding overseas", "https://www.linkedin.com/feed/update/urn:li:activity:7437335999665430528/"],
+ ["2026-03-09", "Substack", "China's \"Rest of World\" Strategy Is Opening Non-American Doors", "What the Iran war means for chuhai", "https://insightsfromchina.substack.com/p/chinas-rest-of-world-strategy-is"],
+ ["2026-03-02", "Substack", "Top 10 Lesser-Known Chinese Startups to Watch", "Beyond DeepSeek and TikTok", "https://insightsfromchina.substack.com/p/top-10-lesser-known-startups-to-watch"],
+ ["2026-02-23", "Substack", "Where Are the North Korean Startups?", "The elephant in the room", "https://insightsfromchina.substack.com/p/where-are-the-north-korean-startups"],
+ ["2026-02-16", "Substack", "Lessons From the Chinese Economic \"Miracle\"", "Size of government matters more than form", "https://insightsfromchina.substack.com/p/lessons-from-the-chinese-economic"],
+ ["2026-02-13", "Substack", "The Narrative Gap", "Insights from the 2026 LSE China Development Forum", "https://insightsfromchina.substack.com/p/the-narrative-gap"],
+ ["2026-02-09", "Substack", "The Bildungsroman of Chinese Brands", "Why hiding your origins means losing your edge", "https://insightsfromchina.substack.com/p/the-bildungsroman-of-chinese-brands"],
+ ["2026-02-02", "Substack", "Canada's FAFO Moment", "Antagonizing a superpower neighbour never ends well", "https://insightsfromchina.substack.com/p/canadas-fafo-moment"],
+ ["2026-01-24", "Substack", "Canada and China: Star-cross'd Lovers", "The truth about Canadian diplomacy with China", "https://insightsfromchina.substack.com/p/canada-and-china-star-crossd-lovers"],
+ ["2026-01-18", "Substack", "Parenting Is Improving in China", "An encouraging trend", "https://insightsfromchina.substack.com/p/parenting-is-improving-in-china"],
+ ["2026-01-17", "Substack", "Cars for Canola Is Not a Recipe for Canada's Prosperity", "China won't save Canada. Canada needs to save Canada.", "https://insightsfromchina.substack.com/p/cars-for-canola-is-not-a-recipe-for"],
+ ["2025-12-10", "LinkedIn", "Why a US \"crackdown\" now feels like a badge of honour for Chinese founders", "An ironic shift in China's global business", "https://www.linkedin.com/feed/update/urn:li:activity:7404354104875155456/"],
+ ["2025-02-25", "LinkedIn", "Shenzhen now hails helicopter taxis by QR code", "Innovation, Shenzhen style", "https://www.linkedin.com/feed/update/urn:li:activity:7300127313994649601/"],
+ ["2025-02-14", "LinkedIn", "Signs of a warming sentiment towards China in the US", "What I'm seeing on the ground", "https://www.linkedin.com/feed/update/urn:li:activity:7295984196769001474/"],
+ ["2024-11-13", "LinkedIn", "Many Chinese companies go abroad before they are ready", "Speed is China's strength and its overseas risk", "https://www.linkedin.com/feed/update/urn:li:activity:7262253527836557312/"],
+ ["2023-12", "LinkedIn", "The US Should Welcome Companies from China", "LinkedIn article", "https://www.linkedin.com/pulse/us-should-welcome-companies-from-china-chris-pereira-%E5%BD%AD%E5%AE%B6%E8%8D%A3-euccc/"],
+ ["2023-07", "LinkedIn", "The Evolving Landscape of Global Currency: The Case for Multi-polar Stability", "LinkedIn article", "https://www.linkedin.com/pulse/evolving-landscape-global-currency-case-multi-polar-chris-pereira-%E5%BD%AD%E5%AE%B6%E8%8D%A3/"]
+];
 var MEDIA=[
  ["2026-10", "Oct 2026", "China Daily", "Experts point to more scope for enhancing ties", "", "EN", "https://www.chinadaily.com.cn/a/202610/08/WS6ac7b143e4b06d4aa0561bf3.html"],
  ["2026-10", "Oct 2026", "Financial Times", "Chinese camera rivals battle for dominance after GoPro’s decline", "", "EN", "https://www.ft.com/content/b2730098-0767-401f-99b5-a53bd27bd659?syn-25a6b1a6=1"],
@@ -562,6 +602,11 @@ function render(){
 }
 more.addEventListener("click",function(){all=true;render()});
 render();
+(function(){var wl=document.getElementById("writing-list"),wm=document.getElementById("wmore"),wall=false;
+function M(d){var m=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],p=d.split("-");return (p[2]?(+p[2])+" ":"")+m[+p[1]-1]+" "+p[0]}
+function wr(){var shown=wall?WRITING:WRITING.slice(0,8);wl.innerHTML=shown.map(function(w){return '<li><time datetime="'+w[0]+'">'+M(w[0])+'</time><span class="src">'+esc(w[1])+'</span><a class="what" href="'+w[4]+'" target="_blank" rel="noopener">'+esc(w[2])+'</a><span class="dek">'+esc(w[3])+'</span></li>'}).join("");wm.hidden=wall||WRITING.length<=8}
+wm.addEventListener("click",function(){wall=true;wr()});wr();})();
+
 document.querySelectorAll("button[data-copy]").forEach(function(b){
   b.addEventListener("click",function(){
     var el=document.getElementById(b.dataset.copy),text=el.innerText.trim(),label=b.textContent;
