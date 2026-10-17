@@ -132,9 +132,9 @@ h1 .zh{display:block;font-size:.3em;font-weight:500;letter-spacing:.32em;color:v
 .speak img{width:100%;height:auto;border-radius:8px}
 .speak figcaption{font-family:var(--display);font-size:13px;color:var(--muted);margin-top:10px}
 .speak p{margin:0 0 18px}
-.topics{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:0}
-.topics li{font-family:var(--display);font-size:16.5px;font-weight:500;padding:10px 0;border-bottom:1px solid var(--hair);display:flex;gap:12px}
-.topics li::before{content:"";flex:none;width:8px;height:8px;margin-top:9px;background:var(--red);border-radius:50%}
+.topics{list-style:none;margin:0 0 22px;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
+.topics li{font-family:var(--display);font-size:15px;font-weight:500;padding:6px 0;border-bottom:1px solid var(--hair);display:flex;gap:10px}
+.topics li::before{content:"";flex:none;width:6px;height:6px;margin-top:8px;background:var(--red);border-radius:50%}
 .venues{font-size:17px;color:var(--ink);margin-top:10px!important}
 
 .gallery{display:grid;grid-template-columns:1.62fr 1fr;gap:16px;margin-bottom:40px}
@@ -146,6 +146,16 @@ h1 .zh{display:block;font-size:.3em;font-weight:500;letter-spacing:.32em;color:v
 .aboutphoto{margin:0 0 6px}
 .aboutphoto img{width:100%;height:auto;border-radius:8px}
 .speak{align-items:start}
+.training{margin-top:44px;padding-top:32px;border-top:1px solid var(--hair);display:grid;gap:22px}
+.trhead{display:grid;gap:8px}
+.trhead h3{font-size:26px}
+.trhead p{margin:0;max-width:62ch;color:var(--muted)}
+.trgrid{display:grid;border-top:1px solid var(--ink)}
+.tr{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:2px 24px;padding:8px 0;border-bottom:1px solid var(--hair);align-items:baseline}
+.tr:nth-child(even){background:rgba(0,0,0,.018)}
+.tr b{font-family:var(--display);font-weight:600;font-size:15px}
+.tr span{color:var(--muted);font-size:15px;line-height:1.4}
+.training .btn{justify-self:start}
 /* about */
 .about{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:56px}
 .about p{margin:0 0 16px;max-width:60ch}
@@ -203,6 +213,8 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
   .facts div.f:nth-child(n+3){border-top:1px solid var(--hair)}
   .writing,.speak,.about,.kit{grid-template-columns:1fr;gap:36px}
   .gallery{grid-template-columns:1fr}
+  .tr{grid-template-columns:1fr}
+  .topics{grid-template-columns:1fr}
   .gallery img{height:auto;max-height:340px}
   section{padding-block:64px}
 }
@@ -224,7 +236,7 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
   <div class="wrap">
     <a class="mark" href="#top"><span class="seal" lang="zh-Hans">彭家荣</span>Chris Pereira</a>
     <nav class="nav" aria-label="Sections">
-      <a href="#writing">Writing</a><a href="#media">Media</a><a href="#speaking">Speaking</a><a href="#about">About</a>
+      <a href="#writing">Writing</a><a href="#media">Media</a><a href="#speaking">Speaking</a><a href="#training">Training</a><a href="#about">About</a>
     </nav>
     <a class="btn solid" href="#contact">Contact</a>
   </div>
@@ -286,7 +298,7 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
   <section id="speaking">
     <div class="wrap">
       <div class="head">
-        <div><span class="label">Speaking</span><h2>Keynotes, panels and lectures</h2></div>
+        <div><span class="label">Speaking</span><h2>Keynotes, panels and training</h2></div>
         <a class="btn solid" href="#contact">Invite Chris to speak</a>
       </div>
       <div class="gallery">
@@ -296,17 +308,25 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
       <div class="speak">
         <div>
           <p>Chris speaks in English and Mandarin, drawing on two decades inside Chinese business. Favourite topics:</p>
-          <ul class="topics">
-            <li>Trust across borders</li>
-            <li>Chinese brands going global</li>
-            <li>Western brands in China</li>
-            <li>Shenzhen's innovation model</li>
-          </ul>
+          <ul class="topics"><li>Trust across borders</li><li>Chinese brands going global</li><li>Western brands in China</li><li>How to compete with China</li><li>Shenzhen's innovation model</li><li>China's AI and tech race</li><li>China's consumers today</li><li>US, China and the world economy</li><li>Cross-cultural leadership</li><li>What China shows the West</li></ul>
         </div>
         <div>
           <span class="label" style="color:var(--muted)">Past stages</span>
           <p class="venues">Harvard, Yale, Columbia, London Business School, Tsinghua, Peking University, the London Stock Exchange and IFA Berlin. Judge, CES Innovation Awards.</p>
         </div>
+      </div>
+      <div class="training" id="training">
+        <div class="trhead"><h3>Corporate training</h3><p>Half-day and full-day sessions for leadership teams, delivered in English or Mandarin, in person or online. Drawn from 20+ years in China and work with 500+ brands.</p></div>
+        <div class="trgrid">
+          <div class="tr"><b>How to compete with China</b><span>What Western companies can learn from, and how to win against, Chinese competitors at home and abroad</span></div>
+          <div class="tr"><b>Cross-cultural management</b><span>Leading mixed Chinese and Western teams: communication, decision making and trust</span></div>
+          <div class="tr"><b>Building trust in new markets</b><span>The iMpact 5R Methodology: government, industry, investor, community and talent relations</span></div>
+          <div class="tr"><b>Going global from China</b><span>A localization playbook for Chinese companies entering Europe and North America</span></div>
+          <div class="tr"><b>Doing business in China today</b><span>How the market, consumers and policy really work, for executives entering or rethinking China</span></div>
+          <div class="tr"><b>Brand building and reputation across borders</b><span>Earning media coverage, thought leadership and handling a crisis in a foreign market</span></div>
+          <div class="tr"><b>Spokesperson and media training</b><span>Preparing executives for international press, TV interviews and stage appearances</span></div>
+        </div>
+        <a class="btn solid" href="#contact">Request a training session</a>
       </div>
     </div>
   </section>
