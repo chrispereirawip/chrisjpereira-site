@@ -105,7 +105,7 @@ h1 .zh{display:block;font-size:.3em;font-weight:500;letter-spacing:.32em;color:v
 .posts a{color:var(--ink);text-decoration:none}
 .posts a:hover h3{color:var(--red)}
 .posts time{display:block;font-family:var(--display);font-size:13.5px;color:var(--muted);margin-bottom:4px}
-.after{display:flex;gap:12px 26px;flex-wrap:wrap;margin-top:24px;align-items:center}
+.after{display:flex;gap:12px 26px;flex-wrap:wrap;margin-top:16px;align-items:center}
 .yt{font-family:var(--display);font-size:15px;color:var(--muted)}
 .yt a{font-weight:600}
 
@@ -118,6 +118,9 @@ h1 .zh{display:block;font-size:.3em;font-weight:500;letter-spacing:.32em;color:v
 .media .what{color:var(--muted)}
 .media a.what{color:var(--ink);text-decoration:none}
 .media a.what:hover{color:var(--red);text-decoration:underline}
+.wlist li{grid-template-columns:96px minmax(0,1.3fr) minmax(0,1fr)}
+.wlist a.what{font-family:var(--display);font-weight:600;font-size:15px}
+.wlist .dek{color:var(--muted)}
 .media a.what::after{content:" ↗";font-size:12px;color:var(--red)}
 #more{margin-top:18px}
 
@@ -205,7 +208,7 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
   .seen .label{display:none}
   .outlets{font-size:13.5px;gap:4px 14px}
   .media li{grid-template-columns:64px minmax(0,1fr);gap:0 12px}
-  .media .what{grid-column:2}
+  .media .what,.media .dek{grid-column:2}
   .lead{padding:26px}
   .facts div.f{padding:20px 14px}
 }
@@ -260,24 +263,16 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
       <div class="head">
         <div><span class="label">Writing</span><h2>Insights from China</h2><p class="lede">A weekly essay on what China's markets, brands and technology reveal about the West.</p></div>
       </div>
-      <div class="writing">
-        <a class="lead" href="https://insightsfromchina.substack.com/p/western-brands-in-china-need-to-start" target="_blank" rel="noopener">
-          <span class="label">Latest essay · 17 Aug 2026</span>
-          <h3>Western Brands in China Need to Start from Zero</h3>
-          <p>Nike, Starbucks and Gucci built China on imported prestige. Guochao ended that, and the brands winning now hired local teams with real power.</p>
-          <span class="go">Read on Substack ↗</span>
-        </a>
-        <div>
-          <ul class="posts">
-            <li><a href="https://insightsfromchina.substack.com/p/how-louis-vuitton-is-winning-in-court" target="_blank" rel="noopener"><time datetime="2026-07-27">27 Jul 2026</time><h3>How Louis Vuitton Is Winning in Court and Losing China</h3></a></li>
-            <li><a href="https://insightsfromchina.substack.com/p/world-ai-conference-2026" target="_blank" rel="noopener"><time datetime="2026-07-20">20 Jul 2026</time><h3>World AI Conference 2026: Could China Be the World's AI Gateway?</h3></a></li>
-            <li><a href="https://insightsfromchina.substack.com/p/trust-the-new-battleground-for-chinese" target="_blank" rel="noopener"><time datetime="2026-07-13">13 Jul 2026</time><h3>Trust: The New Battleground for Chinese Companies Going Global</h3></a></li>
-          </ul>
-          <div class="after">
-            <a class="btn solid" href="https://insightsfromchina.substack.com" target="_blank" rel="noopener">Subscribe free</a>
-            <span class="yt">Also on YouTube: <a href="https://www.youtube.com/@OutsideLookingWest" target="_blank" rel="noopener">Outside Looking West</a></span>
-          </div>
-        </div>
+      <ul class="media wlist">
+          <li><time datetime="2026-08-17">17 Aug 2026</time><a class="what" href="https://insightsfromchina.substack.com/p/western-brands-in-china-need-to-start" target="_blank" rel="noopener">Western Brands in China Need to Start from Zero</a><span class="dek">When “foreign” stopped meaning “better”</span></li>
+          <li><time datetime="2026-08-10">10 Aug 2026</time><a class="what" href="https://insightsfromchina.substack.com/p/what-makes-a-tech-product-award-worthy" target="_blank" rel="noopener">What Makes a Tech Product Award-Worthy? A Judge's Inside Guide</a><span class="dek">In conversation with tech journalist Eliane Fiolet</span></li>
+          <li><time datetime="2026-08-03">3 Aug 2026</time><a class="what" href="https://insightsfromchina.substack.com/p/what-to-expect-at-ifa-2026" target="_blank" rel="noopener">What to Expect at IFA 2026</a><span class="dek">The trends and technologies shaping Berlin</span></li>
+          <li><time datetime="2026-07-27">27 Jul 2026</time><a class="what" href="https://insightsfromchina.substack.com/p/how-louis-vuitton-is-winning-in-court" target="_blank" rel="noopener">How Louis Vuitton Is Winning in Court and Losing China</a><span class="dek">LV vs. 1.4 billion Chinese</span></li>
+          <li><time datetime="2026-07-20">20 Jul 2026</time><a class="what" href="https://insightsfromchina.substack.com/p/world-ai-conference-2026" target="_blank" rel="noopener">World AI Conference 2026</a><span class="dek">Could China be the world's AI gateway?</span></li>
+          <li><time datetime="2026-07-13">13 Jul 2026</time><a class="what" href="https://insightsfromchina.substack.com/p/trust-the-new-battleground-for-chinese" target="_blank" rel="noopener">Trust: The New Battleground for Chinese Companies Going Global</a><span class="dek">What comes after conquering manufacturing</span></li>
+      </ul>
+      <div class="after">
+        <span class="yt">All essays on <a href="https://insightsfromchina.substack.com" target="_blank" rel="noopener">Substack</a> · Also on YouTube: <a href="https://www.youtube.com/@OutsideLookingWest" target="_blank" rel="noopener">Outside Looking West</a></span>
       </div>
     </div>
   </section>
