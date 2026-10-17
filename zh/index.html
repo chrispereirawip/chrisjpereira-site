@@ -160,7 +160,10 @@ h1 .zh{display:block;font-size:.3em;font-weight:500;letter-spacing:.32em;color:v
 .topics{list-style:none;margin:0 0 22px;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
 .topics li{font-family:var(--display);font-size:15px;font-weight:500;padding:6px 0;border-bottom:1px solid var(--hair);display:flex;gap:10px}
 .topics li::before{content:"";flex:none;width:6px;height:6px;margin-top:8px;background:var(--red);border-radius:50%}
-.venues{font-size:17px;color:var(--ink);margin-top:10px!important}
+.venues{font-size:17px;color:var(--ink);margin:10px 0 0;display:grid;gap:4px}
+.venues dt{font-family:var(--display);font-size:12.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin-top:10px}
+.venues dt:first-child{margin-top:0}
+.venues dd{margin:0;line-height:1.55}
 
 .gallery{display:grid;grid-template-columns:1.62fr 1fr;gap:16px;margin-bottom:28px}
 .gallery figure{margin:0;min-width:0}
@@ -370,7 +373,11 @@ h1 .en{display:block;font-size:.3em;font-weight:500;letter-spacing:.06em;color:v
         </div>
         <div>
           <span class="label" style="color:var(--muted)">曾受邀演讲</span>
-          <p class="venues">哈佛大学、耶鲁大学、哥伦比亚大学、伦敦商学院、清华大学、北京大学、伦敦证券交易所及德国柏林IFA展。CES创新奖评委。</p>
+          <dl class="venues">
+            <dt>高校</dt><dd>哈佛大学、耶鲁大学、哥伦比亚大学、伦敦商学院、伦敦政治经济学院、清华大学、北京大学、中欧国际工商学院、香港科技大学、香港大学、新加坡国立大学、英属哥伦比亚大学、武汉大学、郑州大学</dd>
+            <dt>大会与机构</dt><dd>里斯本 Web Summit、德国柏林IFA展、美国CES展、伦敦证券交易所、Plug and Play、CIDPEX</dd>
+            <dt>评委</dt><dd>CES创新奖</dd>
+          </dl>
         </div>
       </div>
       <div class="training" id="training">

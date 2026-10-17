@@ -170,7 +170,10 @@ h1 .zh{display:block;font-size:.3em;font-weight:500;letter-spacing:.32em;color:v
 .topics{list-style:none;margin:0 0 22px;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
 .topics li{font-family:var(--display);font-size:15px;font-weight:500;padding:6px 0;border-bottom:1px solid var(--hair);display:flex;gap:10px}
 .topics li::before{content:"";flex:none;width:6px;height:6px;margin-top:8px;background:var(--red);border-radius:50%}
-.venues{font-size:17px;color:var(--ink);margin-top:10px!important}
+.venues{font-size:17px;color:var(--ink);margin:10px 0 0;display:grid;gap:4px}
+.venues dt{font-family:var(--display);font-size:12.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin-top:10px}
+.venues dt:first-child{margin-top:0}
+.venues dd{margin:0;line-height:1.55}
 
 .gallery{display:grid;grid-template-columns:1.62fr 1fr;gap:16px;margin-bottom:28px}
 .gallery figure{margin:0;min-width:0}
@@ -376,7 +379,11 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
         </div>
         <div>
           <span class="label" style="color:var(--muted)">Past stages</span>
-          <p class="venues">Harvard, Yale, Columbia, London Business School, Tsinghua, Peking University, the London Stock Exchange and IFA Berlin. Judge, CES Innovation Awards.</p>
+          <dl class="venues">
+            <dt>Universities</dt><dd>Harvard, Yale, Columbia, London Business School, LSE, Tsinghua, Peking University, CEIBS, HKUST, HKU, NUS, UBC, Wuhan University, Zhengzhou University</dd>
+            <dt>Conferences and institutions</dt><dd>Web Summit Lisbon, IFA Berlin, CES, the London Stock Exchange, Plug and Play, CIDPEX</dd>
+            <dt>Judging</dt><dd>CES Innovation Awards</dd>
+          </dl>
         </div>
       </div>
       <div class="training" id="training">
