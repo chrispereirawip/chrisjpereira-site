@@ -172,9 +172,9 @@ h1 .zh{display:block;font-size:.3em;font-weight:500;letter-spacing:.32em;color:v
 .aboutphoto img{width:100%;height:auto;border-radius:8px}
 .speak{align-items:start}
 .training{margin-top:32px;padding-top:24px;border-top:1px solid var(--hair);display:grid;gap:22px}
-.trhead{display:grid;gap:8px}
+.trhead{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:8px 24px;align-items:baseline}
 .trhead h3{font-size:26px}
-.trhead p{margin:0;max-width:62ch;color:var(--muted)}
+.trhead p{margin:0;max-width:68ch;color:var(--muted)}
 .trgrid{display:grid;border-top:1px solid var(--ink)}
 .tr{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:2px 24px;padding:8px 0;border-bottom:1px solid var(--hair);align-items:baseline}
 .tr:nth-child(even){background:rgba(0,0,0,.018)}
@@ -245,6 +245,7 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
   .writing,.speak,.about,.kit{grid-template-columns:1fr;gap:36px}
   .gallery{grid-template-columns:1fr}
   .tr{grid-template-columns:1fr}
+  .trhead{grid-template-columns:1fr}
   .topics{grid-template-columns:1fr}
   .gallery img{height:auto;max-height:340px}
   section{padding-block:40px}
