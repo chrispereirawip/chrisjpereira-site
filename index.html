@@ -81,10 +81,11 @@ h1 .zh{display:block;font-size:.3em;font-weight:500;letter-spacing:.32em;color:v
 .facts span{display:block;margin-top:6px;font-family:var(--display);font-size:14px;color:var(--muted);line-height:1.35}
 
 /* featured */
-.seen{padding-block:40px 0}
-.seen .wrap{display:flex;align-items:baseline;gap:14px 34px;flex-wrap:wrap}
+.seen{padding-block:14px;border-bottom:1px solid var(--hair);background:var(--surface)}
+.seen .wrap{display:flex;align-items:baseline;gap:8px 28px;flex-wrap:wrap}
+.seen .label{font-size:11.5px}
 .seen .label{color:var(--muted)}
-.outlets{display:flex;flex-wrap:wrap;gap:10px 30px;font-family:var(--display);font-weight:600;font-size:18px;color:var(--ink);opacity:.8}
+.outlets{display:flex;flex-wrap:wrap;gap:6px 22px;font-family:var(--display);font-weight:600;font-size:15.5px;color:var(--ink);opacity:.78}
 
 /* writing */
 .writing{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:48px}
@@ -198,6 +199,8 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
   section{padding-block:64px}
 }
 @media (max-width:600px){
+  .seen .label{display:none}
+  .outlets{font-size:13.5px;gap:4px 14px}
   .media li{grid-template-columns:64px minmax(0,1fr);gap:0 12px}
   .media .what{grid-column:2}
   .lead{padding:26px}
@@ -217,6 +220,12 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
 </header>
 
 <main id="top">
+  <div class="seen">
+    <div class="wrap">
+      <span class="label">Featured and quoted in</span>
+      <div class="outlets"><span>Financial Times</span><span>Wall Street Journal</span><span>BBC</span><span>Bloomberg</span><span>Reuters</span><span>CNBC</span><span>Nikkei Asia</span><span>SCMP</span><span>CCTV</span><span>Phoenix TV</span><span>Xinhua</span></div>
+    </div>
+  </div>
   <section class="hero">
     <picture><source media="(max-width:900px)" srcset="img/hero-stage-mobile.jpg"><img class="herobg" src="img/hero-stage.jpg" width="1366" height="652" alt="Chris Pereira giving a keynote at CIDPEX on strategies for Chinese companies going global"></picture>
     <div class="wrap">
@@ -240,13 +249,6 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
       <div class="f"><strong>Ex-Huawei</strong><span>Senior Director, Global Public Affairs</span></div>
       <div class="f"><strong>Top 30</strong><span>Forbes China, brand globalization pioneers</span></div>
       <div class="f"><strong>2 books</strong><span>Trust 《信任》 and Rebuild 《新出海》</span></div>
-    </div>
-  </div>
-
-  <div class="seen">
-    <div class="wrap">
-      <span class="label">Featured and quoted in</span>
-      <div class="outlets"><span>Financial Times</span><span>Wall Street Journal</span><span>BBC</span><span>Bloomberg</span><span>Reuters</span><span>CNBC</span><span>Nikkei Asia</span><span>SCMP</span></div>
     </div>
   </div>
 
