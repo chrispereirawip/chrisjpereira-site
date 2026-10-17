@@ -123,6 +123,7 @@ h1 .zh{display:block;font-size:.3em;font-weight:500;letter-spacing:.32em;color:v
 #wmore{margin-top:18px}
 .wlist a.what{font-family:var(--display);font-weight:600;font-size:15px}
 .wlist .dek{color:var(--muted)}
+.wlist span.what{font-family:var(--display);font-weight:600;font-size:15px;color:var(--ink)}
 .media a.what::after{content:" ↗";font-size:12px;color:var(--red)}
 #more{margin-top:18px}
 
@@ -285,7 +286,7 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
   <section id="writing">
     <div class="wrap">
       <div class="head">
-        <div><span class="label">Essays and posts</span><h2>Writing</h2><p class="lede">My weekly Substack <em>Insights from China</em>, plus videos and LinkedIn pieces on what China reveals about the West.</p></div>
+        <div><span class="label">Essays and posts</span><h2>Writing</h2><p class="lede">My weekly Substack <em>Insights from China</em>, my Chinese-language WeChat account 美讯彭家荣, and LinkedIn pieces on what China reveals about the West.</p></div>
       </div>
       <ul class="media wlist" id="writing-list"></ul>
       <button class="btn" type="button" id="wmore">Show more</button>
@@ -392,7 +393,9 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
 
 <script>
 var WRITING=[
+ ["2026-10-08", "WeChat", "我们别再总是说“出海”", "美讯彭家荣 公众号", ""],
  ["2026-10-06", "Substack", "Starbucks and America's Strange Logic of Isolating Xinjiang", "First cotton, then red dates. Now lattes.", "https://insightsfromchina.substack.com/p/starbucks-and-americas-strange-logic"],
+ ["2026-10-05", "WeChat", "大平台为何集体向“AI垃圾”宣战？", "美讯彭家荣 公众号", ""],
  ["2026-09-29", "Substack", "This Performative Marketing Has to Stop", "Only authentic brand building wins consumer trust", "https://insightsfromchina.substack.com/p/this-performative-marketing-has-to"],
  ["2026-09-21", "Substack", "China's Consumers Have Seen It All", "A conversation with Olivia Plotnick", "https://insightsfromchina.substack.com/p/chinas-consumers-have-seen-it-all"],
  ["2026-09-15", "Substack", "Shenzhen's Civil War Has Moved to Berlin", "We took 60 Chinese tech brands to IFA", "https://insightsfromchina.substack.com/p/shenzhens-civil-war-has-moved-to"],
@@ -418,10 +421,13 @@ var WRITING=[
  ["2026-04-13", "Substack", "Why China Is Suddenly Watching Its Cholesterol", "Health will guide consumer purchases in 2026", "https://insightsfromchina.substack.com/p/why-china-is-suddenly-watching-its"],
  ["2026-04-06", "Substack", "China's \"Harbour of Stability\"", "Why global business interest is surging", "https://insightsfromchina.substack.com/p/the-surge-of-global-business-interest"],
  ["2026-03-30", "Substack", "Guanxi Could Get You Recommended by DeepSeek", "AI is the new gatekeeper", "https://insightsfromchina.substack.com/p/guanxi-could-get-you-recommended"],
+ ["2026-03-27", "WeChat", "AI Agent的“最后一公里”，是人", "美讯彭家荣 公众号", ""],
  ["2026-03-23", "Substack", "Asia Is Serious About Merit and Competency", "The 15-second airport customs experience", "https://insightsfromchina.substack.com/p/asia-is-serious-about-merit-and-competency"],
+ ["2026-03-20", "WeChat", "你可能正在用AI批量得罪客户", "美讯彭家荣 公众号", ""],
  ["2026-03-16", "Substack", "The Hard Road: China Is Winning an AI Race the West Doesn't Care About", "Dancing robots are not the main show", "https://insightsfromchina.substack.com/p/the-hard-road-china-is-winning-an"],
  ["2026-03-11", "LinkedIn", "Trust is the biggest challenge for Chinese companies going global", "Lessons from 500+ companies expanding overseas", "https://www.linkedin.com/feed/update/urn:li:activity:7437335999665430528/"],
  ["2026-03-09", "Substack", "China's \"Rest of World\" Strategy Is Opening Non-American Doors", "What the Iran war means for chuhai", "https://insightsfromchina.substack.com/p/chinas-rest-of-world-strategy-is"],
+ ["2026-03-06", "WeChat", "伊朗局势升级，“出海中东”要缓一缓吗？", "美讯彭家荣 公众号", ""],
  ["2026-03-02", "Substack", "Top 10 Lesser-Known Chinese Startups to Watch", "Beyond DeepSeek and TikTok", "https://insightsfromchina.substack.com/p/top-10-lesser-known-startups-to-watch"],
  ["2026-02-23", "Substack", "Where Are the North Korean Startups?", "The elephant in the room", "https://insightsfromchina.substack.com/p/where-are-the-north-korean-startups"],
  ["2026-02-16", "Substack", "Lessons From the Chinese Economic \"Miracle\"", "Size of government matters more than form", "https://insightsfromchina.substack.com/p/lessons-from-the-chinese-economic"],
@@ -435,7 +441,17 @@ var WRITING=[
  ["2025-02-25", "LinkedIn", "Shenzhen now hails helicopter taxis by QR code", "Innovation, Shenzhen style", "https://www.linkedin.com/feed/update/urn:li:activity:7300127313994649601/"],
  ["2025-02-14", "LinkedIn", "Signs of a warming sentiment towards China in the US", "What I'm seeing on the ground", "https://www.linkedin.com/feed/update/urn:li:activity:7295984196769001474/"],
  ["2024-11-13", "LinkedIn", "Many Chinese companies go abroad before they are ready", "Speed is China's strength and its overseas risk", "https://www.linkedin.com/feed/update/urn:li:activity:7262253527836557312/"],
+ ["2024-05-10", "WeChat", "百度公关危机背后折射出这些问题", "美讯彭家荣 公众号", ""],
+ ["2024-04-26", "WeChat", "广交会效果不好？我有这些建议", "美讯彭家荣 公众号", ""],
+ ["2024-04-25", "WeChat", "“中国制造”短视频火爆北美：偶然还是必然", "美讯彭家荣 公众号", ""],
+ ["2024-04-07", "WeChat", "AI正在改变广告营销、影视、游戏等行业", "美讯彭家荣 公众号", ""],
+ ["2024-02-19", "WeChat", "Sora并不完美，但我们正处于技术变革前夜", "美讯彭家荣 公众号", ""],
+ ["2024-02-17", "WeChat", "Temu一掷千金撒钱超级碗，中国企业需要效仿吗？", "美讯彭家荣 公众号", ""],
+ ["2024-02-12", "WeChat", "海外传播服务机构出现“李鬼”，品牌方应仔细辨别", "美讯彭家荣 公众号", ""],
+ ["2024-01-17", "WeChat", "CES 2024回顾：参展不是摆摊", "美讯彭家荣 公众号", ""],
+ ["2023-11-22", "WeChat", "OpenAI内杠，员工忙跳槽", "美讯彭家荣 公众号", ""],
  ["2023-11-10", "LinkedIn", "The US Should Welcome Companies from China", "Why openness serves America better than exclusion", "https://www.linkedin.com/pulse/us-should-welcome-companies-from-china-chris-pereira-%E5%BD%AD%E5%AE%B6%E8%8D%A3-euccc/"],
+ ["2023-09-25", "WeChat", "为什么说中国新能源车企应加速进入国际市场", "美讯彭家荣 公众号", ""],
  ["2023-08-22", "LinkedIn", "The Evolving Landscape of Global Currency: The Case for Multi-polar Stability", "The case for a multi-polar currency system", "https://www.linkedin.com/pulse/evolving-landscape-global-currency-case-multi-polar-chris-pereira-%E5%BD%AD%E5%AE%B6%E8%8D%A3/"],
  ["2023-04-30", "LinkedIn", "Access Denied: The Cost of Limited Access to AI", "What restricted AI access costs China and the West", "https://www.linkedin.com/pulse/access-denied-cost-limited-ai-chris-pereira-%E5%BD%AD%E5%AE%B6%E8%8D%A3/"],
  ["2023-04-24", "LinkedIn", "Leave TikTok Alone: The Smart Chinese Spies Are Headed to American Companies", "Why the TikTok ban misses the real issue", "https://www.linkedin.com/pulse/leave-tiktok-alone-smart-chinese-spies-headed-chris-pereira-%E5%BD%AD%E5%AE%B6%E8%8D%A3/"],
