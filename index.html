@@ -59,21 +59,17 @@ section{padding-block:88px}
 .bar .btn{padding:9px 18px;font-size:14px}
 
 /* hero */
-.hero{position:relative;overflow:hidden;padding:0}
-.hero .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:32px;align-items:end;min-height:min(640px,82vh)}
-.hero .copy{padding-block:72px 64px;display:grid;gap:24px;align-content:center;align-self:center}
-h1{font-size:clamp(54px,7.6vw,96px);font-weight:600;line-height:.95;letter-spacing:-.035em}
+.hero{position:relative;overflow:hidden;padding:0;background:#F6F2E9;min-height:min(660px,84vh);display:flex;align-items:center}
+.herobg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:22% 100%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(246,242,233,0) 0%,rgba(246,242,233,0) 40%,rgba(246,242,233,.85) 52%,rgba(246,242,233,.96) 100%);pointer-events:none}
+.hero .wrap{position:relative;z-index:1;width:100%;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
+.hero .copy{grid-column:2;padding-block:80px;display:grid;gap:22px}
+h1{font-size:clamp(52px,6.6vw,88px);font-weight:600;line-height:.95;letter-spacing:-.035em}
 h1 .zh{display:block;font-size:.3em;font-weight:500;letter-spacing:.32em;color:var(--red);margin-top:18px}
-.badge{margin:0;font-style:italic;font-size:clamp(22px,2.6vw,28px);line-height:1.3;max-width:24ch}
+.badge{margin:0;font-style:italic;font-size:clamp(22px,2.4vw,27px);line-height:1.3;max-width:26ch}
 .identity{margin:0;max-width:46ch;color:var(--muted);font-size:18px}
 .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
-.stagewrap{position:relative;align-self:end;height:100%;min-height:520px;display:flex;justify-content:center;align-items:flex-end}
-.arch{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:min(500px,96%);height:84%;background:linear-gradient(180deg,#F1E1D8 0%,var(--blush) 100%);border-radius:260px 260px 0 0}
-.arch::after{content:"";position:absolute;inset:-14px -14px 0 -14px;border:1.5px solid var(--red);border-bottom:0;border-radius:274px 274px 0 0;opacity:.55}
-.cutout{position:relative;width:min(430px,90%);height:auto;filter:drop-shadow(0 24px 30px rgba(60,20,10,.16))}
-.namecard{position:absolute;left:0;bottom:36px;background:var(--surface);border-left:3px solid var(--red);padding:10px 16px;font-family:var(--display);font-size:13.5px;line-height:1.35;box-shadow:0 10px 24px rgba(40,20,10,.10);max-width:230px}
-.namecard b{display:block;font-size:15px}
-.namecard span{color:var(--muted)}
+.herocap{position:absolute;left:max(20px,calc(50% - 540px));bottom:18px;z-index:1;font-family:var(--display);font-size:12.5px;letter-spacing:.06em;color:var(--muted);background:rgba(246,242,233,.85);padding:4px 10px;border-radius:999px}
 
 /* facts */
 .facts{background:var(--surface);border-block:1px solid var(--hair)}
@@ -127,8 +123,17 @@ h1 .zh{display:block;font-size:.3em;font-weight:500;letter-spacing:.32em;color:v
 .topics{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:0}
 .topics li{font-family:var(--display);font-size:16.5px;font-weight:500;padding:10px 0;border-bottom:1px solid var(--hair);display:flex;gap:12px}
 .topics li::before{content:"";flex:none;width:8px;height:8px;margin-top:9px;background:var(--red);border-radius:50%}
-.venues{font-size:15.5px;color:var(--muted)}
+.venues{font-size:17px;color:var(--ink);margin-top:10px!important}
 
+.gallery{display:grid;grid-template-columns:1.7fr 1.1fr .75fr;gap:14px;margin-bottom:40px}
+.gallery figure{margin:0;min-width:0}
+.gallery img{width:100%;height:360px;object-fit:cover;border-radius:8px}
+.gallery .g3 img{object-position:50% 70%}
+.gallery .g2 img{object-position:14% 50%}
+.gallery figcaption,.aboutphoto figcaption{font-family:var(--display);font-size:13px;color:var(--muted);margin-top:8px}
+.aboutphoto{margin:0 0 6px}
+.aboutphoto img{width:100%;height:auto;border-radius:8px}
+.speak{align-items:start}
 /* about */
 .about{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:56px}
 .about p{margin:0 0 16px;max-width:60ch}
@@ -164,25 +169,28 @@ footer{background:var(--red-deep);color:#fff}
 footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:10px 24px;flex-wrap:wrap;font-family:var(--display);font-size:14px}
 
 @media (max-width:900px){
+  .hero{display:block;min-height:0}
+  .herobg{position:relative;height:auto;max-height:440px;object-position:50% 100%}
+  .hero::after{display:none}
+  .hero .wrap{display:block}
+  .hero .copy{padding-block:36px 8px}
+  .herocap{display:none}
   .nav{display:none}
   .bar .btn{margin-left:auto}
-  .hero .wrap{grid-template-columns:1fr;min-height:0;gap:0}
-  .hero .copy{padding-block:44px 8px}
-  .stagewrap{min-height:0;height:auto;padding-top:12px}
-  .arch{height:78%}
-  .cutout{width:min(360px,86%)}
-  .namecard{left:0;bottom:22px}
   .facts .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
   .facts div.f:nth-child(3){border-left:0}
   .facts div.f:nth-child(n+3){border-top:1px solid var(--hair)}
   .writing,.speak,.about,.kit{grid-template-columns:1fr;gap:36px}
+  .gallery{grid-template-columns:1fr 1fr}
+  .gallery .g1{grid-column:1/-1}
+  .gallery img{height:240px}
+  .gallery .g1 img{height:auto}
   section{padding-block:64px}
 }
 @media (max-width:600px){
   .media li{grid-template-columns:1fr;gap:2px}
   .lead{padding:26px}
   .facts div.f{padding:20px 14px}
-  .namecard{display:none}
 }
 </style>
 </head>
@@ -191,7 +199,7 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
   <div class="wrap">
     <a class="mark" href="#top"><span class="seal" lang="zh-Hans">彭家荣</span>Chris Pereira</a>
     <nav class="nav" aria-label="Sections">
-      <a href="#writing">Writing</a><a href="#media">Media</a><a href="#speaking">Speaking</a><a href="#about">About</a><a href="#press">Press</a>
+      <a href="#writing">Writing</a><a href="#media">Media</a><a href="#speaking">Speaking</a><a href="#about">About</a>
     </nav>
     <a class="btn solid" href="#contact">Contact</a>
   </div>
@@ -199,6 +207,7 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
 
 <main id="top">
   <section class="hero">
+    <picture><source media="(max-width:900px)" srcset="img/hero-stage-mobile.jpg"><img class="herobg" src="img/hero-stage.jpg" width="1366" height="652" alt="Chris Pereira giving a keynote at CIDPEX on strategies for Chinese companies going global"></picture>
     <div class="wrap">
       <div class="copy">
         <span class="label">Founder and CEO, iMpact 美讯</span>
@@ -210,11 +219,8 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
           <a class="btn" href="#speaking">Invite Chris to speak</a>
         </div>
       </div>
-      <div class="stagewrap">
-        <div class="arch" aria-hidden="true"></div>
-        <img class="cutout" src="img/hero-cutout.webp" width="747" height="1040" alt="Chris Pereira giving a keynote, microphone in hand">
-      </div>
     </div>
+    <span class="herocap">Keynote at CIDPEX</span>
   </section>
 
   <div class="facts">
@@ -276,8 +282,12 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
         <div><span class="label">Speaking</span><h2>Keynotes, panels and lectures</h2></div>
         <a class="btn solid" href="#contact">Invite Chris to speak</a>
       </div>
+      <div class="gallery">
+        <figure class="g1"><img src="img/panel-hkust-byd.webp" width="1400" height="933" alt="Chris Pereira speaking on a panel with BYD's Li Yunfei at the HKUST BizInsight Forum in Shenzhen"><figcaption>With BYD's Li Yunfei, HKUST BizInsight Forum, Shenzhen 2025</figcaption></figure>
+        <figure class="g2"><img src="img/stage-cidpex.webp" width="1366" height="912" alt="Chris Pereira giving a keynote at CIDPEX"><figcaption>Keynote at CIDPEX</figcaption></figure>
+        <figure class="g3"><img src="img/partnerboost.webp" width="800" height="1200" alt="Chris Pereira in conversation on stage at a PartnerBoost and Rakuten Advertising event"><figcaption>PartnerBoost × Rakuten Advertising</figcaption></figure>
+      </div>
       <div class="speak">
-        <figure><img src="img/stage-cidpex.webp" width="1366" height="912" alt="Chris Pereira on stage at CIDPEX in front of a slide titled Strategies for Chinese Companies Going Global"><figcaption>Keynote at CIDPEX: strategies for Chinese companies going global</figcaption></figure>
         <div>
           <p>Chris speaks in English and Mandarin, drawing on two decades inside Chinese business. Favourite topics:</p>
           <ul class="topics">
@@ -286,7 +296,10 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
             <li>Western brands in China</li>
             <li>Shenzhen's innovation model</li>
           </ul>
-          <p class="venues">Past stages include Harvard, Yale, Columbia, London Business School, Tsinghua, Peking University, the London Stock Exchange and IFA Berlin. Judge, CES Innovation Awards.</p>
+        </div>
+        <div>
+          <span class="label" style="color:var(--muted)">Past stages</span>
+          <p class="venues">Harvard, Yale, Columbia, London Business School, Tsinghua, Peking University, the London Stock Exchange and IFA Berlin. Judge, CES Innovation Awards.</p>
         </div>
       </div>
     </div>
@@ -305,6 +318,7 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
           </div>
         </div>
         <div class="ventures">
+          <figure class="aboutphoto"><img src="img/fireside-jinjiang.webp" width="800" height="533" alt="Chris Pereira smiling during a fireside chat at the Jinjiang Awards CMO Club"><figcaption>Fireside chat, Jinjiang Awards CMO Club</figcaption></figure>
           <div class="venture"><b>iMpact 美讯</b><span>Consulting group that has helped 500+ companies build trust in new markets.</span><a href="https://www.impact5r.com" target="_blank" rel="noopener">impact5r.com ↗</a></div>
           <div class="venture"><b>Global Connect Show</b><span>Puts innovative brands in front of international media, buyers and investors at CES, IFA and beyond.</span><a href="https://www.globalconnect.show" target="_blank" rel="noopener">globalconnect.show ↗</a></div>
           <div class="venture"><b>Council for Global Brand Building <span class="zh" lang="zh-Hans">品信会</span></b><span>Founding Chairman. Sets standards for how far brands can be trusted.</span><a href="https://cgbb.org" target="_blank" rel="noopener">cgbb.org ↗</a></div>
