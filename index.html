@@ -289,6 +289,10 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
 #em a:hover{color:var(--red)}
 .sum p.wxnote{margin:10px 0 0;padding-top:8px;border-top:1px solid var(--hair);font-family:var(--display);font-size:13.5px;color:var(--muted)}
 .sum p.wxnote a{font-size:inherit}
+.head>.hsplit{flex:1 1 100%;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);column-gap:56px;align-items:end}
+.hsplit .label,.hsplit h2{grid-column:1}
+.hsplit .lede{grid-column:2;grid-row:1/span 2;max-width:62ch;align-self:end;padding-bottom:6px}
+@media (max-width:900px){.head>.hsplit{grid-template-columns:1fr}.hsplit .lede{grid-column:1;grid-row:auto;margin-top:8px;padding-bottom:0}}
 </style>
 </head>
 <body>
@@ -338,7 +342,7 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
   <section id="writing">
     <div class="wrap">
       <div class="head">
-        <div><span class="label">Essays and posts</span><h2>Writing</h2><p class="lede">My weekly Substack <em>Insights from China</em>, my Chinese-language WeChat account 美讯彭家荣, and LinkedIn pieces on what China reveals about the West.</p></div>
+        <div class="hsplit"><span class="label">Essays and posts</span><h2>Writing</h2><p class="lede">My weekly Substack <em>Insights from China</em>, my Chinese-language WeChat account 美讯彭家荣, and LinkedIn pieces on what China reveals about the West.</p></div>
       </div>
       <ul class="media wlist" id="writing-list"></ul>
       <button class="btn" type="button" id="wmore">Show more</button>
@@ -348,7 +352,7 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
   <section id="media" class="alt">
     <div class="wrap">
       <div class="head">
-        <div><span class="label">Op-eds, interviews, quotes and TV</span><h2>Commentary</h2><p class="lede">Hundreds of op-eds, interviews and quotes across TV, print, radio and podcasts, in English and Chinese. The full record:</p></div>
+        <div class="hsplit"><span class="label">Op-eds, interviews, quotes and TV</span><h2>Commentary</h2><p class="lede">Hundreds of op-eds, interviews and quotes across TV, print, radio and podcasts, in English and Chinese. The full record:</p></div>
       </div>
       <ul class="media" id="media-list"></ul>
       <button class="btn" type="button" id="more">Show all 189</button>

@@ -283,6 +283,10 @@ h1 .en{display:block;font-size:.3em;font-weight:500;letter-spacing:.06em;color:v
 #em a:hover{color:var(--red)}
 .sum p.wxnote{margin:10px 0 0;padding-top:8px;border-top:1px solid var(--hair);font-family:var(--display);font-size:13.5px;color:var(--muted)}
 .sum p.wxnote a{font-size:inherit}
+.head>.hsplit{flex:1 1 100%;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);column-gap:56px;align-items:end}
+.hsplit .label,.hsplit h2{grid-column:1}
+.hsplit .lede{grid-column:2;grid-row:1/span 2;max-width:62ch;align-self:end;padding-bottom:6px}
+@media (max-width:900px){.head>.hsplit{grid-template-columns:1fr}.hsplit .lede{grid-column:1;grid-row:auto;margin-top:8px;padding-bottom:0}}
 </style>
 </head>
 <body>
@@ -332,7 +336,7 @@ h1 .en{display:block;font-size:.3em;font-weight:500;letter-spacing:.06em;color:v
   <section id="writing">
     <div class="wrap">
       <div class="head">
-        <div><span class="label">公众号、Substack 与领英</span><h2>文章</h2><p class="lede">中文公众号<span class="wxacct">「美讯彭家荣」</span>、英文周刊 Substack《Insights from China》以及领英上的文章，探讨中国企业出海，以及中国给西方的启示。</p></div>
+        <div class="hsplit"><span class="label">公众号、Substack 与领英</span><h2>文章</h2><p class="lede">中文公众号<span class="wxacct">「美讯彭家荣」</span>、英文周刊 Substack《Insights from China》以及领英上的文章，探讨中国企业出海，以及中国给西方的启示。</p></div>
       </div>
       <ul class="media wlist" id="writing-list"><li>加载中…</li></ul>
       <button class="btn" type="button" id="wmore" hidden>查看更多</button>
@@ -342,7 +346,7 @@ h1 .en{display:block;font-size:.3em;font-weight:500;letter-spacing:.06em;color:v
   <section id="media" class="alt">
     <div class="wrap">
       <div class="head">
-        <div><span class="label">专栏、专访、引用与电视</span><h2>媒体评论</h2><p class="lede">数百篇专栏文章、专访与引述，覆盖电视、报刊、电台与播客，中英文兼有。完整记录如下：</p></div>
+        <div class="hsplit"><span class="label">专栏、专访、引用与电视</span><h2>媒体评论</h2><p class="lede">数百篇专栏文章、专访与引述，覆盖电视、报刊、电台与播客，中英文兼有。完整记录如下：</p></div>
       </div>
       <ul class="media" id="media-list"><li>加载中…</li></ul>
       <button class="btn" type="button" id="more" hidden>查看全部</button>
