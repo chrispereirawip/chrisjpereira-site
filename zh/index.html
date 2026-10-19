@@ -291,6 +291,7 @@ h1 .en{display:block;font-size:.3em;font-weight:500;letter-spacing:.06em;color:v
 @media (max-width:380px){.mark{font-size:14.5px;gap:6px}.seal{font-size:11.5px;padding:4px 5px 4px 6px}.bar .langsw{padding:4px 8px}.bar .langsw+.btn{padding:7px 11px}}
 #em a{color:inherit;text-decoration:none}
 #em a:hover{color:var(--red)}
+.sum > a+a{margin-left:20px}
 .sum p.wxnote{margin:10px 0 0;padding-top:8px;border-top:1px solid var(--hair);font-family:var(--display);font-size:13.5px;color:var(--muted)}
 .sum p.wxnote a{font-size:inherit}
 .head>.hsplit{flex:1 1 100%;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);column-gap:56px;align-items:end}
@@ -463,7 +464,8 @@ fetch("/index.html",{cache:"no-cache"}).then(function(r){return r.text()}).then(
   wl.addEventListener("click",toggle);
   wm.addEventListener("click",function(){var was=wall;wall=!wall;wr();if(was)document.getElementById("writing").scrollIntoView({behavior:"smooth"})});wr();
   var list=document.getElementById("media-list"),more=document.getElementById("more"),all=false;
-  function render(){var shown=all?MEDIA:MEDIA.slice(0,12);list.innerHTML=shown.map(function(m){var zh=m[5]==="中文"?' zh':'';var d=m[6]?'<a class="what'+zh+'" href="'+m[6]+'" target="_blank" rel="noopener">'+esc(m[3])+'</a>':'<span class="what'+zh+'">'+esc(m[3])+'</span>';if(m[8])d='<span class="tcell">'+d+'<span class="en">'+esc(m[8])+'</span></span>';var b=m[7]?'<button type="button" class="sumbtn" aria-expanded="false">摘要</button>':'<span></span>';var sm=m[7]?'<div class="sum" hidden>'+sumP(m[7])+(m[6]?'<a href="'+m[6]+'" target="_blank" rel="noopener">阅读全文 ↗</a>':'')+'</div>':'';return '<li><time datetime="'+m[0]+'">'+D(m[0])+'</time><span class="outlet" title="'+esc(m[2])+'">'+esc(m[2])+'</span>'+d+b+sm+'</li>'}).join("");more.hidden=false;more.textContent=all?"收起":"查看全部 "+MEDIA.length+" 条"}
+  function fl(m){function k(u,t){if(/podcast/i.test(t)||/podcast|spotify|apple\.com\/podcast/i.test(u))return 'p';if(/^(tv|video)$/i.test(t)||/youtube\.com|youtu\.be|bilibili\.com|weibo\.com|dailymotion\.com|channels\.weixin/i.test(u))return 'v';return 'a'}var L={a:'阅读全文 ↗',v:'观看完整视频 ↗',p:'收听完整节目 ↗'},o='';if(m[6])o+='<a href="'+m[6]+'" target="_blank" rel="noopener">'+L[k(m[6],m[4])]+'</a>';if(m[9])o+='<a href="'+m[9]+'" target="_blank" rel="noopener">'+L[k(m[9],'video')]+'</a>';return o}
+  function render(){var shown=all?MEDIA:MEDIA.slice(0,12);list.innerHTML=shown.map(function(m){var zh=m[5]==="中文"?' zh':'';var d=m[6]?'<a class="what'+zh+'" href="'+m[6]+'" target="_blank" rel="noopener">'+esc(m[3])+'</a>':'<span class="what'+zh+'">'+esc(m[3])+'</span>';if(m[8])d='<span class="tcell">'+d+'<span class="en">'+esc(m[8])+'</span></span>';var b=m[7]?'<button type="button" class="sumbtn" aria-expanded="false">摘要</button>':'<span></span>';var sm=m[7]?'<div class="sum" hidden>'+sumP(m[7])+fl(m)+'</div>':'';return '<li><time datetime="'+m[0]+'">'+D(m[0])+'</time><span class="outlet" title="'+esc(m[2])+'">'+esc(m[2])+'</span>'+d+b+sm+'</li>'}).join("");more.hidden=false;more.textContent=all?"收起":"查看全部 "+MEDIA.length+" 条"}
   list.addEventListener("click",toggle);
   more.addEventListener("click",function(){var wasAll=all;all=!all;render();if(wasAll)document.getElementById("media").scrollIntoView({behavior:"smooth"})});render();
 }).catch(function(){document.getElementById("writing-list").innerHTML='<li><a href="/#writing">查看英文页面</a></li>';document.getElementById("media-list").innerHTML='<li><a href="/#media">查看英文页面</a></li>'});
