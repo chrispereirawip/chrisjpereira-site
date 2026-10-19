@@ -270,7 +270,7 @@ a{color:var(--red);text-underline-offset:3px}
 .bar .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
 .mark{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:600;font-size:18px;color:var(--ink);text-decoration:none;margin-right:auto}
 .seal{background:var(--red);color:#fff;font-size:14px;padding:4px 7px;border-radius:3px}
-.bar a.back{font-family:var(--display);font-weight:500;font-size:15px;color:var(--ink);text-decoration:none}
+.nav{display:flex;gap:22px}.nav a{font-family:var(--display);font-weight:500;font-size:15px;color:var(--ink);text-decoration:none}.nav a[aria-current]{color:var(--red)}
 .btn{display:inline-flex;align-items:center;font-family:var(--display);font-weight:600;font-size:15px;padding:11px 20px;border-radius:999px;text-decoration:none;border:1.5px solid var(--red);background:var(--red);color:#fff}
 .btn:hover{background:var(--red-deep);border-color:var(--red-deep)}
 .label{font-family:var(--display);font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
@@ -294,14 +294,14 @@ figure.q figcaption a{font-weight:600;text-decoration:none;white-space:nowrap}
 .cta{padding-top:40px;padding-bottom:64px;border-top:1px solid var(--hair)}
 .cta p{max-width:60ch;color:var(--muted);margin:8px 0 18px}
 footer{border-top:1px solid var(--hair);padding:22px 0 40px;font-family:var(--display);font-size:13.5px;color:var(--muted)}
-@media (max-width:760px){.wrap{padding:0 16px}.qs{grid-template-columns:1fr}.bar a.back{display:none}figure.q blockquote{font-size:18px}}
+@media (max-width:760px){.wrap{padding:0 16px}.qs{grid-template-columns:1fr}.nav{display:none}figure.q blockquote{font-size:18px}}
 </style>
 <script type="application/ld+json">__LD__</script>
 </head>
 <body>
 <header class="bar"><div class="wrap">
   <a class="mark" href="/"><span class="seal" lang="zh-Hans">彭家荣</span>Chris Pereira</a>
-  <a class="back" href="/#media">All commentary</a>
+  <nav class="nav" aria-label="Sections"><a href="/#writing">Writing</a><a href="/#media">Commentary</a><a href="/quotes/" aria-current="page">Quotes</a><a href="/#speaking">Speaking</a><a href="/#training">Training</a><a href="/#about">About</a></nav>
   <a class="btn" href="/#contact">Contact</a>
 </div></header>
 <main>
