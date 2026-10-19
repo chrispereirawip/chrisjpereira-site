@@ -1,0 +1,510 @@
+[
+ {
+  "key": "trust",
+  "title": "Trust is the new competitive edge",
+  "quotes": [
+   {
+    "text": "We build businesses separately. We build trust together.",
+    "lang": "en",
+    "outlet": "London Business School",
+    "date": "2026-10",
+    "type": "speaking",
+    "url": ""
+   },
+   {
+    "text": "Innovation has been commodified. Human trust is the new moat.",
+    "lang": "en",
+    "outlet": "IFA Berlin",
+    "date": "2026-09",
+    "type": "speaking",
+    "url": ""
+   },
+   {
+    "text": "China has innovation but needs trust. Europe has trust but needs innovation.",
+    "lang": "en",
+    "outlet": "IFA Berlin",
+    "date": "2026-09",
+    "type": "speaking",
+    "url": ""
+   },
+   {
+    "text": "Chinese brands used to come to Berlin to be seen. Now they come to be trusted.",
+    "lang": "en",
+    "outlet": "IFA Berlin",
+    "date": "2026-09",
+    "type": "speaking",
+    "url": ""
+   },
+   {
+    "text": "Success overseas depends on winning belief before you win business",
+    "lang": "en",
+    "outlet": "CKGSB",
+    "date": "2026-07",
+    "type": "interview",
+    "url": "https://english.ckgsb.edu.cn/knowledge/article/building-trust-the-key-element-in-overseas-expansion/"
+   },
+   {
+    "text": "trust functions as a multiplier sitting at the foundation of product and price.",
+    "lang": "en",
+    "outlet": "CKGSB",
+    "date": "2026-07",
+    "type": "interview",
+    "url": "https://english.ckgsb.edu.cn/knowledge/article/building-trust-the-key-element-in-overseas-expansion/"
+   },
+   {
+    "text": "Chinese companies are competing on trust as much as on hardware.",
+    "lang": "en",
+    "outlet": "SCMP",
+    "date": "2025-09",
+    "type": "column",
+    "url": "https://www.scmp.com/opinion/china-opinion/article/3323996/why-labubu-craze-just-start-chinas-branding-boom"
+   },
+   {
+    "text": "In overseas markets, the product is not the core issue. The biggest challenge is trust.",
+    "original": "在海外市场，产品不是核心问题，最大的挑战是信任。",
+    "lang": "zh",
+    "outlet": "新华网",
+    "date": "2025-09",
+    "type": "interview",
+    "url": "https://www.news.cn/20250923/cd48cce5754949afaf6f12cdfa4015d0/c.html"
+   },
+   {
+    "text": "All business is built on trust. Overseas, a company has to deal with government, hire people, find customers and investors, and work with local associations. Behind all of it is the question of trust.",
+    "original": "所有的生意都建立在信任的基础上。企业到了海外市场，需要和政府打交道，需要招人、找客户和投资人，需要跟当地的协会进行合作，背后都是信任的问题。",
+    "lang": "zh",
+    "outlet": "福布斯中国",
+    "date": "2024-02",
+    "type": "interview",
+    "url": "https://mp.weixin.qq.com/s/AJYU3hlVtm0AvIFxBdIoFg"
+   },
+   {
+    "text": "Many people shop on Temu, but that does not mean they trust the platform.",
+    "original": "很多人虽然在Temu平台上购物，但是并不意味着他们信任这个平台。",
+    "lang": "zh",
+    "outlet": "36氪（授权转载）",
+    "date": "2024-04",
+    "type": "reprint",
+    "url": "https://36kr.com/p/2730034996646537"
+   },
+   {
+    "text": "If nobody locally really knows you, then when something goes wrong, it is hard to find anyone to explain on your behalf.",
+    "original": "如果当地没有人真正了解你，那么出现问题的时候，很难有人替你解释。",
+    "lang": "zh",
+    "outlet": "新浪财经",
+    "date": "2026-09",
+    "type": "interview",
+    "url": "https://finance.sina.com.cn/hy/hyjz/2026-09-18/doc-inisfazm0219134.shtml"
+   },
+   {
+    "text": "This trust deficit means that they need to be extra competitive in terms of product and price in order for the market to choose them.",
+    "lang": "en",
+    "outlet": "Deutsche Welle",
+    "date": "2026-10",
+    "type": "quoted",
+    "url": "https://www.dw.com/en/chinese-consumer-tech-outpacing-western-brands/a-79646187"
+   }
+  ]
+ },
+ {
+  "key": "localization",
+  "title": "Going global means going local",
+  "quotes": [
+   {
+    "text": "This is no longer simply about exporting products. We have entered the stage of deep localization.",
+    "original": "现在已经不是简单的产品出海，而是进入了深度本土化的阶段。",
+    "lang": "zh",
+    "outlet": "新浪财经",
+    "date": "2026-09",
+    "type": "interview",
+    "url": "https://finance.sina.com.cn/hy/hyjz/2026-09-18/doc-inisfazm0219134.shtml"
+   },
+   {
+    "text": "Exporting products is one thing. Operating like a local company in New York, Berlin or Mexico City is something completely different.",
+    "original": "出口产品是一回事，但在纽约、柏林或者墨西哥城像一家当地企业一样运营，是完全不同的事情。",
+    "lang": "zh",
+    "outlet": "新浪财经",
+    "date": "2026-09",
+    "type": "interview",
+    "url": "https://finance.sina.com.cn/hy/hyjz/2026-09-18/doc-inisfazm0219134.shtml"
+   },
+   {
+    "text": "the physical footprint (the office) is the easiest and least meaningful part of localization",
+    "lang": "en",
+    "outlet": "CKGSB",
+    "date": "2026-07",
+    "type": "interview",
+    "url": "https://english.ckgsb.edu.cn/knowledge/article/building-trust-the-key-element-in-overseas-expansion/"
+   },
+   {
+    "text": "Chinese officials and companies recognize that manufacturing needs to be localized to a certain degree. One reason is to assuage the challenges of exporting, another is to create trust locally.",
+    "lang": "en",
+    "outlet": "Deutsche Welle",
+    "date": "2026-10",
+    "type": "quoted",
+    "url": "https://www.dw.com/en/chinese-consumer-tech-outpacing-western-brands/a-79646187"
+   },
+   {
+    "text": "What is actually happening is Chinese brands and companies are learning how to localize in overseas markets, from branding to team building,\" he said.",
+    "lang": "en",
+    "outlet": "Nikkei Asia",
+    "date": "2024-01",
+    "type": "interview",
+    "url": "https://asia.nikkei.com/Business/Business-Spotlight/China-s-slump-pushes-its-smaller-companies-overseas-for-growth"
+   },
+   {
+    "text": "When Chinese companies run into problems overseas, it is often not because they are Chinese, or held back by some 'original sin'. I even think Chinese companies have advantages overseas. The problem is usually that they haven't built good local relationships.",
+    "original": "为什么中国企业在海外出现问题，往往不是因为它们是中国企业，也不是受到所谓‘原罪’的制约，我甚至认为中国企业在海外有优势。问题往往在于它们在本地没有建立好人脉关系。",
+    "lang": "zh",
+    "outlet": "亿邦动力",
+    "date": "2023-12",
+    "type": "interview",
+    "url": "https://m.ebrun.com/535963.html"
+   },
+   {
+    "text": "Our philosophy is to help Chinese companies going abroad achieve 'glocalization': not to help Chinese companies enter the North American market one by one, but to help each of them become a quality local brand in North America.",
+    "original": "我们所秉承的理念是助力中国出海企业‘全球本地化’，不是帮助一个个中国企业进入北美市场，而是助力一个个中国企业成为北美市场本地优质品牌。",
+    "lang": "zh",
+    "outlet": "国际在线",
+    "date": "2023-03",
+    "type": "",
+    "url": "https://gd.cri.cn/2023-03-23/81004aff-93c6-53c5-94c6-a2475ab3c12e.html"
+   },
+   {
+    "text": "I suggest being decisive in delegating authority to the teams managing overseas operations, while making sure responsibility and authority are matched.",
+    "original": "我建议管理海外的团队放权要果断，同时做到责任和权力对等。",
+    "lang": "zh",
+    "outlet": "观察者网",
+    "date": "2024-06",
+    "type": "column",
+    "url": "https://www.guancha.cn/ChrisPereira/2024_06_20_738580_1.shtml"
+   },
+   {
+    "text": "Overseas expansion fails when a company treats it as only a sales or marketing problem,",
+    "lang": "en",
+    "outlet": "HKUST Newsletter",
+    "date": "2026-02",
+    "type": "feature",
+    "url": "https://alum.hkust.edu.hk/highlight-story-dec-2025-jan-2026"
+   }
+  ]
+ },
+ {
+  "key": "competition",
+  "title": "Shenzhen speed and the end of cheap",
+  "quotes": [
+   {
+    "text": "The strong competition . . . in the local Shenzhen market is generating extremely efficient . . . companies that are going overseas now.",
+    "lang": "en",
+    "outlet": "Financial Times",
+    "date": "2026-10",
+    "type": "quoted",
+    "url": "https://www.ft.com/content/b2730098-0767-401f-99b5-a53bd27bd659?syn-25a6b1a6=1"
+   },
+   {
+    "text": "China is still making affordable products today. But the products are also high quality.",
+    "lang": "en",
+    "outlet": "Deutsche Welle",
+    "date": "2026-10",
+    "type": "quoted",
+    "url": "https://www.dw.com/en/chinese-consumer-tech-outpacing-western-brands/a-79646187"
+   },
+   {
+    "text": "Shenzhen is exporting not just products, but entire industrial ecosystems.",
+    "lang": "en",
+    "outlet": "China Daily",
+    "date": "2026-08",
+    "type": "column",
+    "url": "https://www.chinadaily.com.cn/a/202608/05/WS6a72916ea310986e2b46904e.html"
+   },
+   {
+    "text": "I think it's clear that the 'brand moat' of most Western brands is currently eroding in the face of Chinese competition around the globe",
+    "lang": "en",
+    "outlet": "KrASIA",
+    "date": "2026-03",
+    "type": "",
+    "url": "https://kr-asia.com/chinese-furniture-maker-takes-on-us-incumbents-in-bid-to-expand-foothold"
+   },
+   {
+    "text": "The little gremlin doll made it clear that a brand being from China is no longer shorthand for cheap.",
+    "lang": "en",
+    "outlet": "SCMP",
+    "date": "2025-09",
+    "type": "column",
+    "url": "https://www.scmp.com/opinion/china-opinion/article/3323996/why-labubu-craze-just-start-chinas-branding-boom"
+   },
+   {
+    "text": "Future competition will not be on price. It will be competition between premium brands and on quality. That is where companies going global are heading.",
+    "original": "未来的竞争不是在价格上竞争，而是高端品牌的竞争、质量的竞争，这是企业出海未来发展的趋势。",
+    "lang": "zh",
+    "outlet": "深圳特区报",
+    "date": "2024-04",
+    "type": "feature",
+    "url": "http://sztqb.sznews.com/MB/content/202404/19/content_3201044.html"
+   },
+   {
+    "text": "This wave of going global isn't because the domestic market is too competitive. I think it's because China's industrial upgrading has reached a point where we can out-compete many Western industries in technology, management and drive.",
+    "original": "出海这个潮流，不是因为国内太卷、压力大而选择走出去，我认为是因为中国的产业升级已经走到了一定程度，我们在科技、管理模式和奋斗精神等方面可以竞争得过欧美很多行业。",
+    "lang": "zh",
+    "outlet": "亿邦动力",
+    "date": "2023-12",
+    "type": "interview",
+    "url": "https://m.ebrun.com/535963.html"
+   }
+  ]
+ },
+ {
+  "key": "europe",
+  "title": "What Europe and China can learn from each other",
+  "quotes": [
+   {
+    "text": "What Europe is teaching Chinese companies is: you can move at Chinese speed, but in the direction of European laws and regulations.",
+    "lang": "en",
+    "outlet": "Euronews România",
+    "date": "2026-09",
+    "type": "interview",
+    "url": "https://www.euronews.ro/articole/de-la-made-in-china-la-expansiunea-globala-cum-au-ajuns-companiile-chinezesti-sa"
+   },
+   {
+    "text": "If you want to win in the market, you have to react quickly. But fast does not mean ignoring the law.",
+    "lang": "en",
+    "outlet": "Euronews România",
+    "date": "2026-09",
+    "type": "interview",
+    "url": "https://www.euronews.ro/articole/de-la-made-in-china-la-expansiunea-globala-cum-au-ajuns-companiile-chinezesti-sa"
+   },
+   {
+    "text": "China taught me speed. Europe taught me weekends. The winners will need both.",
+    "lang": "en",
+    "outlet": "IFA Berlin",
+    "date": "2026-09",
+    "type": "speaking",
+    "url": ""
+   },
+   {
+    "text": "Chinese regulators tell you very clearly and quickly what you can do. That speed helps companies iterate and succeed overseas. If you're waiting weeks for a response, you're going to lose business.",
+    "lang": "en",
+    "outlet": "Deutsche Welle",
+    "date": "2026-10",
+    "type": "quoted",
+    "url": "https://www.dw.com/en/chinese-consumer-tech-outpacing-western-brands/a-79646187"
+   },
+   {
+    "text": "The robot dancing on stage is marketing. The robot on the night shift is not.",
+    "lang": "en",
+    "outlet": "IFA Berlin",
+    "date": "2026-09",
+    "type": "speaking",
+    "url": ""
+   }
+  ]
+ },
+ {
+  "key": "geopolitics",
+  "title": "Tariffs, tension and staying engaged",
+  "quotes": [
+   {
+    "text": "There are restrictions, but it's better to have a clear no than maybe in business.",
+    "lang": "en",
+    "outlet": "Rest of World",
+    "date": "2026-10",
+    "type": "",
+    "url": "https://restofworld.org/2026/insta360-us-dji-sanctions-drones-cameras/"
+   },
+   {
+    "text": "Rather than a complete decoupling, we're seeing a strategic rebalancing — diversification, not divorce.",
+    "lang": "en",
+    "outlet": "Benzinga",
+    "date": "2025-05",
+    "type": "interview",
+    "url": "https://www.benzinga.com/news/global/25/05/45337755/us-and-china-remain-deeply-economically-intertwined-and-complete-disengagement-would-be-mutually-damaging-says-chris-pereira"
+   },
+   {
+    "text": "The more connections we remove from the relationship, the easier it is for conflict to arise,",
+    "lang": "en",
+    "outlet": "SCMP",
+    "date": "2024-11",
+    "type": "quoted",
+    "url": "https://finance.yahoo.com/news/chinese-tech-workers-report-us-093000326.html"
+   },
+   {
+    "text": "Tariffs are an issue on another level. They force us to climb toward the high end of the value chain and industrial chain, which is not a bad thing for brand building.",
+    "original": "关税则是另一个层面的问题，它逼着我们往价值链、产业链高端攀升，对品牌建设来说并不是坏事。",
+    "lang": "zh",
+    "outlet": "观察者网",
+    "date": "2024-06",
+    "type": "column",
+    "url": "https://www.guancha.cn/ChrisPereira/2024_06_20_738580_1.shtml"
+   },
+   {
+    "text": "Predictable leader contact gives governments and companies greater clarity and stability for them to make longer-term decisions.",
+    "lang": "en",
+    "outlet": "China Daily",
+    "date": "2026-10",
+    "type": "",
+    "url": "https://www.chinadaily.com.cn/a/202610/08/WS6ac7b143e4b06d4aa0561bf3.html"
+   },
+   {
+    "text": "The main constraints will be political rather than technical. Market access and trust will be key,",
+    "lang": "en",
+    "outlet": "CKGSB Knowledge",
+    "date": "2026-01",
+    "type": "quoted",
+    "url": "https://english.ckgsb.edu.cn/knowledge/article/dji-growth-challenges-under-us-drone-regulations/"
+   },
+   {
+    "text": "Selling fear is good for business, good for political careers and very bad for our future prosperity.",
+    "lang": "en",
+    "outlet": "Business in Vancouver",
+    "date": "2022-10",
+    "type": "column",
+    "url": "https://biv.com/article/2022/10/chris-pereira-worsening-geopolitical-crisis-china-or-signs-stability"
+   }
+  ]
+ },
+ {
+  "key": "brand",
+  "title": "Brand, story and reputation",
+  "quotes": [
+   {
+    "text": "If you don’t have the third-party endorsement, you shouldn’t do advertising.",
+    "lang": "en",
+    "outlet": "Yanko Design",
+    "date": "2025-11",
+    "type": "interview",
+    "url": "https://www.yankodesign.com/2025/11/23/why-huaweis-former-pr-leader-says-most-brands-get-global-marketing-completely-wrong/"
+   },
+   {
+    "text": "Design isn’t neutral, especially across cultures.",
+    "lang": "en",
+    "outlet": "Yanko Design",
+    "date": "2025-11",
+    "type": "interview",
+    "url": "https://www.yankodesign.com/2025/11/23/why-huaweis-former-pr-leader-says-most-brands-get-global-marketing-completely-wrong/"
+   },
+   {
+    "text": "The question isn’t if your design will tell a story, but what story you’re telling.",
+    "lang": "en",
+    "outlet": "Yanko Design",
+    "date": "2025-11",
+    "type": "interview",
+    "url": "https://www.yankodesign.com/2025/11/23/why-huaweis-former-pr-leader-says-most-brands-get-global-marketing-completely-wrong/"
+   },
+   {
+    "text": "One thing the companies have in common is struggling with branding and marketing.",
+    "lang": "en",
+    "outlet": "People's Daily Online",
+    "date": "2025-02",
+    "type": "column",
+    "url": "http://en.people.cn/n3/2025/0206/c90000-20273052.html"
+   },
+   {
+    "text": "The key to telling China's story well is having others tell it for you,",
+    "lang": "en",
+    "outlet": "China Daily",
+    "date": "2025-10",
+    "type": "interview",
+    "url": "https://enapp.chinadaily.com.cn/a/202510/11/AP68e9956ca31017a8053b71c6.html"
+   },
+   {
+    "text": "Promotion can be done with money, but making friends requires actions and wisdom.",
+    "lang": "en",
+    "outlet": "36Kr Europe",
+    "date": "2025-10",
+    "type": "reprint",
+    "url": "https://eu.36kr.com/en/p/3521022537833351"
+   }
+  ]
+ },
+ {
+  "key": "leadership",
+  "title": "Relationships, leadership and mindset",
+  "quotes": [
+   {
+    "text": "You can't see your own culture from inside it.",
+    "lang": "en",
+    "outlet": "London Business School",
+    "date": "2026-10",
+    "type": "speaking",
+    "url": ""
+   },
+   {
+    "text": "Trust between nations starts between people.",
+    "lang": "en",
+    "outlet": "London Business School",
+    "date": "2026-10",
+    "type": "speaking",
+    "url": ""
+   },
+   {
+    "text": "Human connection matters more than the deal. Personal relationships are the foundation of business and what keeps it going.",
+    "original": "人的连接比生意更重要，人际联系是生意的基础，生意的持续。",
+    "lang": "zh",
+    "outlet": "姐夫李",
+    "date": "2025-10",
+    "type": "quoted",
+    "url": "https://mp.weixin.qq.com/s/8jdR9W_XlJtHmAQz1flpsQ"
+   },
+   {
+    "text": "A good product is a given, but that is only 50%. I believe the other 50% is emotional intelligence overseas: how you make friends.",
+    "original": "产品好是必然的，但我觉得那个是 50%，另外 50% 我相信是在海外的情商、怎么交朋友。",
+    "lang": "zh",
+    "outlet": "深圳卫视",
+    "date": "2025-07",
+    "type": "tv",
+    "url": "https://weibo.com/7057424731/5184457700544087"
+   },
+   {
+    "text": "My advice is that, as a boss, you need to go overseas, drink coffee, talk about the weather, make friends and build an intuition for the local market.",
+    "original": "我的建议是，作为老板要走到海外去，喝咖啡，聊天气，交朋友，积累对本地市场的直觉。",
+    "lang": "zh",
+    "outlet": "搜狐",
+    "date": "2025-06",
+    "type": "interview",
+    "url": "https://www.sohu.com/a/902997485_121956368"
+   },
+   {
+    "text": "In fact, top talent is usually not attracted by salary. They are attracted by a company's passion, goals and mission.",
+    "original": "其实，高层次人才往往不会被工资所吸引，他们会被企业的情怀、目标和使命所吸引。",
+    "lang": "zh",
+    "outlet": "搜狐",
+    "date": "2025-06",
+    "type": "interview",
+    "url": "https://www.sohu.com/a/902997485_121956368"
+   },
+   {
+    "text": "If you're being hit in overseas markets, it means you've succeeded.",
+    "original": "在海外市场遭受打击，说明你成功了。",
+    "lang": "zh",
+    "outlet": "虎嗅",
+    "date": "2024-11",
+    "type": "quoted",
+    "url": "https://www.huxiu.com/moment/1068904"
+   },
+   {
+    "text": "The harder challenges you face, the stronger and better you get over time.",
+    "lang": "en",
+    "outlet": "HKUST MBA Pulse",
+    "date": "2025-11",
+    "type": "feature",
+    "url": "https://mba.hkust.edu.hk/mba-programs/mba-pulse/Chris%20Pereira-Business-China"
+   },
+   {
+    "text": "Be culturally fluent, not just bilingual. Empathy and context win in the long term.",
+    "lang": "en",
+    "outlet": "HKUST Newsletter",
+    "date": "2026-02",
+    "type": "feature",
+    "url": "https://alum.hkust.edu.hk/highlight-story-dec-2025-jan-2026"
+   },
+   {
+    "text": "I am an extreme optimist.",
+    "original": "我是一个极端的乐观主义者。",
+    "lang": "zh",
+    "outlet": "新浪财经",
+    "date": "2026-09",
+    "type": "interview",
+    "url": "https://finance.sina.com.cn/hy/hyjz/2026-09-18/doc-inisfazm0219134.shtml"
+   }
+  ]
+ }
+]

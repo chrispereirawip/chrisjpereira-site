@@ -223,3 +223,148 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+# ---------------------------------------------------------------- quotes page
+OUTLET_EN = {"新浪财经": "Sina Finance 新浪财经", "福布斯中国": "Forbes China 福布斯中国", "36氪（授权转载）": "36Kr 36氪",
+             "新华网": "Xinhua 新华网", "亿邦动力": "Ebrun 亿邦动力", "国际在线": "CRI Online 国际在线",
+             "观察者网": "Guancha 观察者网", "深圳特区报": "Shenzhen Special Zone Daily 深圳特区报",
+             "姐夫李": "姐夫李 (WeChat)", "深圳卫视": "Shenzhen TV 深圳卫视", "搜狐": "Sohu 搜狐", "虎嗅": "Huxiu 虎嗅"}
+
+
+def quote_attr(q):
+    outlet = OUTLET_EN.get(q["outlet"], q["outlet"])
+    t = (q.get("type") or "").lower()
+    verb = {"interview": "interviewed by", "tv": "speaking on", "video": "speaking on", "podcast": "speaking on",
+            "speaking": "speaking at", "column": "writing in", "reprint": "writing in", "feature": "featured in"}.get(t, "quoted in")
+    return "Chris Pereira, " + verb + " " + outlet + ", " + d_en(q["date"])
+
+
+QUOTES_PAGE = """<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Chris Pereira on China, Trust and Global Brands | Quotes</title>
+<meta name="description" content="Selected quotes from Chris Pereira (彭家荣), founder and CEO of iMpact and author of Trust 《信任》, on trust, Chinese brands going global, localization, Shenzhen, Europe and China, and tariffs. Each quote links to its original source.">
+<meta name="robots" content="__ROBOTS__">
+<meta name="theme-color" content="#A40706">
+<link rel="canonical" href="https://chrisjpereira.com/quotes/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Chris Pereira on China, trust and global brands">
+<meta property="og:description" content="Selected quotes from Chris Pereira (彭家荣), with links to the original sources.">
+<meta property="og:image" content="https://chrisjpereira.com/img/press-portrait.jpg">
+<meta property="og:url" content="https://chrisjpereira.com/quotes/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Tinos:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+:root{--paper:#F6F2E9;--surface:#FFFFFF;--ink:#151313;--muted:#626060;--hair:#E2DCD0;--red:#A40706;--red-deep:#7A0504;
+--display:"Jost","Avenir Next","Helvetica Neue",Arial,sans-serif;--body:"Times New Roman","Tinos",Times,serif;--head:"Playfair Display","Times New Roman",Georgia,serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
+a{color:var(--red);text-underline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.bar{position:sticky;top:0;z-index:5;background:rgba(246,242,233,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--hair)}
+.bar .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+.mark{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:600;font-size:18px;color:var(--ink);text-decoration:none;margin-right:auto}
+.seal{background:var(--red);color:#fff;font-size:14px;padding:4px 7px;border-radius:3px}
+.bar a.back{font-family:var(--display);font-weight:500;font-size:15px;color:var(--ink);text-decoration:none}
+.btn{display:inline-flex;align-items:center;font-family:var(--display);font-weight:600;font-size:15px;padding:11px 20px;border-radius:999px;text-decoration:none;border:1.5px solid var(--red);background:var(--red);color:#fff}
+.btn:hover{background:var(--red-deep);border-color:var(--red-deep)}
+.label{font-family:var(--display);font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
+h1,h2{font-family:var(--head);margin:0;font-weight:700;letter-spacing:-.01em;text-wrap:balance}
+h1{font-size:clamp(34px,5vw,54px);line-height:1.06;margin:10px 0 16px}
+h2{font-size:clamp(26px,3.2vw,34px);font-weight:600;line-height:1.12}
+.intro{padding-top:56px;padding-bottom:28px}
+.intro p{max-width:62ch;color:var(--muted);font-size:18px;margin:0 0 12px}
+.toc{display:flex;flex-wrap:wrap;gap:8px 10px;margin:22px 0 0;padding:0;list-style:none}
+.toc a{display:inline-block;font-family:var(--display);font-size:14px;font-weight:500;color:var(--ink);text-decoration:none;border:1px solid var(--hair);background:var(--surface);border-radius:999px;padding:7px 14px}
+.toc a:hover{border-color:var(--red);color:var(--red)}
+section.topic{padding:36px 0;border-top:1px solid var(--hair);scroll-margin-top:72px}
+.qs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:22px}
+figure.q{margin:0;background:var(--surface);border:1px solid var(--hair);border-left:3px solid var(--red);border-radius:4px;padding:20px 22px;display:flex;flex-direction:column;gap:12px}
+figure.q blockquote{margin:0;font-size:19px;line-height:1.5}
+figure.q blockquote p{margin:0}
+figure.q .orig{font-family:"Noto Sans SC",system-ui,sans-serif;font-size:14.5px;color:var(--muted);margin:0}
+figure.q figcaption{font-family:var(--display);font-size:13.5px;color:var(--muted);margin-top:auto}
+figure.q figcaption a{font-weight:600;text-decoration:none;white-space:nowrap}
+.note{font-family:var(--display);font-size:12.5px;color:var(--muted)}
+.cta{padding-top:40px;padding-bottom:64px;border-top:1px solid var(--hair)}
+.cta p{max-width:60ch;color:var(--muted);margin:8px 0 18px}
+footer{border-top:1px solid var(--hair);padding:22px 0 40px;font-family:var(--display);font-size:13.5px;color:var(--muted)}
+@media (max-width:760px){.wrap{padding:0 16px}.qs{grid-template-columns:1fr}.bar a.back{display:none}figure.q blockquote{font-size:18px}}
+</style>
+<script type="application/ld+json">__LD__</script>
+</head>
+<body>
+<header class="bar"><div class="wrap">
+  <a class="mark" href="/"><span class="seal" lang="zh-Hans">彭家荣</span>Chris Pereira</a>
+  <a class="back" href="/#media">All commentary</a>
+  <a class="btn" href="/#contact">Contact</a>
+</div></header>
+<main>
+  <div class="wrap intro">
+    <span class="label">Quotes</span>
+    <h1>Chris Pereira on China, trust and global brands</h1>
+    <p>Chris Pereira (彭家荣) is a British Canadian business leader with 20+ years in China, founder and CEO of iMpact 美讯 and author of <em>Trust</em> 《信任》. These are selected lines from his interviews, talks and op-eds, grouped by theme, each with a link to the original source.</p>
+    <p>Journalists are welcome to cite these quotes with attribution. For new comment, interviews or speaking, <a href="/#contact">get in touch</a>.</p>
+    <ul class="toc">__TOC__</ul>
+  </div>
+__SECTIONS__
+  <div class="wrap cta">
+    <h2>Need a comment on China business?</h2>
+    <p>Chris comments on Chinese brands going global, trust and localization, Shenzhen and consumer technology, and US, Europe and China business relations, in English and Mandarin.</p>
+    <a class="btn" href="/#contact">Contact Chris</a>
+  </div>
+</main>
+<footer><div class="wrap">© Chris Pereira 彭家荣 · <a href="/">chrisjpereira.com</a> · Quotes translated from Chinese are marked; the original wording is shown beneath.</div></footer>
+</body>
+</html>
+"""
+
+
+def build_quotes(QUOTES, robots):
+    toc, secs, graph = [], [], []
+    page = SITE + "/quotes/"
+    for s in QUOTES:
+        toc.append('<li><a href="#' + s["key"] + '">' + esc(s["title"]) + "</a></li>")
+        cards = []
+        for q in s["quotes"]:
+            src = ('<a href="' + esc(q["url"]) + '" target="_blank" rel="noopener">Source ↗</a>') if q.get("url") else ""
+            orig = ""
+            if q.get("lang") == "zh":
+                orig = '<p class="orig" lang="zh-Hans">' + esc(q["original"]) + '</p><span class="note">Translated from Chinese</span>'
+            cards.append('<figure class="q"><blockquote' + (' cite="' + esc(q["url"]) + '"' if q.get("url") else "") + "><p>“" + esc(q["text"]) + "”</p></blockquote>" + orig +
+                         "<figcaption>" + esc(quote_attr(q)) + (" · " + src if src else "") + "</figcaption></figure>")
+            node = {"@type": "Quotation", "text": q["text"], "creator": {"@id": PERSON}, "about": s["title"], "dateCreated": q["date"]}
+            if q.get("url"):
+                node["isPartOf"] = {"@type": "CreativeWork", "@id": q["url"], "url": q["url"],
+                                    "publisher": {"@type": "Organization", "name": OUTLET_EN.get(q["outlet"], q["outlet"])}}
+            else:
+                node["isPartOf"] = {"@type": "Event", "name": q["outlet"]}
+            if q.get("lang") == "zh":
+                node["inLanguage"] = "en"
+                node["translationOfWork"] = {"@type": "Quotation", "text": q["original"], "inLanguage": "zh"}
+            graph.append(node)
+        secs.append('  <section class="topic" id="' + s["key"] + '"><div class="wrap"><h2>' + esc(s["title"]) +
+                    '</h2><div class="qs">' + "".join(cards) + "</div></div></section>")
+    ld = {"@context": "https://schema.org", "@graph": [
+        {"@type": "WebPage", "@id": page, "url": page, "name": "Chris Pereira on China, trust and global brands",
+         "about": {"@id": PERSON}, "mainEntity": {"@id": page + "#quotes"}, "inLanguage": "en"},
+        {"@type": "ItemList", "@id": page + "#quotes", "itemListElement": [{"@type": "ListItem", "position": i + 1, "item": g} for i, g in enumerate(graph)]},
+        {"@type": "Person", "@id": PERSON, "name": "Chris Pereira", "alternateName": "彭家荣", "url": SITE + "/"}]}
+    html_out = (QUOTES_PAGE.replace("__ROBOTS__", robots).replace("__TOC__", "".join(toc)).replace("__SECTIONS__", "\n".join(secs))
+                .replace("__LD__", json.dumps(ld, ensure_ascii=False, separators=(",", ":"))))
+    import os
+    os.makedirs("quotes", exist_ok=True)
+    open("quotes/index.html", "w", encoding="utf-8").write(html_out)
+    print("quotes page:", sum(len(s["quotes"]) for s in QUOTES), "quotes,", robots)
+
+
+if __name__ == "__main__":
+    import os
+    if os.path.exists("data/quotes.json"):
+        cfg = json.load(open("data/quotes.json", encoding="utf-8"))
+        build_quotes(cfg, "noindex,follow" if not os.path.exists("data/quotes.published") else "index,follow,max-snippet:-1")
