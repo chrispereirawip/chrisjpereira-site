@@ -77,12 +77,16 @@
 - 2026-02-23 · Substack · [Where Are the North Korean Startups?](https://insightsfromchina.substack.com/p/where-are-the-north-korean-startups)
 - 2026-02-16 · Substack · [Lessons From the Chinese Economic "Miracle"](https://insightsfromchina.substack.com/p/lessons-from-the-chinese-economic)
 - 2026-02-13 · Substack · [The Narrative Gap](https://insightsfromchina.substack.com/p/the-narrative-gap)
+- 2026-02-10 · Qizan (repost of WeChat 美讯彭家荣) · 不被媒体认可的出海品牌究竟做了什么？ (What did the brands the media don't respect actually do?) https://www.qizansea.com/91203.html
 - 2026-02-09 · Substack · [The Bildungsroman of Chinese Brands](https://insightsfromchina.substack.com/p/the-bildungsroman-of-chinese-brands)
 - 2026-02-02 · Substack · [Canada's FAFO Moment](https://insightsfromchina.substack.com/p/canadas-fafo-moment)
 - 2026-01-24 · Substack · [Canada and China: Star-cross'd Lovers](https://insightsfromchina.substack.com/p/canada-and-china-star-crossd-lovers)
 - 2026-01-18 · Substack · [Parenting Is Improving in China](https://insightsfromchina.substack.com/p/parenting-is-improving-in-china)
 - 2026-01-17 · Substack · [Cars for Canola Is Not a Recipe for Canada's Prosperity](https://insightsfromchina.substack.com/p/cars-for-canola-is-not-a-recipe-for)
+- 2026-01-13 · Qizan (repost of WeChat 美讯彭家荣) · CES2026紧急通知：这些奖不算数了 (CES 2026 urgent notice: these awards no longer count) https://www.qizansea.com/89123.html
 - 2025-12-10 · LinkedIn · [Why a US "crackdown" now feels like a badge of honour for Chinese founders](https://www.linkedin.com/feed/update/urn:li:activity:7404354104875155456/)
+- 2025-12-05 · Qizan (repost of WeChat 美讯彭家荣) · AI内容是如何消磨你的用户信任度的？ (How AI content wears down your customers' trust) https://www.qizansea.com/84499.html
+- 2025-11-05 · Qizan (repost of WeChat 美讯彭家荣) · 想让AI推荐你的品牌？得先弄懂GEO (Want AI to recommend your brand? First understand GEO) https://www.qizansea.com/80238.html
 - 2025-02-25 · LinkedIn · [Shenzhen now hails helicopter taxis by QR code](https://www.linkedin.com/feed/update/urn:li:activity:7300127313994649601/)
 - 2025-02-14 · LinkedIn · [Signs of a warming sentiment towards China in the US](https://www.linkedin.com/feed/update/urn:li:activity:7295984196769001474/)
 - 2024-11-13 · LinkedIn · [Many Chinese companies go abroad before they are ready](https://www.linkedin.com/feed/update/urn:li:activity:7262253527836557312/)
@@ -136,15 +140,11 @@
 - 2026-03 · Vogue · [中国时尚相关](https://www.vogue.com/article/chinese-designers-rethink-us-ambitions-in-light-of-tariffs)
 - 2026-03 · CGTN · [两会相关](https://youtu.be/_goiNR77D-8?si=19zjZkoF9-7KsygD)
 - 2026-02 · HKUST Newsletter · [Highlight Story - Dec 2025-Jan2026 Chris Pereira](https://alum.hkust.edu.hk/highlight-story-dec-2025-jan-2026)
-- 2026-02 · 奇赞 Qizan · 品牌知名度为何难以衡量
 - 2026-01 · CKGSB Knowledge · [Facing uncertainty: DJI’s future amid US regulations](https://english.ckgsb.edu.cn/knowledge/article/dji-growth-challenges-under-us-drone-regulations/)
 - 2026-01 · CGTN · [Artificial intelligence transforms work, life and entertainment at 2026 Consumer Electronics Show](https://news.cgtn.com/news/2026-01-08/CES-2026-AI-transforms-work-life-and-entertainment-1JLt9Czba00/share_amp.html)
-- 2026-01 · 奇赞 Qizan · CES 评委给 CES 2027 参展企业的建议
-- 2025-12 · 奇赞 Qizan · 拒绝盲目使用 AI，反而成为差异化
 - 2025-11 · Yanko Design · [WHY HUAWEI’S FORMER PR LEADER SAYS MOST BRANDS GET GLOBAL MARKETING COMPLETELY WRONG](https://www.yankodesign.com/2025/11/23/why-huaweis-former-pr-leader-says-most-brands-get-global-marketing-completely-wrong/)
 - 2025-11 · Designing with Intention · Branding, purpose and social impact
 - 2025-11 · 财富Fortune · [墨西哥蒙特雷：北美“新东莞”？](https://mp.weixin.qq.com/s/2nKQMrP5FpIkTeyU8Kaslg)
-- 2025-11 · 奇赞 Qizan · 生成式引擎优化（GEO）对品牌意味着什么
 - 2025-10 · 新华社 · [与世界各国共享机遇共同发展——国际社会热议中共二十届四中全会擘画“十五五”发展蓝图](https://h.xinhuaxmt.com/vh512/share/12792714?docid=12792714&newstype=1001&d=1350190&channel=weixin&time=1761324845640)
 - 2025-10 · 36Kr Europe · [From "being seen" to "being trusted", how can Chinese automakers truly win over Europe?](https://eu.36kr.com/en/p/3521022537833351)
 - 2025-10 · 微信公众号 · [从“被看见”到“被信任”，中国车企如何真正赢得欧洲？ | 出海进化论](https://mp.weixin.qq.com/s/N7MvGVddcLTvDnNnF9yQKQ)
@@ -238,7 +238,6 @@
 - 2024-04 · 深圳特区报 · [深圳-北美科创经贸合作交流会举行](https://sztqb.sznews.com/MB/content/202404/19/content_3201043.html)
 - 2024-04 · 深圳特区报 · [iMpact美讯创始人兼首席执行官彭家荣：“深圳速度”助力中国企业扬帆出海](http://sztqb.sznews.com/MB/content/202404/19/content_3201044.html)
 - 2024-04 · Antler龙资本Pro · [在海外，如何从一杯咖啡开始向“罗马人”学习入乡随俗？｜出海行行行](https://mp.weixin.qq.com/s/r4DTmBEfkrpJ0ohARDWa4w)
-- 2024-04 · Sci中加创新 · [融合创新 联通世界 | “深圳-北美科创经贸合作交流会”圆满举行！](https://mp.weixin.qq.com/s/q9cKi5Q7US42h6itkeBgGw)
 - 2024-04 · Shenzhen Daily · [Conference links SZ, North American businesses 深圳-北美科创经贸合作交流会举行](https://mp.weixin.qq.com/s/Gs2xQmM5msiOKPy22K4unw)
 - 2024-04 · 深圳Plus · [融合创新·联通世界 “深圳-北美科创经贸合作交流会”在深圳举办](https://site.szplus.com/content/s6620ed60e4b02fe291a94424.html)
 - 2024-04 · 深圳卫视 · [40余家北美大中型企业来深洽谈合作](https://www.sztv.com.cn/ysz/dsdb/szws/ssxw/80070038.shtml)
