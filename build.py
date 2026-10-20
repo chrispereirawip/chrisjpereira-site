@@ -282,19 +282,30 @@ h2{font-size:clamp(26px,3.2vw,34px);font-weight:600;line-height:1.12}
 .toc{display:flex;flex-wrap:wrap;gap:8px 10px;margin:22px 0 0;padding:0;list-style:none}
 .toc a{display:inline-block;font-family:var(--display);font-size:14px;font-weight:500;color:var(--ink);text-decoration:none;border:1px solid var(--hair);background:var(--surface);border-radius:999px;padding:7px 14px}
 .toc a:hover{border-color:var(--red);color:var(--red)}
-section.topic{padding:36px 0;border-top:1px solid var(--hair);scroll-margin-top:72px}
-.qs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:22px}
-figure.q{margin:0;background:var(--surface);border:1px solid var(--hair);border-left:3px solid var(--red);border-radius:4px;padding:20px 22px;display:flex;flex-direction:column;gap:12px}
-figure.q blockquote{margin:0;font-size:19px;line-height:1.5}
-figure.q blockquote p{margin:0}
-figure.q .orig{font-family:"Noto Sans SC",system-ui,sans-serif;font-size:14.5px;color:var(--muted);margin:0}
-figure.q figcaption{font-family:var(--display);font-size:13.5px;color:var(--muted);margin-top:auto}
-figure.q figcaption a{font-weight:600;text-decoration:none;white-space:nowrap}
+section.topic{padding:28px 0;border-top:1px solid var(--hair);scroll-margin-top:72px}
+.qs{list-style:none;margin:16px 0 0;padding:0;border-top:1px solid var(--ink)}
+.qs li{display:grid;grid-template-columns:80px 170px minmax(0,1fr) 70px;gap:0 16px;padding:9px 0;border-bottom:1px solid var(--hair);align-items:baseline}
+.qs li:nth-child(even){background:rgba(0,0,0,.018)}
+.qs:not(.all)>li.x{display:none}
+.qs time{font-family:var(--display);font-size:13.5px;color:var(--muted);white-space:nowrap}
+.qs .outlet{font-family:var(--display);font-weight:600;font-size:14.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.qs blockquote{margin:0;font-size:16.5px;line-height:1.45}
+.qs blockquote p{margin:0;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.qs li.open blockquote p{-webkit-line-clamp:unset;display:block}
+.qs .more,.showall{font-family:var(--display);font-size:12.5px;font-weight:600;color:var(--red);background:transparent;border:1px solid var(--red);border-radius:999px;padding:3px 10px;cursor:pointer;justify-self:end;white-space:nowrap}
+.qs .more:hover,.qs .more[aria-expanded="true"],.showall:hover{background:var(--red);color:#fff}
+.qs .det{grid-column:3/5;margin:8px 0 4px;padding:10px 14px;background:var(--surface);border-left:3px solid var(--red);font-size:15px}
+.qs .det p{margin:0 0 6px}.qs .det p:last-child{margin:0}
+.qs .orig{font-family:"Noto Sans SC",system-ui,sans-serif;font-size:14.5px;color:var(--muted)}
+.qs .attr{font-family:var(--display);font-size:13.5px;color:var(--muted)}
+.qs .det a{font-family:var(--display);font-weight:600;font-size:13.5px;text-decoration:none}
+.showall{margin-top:12px;font-size:13.5px;padding:6px 14px}
+h2 .cnt{font-family:var(--display);font-size:14px;font-weight:600;color:var(--muted);vertical-align:middle;margin-left:6px}
 .note{font-family:var(--display);font-size:12.5px;color:var(--muted)}
 .cta{padding-top:40px;padding-bottom:64px;border-top:1px solid var(--hair)}
 .cta p{max-width:60ch;color:var(--muted);margin:8px 0 18px}
 footer{border-top:1px solid var(--hair);padding:22px 0 40px;font-family:var(--display);font-size:13.5px;color:var(--muted)}
-@media (max-width:760px){.wrap{padding:0 16px}.qs{grid-template-columns:1fr}.nav{display:none}figure.q blockquote{font-size:18px}}
+@media (max-width:760px){.wrap{padding:0 16px}.nav{display:none}.qs li{grid-template-columns:auto minmax(0,1fr) auto;gap:2px 10px}.qs blockquote{grid-column:1/4;order:3;font-size:16px}.qs .more{grid-column:3;grid-row:1}.qs .det{grid-column:1/4;order:4}}
 </style>
 <script type="application/ld+json">__LD__</script>
 </head>
@@ -320,6 +331,7 @@ __SECTIONS__
   </div>
 </main>
 <footer><div class="wrap">© Chris Pereira 彭家荣 · <a href="/">chrisjpereira.com</a> · Quotes translated from Chinese are marked; the original wording is shown beneath.</div></footer>
+<script>document.addEventListener("click",function(e){var m=e.target.closest(".more");if(m){var li=m.parentNode,d=li.querySelector(".det"),o=d.hidden;d.hidden=!o;li.classList.toggle("open",o);m.setAttribute("aria-expanded",o?"true":"false");m.textContent=o?"Less":"More";return}var b=e.target.closest(".showall");if(b){var ul=b.previousElementSibling,on=ul.classList.toggle("all");b.textContent=on?"Show less":b.dataset.label;if(!on)b.closest("section").scrollIntoView({behavior:"smooth"})}});</script>
 </body>
 </html>
 """
@@ -332,12 +344,17 @@ def build_quotes(QUOTES, robots):
         toc.append('<li><a href="#' + s["key"] + '">' + esc(s["title"]) + "</a></li>")
         cards = []
         for q in s["quotes"]:
-            src = ('<a href="' + esc(q["url"]) + '" target="_blank" rel="noopener">Source ↗</a>') if q.get("url") else ""
+            src = ('<a href="' + esc(q["url"]) + '" target="_blank" rel="noopener">Read the source ↗</a>') if q.get("url") else ""
             orig = ""
             if q.get("lang") == "zh":
-                orig = '<p class="orig" lang="zh-Hans">' + esc(q["original"]) + '</p><span class="note">Translated from Chinese</span>'
-            cards.append('<figure class="q"><blockquote' + (' cite="' + esc(q["url"]) + '"' if q.get("url") else "") + "><p>“" + esc(q["text"]) + "”</p></blockquote>" + orig +
-                         "<figcaption>" + esc(quote_attr(q)) + (" · " + src if src else "") + "</figcaption></figure>")
+                orig = '<p class="orig" lang="zh-Hans">' + esc(q["original"]) + '</p><p class="note">Translated from Chinese</p>'
+            hide = ' class="x"' if len(cards) >= 4 else ""
+            outlet = OUTLET_EN.get(q["outlet"], q["outlet"])
+            cards.append('<li' + hide + '><time datetime="' + esc(q["date"]) + '">' + esc(d_en(q["date"])) + '</time>'
+                         '<span class="outlet" title="' + esc(outlet) + '">' + esc(outlet) + '</span>'
+                         '<blockquote' + (' cite="' + esc(q["url"]) + '"' if q.get("url") else "") + '><p>“' + esc(q["text"]) + '”</p></blockquote>'
+                         '<button class="more" type="button" aria-expanded="false">More</button>'
+                         '<div class="det" hidden>' + orig + '<p class="attr">' + esc(quote_attr(q)) + '</p>' + (src and '<p>' + src + '</p>') + '</div></li>')
             node = {"@type": "Quotation", "text": q["text"], "creator": {"@id": PERSON}, "about": s["title"], "dateCreated": q["date"]}
             if q.get("url"):
                 node["isPartOf"] = {"@type": "CreativeWork", "@id": q["url"], "url": q["url"],
@@ -348,8 +365,10 @@ def build_quotes(QUOTES, robots):
                 node["inLanguage"] = "en"
                 node["translationOfWork"] = {"@type": "Quotation", "text": q["original"], "inLanguage": "zh"}
             graph.append(node)
+        n = len(s["quotes"])
+        allbtn = ('<button class="showall" type="button" data-label="Show all ' + str(n) + '">Show all ' + str(n) + '</button>') if n > 4 else ""
         secs.append('  <section class="topic" id="' + s["key"] + '"><div class="wrap"><h2>' + esc(s["title"]) +
-                    '</h2><div class="qs">' + "".join(cards) + "</div></div></section>")
+                    ' <span class="cnt">' + str(n) + '</span></h2><ul class="qs">' + "".join(cards) + "</ul>" + allbtn + "</div></section>")
     ld = {"@context": "https://schema.org", "@graph": [
         {"@type": "WebPage", "@id": page, "url": page, "name": "Chris Pereira on China, trust and global brands",
          "about": {"@id": PERSON}, "mainEntity": {"@id": page + "#quotes"}, "inLanguage": "en"},
