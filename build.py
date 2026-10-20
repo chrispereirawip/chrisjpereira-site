@@ -323,7 +323,7 @@ footer .wrap{padding-top:28px;padding-bottom:28px;display:flex;justify-content:s
   <div class="wrap intro">
     <div class="ihead">
       <div><span class="label">Quotes</span><h1>On China, trust and global brands</h1></div>
-      <p class="lede">Selected lines from Chris Pereira's interviews, talks and op-eds, each linked to the original source. Journalists are welcome to cite them with attribution.</p>
+      <p class="lede">Selected quotes from Chris Pereira's interviews, talks and op-eds, each linked to the original source. Journalists are welcome to cite them with attribution.</p>
     </div>
     <nav class="toc" aria-label="Themes"><ul>__TOC__</ul></nav>
   </div>
