@@ -364,7 +364,7 @@ def build_quotes(QUOTES, robots):
                 node["isPartOf"] = {"@type": "CreativeWork", "@id": q["url"], "url": q["url"],
                                     "publisher": {"@type": "Organization", "name": OUTLET_EN.get(q["outlet"], q["outlet"])}}
             else:
-                node["isPartOf"] = {"@type": "Event", "name": q["outlet"]}
+                node["isPartOf"] = {"@type": "CreativeWork", "name": OUTLET_EN.get(q["outlet"], q["outlet"]), "dateCreated": q["date"], "creator": {"@id": PERSON}}
             if q.get("lang") == "zh":
                 node["inLanguage"] = "en"
                 node["translationOfWork"] = {"@type": "Quotation", "text": q["original"], "inLanguage": "zh"}
