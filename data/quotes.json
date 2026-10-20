@@ -36,15 +36,7 @@
     "url": ""
    },
    {
-    "text": "Success overseas depends on winning belief before you win business",
-    "lang": "en",
-    "outlet": "CKGSB",
-    "date": "2026-07",
-    "type": "interview",
-    "url": "https://english.ckgsb.edu.cn/knowledge/article/building-trust-the-key-element-in-overseas-expansion/"
-   },
-   {
-    "text": "trust functions as a multiplier sitting at the foundation of product and price.",
+    "text": "Success overseas depends on winning belief before you win business.",
     "lang": "en",
     "outlet": "CKGSB",
     "date": "2026-07",
@@ -128,14 +120,6 @@
     "url": "https://finance.sina.com.cn/hy/hyjz/2026-09-18/doc-inisfazm0219134.shtml"
    },
    {
-    "text": "the physical footprint (the office) is the easiest and least meaningful part of localization",
-    "lang": "en",
-    "outlet": "CKGSB",
-    "date": "2026-07",
-    "type": "interview",
-    "url": "https://english.ckgsb.edu.cn/knowledge/article/building-trust-the-key-element-in-overseas-expansion/"
-   },
-   {
     "text": "Chinese officials and companies recognize that manufacturing needs to be localized to a certain degree. One reason is to assuage the challenges of exporting, another is to create trust locally.",
     "lang": "en",
     "outlet": "Deutsche Welle",
@@ -144,7 +128,7 @@
     "url": "https://www.dw.com/en/chinese-consumer-tech-outpacing-western-brands/a-79646187"
    },
    {
-    "text": "What is actually happening is Chinese brands and companies are learning how to localize in overseas markets, from branding to team building,\" he said.",
+    "text": "What is actually happening is Chinese brands and companies are learning how to localize in overseas markets, from branding to team building.",
     "lang": "en",
     "outlet": "Nikkei Asia",
     "date": "2024-01",
@@ -152,7 +136,7 @@
     "url": "https://asia.nikkei.com/Business/Business-Spotlight/China-s-slump-pushes-its-smaller-companies-overseas-for-growth"
    },
    {
-    "text": "When Chinese companies run into problems overseas, it is often not because they are Chinese, or held back by some 'original sin'. I even think Chinese companies have advantages overseas. The problem is usually that they haven't built good local relationships.",
+    "text": "When Chinese companies run into problems overseas, it is often not because they are Chinese, or held back by some ‘original sin’. I even think Chinese companies have advantages overseas. The problem is usually that they haven’t built good local relationships.",
     "original": "为什么中国企业在海外出现问题，往往不是因为它们是中国企业，也不是受到所谓‘原罪’的制约，我甚至认为中国企业在海外有优势。问题往往在于它们在本地没有建立好人脉关系。",
     "lang": "zh",
     "outlet": "亿邦动力",
@@ -161,7 +145,7 @@
     "url": "https://m.ebrun.com/535963.html"
    },
    {
-    "text": "Our philosophy is to help Chinese companies going abroad achieve 'glocalization': not to help Chinese companies enter the North American market one by one, but to help each of them become a quality local brand in North America.",
+    "text": "Our philosophy is to help Chinese companies going abroad achieve ‘glocalization’: not to help Chinese companies enter the North American market one by one, but to help each of them become a quality local brand in North America.",
     "original": "我们所秉承的理念是助力中国出海企业‘全球本地化’，不是帮助一个个中国企业进入北美市场，而是助力一个个中国企业成为北美市场本地优质品牌。",
     "lang": "zh",
     "outlet": "国际在线",
@@ -179,7 +163,7 @@
     "url": "https://www.guancha.cn/ChrisPereira/2024_06_20_738580_1.shtml"
    },
    {
-    "text": "Overseas expansion fails when a company treats it as only a sales or marketing problem,",
+    "text": "Overseas expansion fails when a company treats it as only a sales or marketing problem.",
     "lang": "en",
     "outlet": "HKUST Newsletter",
     "date": "2026-02",
@@ -190,15 +174,24 @@
  },
  {
   "key": "competition",
-  "title": "Shenzhen speed and the end of cheap",
+  "title": "Shenzhen’s civil war goes global",
   "quotes": [
    {
-    "text": "The strong competition . . . in the local Shenzhen market is generating extremely efficient . . . companies that are going overseas now.",
+    "text": "Shenzhen’s civil war has moved to Berlin.",
+    "lang": "en",
+    "outlet": "Insights from China",
+    "date": "2026-09",
+    "type": "column",
+    "url": "https://insightsfromchina.substack.com/p/shenzhens-civil-war-has-moved-to"
+   },
+   {
+    "text": "The strong competition … in the local Shenzhen market is generating extremely efficient … companies that are going overseas now.",
     "lang": "en",
     "outlet": "Financial Times",
     "date": "2026-10",
     "type": "quoted",
-    "url": "https://www.ft.com/content/b2730098-0767-401f-99b5-a53bd27bd659?syn-25a6b1a6=1"
+    "url": "https://www.ft.com/content/b2730098-0767-401f-99b5-a53bd27bd659?syn-25a6b1a6=1",
+    "context": "The FT summed up his point as DJI and Insta360 exporting Shenzhen’s “civil war”, the intense rivalry between the city’s start-ups."
    },
    {
     "text": "China is still making affordable products today. But the products are also high quality.",
@@ -217,7 +210,7 @@
     "url": "https://www.chinadaily.com.cn/a/202608/05/WS6a72916ea310986e2b46904e.html"
    },
    {
-    "text": "I think it's clear that the 'brand moat' of most Western brands is currently eroding in the face of Chinese competition around the globe",
+    "text": "I think it’s clear that the ‘brand moat’ of most Western brands is currently eroding in the face of Chinese competition around the globe.",
     "lang": "en",
     "outlet": "KrASIA",
     "date": "2026-03",
@@ -242,7 +235,7 @@
     "url": "http://sztqb.sznews.com/MB/content/202404/19/content_3201044.html"
    },
    {
-    "text": "This wave of going global isn't because the domestic market is too competitive. I think it's because China's industrial upgrading has reached a point where we can out-compete many Western industries in technology, management and drive.",
+    "text": "This wave of going global isn’t because the domestic market is too competitive. I think it’s because China’s industrial upgrading has reached a point where we can out-compete many Western industries in technology, management and drive.",
     "original": "出海这个潮流，不是因为国内太卷、压力大而选择走出去，我认为是因为中国的产业升级已经走到了一定程度，我们在科技、管理模式和奋斗精神等方面可以竞争得过欧美很多行业。",
     "lang": "zh",
     "outlet": "亿邦动力",
@@ -281,7 +274,7 @@
     "url": ""
    },
    {
-    "text": "Chinese regulators tell you very clearly and quickly what you can do. That speed helps companies iterate and succeed overseas. If you're waiting weeks for a response, you're going to lose business.",
+    "text": "Chinese regulators tell you very clearly and quickly what you can do. That speed helps companies iterate and succeed overseas. If you’re waiting weeks for a response, you’re going to lose business.",
     "lang": "en",
     "outlet": "Deutsche Welle",
     "date": "2026-10",
@@ -303,7 +296,7 @@
   "title": "Tariffs, tension and staying engaged",
   "quotes": [
    {
-    "text": "There are restrictions, but it's better to have a clear no than maybe in business.",
+    "text": "There are restrictions, but it’s better to have a clear no than maybe in business.",
     "lang": "en",
     "outlet": "Rest of World",
     "date": "2026-10",
@@ -311,7 +304,7 @@
     "url": "https://restofworld.org/2026/insta360-us-dji-sanctions-drones-cameras/"
    },
    {
-    "text": "Rather than a complete decoupling, we're seeing a strategic rebalancing — diversification, not divorce.",
+    "text": "Rather than a complete decoupling, we’re seeing a strategic rebalancing — diversification, not divorce.",
     "lang": "en",
     "outlet": "Benzinga",
     "date": "2025-05",
@@ -319,7 +312,7 @@
     "url": "https://www.benzinga.com/news/global/25/05/45337755/us-and-china-remain-deeply-economically-intertwined-and-complete-disengagement-would-be-mutually-damaging-says-chris-pereira"
    },
    {
-    "text": "The more connections we remove from the relationship, the easier it is for conflict to arise,",
+    "text": "The more connections we remove from the relationship, the easier it is for conflict to arise.",
     "lang": "en",
     "outlet": "SCMP",
     "date": "2024-11",
@@ -344,7 +337,7 @@
     "url": "https://www.chinadaily.com.cn/a/202610/08/WS6ac7b143e4b06d4aa0561bf3.html"
    },
    {
-    "text": "The main constraints will be political rather than technical. Market access and trust will be key,",
+    "text": "The main constraints will be political rather than technical. Market access and trust will be key.",
     "lang": "en",
     "outlet": "CKGSB Knowledge",
     "date": "2026-01",
@@ -398,7 +391,7 @@
     "url": "http://en.people.cn/n3/2025/0206/c90000-20273052.html"
    },
    {
-    "text": "The key to telling China's story well is having others tell it for you,",
+    "text": "The key to telling China’s story well is having others tell it for you.",
     "lang": "en",
     "outlet": "China Daily",
     "date": "2025-10",
@@ -420,7 +413,7 @@
   "title": "Relationships, leadership and mindset",
   "quotes": [
    {
-    "text": "You can't see your own culture from inside it.",
+    "text": "You can’t see your own culture from inside it.",
     "lang": "en",
     "outlet": "London Business School",
     "date": "2026-10",
@@ -463,7 +456,7 @@
     "url": "https://www.sohu.com/a/902997485_121956368"
    },
    {
-    "text": "In fact, top talent is usually not attracted by salary. They are attracted by a company's passion, goals and mission.",
+    "text": "In fact, top talent is usually not attracted by salary. They are attracted by a company’s passion, goals and mission.",
     "original": "其实，高层次人才往往不会被工资所吸引，他们会被企业的情怀、目标和使命所吸引。",
     "lang": "zh",
     "outlet": "搜狐",
@@ -472,7 +465,7 @@
     "url": "https://www.sohu.com/a/902997485_121956368"
    },
    {
-    "text": "If you're being hit in overseas markets, it means you've succeeded.",
+    "text": "If you’re being hit in overseas markets, it means you’ve succeeded.",
     "original": "在海外市场遭受打击，说明你成功了。",
     "lang": "zh",
     "outlet": "虎嗅",

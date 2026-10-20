@@ -288,7 +288,7 @@ h2{font-size:clamp(22px,2.4vw,26px);font-weight:600;line-height:1.15}
 .toc a:hover{color:var(--red);border-bottom-color:var(--red)}
 section.topic{padding:26px 0 22px;scroll-margin-top:112px}
 .qs{list-style:none;margin:12px 0 0;padding:0;border-top:1px solid var(--ink)}
-.qs li{display:grid;grid-template-columns:80px 170px minmax(0,1fr) 70px;gap:0 16px;padding:9px 0;border-bottom:1px solid var(--hair);align-items:baseline}
+.qs li{display:grid;grid-template-columns:80px 196px minmax(0,1fr) 70px;gap:0 16px;padding:9px 0;border-bottom:1px solid var(--hair);align-items:baseline}
 .qs li:nth-child(even){background:rgba(0,0,0,.018)}
 .qs:not(.all)>li.x{display:none}
 .qs time{font-family:var(--display);font-size:13.5px;color:var(--muted);white-space:nowrap}
@@ -358,7 +358,7 @@ def build_quotes(QUOTES, robots):
                          '<span class="outlet" title="' + esc(outlet) + '">' + esc(outlet) + '</span>'
                          '<blockquote' + (' cite="' + esc(q["url"]) + '"' if q.get("url") else "") + '><p>“' + esc(q["text"]) + '”</p></blockquote>'
                          '<button class="more" type="button" aria-expanded="false">More</button>'
-                         '<div class="det" hidden>' + orig + '<p class="attr">' + esc(quote_attr(q)) + '</p>' + (src and '<p>' + src + '</p>') + '</div></li>')
+                         '<div class="det" hidden>' + (('<p class="ctx">' + esc(q["context"]) + '</p>') if q.get("context") else "") + orig + '<p class="attr">' + esc(quote_attr(q)) + '</p>' + (src and '<p>' + src + '</p>') + '</div></li>')
             node = {"@type": "Quotation", "text": q["text"], "creator": {"@id": PERSON}, "about": s["title"], "dateCreated": q["date"]}
             if q.get("url"):
                 node["isPartOf"] = {"@type": "CreativeWork", "@id": q["url"], "url": q["url"],
