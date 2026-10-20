@@ -322,14 +322,14 @@ footer .wrap{padding-top:28px;padding-bottom:28px;display:flex;justify-content:s
 <main>
   <div class="wrap intro">
     <div class="ihead">
-      <div><span class="label">Quotes</span><h1>On China, trust and global brands</h1></div>
+      <div><span class="label">Quotes</span><h1>Straight talk on China, trust and global brands</h1></div>
       <p class="lede">Selected quotes from Chris Pereira's interviews, talks and op-eds, each linked to the original source. Journalists are welcome to cite them with attribution.</p>
     </div>
     <nav class="toc" aria-label="Themes"><ul>__TOC__</ul></nav>
   </div>
 __SECTIONS__
   <div class="wrap cta">
-    <h2>Need a comment on China business?</h2>
+    <h2>Need a sharp take on China, fast?</h2>
     <p>Chris comments on Chinese brands going global, trust and localization, Shenzhen and consumer technology, and US, Europe and China business relations, in English and Mandarin.</p>
     <a class="btn" href="/#contact">Contact Chris</a>
   </div>

@@ -1,21 +1,21 @@
 [
  {
   "key": "trust",
-  "title": "Trust is the new moat",
+  "title": "Innovation is cheap. Trust is the moat.",
   "quotes": [
-   {
-    "text": "We build businesses separately. We build trust together.",
-    "lang": "en",
-    "outlet": "London Business School",
-    "date": "2026-10",
-    "type": "speaking",
-    "url": ""
-   },
    {
     "text": "Innovation has been commodified. Human trust is the new moat.",
     "lang": "en",
     "outlet": "IFA Berlin",
     "date": "2026-09",
+    "type": "speaking",
+    "url": ""
+   },
+   {
+    "text": "We build businesses separately. We build trust together.",
+    "lang": "en",
+    "outlet": "London Business School",
+    "date": "2026-10",
     "type": "speaking",
     "url": ""
    },
@@ -100,7 +100,7 @@
  },
  {
   "key": "localization",
-  "title": "From exporter to local",
+  "title": "Exporting is over. Going local has begun.",
   "quotes": [
    {
     "text": "This is no longer simply about exporting products. We have entered the stage of deep localization.",
@@ -250,8 +250,16 @@
  },
  {
   "key": "europe",
-  "title": "China taught me speed, Europe taught me weekends",
+  "title": "China taught me speed. Europe taught me weekends.",
   "quotes": [
+   {
+    "text": "China taught me speed. Europe taught me weekends. The winners will need both.",
+    "lang": "en",
+    "outlet": "IFA Berlin",
+    "date": "2026-09",
+    "type": "speaking",
+    "url": ""
+   },
    {
     "text": "What Europe is teaching Chinese companies is: you can move at Chinese speed, but in the direction of European laws and regulations.",
     "lang": "en",
@@ -267,14 +275,6 @@
     "date": "2026-09",
     "type": "interview",
     "url": "https://www.euronews.ro/articole/de-la-made-in-china-la-expansiunea-globala-cum-au-ajuns-companiile-chinezesti-sa"
-   },
-   {
-    "text": "China taught me speed. Europe taught me weekends. The winners will need both.",
-    "lang": "en",
-    "outlet": "IFA Berlin",
-    "date": "2026-09",
-    "type": "speaking",
-    "url": ""
    },
    {
     "text": "Chinese regulators tell you very clearly and quickly what you can do. That speed helps companies iterate and succeed overseas. If you’re waiting weeks for a response, you’re going to lose business.",
@@ -297,8 +297,16 @@
  },
  {
   "key": "geopolitics",
-  "title": "Better a clear no than a maybe",
+  "title": "Fear sells. It’s also making us poorer.",
   "quotes": [
+   {
+    "text": "Selling fear is good for business, good for political careers and very bad for our future prosperity.",
+    "lang": "en",
+    "outlet": "Business in Vancouver",
+    "date": "2022-10",
+    "type": "column",
+    "url": "https://biv.com/article/2022/10/chris-pereira-worsening-geopolitical-crisis-china-or-signs-stability"
+   },
    {
     "text": "There are restrictions, but it’s better to have a clear no than maybe in business.",
     "lang": "en",
@@ -347,21 +355,13 @@
     "date": "2026-01",
     "type": "quoted",
     "url": "https://english.ckgsb.edu.cn/knowledge/article/dji-growth-challenges-under-us-drone-regulations/"
-   },
-   {
-    "text": "Selling fear is good for business, good for political careers and very bad for our future prosperity.",
-    "lang": "en",
-    "outlet": "Business in Vancouver",
-    "date": "2022-10",
-    "type": "column",
-    "url": "https://biv.com/article/2022/10/chris-pereira-worsening-geopolitical-crisis-china-or-signs-stability"
    }
   ],
   "topic": "Tariffs and geopolitics"
  },
  {
   "key": "brand",
-  "title": "Let others tell your story",
+  "title": "No one vouching for you? Skip the ads.",
   "quotes": [
    {
     "text": "If you don’t have the third-party endorsement, you shouldn’t do advertising.",
@@ -416,8 +416,17 @@
  },
  {
   "key": "leadership",
-  "title": "Drink coffee, talk about the weather",
+  "title": "Bosses, get on a plane and go drink coffee",
   "quotes": [
+   {
+    "text": "My advice is that, as a boss, you need to go overseas, drink coffee, talk about the weather, make friends and build an intuition for the local market.",
+    "original": "我的建议是，作为老板要走到海外去，喝咖啡，聊天气，交朋友，积累对本地市场的直觉。",
+    "lang": "zh",
+    "outlet": "搜狐",
+    "date": "2025-06",
+    "type": "interview",
+    "url": "https://www.sohu.com/a/902997485_121956368"
+   },
    {
     "text": "You can’t see your own culture from inside it.",
     "lang": "en",
@@ -451,15 +460,6 @@
     "date": "2025-07",
     "type": "tv",
     "url": "https://weibo.com/7057424731/5184457700544087"
-   },
-   {
-    "text": "My advice is that, as a boss, you need to go overseas, drink coffee, talk about the weather, make friends and build an intuition for the local market.",
-    "original": "我的建议是，作为老板要走到海外去，喝咖啡，聊天气，交朋友，积累对本地市场的直觉。",
-    "lang": "zh",
-    "outlet": "搜狐",
-    "date": "2025-06",
-    "type": "interview",
-    "url": "https://www.sohu.com/a/902997485_121956368"
    },
    {
     "text": "In fact, top talent is usually not attracted by salary. They are attracted by a company’s passion, goals and mission.",
