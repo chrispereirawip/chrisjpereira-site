@@ -226,7 +226,7 @@ if __name__ == "__main__":
 
 
 # ---------------------------------------------------------------- quotes page
-OUTLET_EN = {"新浪财经": "Sina Finance 新浪财经", "福布斯中国": "Forbes China 福布斯中国", "36氪（授权转载）": "36Kr 36氪",
+OUTLET_EN = {"美讯彭家荣": "WeChat 美讯彭家荣", "新浪财经": "Sina Finance 新浪财经", "福布斯中国": "Forbes China 福布斯中国", "36氪（授权转载）": "36Kr 36氪",
              "新华网": "Xinhua 新华网", "亿邦动力": "Ebrun 亿邦动力", "国际在线": "CRI Online 国际在线",
              "观察者网": "Guancha 观察者网", "深圳特区报": "Shenzhen Special Zone Daily 深圳特区报",
              "姐夫李": "姐夫李 (WeChat)", "深圳卫视": "Shenzhen TV 深圳卫视", "搜狐": "Sohu 搜狐", "虎嗅": "Huxiu 虎嗅"}
