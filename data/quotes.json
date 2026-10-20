@@ -95,7 +95,8 @@
     "type": "quoted",
     "url": "https://www.dw.com/en/chinese-consumer-tech-outpacing-western-brands/a-79646187"
    }
-  ]
+  ],
+  "topic": "Trust and competitive advantage"
  },
  {
   "key": "localization",
@@ -170,7 +171,8 @@
     "type": "feature",
     "url": "https://alum.hkust.edu.hk/highlight-story-dec-2025-jan-2026"
    }
-  ]
+  ],
+  "topic": "Localization for Chinese companies going global"
  },
  {
   "key": "competition",
@@ -243,7 +245,8 @@
     "type": "interview",
     "url": "https://m.ebrun.com/535963.html"
    }
-  ]
+  ],
+  "topic": "Shenzhen and Chinese brand competition"
  },
  {
   "key": "europe",
@@ -289,7 +292,8 @@
     "type": "speaking",
     "url": ""
    }
-  ]
+  ],
+  "topic": "Europe and China business"
  },
  {
   "key": "geopolitics",
@@ -352,7 +356,8 @@
     "type": "column",
     "url": "https://biv.com/article/2022/10/chris-pereira-worsening-geopolitical-crisis-china-or-signs-stability"
    }
-  ]
+  ],
+  "topic": "Tariffs and geopolitics"
  },
  {
   "key": "brand",
@@ -406,7 +411,8 @@
     "type": "reprint",
     "url": "https://eu.36kr.com/en/p/3521022537833351"
    }
-  ]
+  ],
+  "topic": "Brand and reputation"
  },
  {
   "key": "leadership",
@@ -498,6 +504,7 @@
     "type": "interview",
     "url": "https://finance.sina.com.cn/hy/hyjz/2026-09-18/doc-inisfazm0219134.shtml"
    }
-  ]
+  ],
+  "topic": "Relationships and leadership"
  }
 ]

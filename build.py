@@ -359,7 +359,7 @@ def build_quotes(QUOTES, robots):
                          '<blockquote' + (' cite="' + esc(q["url"]) + '"' if q.get("url") else "") + '><p>“' + esc(q["text"]) + '”</p></blockquote>'
                          '<button class="more" type="button" aria-expanded="false">More</button>'
                          '<div class="det" hidden>' + (('<p class="ctx">' + esc(q["context"]) + '</p>') if q.get("context") else "") + orig + '<p class="attr">' + esc(quote_attr(q)) + '</p>' + (src and '<p>' + src + '</p>') + '</div></li>')
-            node = {"@type": "Quotation", "text": q["text"], "creator": {"@id": PERSON}, "about": s["title"], "dateCreated": q["date"]}
+            node = {"@type": "Quotation", "text": q["text"], "creator": {"@id": PERSON}, "about": s.get("topic", s["title"]), "dateCreated": q["date"]}
             if q.get("url"):
                 node["isPartOf"] = {"@type": "CreativeWork", "@id": q["url"], "url": q["url"],
                                     "publisher": {"@type": "Organization", "name": OUTLET_EN.get(q["outlet"], q["outlet"])}}
