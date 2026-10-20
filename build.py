@@ -316,7 +316,7 @@ footer .wrap{padding-top:28px;padding-bottom:28px;display:flex;justify-content:s
 <body>
 <header class="bar"><div class="wrap">
   <a class="mark" href="/"><span class="seal" lang="zh-Hans">彭家荣</span>Chris Pereira</a>
-  <nav class="nav" aria-label="Sections"><a href="/#writing">Writing</a><a href="/#media">Commentary</a><a href="/quotes/" aria-current="page">Quotes</a><a href="/#speaking">Speaking</a><a href="/#training">Training</a><a href="/#about">About</a></nav>
+  <nav class="nav" aria-label="Sections"><a href="/#writing">Writing</a><a href="/#media">Commentary</a><a href="/#speaking">Speaking</a><a href="/#training">Training</a><a href="/#about">About</a></nav>
   <a class="btn" href="/#contact">Contact</a>
 </div></header>
 <main>

@@ -301,6 +301,8 @@ h1 .en{display:block;font-size:.3em;font-weight:500;letter-spacing:.06em;color:v
 .hsplit .lede{grid-column:2;grid-row:1/span 2;max-width:62ch;align-self:end;padding-bottom:6px}
 @media (max-width:900px){.head>.hsplit{grid-template-columns:1fr}.hsplit .lede{grid-column:1;grid-row:auto;margin-top:8px;padding-bottom:0}}
 .logowall{margin:44px 0 8px;padding-top:28px;border-top:1px solid var(--hair)}.logowall ul{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:10px}.logowall li{background:var(--surface);border:1px solid var(--hair);height:76px;display:flex;align-items:center;justify-content:center;padding:12px 14px}.logowall img{max-height:38px;max-width:100%;width:auto;height:auto;object-fit:contain}@media (max-width:900px){.logowall ul{grid-template-columns:repeat(4,minmax(0,1fr))}}@media (max-width:520px){.logowall ul{gap:6px}.logowall li{height:56px;padding:8px}.logowall img{max-height:26px}}
+.mbtns{display:flex;align-items:center;gap:12px 24px;flex-wrap:wrap;margin-top:18px}.mbtns .btn,.mbtns #more{margin:0}.qlink{font-family:var(--display);font-weight:600;font-size:14px;color:var(--red);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px}.qlink:hover{color:var(--ink)}
+.qrow{padding:16px 0 4px;border-top:1px solid var(--hair);display:grid;gap:6px}.qrow .v{font-size:17px}.qrow .v:hover{color:var(--red)}
 </style>
 </head>
 <body>
@@ -308,7 +310,7 @@ h1 .en{display:block;font-size:.3em;font-weight:500;letter-spacing:.06em;color:v
   <div class="wrap">
     <a class="mark" href="#top"><span class="seal" lang="zh-Hans">彭家荣</span>Chris Pereira</a>
     <nav class="nav" aria-label="栏目">
-      <a href="#writing">文章</a><a href="#media">媒体评论</a><a href="/quotes/">语录</a><a href="#speaking">演讲</a><a href="#training">培训</a><a href="#about">关于</a>
+      <a href="#writing">文章</a><a href="#media">媒体评论</a><a href="#speaking">演讲</a><a href="#training">培训</a><a href="#about">关于</a>
     </nav>
     <a class="langsw" href="/" hreflang="en" lang="en">EN</a>
     <a class="btn solid" href="#contact">联系</a>
@@ -638,7 +640,7 @@ h1 .en{display:block;font-size:.3em;font-weight:500;letter-spacing:.06em;color:v
 <li class="x"><time datetime="2021-03">2021年3月</time><span class="outlet" title="凤凰卫视">凤凰卫视</span><span class="tcell"><a class="what zh" href="https://news.ifeng.com/c/84W3SphxZal" target="_blank" rel="noopener">海外精英看中国｜加拿大应与中国筑起互相沟通桥梁</a><span class="en">Overseas Elites on China: Canada Should Build Bridges of Communication with China</span></span><button type="button" class="sumbtn" aria-expanded="false">摘要</button><div class="sum" hidden><p class="zh">“我们现在不应筑起围墙，而应修筑桥梁，尤其未来五到十年，疫情后的世界更需要沟通的桥梁。”</p><p class="en">&quot;We should not be building walls now, we should be building bridges. Especially over the next five to ten years, the post-pandemic world needs bridges of communication even more.&quot;</p><p class="zh">“我不认为什么都是黑白分明，这样的描述是不正确的。”</p><p class="en">&quot;I don&#x27;t think everything is black and white. That kind of portrayal is not accurate.&quot;</p><p class="zh">“尤其是关于中国，加拿大有可以学习的方面，中国也有可以向加拿大学习之处，我们只能通过接触互相学习。”</p><p class="en">&quot;Especially when it comes to China, there are things Canada can learn, and things China can learn from Canada. We can only learn from each other through engagement.&quot;</p><p class="attr">彭家荣（Chris Pereira）· 凤凰卫视 · 2021年3月</p><a href="https://news.ifeng.com/c/84W3SphxZal" target="_blank" rel="noopener">观看完整视频 ↗</a></div></li>
 <li class="x"><time datetime="2020-12">2020年12月</time><span class="outlet" title="中新网">中新网</span><span class="tcell"><a class="what zh" href="https://www.chinanews.com/gj/2020/12-28/9372954.shtml" target="_blank" rel="noopener">加拿大年轻创业者：中国兼具发展与稳定 期待加中求同存异</a><span class="en">Young Canadian Entrepreneurs: China Combines Growth and Stability, Hope Canada and China Can Seek Common Ground</span></span><button type="button" class="sumbtn" aria-expanded="false">摘要</button><div class="sum" hidden><p class="zh">“中国人教会我坚持，真正投入到一项事业中。”</p><p class="en">&quot;The Chinese taught me perseverance, to truly commit myself to an undertaking.&quot;</p><p class="zh">Paraphrased: 他给海外中国企业和华商的建议是，将思维、运营方式本地化，保持沟通，“小步快跑”。</p><p class="en">Paraphrased: His advice to Chinese companies and businesspeople overseas is to localize their thinking and operations, keep communicating, and move forward in &quot;small, fast steps.&quot;</p><p class="zh">“一个大度的大国兴起，是最好的发展方式。”</p><p class="en">&quot;The rise of a magnanimous major power is the best way to develop.&quot;</p><p class="attr">彭家荣（Chris Pereira）· 中新网 · 2020年12月</p><a href="https://www.chinanews.com/gj/2020/12-28/9372954.shtml" target="_blank" rel="noopener">阅读全文 ↗</a></div></li>
       </ul>
-      <button class="btn" type="button" id="more">查看全部 201 条</button>
+      <div class="mbtns"><button class="btn" type="button" id="more">查看全部 201 条</button><a class="qlink" href="/quotes/">按主题浏览语录 →</a></div>
     </div>
   </section>
 
@@ -723,6 +725,7 @@ h1 .en{display:block;font-size:.3em;font-weight:500;letter-spacing:.06em;color:v
           <div><span class="k">邮箱</span><div class="emailrow"><span class="v" id="em"><a href="mailto:inquiries@chrisjpereira.com">inquiries@chrisjpereira.com</a></span><button class="btn sm" type="button" data-copy="em">复制</button></div></div>
           <div><span class="k">微信公众号</span><span class="v">美讯彭家荣</span></div>
           <div class="socials"><a href="https://www.linkedin.com/in/chrisjpereira" target="_blank" rel="noopener">领英 ↗</a><a href="https://insightsfromchina.substack.com" target="_blank" rel="noopener">Substack ↗</a><a href="https://www.youtube.com/@OutsideLookingWest" target="_blank" rel="noopener">YouTube ↗</a><a href="https://baike.baidu.com/item/%E5%BD%AD%E5%AE%B6%E8%8D%A3/57120710" target="_blank" rel="noopener">百度百科 ↗</a></div>
+          <div class="qrow"><span class="k">媒体引用</span><a class="v" href="/quotes/">按主题浏览语录（附出处）→</a></div>
         </div>
       </div>
     </div>
