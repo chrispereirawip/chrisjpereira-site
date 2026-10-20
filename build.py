@@ -275,15 +275,19 @@ a{color:var(--red);text-underline-offset:3px}
 .btn:hover{background:var(--red-deep);border-color:var(--red-deep)}
 .label{font-family:var(--display);font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
 h1,h2{font-family:var(--head);margin:0;font-weight:700;letter-spacing:-.01em;text-wrap:balance}
-h1{font-size:clamp(34px,5vw,54px);line-height:1.06;margin:10px 0 16px}
-h2{font-size:clamp(26px,3.2vw,34px);font-weight:600;line-height:1.12}
-.intro{padding-top:56px;padding-bottom:28px}
-.intro p{max-width:62ch;color:var(--muted);font-size:18px;margin:0 0 12px}
-.toc{display:flex;flex-wrap:wrap;gap:8px 10px;margin:22px 0 0;padding:0;list-style:none}
-.toc a{display:inline-block;font-family:var(--display);font-size:14px;font-weight:500;color:var(--ink);text-decoration:none;border:1px solid var(--hair);background:var(--surface);border-radius:999px;padding:7px 14px}
-.toc a:hover{border-color:var(--red);color:var(--red)}
-section.topic{padding:28px 0;border-top:1px solid var(--hair);scroll-margin-top:72px}
-.qs{list-style:none;margin:16px 0 0;padding:0;border-top:1px solid var(--ink)}
+h1{font-size:clamp(30px,4vw,42px);line-height:1.08;margin:8px 0 0}
+h2{font-size:clamp(22px,2.4vw,26px);font-weight:600;line-height:1.15}
+.intro{padding-top:40px;padding-bottom:6px}
+.ihead{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px 40px;align-items:end}
+.lede{margin:0;max-width:56ch;color:var(--muted);font-size:16.5px;line-height:1.55}
+.toc{position:sticky;top:64px;z-index:4;background:rgba(246,242,233,.96);backdrop-filter:blur(8px);margin:22px 0 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--hair)}
+.toc ul{display:flex;flex-wrap:wrap;gap:4px 22px;list-style:none;margin:0;padding:9px 0;scrollbar-width:none}
+.toc ul::-webkit-scrollbar{display:none}
+.toc a{font-family:var(--display);font-size:13.5px;font-weight:500;color:var(--ink);text-decoration:none;white-space:nowrap;padding:3px 0;border-bottom:1px solid transparent}
+.toc a span{color:var(--muted);font-size:12px;margin-left:2px}
+.toc a:hover{color:var(--red);border-bottom-color:var(--red)}
+section.topic{padding:26px 0 22px;scroll-margin-top:112px}
+.qs{list-style:none;margin:12px 0 0;padding:0;border-top:1px solid var(--ink)}
 .qs li{display:grid;grid-template-columns:80px 170px minmax(0,1fr) 70px;gap:0 16px;padding:9px 0;border-bottom:1px solid var(--hair);align-items:baseline}
 .qs li:nth-child(even){background:rgba(0,0,0,.018)}
 .qs:not(.all)>li.x{display:none}
@@ -300,12 +304,12 @@ section.topic{padding:28px 0;border-top:1px solid var(--hair);scroll-margin-top:
 .qs .attr{font-family:var(--display);font-size:13.5px;color:var(--muted)}
 .qs .det a{font-family:var(--display);font-weight:600;font-size:13.5px;text-decoration:none}
 .showall{margin-top:12px;font-size:13.5px;padding:6px 14px}
-h2 .cnt{font-family:var(--display);font-size:14px;font-weight:600;color:var(--muted);vertical-align:middle;margin-left:6px}
 .note{font-family:var(--display);font-size:12.5px;color:var(--muted)}
-.cta{padding-top:40px;padding-bottom:64px;border-top:1px solid var(--hair)}
+.cta{padding-top:36px;padding-bottom:56px;margin-top:12px;border-top:1px solid var(--ink)}
 .cta p{max-width:60ch;color:var(--muted);margin:8px 0 18px}
-footer{border-top:1px solid var(--hair);padding:22px 0 40px;font-family:var(--display);font-size:13.5px;color:var(--muted)}
-@media (max-width:760px){.wrap{padding:0 16px}.nav{display:none}.qs li{grid-template-columns:auto minmax(0,1fr) auto;gap:2px 10px}.qs blockquote{grid-column:1/4;order:3;font-size:16px}.qs .more{grid-column:3;grid-row:1}.qs .det{grid-column:1/4;order:4}}
+footer{background:var(--red-deep);color:#fff}
+footer .wrap{padding-top:28px;padding-bottom:28px;display:flex;justify-content:space-between;gap:10px 24px;flex-wrap:wrap;font-family:var(--display);font-size:14px}
+@media (max-width:760px){.wrap{padding:0 16px}.nav{display:none}.ihead{grid-template-columns:1fr}.toc{margin-left:-16px;margin-right:-16px;padding:0 16px}.toc ul{flex-wrap:nowrap;overflow-x:auto}.qs li{grid-template-columns:auto minmax(0,1fr) auto;gap:2px 10px}.qs blockquote{grid-column:1/4;order:3;font-size:16px}.qs .more{grid-column:3;grid-row:1}.qs .det{grid-column:1/4;order:4}}
 </style>
 <script type="application/ld+json">__LD__</script>
 </head>
@@ -317,11 +321,11 @@ footer{border-top:1px solid var(--hair);padding:22px 0 40px;font-family:var(--di
 </div></header>
 <main>
   <div class="wrap intro">
-    <span class="label">Quotes</span>
-    <h1>Chris Pereira on China, trust and global brands</h1>
-    <p>Chris Pereira (彭家荣) is a British Canadian business leader with 20+ years in China, founder and CEO of iMpact 美讯 and author of <em>Trust</em> 《信任》. These are selected lines from his interviews, talks and op-eds, grouped by theme, each with a link to the original source.</p>
-    <p>Journalists are welcome to cite these quotes with attribution. For new comment, interviews or speaking, <a href="/#contact">get in touch</a>.</p>
-    <ul class="toc">__TOC__</ul>
+    <div class="ihead">
+      <div><span class="label">Quotes</span><h1>On China, trust and global brands</h1></div>
+      <p class="lede">Selected lines from Chris Pereira's interviews, talks and op-eds, each linked to the original source. Journalists are welcome to cite them with attribution.</p>
+    </div>
+    <nav class="toc" aria-label="Themes"><ul>__TOC__</ul></nav>
   </div>
 __SECTIONS__
   <div class="wrap cta">
@@ -330,7 +334,7 @@ __SECTIONS__
     <a class="btn" href="/#contact">Contact Chris</a>
   </div>
 </main>
-<footer><div class="wrap">© Chris Pereira 彭家荣 · <a href="/">chrisjpereira.com</a> · Quotes translated from Chinese are marked; the original wording is shown beneath.</div></footer>
+<footer><div class="wrap"><span>Chris Pereira <span lang="zh-Hans">彭家荣</span></span><span>Updated October 2026</span></div></footer>
 <script>document.addEventListener("click",function(e){var m=e.target.closest(".more");if(m){var li=m.parentNode,d=li.querySelector(".det"),o=d.hidden;d.hidden=!o;li.classList.toggle("open",o);m.setAttribute("aria-expanded",o?"true":"false");m.textContent=o?"Less":"More";return}var b=e.target.closest(".showall");if(b){var ul=b.previousElementSibling,on=ul.classList.toggle("all");b.textContent=on?"Show less":b.dataset.label;if(!on)b.closest("section").scrollIntoView({behavior:"smooth"})}});</script>
 </body>
 </html>
@@ -341,13 +345,13 @@ def build_quotes(QUOTES, robots):
     toc, secs, graph = [], [], []
     page = SITE + "/quotes/"
     for s in QUOTES:
-        toc.append('<li><a href="#' + s["key"] + '">' + esc(s["title"]) + "</a></li>")
+        toc.append('<li><a href="#' + s["key"] + '">' + esc(s["title"]) + ' <span>' + str(len(s["quotes"])) + '</span></a></li>')
         cards = []
         for q in s["quotes"]:
             src = ('<a href="' + esc(q["url"]) + '" target="_blank" rel="noopener">Read the source ↗</a>') if q.get("url") else ""
             orig = ""
             if q.get("lang") == "zh":
-                orig = '<p class="orig" lang="zh-Hans">' + esc(q["original"]) + '</p><p class="note">Translated from Chinese</p>'
+                orig = '<p class="orig" lang="zh-Hans">' + esc(q["original"]) + '</p><p class="note">Translated from the Chinese original above</p>'
             hide = ' class="x"' if len(cards) >= 4 else ""
             outlet = OUTLET_EN.get(q["outlet"], q["outlet"])
             cards.append('<li' + hide + '><time datetime="' + esc(q["date"]) + '">' + esc(d_en(q["date"])) + '</time>'
@@ -368,7 +372,7 @@ def build_quotes(QUOTES, robots):
         n = len(s["quotes"])
         allbtn = ('<button class="showall" type="button" data-label="Show all ' + str(n) + '">Show all ' + str(n) + '</button>') if n > 4 else ""
         secs.append('  <section class="topic" id="' + s["key"] + '"><div class="wrap"><h2>' + esc(s["title"]) +
-                    ' <span class="cnt">' + str(n) + '</span></h2><ul class="qs">' + "".join(cards) + "</ul>" + allbtn + "</div></section>")
+                    '</h2><ul class="qs">' + "".join(cards) + "</ul>" + allbtn + "</div></section>")
     ld = {"@context": "https://schema.org", "@graph": [
         {"@type": "WebPage", "@id": page, "url": page, "name": "Chris Pereira on China, trust and global brands",
          "about": {"@id": PERSON}, "mainEntity": {"@id": page + "#quotes"}, "inLanguage": "en"},
