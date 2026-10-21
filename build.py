@@ -87,6 +87,19 @@ def sum_p(t):
     return "".join(out)
 
 
+def eid(prefix, key):
+    import hashlib
+    return prefix + "-" + hashlib.sha1(key.encode("utf-8")).hexdigest()[:8]
+
+
+def media_id(m):
+    return eid("m", m[6] or (m[2] + m[3]))
+
+
+def writing_id(w):
+    return eid("w", w[4] or (w[1] + w[2]))
+
+
 def media_li(m, i, lang):
     zh = " zh" if m[5] == "中文" else ""
     d = ('<a class="what' + zh + '" href="' + esc(m[6]) + '" target="_blank" rel="noopener">' + esc(m[3]) + "</a>") if m[6] \
@@ -106,7 +119,7 @@ def media_li(m, i, lang):
         sm = '<div class="sum" hidden>' + sum_p(q) + attr + links + "</div>"
     date = d_en(m[0]) if lang == "en" else d_zh(m[0])
     cls = ' class="x"' if i >= MLIMIT else ""
-    return ("<li" + cls + '><time datetime="' + m[0] + '">' + date + '</time><span class="outlet" title="' + esc(m[2]) + '">'
+    return ("<li" + cls + ' id="' + media_id(m) + '"><time datetime="' + m[0] + '">' + date + '</time><span class="outlet" title="' + esc(m[2]) + '">'
             + esc(m[2]) + "</span>" + d + b + sm + "</li>")
 
 
@@ -130,7 +143,7 @@ def writing_li(w, i, lang):
         sm = '<div class="sum" hidden><p>' + esc(w[5]) + "</p>" + tail + "</div>"
     date = d_en(w[0]) if lang == "en" else d_zh(w[0])
     cls = ' class="x"' if i >= WLIMIT else ""
-    return ("<li" + cls + '><time datetime="' + w[0] + '">' + date + '</time><span class="src" title="' + esc(w[1]) + '">'
+    return ("<li" + cls + ' id="' + writing_id(w) + '"><time datetime="' + w[0] + '">' + date + '</time><span class="src" title="' + esc(w[1]) + '">'
             + esc(src_label(w[1], lang)) + "</span>" + t + '<span class="dek">' + esc(w[3]) + "</span>" + b + sm + "</li>")
 
 
@@ -194,7 +207,13 @@ def lists_js(lang, wmore, more):
             'if(!btn)return;btn.addEventListener("click",function(){var on=ul.classList.toggle("all");btn.textContent=on?"' + less + '":label;'
             'if(!on)document.getElementById(sec).scrollIntoView({behavior:"smooth"})})}'
             'wire("writing-list","wmore","writing",' + json.dumps(wmore, ensure_ascii=False) + ');'
-            'wire("media-list","more","media",' + json.dumps(more, ensure_ascii=False) + ");})();\n</script>")
+            'wire("media-list","more","media",' + json.dumps(more, ensure_ascii=False) + ");"
+            'function deep(){var h=location.hash.slice(1);if(!/^[mw]-[0-9a-f]{8}$/.test(h))return;var li=document.getElementById(h);if(!li)return;'
+            'var ul=li.parentNode;if(li.classList.contains("x")&&!ul.classList.contains("all")){ul.classList.add("all");var b=document.getElementById(ul.id==="media-list"?"more":"wmore");if(b)b.textContent="' + less + '"}'
+            'var sb=li.querySelector(".sumbtn"),sm=li.querySelector(".sum");if(sb&&sm&&sm.hidden)sb.click();'
+            'li.classList.add("hit");setTimeout(function(){li.scrollIntoView({block:"center"})},60);setTimeout(function(){li.classList.remove("hit")},2600)}'
+            'deep();window.addEventListener("hashchange",deep);'
+            "})();\n</script>")
 
 
 def main():
@@ -341,7 +360,30 @@ __SECTIONS__
 """
 
 
+def norm_url(u):
+    return re.sub(r"[?#].*$", "", (u or "").strip()).rstrip("/").lower()
+
+
+def find_entry(q, MEDIA, WRITING):
+    u = norm_url(q.get("url"))
+    if u:
+        for w in WRITING:
+            if w[4] and norm_url(w[4]) == u:
+                return "/#" + writing_id(w), "See it in Writing"
+        for m in MEDIA:
+            if (m[6] and norm_url(m[6]) == u) or (len(m) > 9 and m[9] and norm_url(m[9]) == u):
+                return "/#" + media_id(m), "See it in Commentary"
+    cands = [m for m in MEDIA if m[0][:7] == q["date"][:7] and (m[2] == q["outlet"] or OUTLET_EN.get(m[2], m[2]) == OUTLET_EN.get(q["outlet"], q["outlet"]))]
+    if cands:
+        best = next((m for m in cands if q["text"][:25].lower() in (m[7] if len(m) > 7 else "").lower()), cands[0])
+        return "/#" + media_id(best), "See it in Commentary"
+    return None, None
+
+
 def build_quotes(QUOTES, robots):
+    MEDIA = json.load(open("data/media.json", encoding="utf-8"))
+    WRITING = json.load(open("data/writing.json", encoding="utf-8"))
+    unmatched = []
     toc, secs, graph = [], [], []
     page = SITE + "/quotes/"
     for s in QUOTES:
@@ -349,6 +391,11 @@ def build_quotes(QUOTES, robots):
         cards = []
         for q in s["quotes"]:
             src = ('<a href="' + esc(q["url"]) + '" target="_blank" rel="noopener">Read the source ↗</a>') if q.get("url") else ""
+            href, lbl = find_entry(q, MEDIA, WRITING)
+            if href:
+                src = '<a href="' + href + '">' + lbl + " →</a>" + (" · " + src if src else "")
+            else:
+                unmatched.append(q["outlet"] + " " + q["date"] + " " + q["text"][:40])
             orig = ""
             if q.get("lang") == "zh":
                 orig = '<p class="orig" lang="zh-Hans">' + esc(q["original"]) + '</p><p class="note">Translated from the Chinese original above</p>'
@@ -384,6 +431,7 @@ def build_quotes(QUOTES, robots):
     os.makedirs("quotes", exist_ok=True)
     open("quotes/index.html", "w", encoding="utf-8").write(html_out)
     print("quotes page:", sum(len(s["quotes"]) for s in QUOTES), "quotes,", robots)
+    for x in unmatched: print("  no entry:", x)
 
 
 if __name__ == "__main__":
