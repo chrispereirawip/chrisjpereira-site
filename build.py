@@ -116,7 +116,10 @@ def media_li(m, i, lang):
         if len(m) > 9 and m[9]:
             links += '<a href="' + esc(m[9]) + '" target="_blank" rel="noopener">' + LBL[lang][kind(m[9], "video")] + "</a>"
         attr = ('<p class="attr">' + esc(attribution(m, lang)) + "</p>") if any(is_quote_line(l) for l in q.split("\n")) else ""
-        sm = '<div class="sum" hidden>' + sum_p(q) + attr + links + "</div>"
+        pic = ""
+        if len(m) > 10 and m[10]:
+            pic = '<img class="mthumb" src="' + ("" if lang == "en" else "../") + esc(m[10]) + '" alt="' + esc(("Chris Pereira interviewed by " + ({"第一财经": "Yicai"}.get(m[2], m[2]))) if lang == "en" else ("彭家荣接受" + m[2] + "采访")) + '" width="900" height="704" loading="lazy">'
+        sm = '<div class="sum" hidden>' + pic + sum_p(q) + attr + links + "</div>"
     date = d_en(m[0]) if lang == "en" else d_zh(m[0])
     cls = ' class="x"' if i >= MLIMIT else ""
     return ("<li" + cls + ' id="' + media_id(m) + '"><time datetime="' + m[0] + '">' + date + '</time><span class="outlet" title="' + esc(m[2]) + '">'
