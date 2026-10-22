@@ -203,6 +203,36 @@ TOGGLE_JS = {
 }
 
 
+OUTLET_MAP = {"Financial Times": ["Financial Times"], "金融时报": ["Financial Times"],
+    "Wall Street Journal": ["Wall Street Journal"], "华尔街日报": ["Wall Street Journal"],
+    "BBC": ["BBC", "BBC Global News"], "Bloomberg": ["Bloomberg"], "彭博社": ["Bloomberg"],
+    "Reuters": ["Reuters"], "路透社": ["Reuters"], "CNBC": ["CNBC"], "Nikkei Asia": ["Nikkei Asia"], "日经亚洲": ["Nikkei Asia"],
+    "SCMP": ["SCMP"], "南华早报": ["SCMP"], "CCTV": ["CCTV 央视网", "CCTV-13《新闻直播间》", "CCTV-13《朝闻天下》"], "央视": ["CCTV 央视网", "CCTV-13《新闻直播间》", "CCTV-13《朝闻天下》"],
+    "CGTN": ["CGTN", "CGTN Europe", "CGTN, The Heat", "CGTN Global Business"], "Phoenix TV": ["凤凰卫视"], "凤凰卫视": ["凤凰卫视"],
+    "Xinhua": ["新华社", "Xinhua", "新华网", "新华国际"], "新华社": ["新华社", "Xinhua", "新华网", "新华国际"]}
+
+
+def link_highlights(page, MEDIA, lang):
+    def latest(names):
+        for m in MEDIA:
+            if m[2] in names:
+                return "#" + media_id(m)
+        return "#media"
+    def outlets(mo):
+        names = re.findall(r"<(?:span|a)[^>]*>([^<]+)</(?:span|a)>", mo.group(1))
+        return '<div class="outlets">' + "".join('<a href="' + latest(OUTLET_MAP.get(n, [n])) + '">' + esc(n) + "</a>" for n in names) + "</div>"
+    page = re.sub(r'<div class="outlets">(.*?)</div>', outlets, page, count=1, flags=re.S)
+    forbes = next((m for m in MEDIA if "1787878427776611768" in (m[6] or "")), None)
+    work = "https://www.impact5r.com/work/" if lang == "en" else "https://www.impact5r.com/zh/work/"
+    targets = ['href="#about"', 'href="' + ("#" + media_id(forbes) if forbes else "#about") + '"', 'href="#books"', 'href="' + work + '" target="_blank" rel="noopener"']
+    blocks = re.findall(r'<(?:div|a) class="f"[^>]*>.*?</(?:div|a)>(?=\s*(?:<(?:div|a) class="f"|</div>))', page, flags=re.S)
+    for b, t in zip(blocks[:4], targets):
+        inner = re.sub(r'^<(?:div|a) class="f"[^>]*>|</(?:div|a)>$', "", b)
+        page = page.replace(b, '<a class="f" ' + t + ">" + inner + "</a>", 1)
+    page = page.replace('<div class="books">', '<div class="books" id="books">', 1)
+    return page
+
+
 def lists_js(lang, wmore, more):
     fn, less = TOGGLE_JS[lang]
     return ("<script>/* lists are pre-rendered by build.py */\n(function(){" + fn +
@@ -231,6 +261,7 @@ def main():
         wmore, more = UI[lang]["wmore"], UI[lang]["more"].format(n=len(MEDIA))
         page = put_btn(page, "wmore", wmore, len(WRITING) <= WLIMIT)
         page = put_btn(page, "more", more, len(MEDIA) <= MLIMIT)
+        page = link_highlights(page, MEDIA, lang)
         page = re.sub(r"<script>/\* lists are pre-rendered by build\.py \*/.*?</script>", lambda _: lists_js(lang, wmore, more), page, flags=re.S)
         if lang == "en":
             ld = '<script type="application/ld+json" id="ld-coverage">' + coverage_ld(MEDIA, WRITING) + "</script>"
