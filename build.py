@@ -205,7 +205,7 @@ TOGGLE_JS = {
 
 OUTLET_MAP = {"Financial Times": ["Financial Times"], "金融时报": ["Financial Times"],
     "Wall Street Journal": ["Wall Street Journal"], "华尔街日报": ["Wall Street Journal"],
-    "BBC": ["BBC", "BBC Global News"], "Bloomberg": ["Bloomberg"], "彭博社": ["Bloomberg"],
+    "BBC": ["BBC", "BBC Global News"], "CBC": ["CBC News"], "Bloomberg": ["Bloomberg"], "彭博社": ["Bloomberg"],
     "Reuters": ["Reuters"], "路透社": ["Reuters"], "CNBC": ["CNBC"], "Nikkei Asia": ["Nikkei Asia"], "日经亚洲": ["Nikkei Asia"],
     "SCMP": ["SCMP"], "南华早报": ["SCMP"], "CCTV": ["CCTV 央视网", "CCTV-13《新闻直播间》", "CCTV-13《朝闻天下》"], "央视": ["CCTV 央视网", "CCTV-13《新闻直播间》", "CCTV-13《朝闻天下》"],
     "CGTN": ["CGTN", "CGTN Europe", "CGTN, The Heat", "CGTN Global Business"], "Phoenix TV": ["凤凰卫视"], "凤凰卫视": ["凤凰卫视"],
