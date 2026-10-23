@@ -249,15 +249,39 @@ def lists_js(lang, wmore, more):
             "})();\n</script>")
 
 
+def talk_li(t, lang):
+    zh = lang == "zh"
+    title = (t["title_zh"] if zh else t["title_en"]) or t["title_en"] or t["title_zh"]
+    summ = (t["summary_zh"] if zh else t["summary_en"]) or ""
+    q = (t["quote_zh"] if zh else t["quote_en"]) or ""
+    meta = " · ".join(x for x in ((d_zh(t["date"]) if zh else d_en(t["date"])) if t.get("date") else "", t.get("city") or "") if x)
+    img = ('<img src="' + ("../" if zh else "") + "img/talks/" + esc(t["img"]) + '" alt="' + esc(t.get("caption") or title) + '" loading="lazy">') if t.get("img") else ""
+    return ("        <li>" + img + '<span class="tmeta">' + esc(meta) + "</span><h3>" + esc(title) + "</h3>"
+            + ("<p>" + esc(summ) + "</p>" if summ else "") + ("<blockquote>" + esc(q) + "</blockquote>" if q else "") + "</li>")
+
+
+def put_talks(page, TALKS, lang):
+    items = [talk_li(t, lang) for t in TALKS[:3]]
+    pat = re.compile(r'(<ul class="tlist" id="talks-list">)(.*?)(</ul>)', re.S)
+    assert len(pat.findall(page)) == 1, "talks-list"
+    page = pat.sub(lambda mo: mo.group(1) + "\n" + "\n".join(items) + "\n      " + mo.group(3), page)
+    return re.sub(r'<div class="talks" id="talks"( hidden)?>', '<div class="talks" id="talks"' + ("" if items else " hidden") + ">", page)
+
+
 def main():
     en = open("index.html", encoding="utf-8").read()
     zh = open("zh/index.html", encoding="utf-8").read()
     WRITING = json.load(open("data/writing.json", encoding="utf-8"))
     MEDIA = json.load(open("data/media.json", encoding="utf-8"))
+    try:
+        TALKS = json.load(open("data/talks.json", encoding="utf-8"))
+    except FileNotFoundError:
+        TALKS = []
     for page_name, lang in (("en", "en"), ("zh", "zh")):
         page = en if lang == "en" else zh
         page = put_list(page, "writing-list", [writing_li(w, i, lang) for i, w in enumerate(WRITING)])
         page = put_list(page, "media-list", [media_li(m, i, lang) for i, m in enumerate(MEDIA)])
+        page = put_talks(page, TALKS, lang)
         wmore, more = UI[lang]["wmore"], UI[lang]["more"].format(n=len(MEDIA))
         page = put_btn(page, "wmore", wmore, len(WRITING) <= WLIMIT)
         page = put_btn(page, "more", more, len(MEDIA) <= MLIMIT)

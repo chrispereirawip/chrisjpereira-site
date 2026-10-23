@@ -306,6 +306,15 @@ h1 .en{display:block;font-size:.3em;font-weight:500;letter-spacing:.06em;color:v
 .media li.hit{background:#F3E2DA!important;transition:background .6s}.media li{scroll-margin-top:90px}
 .mthumb{display:block;width:100%;max-width:420px;height:auto;margin:2px 0 12px;border-radius:2px}
 .facts a.f{display:block;text-decoration:none;color:inherit;transition:background .2s}.facts a.f:hover{background:var(--paper)}.facts a.f:hover strong{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}.outlets a{color:inherit;text-decoration:none}.outlets a:hover{color:var(--red)}
+.talks{margin:0 0 40px}
+.tlist{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.tlist li{display:flex;flex-direction:column;gap:8px;min-width:0}
+.tlist img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px}
+.tlist .tmeta{font-family:var(--display);font-size:13px;color:var(--muted)}
+.tlist h3{margin:0;font-size:20px;line-height:1.3}
+.tlist p{margin:0;font-size:15.5px}
+.tlist blockquote{margin:2px 0 0;padding-left:12px;border-left:3px solid var(--red);font-style:italic}
+@media (max-width:900px){.tlist{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -676,6 +685,9 @@ h1 .en{display:block;font-size:.3em;font-weight:500;letter-spacing:.06em;color:v
         <figure class="g1"><img src="../img/panel-hkust-byd.webp" width="1100" height="682" alt="彭家荣与比亚迪李云飞在深圳香港科技大学BizInsight论坛同台对话"><figcaption>与比亚迪李云飞同台，香港科技大学 BizInsight 论坛，深圳</figcaption></figure>
         <figure class="g2"><img src="../img/partnerboost.webp" width="800" height="637" alt="彭家荣在PartnerBoost与Rakuten Advertising活动上进行炉边对话"><figcaption>炉边对话，PartnerBoost × Rakuten Advertising</figcaption></figure>
       </div>
+      <div class="talks" id="talks" hidden><span class="label" style="color:var(--muted)">最新演讲</span><ul class="tlist" id="talks-list">
+
+      </ul></div>
       <div class="speak">
         <div>
           <p>彭家荣可用中文或英文演讲，分享他在中国商界二十余年的一线经验。常讲主题：</p>
