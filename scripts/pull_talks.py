@@ -26,6 +26,8 @@ def main():
     for t in feed["talks"]:
         if not (t.get("title_en") or t.get("title_zh")):
             continue
+        if t.get("chris") is False:  # the Academy feed has talks by every iMpact speaker; this site shows Chris's only
+            continue
         img = ""
         photos = t.get("photos") or []
         cover = next((p for p in photos if p.get("cover")), photos[0] if photos else None)
