@@ -194,11 +194,11 @@ async function gscRefresh(env) {
     .bind(Date.now(), JSON.stringify({ from: j.from, to: j.to, query: j.query, page: j.page, country: j.country, device: j.device })));
   for (let i = 0; i < st.length; i += 50) await env.DB.batch(st.slice(i, i + 50));
 }
-async function gscGet(env, ctx) {
+async function gscGet(env, ctx, again = false) {
   const row = await env.DB.prepare("SELECT at, json FROM gsc_feed WHERE k = 'feed'").first();
-  if (env.GSC_URL && (!row || Date.now() - row.at > 6 * 36e5)) {
+  if (env.GSC_URL && !again && (!row || Date.now() - row.at > 6 * 36e5)) {
     const job = gscRefresh(env).catch((e) => console.log('gsc', e && e.message));
-    if (!row) { await job; return gscGet(env, null); }
+    if (!row) { await job; return gscGet(env, null, true); }
     if (ctx) ctx.waitUntil(job);
   }
   return row ? { at: row.at, ...JSON.parse(row.json) } : null;
