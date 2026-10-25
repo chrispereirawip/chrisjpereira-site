@@ -7,9 +7,10 @@
   "routes": [{ "pattern": "stats.chrisjpereira.com", "custom_domain": true }],
   "d1_databases": [{ "binding": "DB", "database_name": "chrisjpereira-stats", "database_id": "a608bcb6-8d40-4eb2-8b4d-b772369cc780" }],
   "send_email": [{ "name": "EMAIL" }],
-  // once a day: drop visits older than two years
+  // once a day: drop visits older than two years, refresh Google Search data
   "triggers": { "crons": ["17 3 * * *"] },
-  // Secret (Cloudflare dashboard): SALT — any long random text; it makes the daily visitor codes impossible to reverse
+  // Secrets (Cloudflare dashboard): SALT — any long random text; it makes the daily visitor codes impossible to reverse.
+  // GSC_URL — the Apps Script web app that returns Google Search Console data ("chrisjpereira.com stats - Google Search data" in chris@ecoinst.ca's Drive)
   "vars": { "OWNER_EMAIL": "chris@impact5r.com" },
   "observability": { "enabled": true }
 }

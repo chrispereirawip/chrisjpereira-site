@@ -23,6 +23,9 @@ const SCHEMA = [
   'CREATE TABLE IF NOT EXISTS logins (id TEXT PRIMARY KEY, expires INTEGER NOT NULL, used INTEGER NOT NULL DEFAULT 0)',
   'CREATE TABLE IF NOT EXISTS sessions (id TEXT PRIMARY KEY, expires INTEGER NOT NULL)',
   'CREATE TABLE IF NOT EXISTS limits (k TEXT PRIMARY KEY, n INTEGER NOT NULL, until INTEGER NOT NULL)',
+  // Google Search Console: one row per day (kept for good, so history grows past Google's 16-month limit) + the latest breakdowns
+  'CREATE TABLE IF NOT EXISTS gsc_day (day TEXT PRIMARY KEY, clicks INTEGER NOT NULL, imp INTEGER NOT NULL, pos REAL NOT NULL)',
+  'CREATE TABLE IF NOT EXISTS gsc_feed (k TEXT PRIMARY KEY, at INTEGER NOT NULL, json TEXT NOT NULL)',
 ];
 let ready = false;
 async function init(env) { if (ready) return; await env.DB.batch(SCHEMA.map((s) => env.DB.prepare(s))); ready = true; }
@@ -179,6 +182,72 @@ async function redeem(env, req) {
   return new Response(null, { status: 302, headers: { location: '/', 'set-cookie': `${COOKIE}=${s}; Path=/; Max-Age=${30 * 86400}; HttpOnly; Secure; SameSite=Lax` } });
 }
 
+/* ---------- Google Search Console (via Chris's Apps Script web app, URL in secret GSC_URL) ---------- */
+async function gscRefresh(env) {
+  if (!env.GSC_URL) return;
+  const r = await fetch(env.GSC_URL, { redirect: 'follow', signal: AbortSignal.timeout(25000) });
+  const j = await r.json();
+  if (!j || !Array.isArray(j.date)) throw new Error('GSC feed: unexpected response');
+  const st = j.date.map((x) => env.DB.prepare('INSERT INTO gsc_day (day, clicks, imp, pos) VALUES (?1, ?2, ?3, ?4) ON CONFLICT(day) DO UPDATE SET clicks = ?2, imp = ?3, pos = ?4')
+    .bind(x.keys[0], x.clicks, x.impressions, x.position));
+  st.push(env.DB.prepare("INSERT INTO gsc_feed (k, at, json) VALUES ('feed', ?1, ?2) ON CONFLICT(k) DO UPDATE SET at = ?1, json = ?2")
+    .bind(Date.now(), JSON.stringify({ from: j.from, to: j.to, query: j.query, page: j.page, country: j.country, device: j.device })));
+  for (let i = 0; i < st.length; i += 50) await env.DB.batch(st.slice(i, i + 50));
+}
+async function gscGet(env, ctx) {
+  const row = await env.DB.prepare("SELECT at, json FROM gsc_feed WHERE k = 'feed'").first();
+  if (env.GSC_URL && (!row || Date.now() - row.at > 6 * 36e5)) {
+    const job = gscRefresh(env).catch((e) => console.log('gsc', e && e.message));
+    if (!row) { await job; return gscGet(env, null); }
+    if (ctx) ctx.waitUntil(job);
+  }
+  return row ? { at: row.at, ...JSON.parse(row.json) } : null;
+}
+const ISO3 = { SGP: 'SG', CHN: 'CN', HKG: 'HK', USA: 'US', GBR: 'GB', CAN: 'CA', AUS: 'AU', IND: 'IN', MYS: 'MY', TWN: 'TW', JPN: 'JP', KOR: 'KR', DEU: 'DE', FRA: 'FR', NLD: 'NL', IDN: 'ID', THA: 'TH', VNM: 'VN', PHL: 'PH', ARE: 'AE', SAU: 'SA', CHE: 'CH', ITA: 'IT', ESP: 'ES', BRA: 'BR', MEX: 'MX', NZL: 'NZ', IRL: 'IE', SWE: 'SE', RUS: 'RU', ZAF: 'ZA', NGA: 'NG', KEN: 'KE', EGY: 'EG', TUR: 'TR', PAK: 'PK', BGD: 'BD', MAC: 'MO', BEL: 'BE', POL: 'PL', ISR: 'IL', QAT: 'QA', NOR: 'NO', DNK: 'DK', FIN: 'FI', AUT: 'AT', PRT: 'PT', GRC: 'GR', ARG: 'AR', CHL: 'CL', COL: 'CO', PER: 'PE', KAZ: 'KZ', UZB: 'UZ', LKA: 'LK', KHM: 'KH', MMR: 'MM', LAO: 'LA', NPL: 'NP' };
+
+async function gscSection(env, ctx, from, today, prevFrom, prevTo, isAll) {
+  if (!env.GSC_URL) return '';
+  let f; try { f = await gscGet(env, ctx); } catch (e) { console.log('gsc', e && e.message); }
+  const [cur, prv, daily] = await env.DB.batch([
+    env.DB.prepare('SELECT SUM(clicks) c, SUM(imp) i, SUM(pos * imp) / NULLIF(SUM(imp), 0) p, MIN(day) f FROM gsc_day WHERE day >= ?1 AND day <= ?2').bind(isAll ? '0000' : from, today),
+    env.DB.prepare('SELECT SUM(clicks) c, SUM(imp) i FROM gsc_day WHERE day >= ?1 AND day <= ?2').bind(prevFrom, prevTo),
+    env.DB.prepare('SELECT day, clicks, imp FROM gsc_day WHERE day >= ?1 AND day <= ?2 ORDER BY day').bind(isAll ? '0000' : from, today),
+  ]);
+  const C = cur.results[0] || {}, P = prv.results[0] || {};
+  const delta = (a, b) => (isAll || !b ? '' : `<span class="delta ${a >= b ? 'up' : 'down'}">${a >= b ? '▲' : '▼'} ${Math.abs(Math.round(((a - b) / b) * 100))}%</span>`);
+  const rows = daily.results, byDay = Object.fromEntries(rows.map((r) => [r.day, r]));
+  const start = isAll ? (rows[0]?.day || today) : from;
+  const days = []; for (let t = Date.parse(start + 'T00:00:00Z'); t <= Date.parse(today + 'T00:00:00Z'); t += 864e5) days.push(new Date(t).toISOString().slice(0, 10));
+  const max = Math.max(1, ...days.map((d) => byDay[d]?.imp || 0)), Wd = 900, H = 150, bw = Wd / Math.max(1, days.length);
+  const bars = days.map((d, i) => { const r = byDay[d] || { clicks: 0, imp: 0 }; const h = (r.imp / max) * (H - 15); const hc = (r.clicks / max) * (H - 15);
+    return `<rect class="imp" x="${(i * bw + bw * 0.15).toFixed(1)}" y="${(H - h).toFixed(1)}" width="${(bw * 0.7).toFixed(1)}" height="${h.toFixed(1)}"><title>${d}: ${r.imp} times shown, ${r.clicks} clicks</title></rect>${r.clicks ? `<rect x="${(i * bw + bw * 0.15).toFixed(1)}" y="${(H - Math.max(2, hc)).toFixed(1)}" width="${(bw * 0.7).toFixed(1)}" height="${Math.max(2, hc).toFixed(1)}"><title>${d}: ${r.clicks} clicks</title></rect>` : ''}`; }).join('');
+  const ticks = days.length > 1 ? [0, Math.floor((days.length - 1) / 2), days.length - 1].map((i) => `<text x="${(i * bw + bw / 2).toFixed(1)}" y="${H + 16}" text-anchor="${i === 0 ? 'start' : i === days.length - 1 ? 'end' : 'middle'}">${days[i].slice(rk_year(days) ? 0 : 5)}</text>`).join('') : '';
+  const chart = `<svg viewBox="0 0 ${Wd} ${H + 22}" class="chart gsc" role="img" aria-label="Google Search per day">${bars}${ticks}</svg>`;
+  const ctr = C.i ? ((C.c / C.i) * 100).toFixed(1) + '%' : '–';
+  const pct = (x) => (x * 100).toFixed(1) + '%';
+  const tbl = (title, head, list, map, note) => table(title, head, (list || []).map(map), { numCols: [1, 2, 3], note });
+  const rowsOf = (k) => (f && f[k]) || [];
+  const short = (u) => { try { const x = new URL(u); return pageName(x.pathname) + (x.hash ? ' ' + x.hash : ''); } catch { return u; } };
+  const per = f ? `${f.from} to ${f.to}` : '';
+  return `<h2 class="sect">Google Search</h2>
+<p class="note sect-note">From Google Search Console: how often the site showed up in Google results and how often people clicked. Includes the months before the stats page existed. Google's figures arrive 2–3 days late and use US Pacific dates.${f ? ` Last updated ${T(local(f.at).toISOString().slice(0, 16).replace('T', ' '), f.at)}.` : ''}</p>
+<div class="kpis k4">
+  <div><b>${n(C.c)}</b><span>Clicks from Google ${delta(C.c || 0, P.c || 0)}</span></div>
+  <div><b>${n(C.i)}</b><span>Times shown in Google ${delta(C.i || 0, P.i || 0)}</span></div>
+  <div><b>${ctr}</b><span>Click rate</span></div>
+  <div><b>${C.p ? C.p.toFixed(1) : '–'}</b><span>Average position in results</span></div>
+</div>
+<section class="card wide"><h2>Google Search per day</h2><p class="note">Light bars: times shown in Google. Dark bars: clicks.${C.f && !isAll && C.f > from ? ` Google data starts ${C.f}.` : ''}</p>${chart}</section>
+<div class="grid">
+${tbl('Search terms', ['Search term', 'Clicks', 'Position', 'Shown'], rowsOf('query'), (r) => [esc(r.keys[0]), r.clicks, `<span data-v="${r.position}">${r.position.toFixed(1)}</span>`, r.impressions], `What people typed into Google before seeing the site, ${per}. Google hides rare searches for privacy.`)}
+${tbl('Pages in Google', ['Page', 'Clicks', 'Position', 'Shown'], rowsOf('page'), (r) => [`<a href="${esc(r.keys[0])}" target="_blank" rel="noopener">${esc(short(r.keys[0]))}</a>`, r.clicks, `<span data-v="${r.position}">${r.position.toFixed(1)}</span>`, r.impressions], per)}
+${tbl('Searchers by country', ['Country', 'Clicks', 'Click rate', 'Shown'], rowsOf('country'), (r) => [country(ISO3[String(r.keys[0]).toUpperCase()] || String(r.keys[0]).toUpperCase()), r.clicks, `<span data-v="${r.ctr}">${pct(r.ctr)}</span>`, r.impressions], per)}
+${tbl('Searchers by device', ['Device', 'Clicks', 'Click rate', 'Shown'], rowsOf('device'), (r) => [esc(r.keys[0][0] + r.keys[0].slice(1).toLowerCase()), r.clicks, `<span data-v="${r.ctr}">${pct(r.ctr)}</span>`, r.impressions], per)}
+</div>`;
+}
+const rk_year = (days) => days.length > 400;
+const T = (s, d) => `<time datetime="${new Date(d).toISOString()}">${s}</time>`;
+
 /* ---------- the statistics page ---------- */
 const RANGES = [['today', 'Today', 0], ['7d', '7 days', 6], ['30d', '30 days', 29], ['90d', '90 days', 89], ['all', 'All time', 3650]];
 const FLAG = (cc) => (/^[A-Z]{2}$/.test(cc) ? String.fromCodePoint(...[...cc].map((c) => 127397 + c.charCodeAt(0))) : '');
@@ -194,12 +263,12 @@ function table(title, head, rows, opts = {}) {
   const body = rows.length ? rows.map((r) => {
     const v = Number(r[r.length - 1] || 0);
     return `<tr>${r.map((c, i) => i === r.length - 1 ? `<td class="num" data-v="${v}"><span class="bar" style="width:${Math.max(2, Math.round((v / total) * 100))}%"></span>${n(v)}</td>`
-      : `<td${typeof c === 'number' ? ` class="num" data-v="${c}"` : ''}>${c}</td>`).join('')}</tr>`;
+      : `<td${typeof c === 'number' ? ` class="num" data-v="${c}"` : opts.numCols?.includes(i) ? ' class="num"' : ''}>${c}</td>`).join('')}</tr>`;
   }).join('') : `<tr><td colspan="${head.length}" class="muted">No data yet</td></tr>`;
   return `<section class="card${opts.wide ? ' wide' : ''}"><h2>${title}</h2>${opts.note ? `<p class="note">${opts.note}</p>` : ''}<div class="tw"><table class="sort"><thead><tr>${head.map((h, i) => `<th${i === head.length - 1 || opts.numCols?.includes(i) ? ' class="num"' : ''}>${h}</th>`).join('')}</tr></thead><tbody>${body}</tbody></table></div></section>`;
 }
 
-async function stats(env, req) {
+async function stats(env, req, ctx) {
   const url = new URL(req.url);
   const rk = RANGES.find((r) => r[0] === url.searchParams.get('r')) || RANGES[2];
   const now = Date.now(), today = dayOf(now), from = dayOf(now - rk[2] * 864e5);
@@ -251,7 +320,7 @@ async function stats(env, req) {
 
   const tabs = RANGES.map((r) => `<a href="?r=${r[0]}"${r === rk ? ' class="on"' : ''}>${r[1]}</a>`).join('');
   const ai = channels.results.find((r) => r.channel === 'AI assistant');
-  const T = (s, d) => `<time datetime="${new Date(d).toISOString()}">${s}</time>`;
+  const search = await gscSection(env, ctx, from, today, prevFrom, prevTo, rk[0] === 'all');
   const body = `<header class="top"><div class="wrap"><p class="brand"><b>彭家荣</b> Chris Pereira <span>Site stats</span></p><nav>${tabs}</nav></div></header>
 <main class="wrap">
 <div class="live"><span class="dot"></span>${n(live.results[0]?.v)} on the site right now <span class="muted">· times in Singapore time · <a href="https://chrisjpereira.com/" target="_blank" rel="noopener">chrisjpereira.com ↗</a></span></div>
@@ -282,6 +351,7 @@ ${table('Most clicked articles, videos and links', ['Item', 'Goes to', 'Clicks']
 ${table('Summaries opened', ['Entry', 'Opens'], sums.results.map((r) => [esc(r.label), r.c]), { wide: true, note: 'Times a visitor clicked "Short summary" on a commentary or writing entry.' })}
 ${other.results.length ? table('Bios copied, downloads and emails', ['Action', 'Item', 'Count'], other.results.map((r) => [({ copy: 'Copied bio', dl: 'Downloaded', mail: 'Clicked email' })[r.type], esc(r.label), r.c])) : ''}
 </div>
+${search}
 <section class="card wide"><h2>Latest visits</h2><div class="tw"><table class="sort"><thead><tr><th>When</th><th>Page</th><th>From</th><th>Where</th><th>Device</th><th class="num">Time on page</th></tr></thead><tbody>
 ${recent.results.map((r) => { const d = local(r.ts); return `<tr><td data-v="${r.ts}">${T(d.toISOString().slice(5, 16).replace('T', ' '), r.ts)}</td><td>${esc(pageName(r.path))}</td><td>${esc(r.source === 'Direct' ? 'Direct' : r.source)}</td><td>${FLAG(r.country)} ${esc([r.city, r.country].filter(Boolean).join(', '))}</td><td>${esc(r.device)} · ${esc(r.browser)}</td><td class="num" data-v="${r.dur}">${r.dur ? fmtDur(r.dur) : '–'}</td></tr>`; }).join('') || '<tr><td colspan="6" class="muted">No visits yet</td></tr>'}
 </tbody></table></div></section>
@@ -315,12 +385,14 @@ td.num .bar{position:absolute;right:0;top:4px;bottom:4px;background:rgba(179,38,
 .hours{display:grid;grid-template-columns:repeat(24,1fr);gap:3px;height:150px;align-items:end;padding-bottom:22px}.hours div{height:100%;display:flex;flex-direction:column;justify-content:flex-end;position:relative}
 .hours span{display:block;background:rgba(179,38,43,.75);border-radius:2px 2px 0 0;min-height:2px}.hours i{position:absolute;bottom:-20px;left:0;font-size:11px;color:var(--muted);font-style:normal}
 footer{font-size:13px;margin:10px 0 40px}
+.sect{font:600 26px "Playfair Display",Georgia,serif;margin:34px 0 2px;padding-top:18px;border-top:1px solid var(--rule)}.sect-note{max-width:820px}
+.grid+.card,.grid+.sect{margin-top:18px}.kpis.k4{grid-template-columns:repeat(4,1fr)}.chart.gsc rect{fill:#161616}.chart.gsc rect.imp{fill:rgba(179,38,43,.22)}
 .login{max-width:420px;margin:12vh auto;padding:0 20px}.login h1{font:600 34px "Playfair Display",Georgia,serif;margin:10px 0}.login form{display:flex;gap:8px;margin-top:18px}
 .login input{flex:1;padding:11px 12px;border:1px solid var(--rule);border-radius:6px;font:inherit}.login button{background:var(--red);color:#fff;border:0;border-radius:6px;padding:11px 16px;font:600 15px Inter;cursor:pointer}
-@media(max-width:900px){.kpis{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}.kpis b{font-size:26px}}`;
+@media(max-width:900px){.kpis,.grid+.card,.grid+.sect{margin-top:18px}.kpis.k4{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}.kpis b{font-size:26px}}`;
 
 export default {
-  async fetch(req, env) {
+  async fetch(req, env, ctx) {
     const url = new URL(req.url);
     try {
       await init(env);
@@ -336,7 +408,7 @@ export default {
         const raw = cookieOf(req); if (raw) await env.DB.prepare('DELETE FROM sessions WHERE id = ?1').bind(await sha(raw)).run();
         return new Response(null, { status: 302, headers: { location: '/', 'set-cookie': `${COOKIE}=; Path=/; Max-Age=0; HttpOnly; Secure; SameSite=Lax` } });
       }
-      if (url.pathname === '/') return (await signedIn(env, req)) ? await stats(env, req) : html(loginPage());
+      if (url.pathname === '/') return (await signedIn(env, req)) ? await stats(env, req, ctx) : html(loginPage());
       return new Response('Not found', { status: 404 });
     } catch (e) {
       console.log('error', e && e.stack);
@@ -349,5 +421,6 @@ export default {
     const cut = dayOf(Date.now() - 730 * 864e5);
     await env.DB.batch([env.DB.prepare('DELETE FROM hits WHERE day < ?1').bind(cut), env.DB.prepare('DELETE FROM events WHERE day < ?1').bind(cut),
       env.DB.prepare('DELETE FROM limits WHERE until < ?1').bind(Math.floor(Date.now() / 1000))]);
+    try { await gscRefresh(env); } catch (e) { console.log('gsc', e && e.message); }
   },
 };
