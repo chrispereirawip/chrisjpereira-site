@@ -182,7 +182,7 @@ async function redeem(env, req) {
   return new Response(null, { status: 302, headers: { location: '/', 'set-cookie': `${COOKIE}=${s}; Path=/; Max-Age=${30 * 86400}; HttpOnly; Secure; SameSite=Lax` } });
 }
 
-/* ---------- Google Search Console (via Chris's Apps Script web app, URL in secret GSC_URL) ---------- */
+/* ---------- Google Search Console: one-time import in D1 (25 Oct 2026); optional live JSON feed in secret GSC_URL ---------- */
 async function gscRefresh(env) {
   if (!env.GSC_URL) return;
   const r = await fetch(env.GSC_URL, { redirect: 'follow', signal: AbortSignal.timeout(25000) });
@@ -206,8 +206,8 @@ async function gscGet(env, ctx, again = false) {
 const ISO3 = { SGP: 'SG', CHN: 'CN', HKG: 'HK', USA: 'US', GBR: 'GB', CAN: 'CA', AUS: 'AU', IND: 'IN', MYS: 'MY', TWN: 'TW', JPN: 'JP', KOR: 'KR', DEU: 'DE', FRA: 'FR', NLD: 'NL', IDN: 'ID', THA: 'TH', VNM: 'VN', PHL: 'PH', ARE: 'AE', SAU: 'SA', CHE: 'CH', ITA: 'IT', ESP: 'ES', BRA: 'BR', MEX: 'MX', NZL: 'NZ', IRL: 'IE', SWE: 'SE', RUS: 'RU', ZAF: 'ZA', NGA: 'NG', KEN: 'KE', EGY: 'EG', TUR: 'TR', PAK: 'PK', BGD: 'BD', MAC: 'MO', BEL: 'BE', POL: 'PL', ISR: 'IL', QAT: 'QA', NOR: 'NO', DNK: 'DK', FIN: 'FI', AUT: 'AT', PRT: 'PT', GRC: 'GR', ARG: 'AR', CHL: 'CL', COL: 'CO', PER: 'PE', KAZ: 'KZ', UZB: 'UZ', LKA: 'LK', KHM: 'KH', MMR: 'MM', LAO: 'LA', NPL: 'NP' };
 
 async function gscSection(env, ctx, from, today, prevFrom, prevTo, isAll) {
-  if (!env.GSC_URL) return '';
   let f; try { f = await gscGet(env, ctx); } catch (e) { console.log('gsc', e && e.message); }
+  if (!f) return '';
   const [cur, prv, daily] = await env.DB.batch([
     env.DB.prepare('SELECT SUM(clicks) c, SUM(imp) i, SUM(pos * imp) / NULLIF(SUM(imp), 0) p, MIN(day) f FROM gsc_day WHERE day >= ?1 AND day <= ?2').bind(isAll ? '0000' : from, today),
     env.DB.prepare('SELECT SUM(clicks) c, SUM(imp) i FROM gsc_day WHERE day >= ?1 AND day <= ?2').bind(prevFrom, prevTo),
@@ -230,7 +230,7 @@ async function gscSection(env, ctx, from, today, prevFrom, prevTo, isAll) {
   const short = (u) => { try { const x = new URL(u); return pageName(x.pathname) + (x.hash ? ' ' + x.hash : ''); } catch { return u; } };
   const per = f ? `${f.from} to ${f.to}` : '';
   return `<h2 class="sect">Google Search</h2>
-<p class="note sect-note">From Google Search Console: how often the site showed up in Google results and how often people clicked. Includes the months before the stats page existed. Google's figures arrive 2–3 days late and use US Pacific dates.${f ? ` Last updated ${T(local(f.at).toISOString().slice(0, 16).replace('T', ' '), f.at)}.` : ''}</p>
+<p class="note sect-note">From Google Search Console: how often the site showed up in Google results and how often people clicked. ${f.note ? esc(f.note) : `Google's figures arrive 2–3 days late and use US Pacific dates. Last updated ${T(local(f.at).toISOString().slice(0, 16).replace('T', ' '), f.at)}.`}</p>
 <div class="kpis k4">
   <div><b>${n(C.c)}</b><span>Clicks from Google ${delta(C.c || 0, P.c || 0)}</span></div>
   <div><b>${n(C.i)}</b><span>Times shown in Google ${delta(C.i || 0, P.i || 0)}</span></div>
@@ -241,7 +241,7 @@ async function gscSection(env, ctx, from, today, prevFrom, prevTo, isAll) {
 <div class="grid">
 ${tbl('Search terms', ['Search term', 'Clicks', 'Position', 'Shown'], rowsOf('query'), (r) => [esc(r.keys[0]), r.clicks, `<span data-v="${r.position}">${r.position.toFixed(1)}</span>`, r.impressions], `What people typed into Google before seeing the site, ${per}. Google hides rare searches for privacy.`)}
 ${tbl('Pages in Google', ['Page', 'Clicks', 'Position', 'Shown'], rowsOf('page'), (r) => [`<a href="${esc(r.keys[0])}" target="_blank" rel="noopener">${esc(short(r.keys[0]))}</a>`, r.clicks, `<span data-v="${r.position}">${r.position.toFixed(1)}</span>`, r.impressions], per)}
-${tbl('Searchers by country', ['Country', 'Clicks', 'Click rate', 'Shown'], rowsOf('country'), (r) => [country(ISO3[String(r.keys[0]).toUpperCase()] || String(r.keys[0]).toUpperCase()), r.clicks, `<span data-v="${r.ctr}">${pct(r.ctr)}</span>`, r.impressions], per)}
+${tbl('Searchers by country', ['Country', 'Clicks', 'Click rate', 'Shown'], rowsOf('country'), (r) => [country(ISO3[String(r.keys[0]).toUpperCase()] || String(r.keys[0]).toUpperCase().slice(0, 2)), r.clicks, `<span data-v="${r.ctr}">${pct(r.ctr)}</span>`, r.impressions], per)}
 ${tbl('Searchers by device', ['Device', 'Clicks', 'Click rate', 'Shown'], rowsOf('device'), (r) => [esc(r.keys[0][0] + r.keys[0].slice(1).toLowerCase()), r.clicks, `<span data-v="${r.ctr}">${pct(r.ctr)}</span>`, r.impressions], per)}
 </div>`;
 }

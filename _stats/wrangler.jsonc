@@ -7,10 +7,11 @@
   "routes": [{ "pattern": "stats.chrisjpereira.com", "custom_domain": true }],
   "d1_databases": [{ "binding": "DB", "database_name": "chrisjpereira-stats", "database_id": "a608bcb6-8d40-4eb2-8b4d-b772369cc780" }],
   "send_email": [{ "name": "EMAIL" }],
-  // once a day: drop visits older than two years, refresh Google Search data
+  // once a day: drop visits older than two years (and refresh Google Search data if GSC_URL is set)
   "triggers": { "crons": ["17 3 * * *"] },
   // Secrets (Cloudflare dashboard): SALT — any long random text; it makes the daily visitor codes impossible to reverse.
-  // GSC_URL — the Apps Script web app that returns Google Search Console data ("chrisjpereira.com stats - Google Search data" in chris@ecoinst.ca's Drive)
+  // GSC_URL (optional, not set) — a JSON feed of Google Search Console data. Without it, the Google Search section shows
+  // the one-time import stored in the gsc_day and gsc_feed tables.
   "vars": { "OWNER_EMAIL": "chris@impact5r.com" },
   "observability": { "enabled": true }
 }
