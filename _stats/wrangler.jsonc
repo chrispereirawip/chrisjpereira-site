@@ -1,0 +1,15 @@
+{
+  // Visitor statistics for chrisjpereira.com, at stats.chrisjpereira.com (see src/index.js)
+  "name": "chrisjpereira-stats",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": false,
+  "routes": [{ "pattern": "stats.chrisjpereira.com", "custom_domain": true }],
+  "d1_databases": [{ "binding": "DB", "database_name": "chrisjpereira-stats", "database_id": "a608bcb6-8d40-4eb2-8b4d-b772369cc780" }],
+  "send_email": [{ "name": "EMAIL" }],
+  // once a day: drop visits older than two years
+  "triggers": { "crons": ["17 3 * * *"] },
+  // Secret (Cloudflare dashboard): SALT — any long random text; it makes the daily visitor codes impossible to reverse
+  "vars": { "OWNER_EMAIL": "chris@impact5r.com" },
+  "observability": { "enabled": true }
+}

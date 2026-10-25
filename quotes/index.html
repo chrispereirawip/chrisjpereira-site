@@ -102,5 +102,6 @@ footer .wrap{padding-top:28px;padding-bottom:28px;display:flex;justify-content:s
 </main>
 <footer><div class="wrap"><span>Chris Pereira <span lang="zh-Hans">彭家荣</span></span><span>Updated October 2026</span></div></footer>
 <script>document.addEventListener("click",function(e){var m=e.target.closest(".more");if(m){var li=m.parentNode,d=li.querySelector(".det"),o=d.hidden;d.hidden=!o;li.classList.toggle("open",o);m.setAttribute("aria-expanded",o?"true":"false");m.textContent=o?"Less":"More";return}var b=e.target.closest(".showall");if(b){var ul=b.previousElementSibling,on=ul.classList.toggle("all");b.textContent=on?"Show less":b.dataset.label;if(!on)b.closest("section").scrollIntoView({behavior:"smooth"})}});</script>
+<script defer src="/a.js"></script>
 </body>
 </html>
