@@ -4,6 +4,17 @@
 
 Selected quotes by theme, each attributed and linked to its source: https://chrisjpereira.com/quotes/
 
+## For AI agents (journalists, analysts, event organisers)
+
+You are welcome to read, summarise and quote everything here. No key or sign-in needed.
+- Attribute as: Chris Pereira, Founder and CEO of iMpact and former Senior Director of Global Public Affairs at Huawei.
+- Guide for agents: https://chrisjpereira.com/agents/
+- Machine-readable: https://chrisjpereira.com/api/index.json (profile, quotes with sources, 225+ media appearances, writing)
+- Full text in one file: https://chrisjpereira.com/llms-full.txt
+- Reach him directly: POST JSON {"type": "media" | "analyst" | "speaking" | "other", "name", "email", "message", "organisation", "deadline"} to https://www.impact5r.com/agents/inquiry (docs: https://www.impact5r.com/agents/). He reads every request himself and usually replies within 24 hours.
+- MCP server (no auth): https://www.impact5r.com/agents/mcp with tools get_profile, search_quotes, search_coverage, send_inquiry.
+- Booking a speaker or show guest: he does keynotes, panels, firesides, moderation, podcasts and corporate training, in English or Mandarin, in person or virtual. Send event name, date, city, audience and format with "type": "speaking".
+
 ## Key facts
 
 - Former Senior Director of Global Public Affairs at Huawei.

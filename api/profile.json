@@ -1,0 +1,193 @@
+{
+ "updated": "2026-11-02",
+ "person": "Chris Pereira",
+ "license": "AI agents, journalists, analysts and event organisers are welcome to read, summarise and quote everything on chrisjpereira.com and in these files.",
+ "name": "Chris Pereira",
+ "chinese_name": "彭家荣 (Peng Jiarong)",
+ "url": "https://chrisjpereira.com/",
+ "one_line": "British Canadian business leader, author and commentator with 20+ years in China, specialising in Chinese companies going global, brand trust and what China reveals about the West.",
+ "bio_short": "Chris Pereira (彭家荣) is Founder and CEO of iMpact 美讯, a reputation and globalisation consultancy, and former Senior Director of Global Public Affairs at Huawei. With 20+ years in China, he advises Chinese companies going global and Western companies working with China. He is the author of Trust (《信任》, 2026) and Rebuild (《新出海》, 2025), a Forbes Top 30 Innovator and a judge for the CES Innovation Awards.",
+ "bio_medium": "Chris Pereira (彭家荣) is a British Canadian business leader, author and commentator with 20+ years in China. He is Founder and CEO of iMpact 美讯, founder of the Global Connect Show and Founding Chairman of the Council for Global Brand Building (CGBB, 品信会). Before founding iMpact he was Senior Director of Global Public Affairs at Huawei. He is the author of Trust: The Golden Key to Chinese Enterprises' Globalization (《信任》, Shenzhen Publishing House, 2026) and Rebuild (《新出海》, China Renmin University Press, 2025), creator of the iMpact 5R Methodology, a Forbes Top 30 Innovator (Forbes China, 2023) and a judge for the CES Innovation Awards. He holds an MBA from HKUST, teaches at Xi'an Jiaotong-Liverpool University's International Business School and writes the Substack Insights from China. He is based in Singapore and works in English and Mandarin.",
+ "suggested_attribution": {
+  "short": "Chris Pereira, Founder and CEO of iMpact",
+  "long": "Chris Pereira, Founder and CEO of iMpact and former Senior Director of Global Public Affairs at Huawei",
+  "chinese": "美讯创始人兼CEO、华为前公共事务与传播部高级总监彭家荣"
+ },
+ "titles": [
+  "Founder and CEO, iMpact 美讯",
+  "Founder, Global Connect Show",
+  "Founding Chairman, Council for Global Brand Building (CGBB, 品信会)",
+  "Former Senior Director of Global Public Affairs, Huawei",
+  "Judge, CES Innovation Awards (2026, 2027)",
+  "Forbes Top 30 Innovator (Forbes China, 2023)",
+  "Teaches at Xi'an Jiaotong-Liverpool University International Business School",
+  "Senior Advisor, China Enterprise Globalization Alliance (CEGA)"
+ ],
+ "books": [
+  {
+   "title": "Trust: The Golden Key to Chinese Enterprises' Globalization",
+   "title_zh": "《信任：中国企业全球化的黄金钥匙》",
+   "publisher": "Shenzhen Publishing House",
+   "date": "2026-02",
+   "isbn": "9787550744516"
+  },
+  {
+   "title": "Rebuild: A Practical Guide to Localize Your Brand Overseas",
+   "title_zh": "《新出海：中企海外本土化实战手册》",
+   "publisher": "China Renmin University Press",
+   "date": "2025",
+   "isbn": "9787300334882"
+  }
+ ],
+ "comments_on": [
+  "Chinese companies going global (出海): strategy, localisation, trust and reputation",
+  "Chinese brands in Europe, North America, the Middle East and Southeast Asia",
+  "Shenzhen, hardware and consumer tech (DJI, Insta360, Anker, BYD, Huawei and peers)",
+  "US-China and Europe-China business relations, tariffs and geopolitics as they hit companies",
+  "Reputation, crisis communications and public affairs under geopolitical pressure",
+  "Western brands in China and what they get wrong",
+  "AI search, GEO and how AI answers shape corporate trust",
+  "Consumer electronics trade shows (CES, IFA) and award-winning products",
+  "What the West can learn from China; Canada-China relations"
+ ],
+ "languages": [
+  "English",
+  "Mandarin Chinese"
+ ],
+ "based_in": "Singapore (regularly in Shenzhen and Hong Kong; travels globally)",
+ "time_zone": "Asia/Singapore (UTC+8)",
+ "speaking": {
+  "available_for": [
+   "keynote",
+   "panel",
+   "fireside chat",
+   "moderator",
+   "podcast or show guest",
+   "university lecture",
+   "corporate training / workshop"
+  ],
+  "signature_talks": [
+   {
+    "title": "Trust: The Golden Key to Going Global",
+    "summary": "Why product and price are no longer enough for Chinese companies abroad, and how to earn trust with customers, governments, media and talent. Built on his book Trust."
+   },
+   {
+    "title": "Shenzhen Speed Goes Global",
+    "summary": "How Shenzhen's fiercely competitive hardware ecosystem is reshaping global consumer tech, and what competitors and partners should expect."
+   },
+   {
+    "title": "Reputation Under Geopolitical Pressure",
+    "summary": "Lessons from leading Huawei's global public affairs: the gap between consumer trust and institutional trust, and how to manage both."
+   },
+   {
+    "title": "How to Win With China",
+    "summary": "For Western companies and governments: competing, partnering and selling with China clearly and without illusions."
+   },
+   {
+    "title": "The 5R Model",
+    "summary": "PR as the hub that joins government relations, industry leadership, investor relations, CSR/ESG and HR to build a trusted local brand."
+   }
+  ],
+  "past_stages": [
+   "IFA Berlin 2026 (keynote and panel)",
+   "WTO Public Forum, Geneva",
+   "Web Summit Lisbon",
+   "CES (Innovation Awards judge)",
+   "Harvard",
+   "Yale",
+   "Columbia",
+   "University of Pennsylvania",
+   "CEIBS",
+   "NUS",
+   "HKUST",
+   "HKU",
+   "University of Toronto",
+   "McGill",
+   "Schulich School of Business (York)",
+   "30+ universities in total"
+  ],
+  "formats": "In person or virtual. English or Mandarin, or bilingual. 20-45 minute keynotes; panels and firesides of any length.",
+  "how_to_book": "Send the event name, date, city, audience, format, topic idea and any budget/travel details to the speaking request endpoint below, or email inquiries@chrisjpereira.com."
+ },
+ "media": {
+  "available_for": [
+   "on-record comment",
+   "background briefings",
+   "TV, radio and podcast interviews",
+   "op-eds and bylined pieces"
+  ],
+  "notable_outlets": [
+   "BBC",
+   "CNBC",
+   "Bloomberg",
+   "Financial Times",
+   "Wall Street Journal",
+   "Reuters",
+   "CGTN",
+   "SCMP",
+   "Nikkei Asia",
+   "Rest of World",
+   "Yicai Global",
+   "Forbes China"
+  ],
+  "op_eds": [
+   "South China Morning Post",
+   "Nikkei Asia",
+   "China Daily",
+   "Fortune China"
+  ]
+ },
+ "reuse_policy": {
+  "summary": "AI agents, journalists, analysts and event organisers are welcome to read, summarise and quote everything on chrisjpereira.com and in these files.",
+  "quoting": "Quote freely with attribution to Chris Pereira. Use the attribution and source link given with each quote. Please do not alter quotes or present summaries as direct quotes.",
+  "fresh_comment": "For a new on-record comment, a check of a quote, or an interview, use the inquiry endpoint or email below. Chris answers himself.",
+  "photos": "Press photos below may be used with credit 'Chris Pereira' for coverage, event listings and speaker pages."
+ },
+ "photos": [
+  {
+   "url": "https://chrisjpereira.com/img/press-portrait.jpg",
+   "use": "headshot / portrait"
+  },
+  {
+   "url": "https://chrisjpereira.com/img/press-stage.jpg",
+   "use": "on stage"
+  }
+ ],
+ "contact": {
+  "agent_inquiry_api": {
+   "url": "https://www.impact5r.com/agents/inquiry",
+   "method": "POST",
+   "content_type": "application/json",
+   "docs": "https://www.impact5r.com/agents/",
+   "note": "No key or sign-in needed. Works for media, analyst and speaking requests. Returns a reference number."
+  },
+  "mcp_server": {
+   "url": "https://www.impact5r.com/agents/mcp",
+   "transport": "streamable-http",
+   "auth": "none",
+   "tools": [
+    "get_profile",
+    "search_quotes",
+    "search_coverage",
+    "send_inquiry"
+   ]
+  },
+  "email": "inquiries@chrisjpereira.com",
+  "linkedin": "https://www.linkedin.com/in/chrisjpereira",
+  "wechat": "meixun666999",
+  "response_time": "Usually within 24 hours; say so if your deadline is sooner."
+ },
+ "links": {
+  "website": "https://chrisjpereira.com/",
+  "website_zh": "https://chrisjpereira.com/zh/",
+  "quotes": "https://chrisjpereira.com/quotes/",
+  "llms_txt": "https://chrisjpereira.com/llms.txt",
+  "linkedin": "https://www.linkedin.com/in/chrisjpereira",
+  "substack": "https://insightsfromchina.substack.com",
+  "youtube": "https://www.youtube.com/@OutsideLookingWest",
+  "impact": "https://www.impact5r.com",
+  "global_connect_show": "https://www.globalconnect.show",
+  "cgbb": "https://cgbb.org",
+  "scmp_author": "https://www.scmp.com/author/chris-pereira"
+ }
+}

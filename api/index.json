@@ -1,0 +1,39 @@
+{
+ "updated": "2026-11-02",
+ "person": "Chris Pereira",
+ "license": "AI agents, journalists, analysts and event organisers are welcome to read, summarise and quote everything on chrisjpereira.com and in these files.",
+ "about": "Machine-readable files about Chris Pereira (彭家荣) for AI agents, journalists, analysts and event organisers. Free to use; no key needed.",
+ "human_page": "https://chrisjpereira.com/agents/",
+ "files": {
+  "profile": "https://chrisjpereira.com/api/profile.json",
+  "quotes": "https://chrisjpereira.com/api/quotes.json",
+  "coverage": "https://chrisjpereira.com/api/coverage.json",
+  "writing": "https://chrisjpereira.com/api/writing.json"
+ },
+ "llms_txt": "https://chrisjpereira.com/llms.txt",
+ "llms_full_txt": "https://chrisjpereira.com/llms-full.txt",
+ "contact": {
+  "agent_inquiry_api": {
+   "url": "https://www.impact5r.com/agents/inquiry",
+   "method": "POST",
+   "content_type": "application/json",
+   "docs": "https://www.impact5r.com/agents/",
+   "note": "No key or sign-in needed. Works for media, analyst and speaking requests. Returns a reference number."
+  },
+  "mcp_server": {
+   "url": "https://www.impact5r.com/agents/mcp",
+   "transport": "streamable-http",
+   "auth": "none",
+   "tools": [
+    "get_profile",
+    "search_quotes",
+    "search_coverage",
+    "send_inquiry"
+   ]
+  },
+  "email": "inquiries@chrisjpereira.com",
+  "linkedin": "https://www.linkedin.com/in/chrisjpereira",
+  "wechat": "meixun666999",
+  "response_time": "Usually within 24 hours; say so if your deadline is sooner."
+ }
+}

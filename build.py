@@ -500,3 +500,5 @@ if __name__ == "__main__":
     if os.path.exists("data/quotes.json"):
         cfg = json.load(open("data/quotes.json", encoding="utf-8"))
         build_quotes(cfg, "noindex,follow" if not os.path.exists("data/quotes.published") else "index,follow,max-snippet:-1")
+    import agents  # agent-friendly layer: api/*.json, agents/, llms-full.txt (agents.py)
+    agents.build()
