@@ -20,6 +20,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
-          git add data/talks.json img/talks index.html zh/index.html
+          git add data/talks.json img/talks index.html zh/index.html quotes api agents llms-full.txt
           git diff --cached --quiet || git commit -m "Latest talks from the Academy Desk"
           git pull --rebase origin main && git push
