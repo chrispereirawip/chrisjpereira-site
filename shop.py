@@ -152,13 +152,9 @@ input:focus,select:focus{outline:none;border-color:var(--red);background:#fff;bo
 .msg.bad{color:var(--red)}.msg.good{color:var(--ok);font-weight:500}
 .hp{position:absolute;left:-9999px}
 
-/* English edition cover, drawn (the real English cover isn't final yet) */
+/* English edition: the draft cover (Trust English Edition Cover canvas), on a navy panel */
 .encov{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:radial-gradient(120% 90% at 30% 10%,#2a5ba0 0%,#173a6e 45%,#0d1f3d 100%)}
-.encov .bk{width:46%;aspect-ratio:2/3;background:linear-gradient(180deg,#1f5db5 0%,#2e74cf 58%,#e8792e 58%,#f08a3a 100%);border-radius:3px 6px 6px 3px;box-shadow:-6px 0 0 rgba(0,0,0,.18) inset,0 26px 50px -18px rgba(0,0,0,.6);transform:rotate(-4deg);display:flex;flex-direction:column;align-items:center;padding:12% 8%;text-align:center;color:#fff}
-.encov .bk i{font-style:normal;font-family:var(--display);font-size:8.5px;line-height:1.35;letter-spacing:.04em;opacity:.9;max-width:90%}
-.encov .bk b{font-family:var(--display);font-weight:700;font-size:clamp(28px,3.4vw,40px);letter-spacing:.04em;color:#f6b37d;margin-top:14%;line-height:1}
-.encov .bk em{font-style:normal;font-family:var(--display);font-size:11px;letter-spacing:.06em;margin-top:8%;opacity:.95}
-.encov .bk span{font-family:var(--display);font-size:10px;letter-spacing:.14em;margin-top:auto;text-transform:uppercase;color:#fff}
+.encov img{height:84%;width:auto;border-radius:2px 5px 5px 2px;box-shadow:-5px 0 0 rgba(0,0,0,.14) inset,0 30px 50px -20px rgba(0,0,0,.65),0 4px 10px rgba(0,0,0,.25)}
 .join-note{font-family:var(--display);font-size:12.5px;color:var(--muted);margin:10px 0 0;text-align:center}
 
 /* about */
@@ -311,7 +307,7 @@ def page(k):
     </article>
 
     <article class="ed" id="english">
-      <div class="vis"><div class="encov" aria-hidden="true"><div class="bk"><i>The Golden Key to Chinese Enterprises' Globalization</i><b>TRUST</b><em>Chris Pereira</em><span>English edition</span></div></div><span class="tag">{t['en_tag']}</span></div>
+      <div class="vis"><div class="encov"><img src="{t['img']}trust-en-cover.webp" width="800" height="1200" alt="Draft cover of the English edition of Trust by Chris Pereira"></div><span class="tag">{t['en_tag']}</span></div>
       <div class="ebody">
         <div class="ehead"><div><span class="ekicker">{t['en_h']}</span><h2>{t['en_title']}</h2></div></div>
         <p class="emeta">{t['en_meta']}</p>
