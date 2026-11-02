@@ -14,10 +14,10 @@ T = {
     "en": {
         "lang": "en", "home": "/", "path": "/books/", "other": "/zh/books/", "other_label": "中文",
         "title": "Buy Trust 《信任》 by Chris Pereira | Books",
-        "desc": "Order a signed copy of Trust 《信任》 (Chinese edition, Shenzhen Publishing House, 2026) by Chris Pereira, or join the list for the English edition.",
+        "desc": "Order a signed copy of Trust 《信任》 (Chinese edition, Shenzhen Publishing House, 2026) by Chris Pereira, posted within mainland China. The English edition is coming soon.",
         "nav": ['<a href="/#writing">Writing</a>', '<a href="/#media">Commentary</a>', '<a href="/#speaking">Speaking</a>', '<a href="/#about">About</a>', '<a href="/books/" aria-current="page">Books</a>'],
         "contact": "Contact", "label": "Books", "h1": "Signed copies of Trust 《信任》",
-        "lede": "The Golden Key to Chinese Enterprises' Globalization. Signed copies of the Chinese edition are posted worldwide. The English edition is on its way.",
+        "lede": "The Golden Key to Chinese Enterprises' Globalization. Signed copies of the Chinese edition, posted within mainland China. The English edition is coming soon.",
         "zh_h": "Chinese edition", "zh_sub": "《信任》 · Shenzhen Publishing House 深圳出版社, 2026 · signed",
         "zh_blurb": "Twenty years of lessons on how Chinese companies earn trust abroad, from Huawei to the brands Chris advises today. Every copy is signed; add a name if you'd like a dedication.",
         "qty": "Copies", "zone": "Ship to", "ded": "Sign it to (optional)", "ded_ph": "e.g. To Anna", "name": "Your name", "email": "Email",
@@ -27,7 +27,7 @@ T = {
         "fields": {"name": "your name", "email": "your email", "qty": "copies", "zone": "where to ship", "dedication": "the dedication"},
         "paid_h": "Thank you, your order is confirmed.", "paid_p": "A confirmation is on its way to your inbox. We'll email the tracking number once your signed copy is posted.",
         "pend_p": "We're confirming your payment with Stripe. This page will update in a moment.", "cancel_p": "Checkout was cancelled. Nothing was charged.",
-        "en_h": "English edition", "en_sub": "Trust · coming early 2027",
+        "en_h": "English edition", "en_sub": "Trust · coming soon",
         "en_blurb": "Rewritten for readers outside China: what Western companies can learn from how China's best brands build trust across borders. Join the list and we'll email you the day it goes on sale. No payment now.",
         "join": "Join the list", "joined": "You're on the list. We'll email you when it's out.", "already": "You're already on the list.",
         "rebuild": "Also by Chris: <i>Rebuild</i> 《新出海》 (China Renmin University Press, 2025), available from Chinese bookstores.",
@@ -39,7 +39,7 @@ T = {
         "desc": "订购彭家荣《信任：中国企业全球化的黄金钥匙》作者签名版（深圳出版社，2026），或登记英文版上市通知。",
         "nav": ['<a href="/zh/#writing">文章</a>', '<a href="/zh/#media">评论</a>', '<a href="/zh/#speaking">演讲</a>', '<a href="/zh/#about">关于</a>', '<a href="/zh/books/" aria-current="page">书籍</a>'],
         "contact": "联系", "label": "书籍", "h1": "《信任》作者签名版",
-        "lede": "《信任：中国企业全球化的黄金钥匙》。中文版签名书可寄往全球，英文版即将出版。",
+        "lede": "《信任：中国企业全球化的黄金钥匙》。中文版签名书，寄送范围仅限中国大陆。英文版即将出版。",
         "zh_h": "中文版", "zh_sub": "《信任》 · 深圳出版社，2026 · 作者签名",
         "zh_blurb": "二十年经验：中国企业如何在海外赢得信任，从华为到今天的出海品牌。每本书均由作者亲笔签名，如需题字，请填写受赠人姓名。",
         "qty": "数量", "zone": "寄送地区", "ded": "签名题字给（选填）", "ded_ph": "例如：致小明", "name": "您的姓名", "email": "邮箱",
@@ -49,7 +49,7 @@ T = {
         "fields": {"name": "姓名", "email": "邮箱", "qty": "数量", "zone": "寄送地区", "dedication": "题字"},
         "paid_h": "感谢订购，订单已确认。", "paid_p": "确认邮件已发送至您的邮箱。签名书寄出后，我们会再发邮件告知快递单号。",
         "pend_p": "正在向 Stripe 确认付款，页面稍后会自动更新。", "cancel_p": "已取消支付，未产生任何费用。",
-        "en_h": "英文版", "en_sub": "Trust · 2027年初出版",
+        "en_h": "英文版", "en_sub": "Trust · 即将出版",
         "en_blurb": "面向海外读者重新撰写：西方企业可以从中国顶尖品牌跨境建立信任的方式中学到什么。登记后，新书开售当天我们会邮件通知您，现在无需付款。",
         "join": "登记通知", "joined": "已登记，新书上市时我们会邮件通知您。", "already": "您已经登记过了。",
         "rebuild": "作者另著：《新出海：中企海外本土化实战手册》（中国人民大学出版社，2025），各大书店有售。",
@@ -220,7 +220,7 @@ def page(k):
       </div>
     </section>
     <section class="book" id="english">
-      <div class="cover soon" aria-hidden="true"><span class="label" style="color:#fff">English edition</span><b>Trust</b><span>Chris Pereira</span><span class="yr">2027</span></div>
+      <div class="cover soon" aria-hidden="true"><span class="label" style="color:#fff">English edition</span><b>Trust</b><span>Chris Pereira</span><span class="yr">Coming soon</span></div>
       <div>
         <h2>{t['en_h']}</h2>
         <p class="sub">{t['en_sub']}</p>
