@@ -15,7 +15,7 @@ T = {
         "lang": "en", "home": "/", "path": "/books/", "other": "/zh/books/", "other_label": "中文",
         "title": "Buy Trust 《信任》 by Chris Pereira | Books",
         "desc": "Order a signed copy of Trust 《信任》 (Chinese edition, Shenzhen Publishing House, 2026) by Chris Pereira, posted within mainland China. The English edition is coming soon.",
-        "nav": ['<a href="/#writing">Writing</a>', '<a href="/#media">Commentary</a>', '<a href="/#speaking">Speaking</a>', '<a href="/#about">About</a>', '<a href="/books/" aria-current="page">Books</a>'],
+        "nav": ['<a href="/#writing">Writing</a>', '<a href="/#media">Commentary</a>', '<a href="/#speaking">Speaking</a>', '<a href="/#training">Training</a>', '<a href="/books/" aria-current="page">Books</a>', '<a href="/#about">About</a>'],
         "contact": "Contact", "label": "Books", "h1": "Signed copies of Trust 《信任》",
         "lede": "The Golden Key to Chinese Enterprises' Globalization. Signed copies of the Chinese edition, posted within mainland China. The English edition is coming soon.",
         "zh_h": "Chinese edition", "zh_sub": "《信任》 · Shenzhen Publishing House 深圳出版社, 2026 · signed",
@@ -34,10 +34,10 @@ T = {
         "updated": "Books", "q": "Questions about an order?",
     },
     "zh": {
-        "lang": "zh-CN", "home": "/zh/", "path": "/zh/books/", "other": "/books/", "other_label": "English",
+        "lang": "zh-CN", "home": "/zh/", "path": "/zh/books/", "other": "/books/", "other_label": "EN",
         "title": "购买彭家荣《信任》签名版 | 书籍",
         "desc": "订购彭家荣《信任：中国企业全球化的黄金钥匙》作者签名版（深圳出版社，2026），或登记英文版上市通知。",
-        "nav": ['<a href="/zh/#writing">文章</a>', '<a href="/zh/#media">评论</a>', '<a href="/zh/#speaking">演讲</a>', '<a href="/zh/#about">关于</a>', '<a href="/zh/books/" aria-current="page">书籍</a>'],
+        "nav": ['<a href="/zh/#writing">文章</a>', '<a href="/zh/#media">媒体评论</a>', '<a href="/zh/#speaking">演讲</a>', '<a href="/zh/#training">培训</a>', '<a href="/zh/books/" aria-current="page">书籍</a>', '<a href="/zh/#about">关于</a>'],
         "contact": "联系", "label": "书籍", "h1": "《信任》作者签名版",
         "lede": "《信任：中国企业全球化的黄金钥匙》。中文版签名书，寄送范围仅限中国大陆。英文版即将出版。",
         "zh_h": "中文版", "zh_sub": "《信任》 · 深圳出版社，2026 · 作者签名",
@@ -69,7 +69,8 @@ a{color:var(--red);text-underline-offset:3px}
 .mark{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:600;font-size:18px;color:var(--ink);text-decoration:none;margin-right:auto}
 .seal{background:var(--red);color:#fff;font-size:14px;padding:4px 7px;border-radius:3px}
 .nav{display:flex;gap:22px}.nav a{font-family:var(--display);font-weight:500;font-size:15px;color:var(--ink);text-decoration:none}.nav a[aria-current]{color:var(--red)}
-.lang{font-family:var(--display);font-size:14px;color:var(--muted);text-decoration:none}
+.langsw{font-family:var(--display);font-size:14px;font-weight:500;color:var(--ink);text-decoration:none;border:1px solid var(--hair);border-radius:999px;padding:6px 12px;white-space:nowrap}
+.langsw:hover{color:var(--red);border-color:var(--red)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--display);font-weight:600;font-size:15px;padding:11px 20px;border-radius:999px;text-decoration:none;border:1.5px solid var(--red);background:var(--red);color:#fff;cursor:pointer}
 .btn:hover{background:var(--red-deep);border-color:var(--red-deep)}
 .btn[disabled]{opacity:.55;cursor:default}
@@ -105,7 +106,7 @@ input:focus,select:focus{outline:2px solid var(--red);outline-offset:1px;border-
 .also{font-size:15.5px;color:var(--muted);padding:6px 0 30px}
 footer{border-top:1px solid var(--hair);padding:22px 0 40px;font-family:var(--display);font-size:13px;color:var(--muted)}
 footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-@media (max-width:760px){.nav{display:none}.book{grid-template-columns:1fr;gap:18px}.cover{max-width:220px;margin:0 auto}.grid2{grid-template-columns:1fr}.wrap{padding:0 16px}}
+@media (max-width:760px){.nav{display:none}.langsw{margin-left:auto;padding:5px 9px;font-size:13px}.book{grid-template-columns:1fr;gap:18px}.cover{max-width:220px;margin:0 auto}.grid2{grid-template-columns:1fr}.wrap{padding:0 16px}}
 """
 
 JS = r"""(function(){
@@ -187,7 +188,7 @@ def page(k):
 <header class="bar"><div class="wrap">
   <a class="mark" href="{t['home']}"><span class="seal" lang="zh-Hans">彭家荣</span>Chris Pereira</a>
   <nav class="nav" aria-label="Sections">{''.join(t['nav'])}</nav>
-  <a class="lang" href="{t['other']}">{t['other_label']}</a>
+  <a class="langsw" href="{t['other']}">{t['other_label']}</a>
   <a class="btn" href="{t['home']}#contact">{t['contact']}</a>
 </div></header>
 <main>

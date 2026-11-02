@@ -34,7 +34,8 @@ a{color:var(--red);text-underline-offset:3px}
 .mark{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:600;font-size:18px;color:var(--ink);text-decoration:none;margin-right:auto}
 .seal{background:var(--red);color:#fff;font-size:14px;padding:4px 7px;border-radius:3px}
 .nav{display:flex;gap:22px}.nav a{font-family:var(--display);font-weight:500;font-size:15px;color:var(--ink);text-decoration:none}.nav a[aria-current]{color:var(--red)}
-.lang{font-family:var(--display);font-size:14px;color:var(--muted);text-decoration:none}
+.langsw{font-family:var(--display);font-size:14px;font-weight:500;color:var(--ink);text-decoration:none;border:1px solid var(--hair);border-radius:999px;padding:6px 12px;white-space:nowrap}
+.langsw:hover{color:var(--red);border-color:var(--red)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--display);font-weight:600;font-size:15px;padding:11px 20px;border-radius:999px;text-decoration:none;border:1.5px solid var(--red);background:var(--red);color:#fff;cursor:pointer}
 .btn:hover{background:var(--red-deep);border-color:var(--red-deep)}
 .btn[disabled]{opacity:.55;cursor:default}
@@ -70,14 +71,14 @@ input:focus,select:focus{outline:2px solid var(--red);outline-offset:1px;border-
 .also{font-size:15.5px;color:var(--muted);padding:6px 0 30px}
 footer{border-top:1px solid var(--hair);padding:22px 0 40px;font-family:var(--display);font-size:13px;color:var(--muted)}
 footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-@media (max-width:760px){.nav{display:none}.book{grid-template-columns:1fr;gap:18px}.cover{max-width:220px;margin:0 auto}.grid2{grid-template-columns:1fr}.wrap{padding:0 16px}}
+@media (max-width:760px){.nav{display:none}.langsw{margin-left:auto;padding:5px 9px;font-size:13px}.book{grid-template-columns:1fr;gap:18px}.cover{max-width:220px;margin:0 auto}.grid2{grid-template-columns:1fr}.wrap{padding:0 16px}}
 </style>
 </head>
 <body>
 <header class="bar"><div class="wrap">
   <a class="mark" href="/"><span class="seal" lang="zh-Hans">彭家荣</span>Chris Pereira</a>
-  <nav class="nav" aria-label="Sections"><a href="/#writing">Writing</a><a href="/#media">Commentary</a><a href="/#speaking">Speaking</a><a href="/#about">About</a><a href="/books/" aria-current="page">Books</a></nav>
-  <a class="lang" href="/zh/books/">中文</a>
+  <nav class="nav" aria-label="Sections"><a href="/#writing">Writing</a><a href="/#media">Commentary</a><a href="/#speaking">Speaking</a><a href="/#training">Training</a><a href="/books/" aria-current="page">Books</a><a href="/#about">About</a></nav>
+  <a class="langsw" href="/zh/books/">中文</a>
   <a class="btn" href="/#contact">Contact</a>
 </div></header>
 <main>
