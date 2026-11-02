@@ -23,7 +23,7 @@ T = {
         "contact": "Contact", "label": "Books",
         "h1": "Trust <span class=\"zh\" lang=\"zh-Hans\">《信任》</span>",
         "sub": "The Golden Key to Chinese Enterprises' Globalization",
-        "lede": "How Chinese companies earn trust in foreign markets, drawn from 20+ years in China, from Huawei's global public affairs to the brands Chris advises today.",
+        "lede": "How Chinese companies earn trust in foreign markets, drawn from 20+ years in China, from Huawei's global public affairs to the brands Chris advises.",
         "facts": [("Author", "Chris Pereira"), ("Publisher", "Shenzhen Publishing House"), ("Published", "February 2026")],
         "zh_tag": "Available now", "zh_h": "Chinese edition", "zh_title": "<span lang=\"zh-Hans\"><span class=\"hang\">《</span>信任》</span>",
         "zh_meta": "Paperback · signed by the author · ships within mainland China",
@@ -109,8 +109,10 @@ h1,h2,h3{font-family:var(--head);margin:0;font-weight:700;letter-spacing:-.01em;
 .hang{margin-left:-.5em}
 
 /* intro */
-.intro{padding:30px 0 22px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px 56px;align-items:end;border-bottom:1px solid var(--ink)}
-.intro h1{font-size:clamp(32px,3.6vw,44px);line-height:1.05;margin:6px 0 0}
+.intro{padding:26px 0 22px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px 56px;align-items:start;border-bottom:1px solid var(--ink);column-gap:24px}
+.intro>.label{grid-column:1/-1}
+.intro h1{font-size:clamp(32px,3.6vw,44px);line-height:1.05;margin:0}
+.intro .lede{padding-top:4px}
 .intro .sub{font-family:var(--head);font-style:italic;font-weight:400;font-size:17px;color:var(--muted);margin:4px 0 0;line-height:1.35}
 html[lang="zh-CN"] .intro .sub{font-family:var(--zh);font-style:normal;font-weight:500}
 .lede{margin:0;font-size:16px;line-height:1.6;color:#2e2b2b}
@@ -269,8 +271,8 @@ def page(k):
 </div></header>
 <main class="wrap">
   <section class="intro">
+    <span class="label">{t['label']}</span>
     <div>
-      <span class="label">{t['label']}</span>
       <h1>{t['h1']}</h1>
       <p class="sub">{t['sub']}</p>
     </div>
