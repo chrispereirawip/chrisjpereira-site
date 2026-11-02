@@ -84,10 +84,12 @@ form{margin-top:12px;display:flex;flex-direction:column;flex:1}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:6px 20px;margin-top:10px}
 label{display:block;font-family:var(--display);font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0}
 html[lang="zh-CN"] label{text-transform:none;letter-spacing:.02em;font-size:12px}
-input,select{width:100%;font:15px var(--display);padding:6px 0 7px;border:0;border-bottom:1px solid #D6CFC1;border-radius:0;background:transparent;color:var(--ink);transition:border-color .15s;-webkit-appearance:none;appearance:none}
+input,select,textarea{width:100%;font:15px var(--display);padding:6px 0 7px;border:0;border-bottom:1px solid #D6CFC1;border-radius:0;background:transparent;color:var(--ink);transition:border-color .15s;-webkit-appearance:none;appearance:none}
 select{background:url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2710%27 height=%276%27%3E%3Cpath d=%27M1 1l4 4 4-4%27 fill=%27none%27 stroke=%27%23626060%27 stroke-width=%271.4%27/%3E%3C/svg%3E") no-repeat right 2px center;padding-right:16px;cursor:pointer}
 input::placeholder{color:#a9a39a}
-input:focus,select:focus{outline:none;border-bottom-color:var(--red)}
+textarea{resize:vertical;line-height:1.45;font-family:var(--display)}
+.full{margin-top:10px}
+input:focus,select:focus,textarea:focus{outline:none;border-bottom-color:var(--red)}
 .sum{margin:14px 0 0;padding:8px 0 0;font-family:var(--display);font-size:13px;color:var(--muted)}
 .sum div{display:flex;justify-content:space-between;padding:2px 0}
 .sum .tot{color:var(--ink);font-weight:600;font-size:15px;padding-top:6px;margin-top:4px;border-top:1px solid var(--hair)}
@@ -160,13 +162,15 @@ footer{background:var(--red-deep);color:#fff}footer .wrap{padding-top:18px;paddi
           </div>
           <div id="zoneBox" hidden style="margin-top:12px"><label for="zone">Ship to</label><select id="zone"></select></div>
           <div class="row2">
-            <div><label for="bname">Your name</label><input id="bname" autocomplete="name" maxlength="120" required></div>
-            <div><label for="bemail">Email</label><input id="bemail" type="email" autocomplete="email" maxlength="200" required></div>
+            <div><label for="bname">Recipient</label><input id="bname" autocomplete="shipping name" maxlength="60" required></div>
+            <div><label for="bphone">Mobile (China)</label><input id="bphone" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="20" placeholder="138 0000 0000" required></div>
           </div>
+          <div class="full"><label for="baddr">Delivery address</label><textarea id="baddr" rows="2" maxlength="200" autocomplete="shipping street-address" placeholder="Province, city, district, street, building and room" required></textarea></div>
+          <div class="full"><label for="bemail">Email (for your receipt)</label><input id="bemail" type="email" autocomplete="email" maxlength="200" required></div>
           <input class="hp" id="bweb" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="sum"><div><span>Trust 《信任》, signed</span><span id="sBook">–</span></div><div><span>Shipping to mainland China</span><span id="sShip">–</span></div><div class="tot"><span>Total</span><span id="tot">–</span></div></div>
           <div class="go"><button class="btn" id="buy" type="submit" disabled>Buy a signed copy</button>
-          <p class="small">Secure checkout by Stripe. You'll add your delivery address on the next step.</p><p class="msg" id="bmsg" role="status"></p></div>
+          <p class="small">Secure payment by Stripe on the next step.</p><p class="msg" id="bmsg" role="status"></p></div>
         </form>
       </div>
     </article>
@@ -202,7 +206,7 @@ footer{background:var(--red-deep);color:#fff}footer .wrap{padding-top:18px;paddi
 </main>
 <footer><div class="wrap"><span>© 2026 Chris Pereira <span lang="zh-Hans">彭家荣</span></span><nav class="fnav" aria-label="Contact and channels"><a href="mailto:inquiries@chrisjpereira.com">inquiries@chrisjpereira.com</a><a href="https://www.linkedin.com/in/chrisjpereira" rel="me">LinkedIn</a><a href="https://insightsfromchina.substack.com" rel="me">Substack</a><a href="https://www.youtube.com/@OutsideLookingWest" rel="me">YouTube</a><a href="/agents/">For AI agents</a></nav></div></footer>
 <script>(function(){
-var API="https://www.globalconnect.show/api/pay", L="en", T={"closed": "Orders open shortly. To reserve a copy, email", "err": "Something went wrong. Please try again, or email", "busy": "Opening secure checkout…", "fix": "Please add ", "fields": {"name": "your name", "email": "your email", "qty": "copies", "zone": "where to ship", "dedication": "the dedication"}, "paidH": "Thank you, your order is confirmed.", "paidP": "A confirmation is on its way to your inbox. We'll email you the tracking number once your signed copy is posted.", "pend": "We're confirming your payment with Stripe. This will update in a moment.", "cancel": "Checkout was cancelled. You haven't been charged.", "joined": "Thanks. We'll email you the day the English edition goes on sale.", "already": "You're already signed up. We'll email you when it's out."}, SEP=L==='zh'?'、':', ';
+var API="https://www.globalconnect.show/api/pay", L="en", T={"closed": "Orders open shortly. To reserve a copy, email", "err": "Something went wrong. Please try again, or email", "busy": "Opening secure checkout…", "fix": "Please add ", "fields": {"name": "the recipient's name", "phone": "a mainland China mobile number (11 digits)", "address": "the delivery address", "email": "your email", "qty": "copies", "zone": "where to ship", "dedication": "the dedication"}, "paidH": "Thank you, your order is confirmed.", "paidP": "A confirmation is on its way to your inbox. We'll email you the tracking number once your signed copy is posted.", "pend": "We're confirming your payment with Stripe. This will update in a moment.", "cancel": "Checkout was cancelled. You haven't been charged.", "joined": "Thanks. We'll email you the day the English edition goes on sale.", "already": "You're already signed up. We'll email you when it's out."}, SEP=L==='zh'?'、':', ';
 var $=function(id){return document.getElementById(id)};
 var book=null, fmt=function(minor,cur){return (cur==='cny'?'¥':cur.toUpperCase()+' ')+(minor/100).toFixed(2).replace(/\.00$/,'')};
 var EM=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
@@ -220,9 +224,9 @@ fetch(API+'/books').then(function(r){return r.json()}).then(function(j){
 }).catch(function(){$('buy').disabled=true;sayMail('bmsg',T.err)});
 document.addEventListener('change',function(e){if(e.target.id==='qty'||e.target.id==='zone')total()});
 $('order').addEventListener('submit',function(e){e.preventDefault();if(!book)return;
-  var miss=[];if(!$('bname').value.trim())miss.push(T.fields.name);if(!EM.test($('bemail').value.trim()))miss.push(T.fields.email);
+  var miss=[];if(!$('bname').value.trim())miss.push(T.fields.name);if(!/^(\+?86)?1[3-9]\d{9}$/.test($('bphone').value.replace(/[\s()-]/g,'')))miss.push(T.fields.phone);if($('baddr').value.trim().length<6)miss.push(T.fields.address);if(!EM.test($('bemail').value.trim()))miss.push(T.fields.email);
   if(miss.length){say('bmsg',T.fix+miss.join(SEP),'bad');return}var b=$('buy');b.disabled=true;say('bmsg',T.busy);
-  fetch(API+'/book',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({book:'trust-zh',qty:+$('qty').value,zone:zone().id,dedication:$('ded').value,name:$('bname').value,email:$('bemail').value,lang:L,website:$('bweb').value})})
+  fetch(API+'/book',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({book:'trust-zh',qty:+$('qty').value,zone:zone().id,dedication:$('ded').value,name:$('bname').value,phone:$('bphone').value,address:$('baddr').value,email:$('bemail').value,lang:L,website:$('bweb').value})})
   .then(function(r){return r.json()}).then(function(j){if(j.ok&&j.url){location.href=j.url;return}b.disabled=false;
     if(j.fields)say('bmsg',T.fix+j.fields.map(function(f){return T.fields[f]||f}).join(SEP),'bad');else sayMail('bmsg',T.err)})
   .catch(function(){b.disabled=false;sayMail('bmsg',T.err)})});
