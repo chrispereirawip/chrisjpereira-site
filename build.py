@@ -502,3 +502,5 @@ if __name__ == "__main__":
         build_quotes(cfg, "noindex,follow" if not os.path.exists("data/quotes.published") else "index,follow,max-snippet:-1")
     import agents  # agent-friendly layer: api/*.json, agents/, llms-full.txt (agents.py)
     agents.build()
+    import shop  # book shop pages /books/ and /zh/books/ (shop.py; prices come live from the GCS site)
+    shop.build()
