@@ -62,7 +62,7 @@ html[lang="zh-CN"] .intro .sub{font-family:var(--zh);font-style:normal;font-weig
 .notice.warn{border-left-color:var(--red)}
 
 /* the two editions */
-.eds{display:grid;grid-template-columns:1fr 1fr;gap:28px;padding:26px 0 56px;align-items:stretch}
+.eds{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:22px 0 26px;align-items:stretch}
 .ed{background:var(--surface);border:1px solid var(--hair);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 14px 34px -30px rgba(21,19,19,.4)}
 .vis{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0d1b33}
 .vis img{width:100%;height:100%;object-fit:cover}
@@ -103,23 +103,23 @@ input:focus,select:focus{outline:none;border-bottom-color:var(--red)}
 .join-note{font-family:var(--display);font-size:11.5px;color:var(--muted);margin:8px 0 0;text-align:center}
 
 /* about */
-.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;padding:56px 0;border-top:1px solid var(--hair)}
+.about{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:32px;align-items:center;padding:24px 0;border-top:1px solid var(--hair)}
 .about figure{margin:0}
-.about img{border-radius:12px;width:100%;height:auto;box-shadow:0 18px 40px -26px rgba(21,19,19,.45)}
-.about figcaption{font-family:var(--display);font-size:13px;color:var(--muted);margin-top:10px}
-.about h2{font-size:clamp(26px,2.8vw,34px);margin:8px 0 14px}
-.about p{margin:0 0 14px;font-size:17.5px;line-height:1.65}
-.also{display:flex;gap:16px;align-items:center;margin-top:24px;padding-top:20px;border-top:1px solid var(--hair)}
-.also img{width:64px;height:auto;border-radius:2px 4px 4px 2px;box-shadow:0 8px 18px -8px rgba(40,20,10,.45)}
-.also b{display:block;font-family:var(--head);font-size:19px}
+.about figure img{border-radius:10px;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:30% 30%;box-shadow:0 18px 40px -26px rgba(21,19,19,.45)}
+.about figcaption{font-family:var(--display);font-size:12px;color:var(--muted);margin-top:6px}
+.about h2{font-size:22px;margin:0 0 8px}
+.about p{margin:0 0 8px;font-size:15.5px;line-height:1.55;color:#2e2b2b}
+.also{display:flex;gap:14px;align-items:center;margin-top:14px;padding-top:12px;border-top:1px solid var(--hair)}
+.also img{width:44px;height:auto;border-radius:2px 4px 4px 2px;box-shadow:0 8px 18px -8px rgba(40,20,10,.45)}
+.also b{display:block;font-family:var(--head);font-size:16px;line-height:1.25}
 .also b [lang]{font-family:var(--zh);font-weight:600}
-.also span{font-family:var(--display);font-size:13px;color:var(--muted)}
-.also .k{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
-.qline{font-family:var(--display);font-size:14px;color:var(--muted);padding:0 0 48px}
-footer{border-top:1px solid var(--hair);padding:22px 0 40px;font-family:var(--display);font-size:13px;color:var(--muted)}
+.also span{font-family:var(--display);font-size:12px;color:var(--muted);line-height:1.4}
+.also .k{font-family:var(--display);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.about .qline{font-family:var(--display);font-size:12.5px;color:var(--muted);margin:10px 0 0}
+footer{border-top:1px solid var(--hair);padding:14px 0 18px;font-family:var(--display);font-size:12px;color:var(--muted)}
 footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
-@media (max-width:900px){.intro{grid-template-columns:1fr;align-items:start;padding-top:24px}.eds{grid-template-columns:1fr;gap:22px;padding-top:28px}.about{grid-template-columns:1fr;gap:28px;padding:40px 0}}
+@media (max-width:900px){.intro{grid-template-columns:1fr;align-items:start;padding-top:24px}.eds{grid-template-columns:1fr;gap:22px;padding-top:28px}.about{grid-template-columns:1fr;gap:16px;padding:20px 0}}
 @media (max-width:760px){.nav{display:none}.langsw{margin-left:auto;padding:5px 9px;font-size:13px}.wrap{padding:0 16px}.ebody{padding:22px 20px 22px}.row{grid-template-columns:80px 1fr}.facts{font-size:12.5px}.facts li+li:before{margin:0 7px}.ed h2{font-size:22px}}
 </style>
 </head>
@@ -196,9 +196,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <h2>About the book</h2>
       <p><i>Trust</i> argues that for Chinese companies going global, trust is the asset that decides whether a brand is welcomed or resisted abroad, and that it can be built deliberately.</p><p>It brings together the lessons from Chris's years leading global public affairs at Huawei and from iMpact's work with hundreds of Chinese brands entering new markets.</p>
       <div class="also"><img src="/img/book-rebuild.webp" width="400" height="581" loading="lazy" alt="Cover of Rebuild 《新出海》 by Chris Pereira"><div><span class="k">Also by Chris</span><b><i>Rebuild</i> <span lang="zh-Hans">《新出海》</span></b><span>A Practical Guide to Localizing Your Brand Overseas · China Renmin University Press, 2025</span></div></div>
+      <p class="qline">Questions about an order? Email <a href="mailto:inquiries@chrisjpereira.com">inquiries@chrisjpereira.com</a></p>
     </div>
   </section>
-  <p class="qline">Questions about an order? Email <a href="mailto:inquiries@chrisjpereira.com">inquiries@chrisjpereira.com</a></p>
 </main>
 <footer><div class="wrap"><span>Chris Pereira <span lang="zh-Hans">彭家荣</span></span><span>Books</span></div></footer>
 <script>(function(){
