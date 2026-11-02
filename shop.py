@@ -35,7 +35,7 @@ T = {
         "paid_h": "Thank you, your order is confirmed.", "paid_p": "A confirmation is on its way to your inbox. We'll email you the tracking number once your signed copy is posted.",
         "pend_p": "We're confirming your payment with Stripe. This will update in a moment.", "cancel_p": "Checkout was cancelled. You haven't been charged.",
         "en_tag": "Coming soon", "en_h": "English edition", "en_title": "Trust",
-        "en_meta": "Rewritten for readers outside China",
+        "en_meta": "Rewritten for readers outside China", "en_pts": ["A global view, rooted in real cases from China", "A system for breaking through the trust barrier abroad", "A guide to becoming a truly local global company"], "en_pts_h": "Inside the English edition",
         "en_blurb": "What Western companies can learn from how China's best brands build trust across borders. Leave your email and we'll tell you the day it goes on sale.",
         "join": "Notify me when it's out", "join_note": "One email when the English edition launches. No payment, no newsletter.",
         "joined": "Thanks. We'll email you the day the English edition goes on sale.", "already": "You're already signed up. We'll email you when it's out.",
@@ -67,7 +67,7 @@ T = {
         "paid_h": "感谢订购，订单已确认。", "paid_p": "确认邮件已发送至您的邮箱。签名书寄出后，我们会再发邮件告知快递单号。",
         "pend_p": "正在向 Stripe 确认付款，稍后自动更新。", "cancel_p": "已取消支付，未产生任何费用。",
         "en_tag": "即将出版", "en_h": "英文版", "en_title": "Trust",
-        "en_meta": "面向海外读者重新撰写",
+        "en_meta": "面向海外读者重新撰写", "en_pts": ["全球视野，扎根中国真实案例", "系统破解海外信任壁垒", "助力企业成为真正本土化的全球公司"], "en_pts_h": "英文版内容",
         "en_blurb": "西方企业可以从中国顶尖品牌跨境建立信任的方式中学到什么。留下邮箱，新书开售当天我们会通知您。",
         "join": "上市时通知我", "join_note": "英文版上市时只发一封邮件，无需付款，不订阅任何简报。",
         "joined": "谢谢！英文版开售当天我们会邮件通知您。", "already": "您已登记，英文版上市时我们会通知您。",
@@ -124,23 +124,31 @@ html[lang="zh-CN"] .intro .sub{font-family:var(--zh);font-style:normal;font-weig
 
 /* the two editions */
 .eds{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:22px 0 26px;align-items:stretch}
-.ed{background:var(--surface);border:1px solid var(--hair);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 14px 34px -30px rgba(21,19,19,.4)}
+.ed{background:var(--surface);border:1px solid var(--hair);border-radius:12px;overflow:hidden;box-shadow:0 14px 34px -30px rgba(21,19,19,.4);
+ display:grid;grid-row:span 7;grid-template-rows:subgrid;row-gap:0}
+/* both cards share the same rows (subgrid), so photo, title, first fields, second fields and button line up across the two */
+.ed form{display:contents}
+.pts .ptsh{display:block;font-family:var(--display);font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:14px}
+.pts ul{list-style:none;margin:8px 0 0;padding:0;font-family:var(--display);font-size:14px;color:#2e2b2b}
+.pts li{padding:7px 0 7px 18px;border-top:1px solid var(--hair);position:relative}.pts li:last-child{border-bottom:1px solid var(--hair)}
+.pts li:before{content:"";position:absolute;left:2px;top:15px;width:6px;height:6px;border-radius:50%;background:var(--red)}
+html[lang="zh-CN"] .pts .ptsh{letter-spacing:.02em;font-size:12px;text-transform:none}
+.ehd,.rA,.rB,.rC,.rS,.go{padding-left:24px;padding-right:24px}
+.ehd{padding-top:18px}.rA{padding-top:12px}.rB,.rC{padding-top:10px}.rS{padding-top:4px}
 .vis{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0d1b33}
 .vis img{width:100%;height:100%;object-fit:cover}
 .tag{position:absolute;top:14px;left:14px;font-family:var(--display);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.94);color:var(--ink)}
 .tag.live{background:var(--red);color:#fff}
-.ebody{padding:18px 24px 20px;display:flex;flex-direction:column;flex:1}
 .ehead{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
 .ekicker{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
-.ed h2{font-size:23px;line-height:1.15;margin:4px 0 0}
+.ed h2{font-size:23px;line-height:28px;height:28px;margin:4px 0 0}
 .ed h2 [lang]{font-family:var(--zh);font-weight:600}
 .price{font-family:var(--display);font-weight:500;font-size:22px;line-height:1;color:var(--ink);white-space:nowrap;margin-top:18px}
 .price small{display:block;font-size:12px;font-weight:500;color:var(--muted);letter-spacing:.02em;margin-top:6px;text-align:right}
 .emeta{font-family:var(--display);font-size:13px;color:var(--muted);margin:4px 0 0}
-.eblurb{margin:10px 0 0;font-size:15.5px;line-height:1.55;color:#2e2b2b}
-form{margin-top:12px;display:flex;flex-direction:column;flex:1}
+.eblurb{margin:0;font-size:15.5px;line-height:1.55;color:#2e2b2b}
 .row{display:grid;grid-template-columns:90px 1fr;gap:6px 20px}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:6px 20px;margin-top:10px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:6px 20px}
 label{display:block;font-family:var(--display);font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0}
 html[lang="zh-CN"] label{text-transform:none;letter-spacing:.02em;font-size:12px}
 input,select,textarea{width:100%;font:15px var(--display);padding:6px 0 7px;border:0;border-bottom:1px solid #D6CFC1;border-radius:0;background:transparent;color:var(--ink);transition:border-color .15s;-webkit-appearance:none;appearance:none}
@@ -149,10 +157,10 @@ input::placeholder{color:#a9a39a}
 textarea{resize:vertical;line-height:1.45;font-family:var(--display)}
 .full{margin-top:10px}
 input:focus,select:focus,textarea:focus{outline:none;border-bottom-color:var(--red)}
-.sum{margin:14px 0 0;padding:8px 0 0;font-family:var(--display);font-size:13px;color:var(--muted)}
+.sum{margin:0;padding:12px 24px 0;font-family:var(--display);font-size:13px;color:var(--muted)}
 .sum div{display:flex;justify-content:space-between;padding:2px 0}
 .sum .tot{color:var(--ink);font-weight:600;font-size:15px;padding-top:6px;margin-top:4px;border-top:1px solid var(--hair)}
-.go{margin-top:auto;padding-top:14px}
+.go{align-self:start;padding-top:14px;padding-bottom:20px}
 .go .btn{width:100%;font-size:14.5px;padding:10px 20px;letter-spacing:.02em}
 .small{font-family:var(--display);font-size:11.5px;color:var(--muted);margin:8px 0 0;text-align:center}
 .msg{font-family:var(--display);font-size:14px;margin:8px 0 0;min-height:0;text-align:center}
@@ -181,7 +189,7 @@ input:focus,select:focus,textarea:focus{outline:none;border-bottom-color:var(--r
 .about .qline{font-family:var(--display);font-size:12.5px;color:var(--muted);margin:10px 0 0}
 
 @media (max-width:900px){.intro{grid-template-columns:1fr;align-items:start;padding-top:24px}.eds{grid-template-columns:1fr;gap:22px;padding-top:28px}.about{grid-template-columns:1fr;gap:16px;padding:20px 0}}
-@media (max-width:760px){.nav{display:none}.langsw{margin-left:auto;padding:5px 9px;font-size:13px}.wrap{padding:0 16px}.ebody{padding:22px 20px 22px}.row{grid-template-columns:80px 1fr}.facts{font-size:12.5px}.facts li+li:before{margin:0 7px}.ed h2{font-size:22px}}
+@media (max-width:760px){.nav{display:none}.langsw{margin-left:auto;padding:5px 9px;font-size:13px}.wrap{padding:0 16px}.ehd,.rA,.rB,.rC,.rS,.go{padding-left:20px;padding-right:20px}.ed{grid-row:auto;display:block}.rC:empty,.rS:empty{display:none}.row{grid-template-columns:80px 1fr}.facts{font-size:12.5px}.facts li+li:before{margin:0 7px}.ed h2{font-size:22px}}
 """
 
 JS = r"""(function(){
@@ -288,48 +296,47 @@ def page(k):
   <section class="eds">
     <article class="ed" id="chinese">
       <div class="vis"><img src="{t['img']}trust-books.webp" width="1000" height="750" alt="{t['photo_alt']}"><span class="tag live">{t['zh_tag']}</span></div>
-      <div class="ebody">
-        <div class="ehead">
-          <div><span class="ekicker">{t['zh_h']}</span><h2>{t['zh_title']}</h2></div>
-          <div class="price" id="price"><span>{t['loading']}</span></div>
-        </div>
+      <div class="ehd">
+        <div class="ehead"><div><span class="ekicker">{t['zh_h']}</span><h2>{t['zh_title']}</h2></div><div class="price" id="price"><span>{t['loading']}</span></div></div>
         <p class="emeta">{t['zh_meta']}</p>
-        <form id="order" novalidate>
-          <div class="row">
-            <div><label for="qty">{t['qty']}</label><select id="qty"><option>1</option></select></div>
-            <div><label for="ded">{t['ded']}</label><input id="ded" maxlength="80" placeholder="{t['ded_ph']}"></div>
-          </div>
-          <div id="zoneBox" hidden style="margin-top:12px"><label for="zone">Ship to</label><select id="zone"></select></div>
-          <div class="row2">
-            <div><label for="bname">{t['rname']}</label><input id="bname" autocomplete="shipping name" maxlength="60" required></div>
-            <div><label for="bphone">{t['phone']}</label><input id="bphone" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="20" placeholder="138 0000 0000" required></div>
-          </div>
-          <div class="full"><label for="baddr">{t['addr']}</label><textarea id="baddr" rows="2" maxlength="200" autocomplete="shipping street-address" placeholder="{t['addr_ph']}" required></textarea></div>
-          <div class="full"><label for="bemail">{t['remail']}</label><input id="bemail" type="email" autocomplete="email" maxlength="200" required></div>
-          <input class="hp" id="bweb" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <div class="sum"><div><span>{t['sum_book']}</span><span id="sBook">–</span></div><div><span>{t['ship_note']}</span><span id="sShip">–</span></div><div class="tot"><span>{t['total']}</span><span id="tot">–</span></div></div>
-          <div class="go"><button class="btn" id="buy" type="submit" disabled>{t['buy']}</button>
-          <p class="small">{t['secure']}</p><p class="msg" id="bmsg" role="status"></p></div>
-        </form>
       </div>
+      <form id="order" novalidate>
+        <div class="rA row">
+          <div><label for="qty">{t['qty']}</label><select id="qty"><option>1</option></select></div>
+          <div><label for="ded">{t['ded']}</label><input id="ded" maxlength="80" placeholder="{t['ded_ph']}"></div>
+          <div id="zoneBox" hidden><label for="zone">Ship to</label><select id="zone"></select></div>
+        </div>
+        <div class="rB row2">
+          <div><label for="bname">{t['rname']}</label><input id="bname" autocomplete="shipping name" maxlength="60" required></div>
+          <div><label for="bphone">{t['phone']}</label><input id="bphone" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="20" placeholder="138 0000 0000" required></div>
+        </div>
+        <div class="rC">
+          <div><label for="baddr">{t['addr']}</label><textarea id="baddr" rows="2" maxlength="200" autocomplete="shipping street-address" placeholder="{t['addr_ph']}" required></textarea></div>
+          <div class="full"><label for="bemail">{t['remail']}</label><input id="bemail" type="email" autocomplete="email" maxlength="200" required></div>
+        </div>
+        <div class="rS sum"><div><span>{t['sum_book']}</span><span id="sBook">–</span></div><div><span>{t['ship_note']}</span><span id="sShip">–</span></div><div class="tot"><span>{t['total']}</span><span id="tot">–</span></div></div>
+        <div class="go"><input class="hp" id="bweb" tabindex="-1" autocomplete="off" aria-hidden="true"><button class="btn" id="buy" type="submit" disabled>{t['buy']}</button>
+        <p class="small">{t['secure']}</p><p class="msg" id="bmsg" role="status"></p></div>
+      </form>
     </article>
 
     <article class="ed" id="english">
       <div class="vis"><div class="encov"><img src="{t['img']}trust-en-cover.webp" width="800" height="1200" alt="Draft cover of the English edition of Trust by Chris Pereira"></div><span class="tag">{t['en_tag']}</span></div>
-      <div class="ebody">
+      <div class="ehd">
         <div class="ehead"><div><span class="ekicker">{t['en_h']}</span><h2>{t['en_title']}</h2></div></div>
         <p class="emeta">{t['en_meta']}</p>
-        <p class="eblurb">{t['en_blurb']}</p>
-        <form id="wait" novalidate>
-          <div class="row2">
-            <div><label for="wname">{t['name']}</label><input id="wname" autocomplete="name" maxlength="120"></div>
-            <div><label for="wemail">{t['email']}</label><input id="wemail" type="email" autocomplete="email" maxlength="200" required></div>
-          </div>
-          <input class="hp" id="wweb" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <div class="go"><button class="btn ghost" id="wbtn" type="submit">{t['join']}</button>
-          <p class="join-note">{t['join_note']}</p><p class="msg" id="wmsg" role="status"></p></div>
-        </form>
       </div>
+      <form id="wait" novalidate>
+        <div class="rA"><p class="eblurb">{t['en_blurb']}</p></div>
+        <div class="rB row2">
+          <div><label for="wname">{t['name']}</label><input id="wname" autocomplete="name" maxlength="120"></div>
+          <div><label for="wemail">{t['email']}</label><input id="wemail" type="email" autocomplete="email" maxlength="200" required></div>
+        </div>
+        <div class="rC pts"><span class="ptsh">{t['en_pts_h']}</span><ul>{''.join(f'<li>{x}</li>' for x in t['en_pts'])}</ul></div>
+        <div class="rS"></div>
+        <div class="go"><input class="hp" id="wweb" tabindex="-1" autocomplete="off" aria-hidden="true"><button class="btn ghost" id="wbtn" type="submit">{t['join']}</button>
+        <p class="join-note">{t['join_note']}</p><p class="msg" id="wmsg" role="status"></p></div>
+      </form>
     </article>
   </section>
 
