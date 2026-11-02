@@ -116,12 +116,10 @@ input:focus,select:focus{outline:none;border-bottom-color:var(--red)}
 .also span{font-family:var(--display);font-size:12px;color:var(--muted);line-height:1.4}
 .also .k{font-family:var(--display);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
 .about .qline{font-family:var(--display);font-size:12.5px;color:var(--muted);margin:10px 0 0}
-footer{border-top:1px solid var(--hair);padding:14px 0 18px;font-family:var(--display);font-size:12px;color:var(--muted)}
-footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
 @media (max-width:900px){.intro{grid-template-columns:1fr;align-items:start;padding-top:24px}.eds{grid-template-columns:1fr;gap:22px;padding-top:28px}.about{grid-template-columns:1fr;gap:16px;padding:20px 0}}
 @media (max-width:760px){.nav{display:none}.langsw{margin-left:auto;padding:5px 9px;font-size:13px}.wrap{padding:0 16px}.ebody{padding:22px 20px 22px}.row{grid-template-columns:80px 1fr}.facts{font-size:12.5px}.facts li+li:before{margin:0 7px}.ed h2{font-size:22px}}
-</style>
+footer{background:var(--red-deep);color:#fff}footer .wrap{padding-top:18px;padding-bottom:18px;display:flex;justify-content:space-between;align-items:center;gap:8px 24px;flex-wrap:wrap;font-family:var(--display);font-size:13px}.fnav{display:flex;flex-wrap:wrap;gap:6px 20px}.fnav a{color:#fff;opacity:.85;text-decoration:none}.fnav a:hover{opacity:1;text-decoration:underline;text-underline-offset:3px}</style>
 </head>
 <body>
 <header class="bar"><div class="wrap">
@@ -200,7 +198,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     </div>
   </section>
 </main>
-<footer><div class="wrap"><span>Chris Pereira <span lang="zh-Hans">彭家荣</span></span><span>书籍</span></div></footer>
+<footer><div class="wrap"><span>© 2026 彭家荣 <span lang="en">Chris Pereira</span></span><nav class="fnav" aria-label="联系方式与频道"><a href="mailto:inquiries@chrisjpereira.com">inquiries@chrisjpereira.com</a><a href="https://www.linkedin.com/in/chrisjpereira" rel="me">领英 LinkedIn</a><a href="https://insightsfromchina.substack.com" rel="me">Substack</a><a href="https://www.youtube.com/@OutsideLookingWest" rel="me">YouTube</a><a href="/agents/">AI 智能体接入</a></nav></div></footer>
 <script>(function(){
 var API="https://www.globalconnect.show/api/pay", L="zh", T={"closed": "即将开放订购。如需预留，请发邮件至", "err": "出了点问题，请重试，或发邮件至", "busy": "正在打开安全支付页面…", "fix": "请填写", "fields": {"name": "姓名", "email": "邮箱", "qty": "数量", "zone": "寄送地区", "dedication": "题字"}, "paidH": "感谢订购，订单已确认。", "paidP": "确认邮件已发送至您的邮箱。签名书寄出后，我们会再发邮件告知快递单号。", "pend": "正在向 Stripe 确认付款，稍后自动更新。", "cancel": "已取消支付，未产生任何费用。", "joined": "谢谢！英文版开售当天我们会邮件通知您。", "already": "您已登记，英文版上市时我们会通知您。"}, SEP=L==='zh'?'、':', ';
 var $=function(id){return document.getElementById(id)};

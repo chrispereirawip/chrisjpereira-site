@@ -9,6 +9,8 @@ gcs-site functions/lib/books.js), so a price change never needs a rebuild here. 
 import json
 import os
 
+import footer
+
 API = "https://www.globalconnect.show/api/pay"
 HERE = os.path.dirname(os.path.abspath(__file__))
 
@@ -173,8 +175,6 @@ input:focus,select:focus{outline:none;border-bottom-color:var(--red)}
 .also span{font-family:var(--display);font-size:12px;color:var(--muted);line-height:1.4}
 .also .k{font-family:var(--display);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
 .about .qline{font-family:var(--display);font-size:12.5px;color:var(--muted);margin:10px 0 0}
-footer{border-top:1px solid var(--hair);padding:14px 0 18px;font-family:var(--display);font-size:12px;color:var(--muted)}
-footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
 @media (max-width:900px){.intro{grid-template-columns:1fr;align-items:start;padding-top:24px}.eds{grid-template-columns:1fr;gap:22px;padding-top:28px}.about{grid-template-columns:1fr;gap:16px;padding:20px 0}}
 @media (max-width:760px){.nav{display:none}.langsw{margin-left:auto;padding:5px 9px;font-size:13px}.wrap{padding:0 16px}.ebody{padding:22px 20px 22px}.row{grid-template-columns:80px 1fr}.facts{font-size:12.5px}.facts li+li:before{margin:0 7px}.ed h2{font-size:22px}}
@@ -258,7 +258,7 @@ def page(k):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Tinos:ital,wght@0,400;0,700;1,400&display=swap">
 <script type="application/ld+json">{ld}</script>
-<style>{CSS}</style>
+<style>{CSS}{footer.CSS}</style>
 </head>
 <body>
 <header class="bar"><div class="wrap">
@@ -337,7 +337,7 @@ def page(k):
     </div>
   </section>
 </main>
-<footer><div class="wrap"><span>Chris Pereira <span lang="zh-Hans">彭家荣</span></span><span>{t['foot']}</span></div></footer>
+{footer.html('zh' if k == 'zh' else 'en')}
 <script>{js}</script>
 <script defer src="/a.js"></script>
 </body>

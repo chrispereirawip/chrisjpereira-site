@@ -8,6 +8,7 @@ pages so every entry, summary and quote is in the static HTML (readable by searc
 engines and AI crawlers without running JavaScript), and regenerates the
 coverage structured data (<script id="ld-coverage">) on the English page.
 """
+import footer
 import html, json, re, sys
 
 SITE = "https://chrisjpereira.com"
@@ -386,8 +387,7 @@ section.topic{padding:26px 0 22px;scroll-margin-top:112px}
 .note{font-family:var(--display);font-size:12.5px;color:var(--muted)}
 .cta{padding-top:36px;padding-bottom:56px;margin-top:12px;border-top:1px solid var(--ink)}
 .cta p{max-width:60ch;color:var(--muted);margin:8px 0 18px}
-footer{background:var(--red-deep);color:#fff}
-footer .wrap{padding-top:28px;padding-bottom:28px;display:flex;justify-content:space-between;gap:10px 24px;flex-wrap:wrap;font-family:var(--display);font-size:14px}
+__FOOTCSS__
 @media (max-width:760px){.wrap{padding:0 16px}.nav{display:none}.ihead{grid-template-columns:1fr}.toc{margin-left:-16px;margin-right:-16px;padding:0 16px}.toc ul{flex-wrap:nowrap;overflow-x:auto}.qs li{grid-template-columns:auto minmax(0,1fr) auto;gap:2px 10px}.qs blockquote{grid-column:1/4;order:3;font-size:16px}.qs .more{grid-column:3;grid-row:1}.qs .det{grid-column:1/4;order:4}}
 </style>
 <script type="application/ld+json">__LD__</script>
@@ -413,7 +413,7 @@ __SECTIONS__
     <a class="btn" href="/#contact">Contact Chris</a>
   </div>
 </main>
-<footer><div class="wrap"><span>Chris Pereira <span lang="zh-Hans">彭家荣</span></span><span>Updated October 2026</span></div></footer>
+__FOOTER__
 <script>document.addEventListener("click",function(e){var m=e.target.closest(".more");if(m){var li=m.parentNode,d=li.querySelector(".det"),o=d.hidden;d.hidden=!o;li.classList.toggle("open",o);m.setAttribute("aria-expanded",o?"true":"false");m.textContent=o?"Less":"More";return}var b=e.target.closest(".showall");if(b){var ul=b.previousElementSibling,on=ul.classList.toggle("all");b.textContent=on?"Show less":b.dataset.label;if(!on)b.closest("section").scrollIntoView({behavior:"smooth"})}});</script>
 <script defer src="/a.js"></script>
 </body>
@@ -487,7 +487,8 @@ def build_quotes(QUOTES, robots):
         {"@type": "ItemList", "@id": page + "#quotes", "itemListElement": [{"@type": "ListItem", "position": i + 1, "item": g} for i, g in enumerate(graph)]},
         {"@type": "Person", "@id": PERSON, "name": "Chris Pereira", "alternateName": "彭家荣", "url": SITE + "/"}]}
     html_out = (QUOTES_PAGE.replace("__ROBOTS__", robots).replace("__TOC__", "".join(toc)).replace("__SECTIONS__", "\n".join(secs))
-                .replace("__LD__", json.dumps(ld, ensure_ascii=False, separators=(",", ":"))))
+                .replace("__LD__", json.dumps(ld, ensure_ascii=False, separators=(",", ":")))
+                .replace("__FOOTCSS__", footer.CSS).replace("__FOOTER__", footer.html("en")))
     import os
     os.makedirs("quotes", exist_ok=True)
     open("quotes/index.html", "w", encoding="utf-8").write(html_out)
@@ -500,6 +501,8 @@ if __name__ == "__main__":
     if os.path.exists("data/quotes.json"):
         cfg = json.load(open("data/quotes.json", encoding="utf-8"))
         build_quotes(cfg, "noindex,follow" if not os.path.exists("data/quotes.published") else "index,follow,max-snippet:-1")
+    footer.sync("index.html", "en")  # one footer site-wide (footer.py)
+    footer.sync("zh/index.html", "zh")
     import agents  # agent-friendly layer: api/*.json, agents/, llms-full.txt (agents.py)
     agents.build()
     import shop  # book shop pages /books/ and /zh/books/ (shop.py; prices come live from the GCS site)

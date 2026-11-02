@@ -116,12 +116,10 @@ input:focus,select:focus{outline:none;border-bottom-color:var(--red)}
 .also span{font-family:var(--display);font-size:12px;color:var(--muted);line-height:1.4}
 .also .k{font-family:var(--display);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
 .about .qline{font-family:var(--display);font-size:12.5px;color:var(--muted);margin:10px 0 0}
-footer{border-top:1px solid var(--hair);padding:14px 0 18px;font-family:var(--display);font-size:12px;color:var(--muted)}
-footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
 @media (max-width:900px){.intro{grid-template-columns:1fr;align-items:start;padding-top:24px}.eds{grid-template-columns:1fr;gap:22px;padding-top:28px}.about{grid-template-columns:1fr;gap:16px;padding:20px 0}}
 @media (max-width:760px){.nav{display:none}.langsw{margin-left:auto;padding:5px 9px;font-size:13px}.wrap{padding:0 16px}.ebody{padding:22px 20px 22px}.row{grid-template-columns:80px 1fr}.facts{font-size:12.5px}.facts li+li:before{margin:0 7px}.ed h2{font-size:22px}}
-</style>
+footer{background:var(--red-deep);color:#fff}footer .wrap{padding-top:18px;padding-bottom:18px;display:flex;justify-content:space-between;align-items:center;gap:8px 24px;flex-wrap:wrap;font-family:var(--display);font-size:13px}.fnav{display:flex;flex-wrap:wrap;gap:6px 20px}.fnav a{color:#fff;opacity:.85;text-decoration:none}.fnav a:hover{opacity:1;text-decoration:underline;text-underline-offset:3px}</style>
 </head>
 <body>
 <header class="bar"><div class="wrap">
@@ -200,7 +198,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     </div>
   </section>
 </main>
-<footer><div class="wrap"><span>Chris Pereira <span lang="zh-Hans">彭家荣</span></span><span>Books</span></div></footer>
+<footer><div class="wrap"><span>© 2026 Chris Pereira <span lang="zh-Hans">彭家荣</span></span><nav class="fnav" aria-label="Contact and channels"><a href="mailto:inquiries@chrisjpereira.com">inquiries@chrisjpereira.com</a><a href="https://www.linkedin.com/in/chrisjpereira" rel="me">LinkedIn</a><a href="https://insightsfromchina.substack.com" rel="me">Substack</a><a href="https://www.youtube.com/@OutsideLookingWest" rel="me">YouTube</a><a href="/agents/">For AI agents</a></nav></div></footer>
 <script>(function(){
 var API="https://www.globalconnect.show/api/pay", L="en", T={"closed": "Orders open shortly. To reserve a copy, email", "err": "Something went wrong. Please try again, or email", "busy": "Opening secure checkout…", "fix": "Please add ", "fields": {"name": "your name", "email": "your email", "qty": "copies", "zone": "where to ship", "dedication": "the dedication"}, "paidH": "Thank you, your order is confirmed.", "paidP": "A confirmation is on its way to your inbox. We'll email you the tracking number once your signed copy is posted.", "pend": "We're confirming your payment with Stripe. This will update in a moment.", "cancel": "Checkout was cancelled. You haven't been charged.", "joined": "Thanks. We'll email you the day the English edition goes on sale.", "already": "You're already signed up. We'll email you when it's out."}, SEP=L==='zh'?'、':', ';
 var $=function(id){return document.getElementById(id)};
