@@ -227,6 +227,9 @@ h1 .zh{display:block;font-size:.3em;font-weight:500;letter-spacing:.32em;color:v
 .bklaunch{margin:24px 0 0}
 .bklaunch img{display:block;width:100%;height:auto;border-radius:4px}
 .bklaunch figcaption{margin-top:8px;font-family:var(--display);font-size:13px;letter-spacing:.02em;color:var(--muted)}
+.bk .bkbuy{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-family:var(--display);font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--red);text-decoration:none;padding-bottom:3px;border-bottom:1px solid currentColor}
+.bk .bkbuy:hover{color:var(--red-deep)}
+.bk .bkbuy span{transition:transform .2s}.bk .bkbuy:hover span{transform:translateX(3px)}
 .bk .pub{display:block;margin-top:6px;font-family:var(--display);font-size:13px;font-weight:500;letter-spacing:.02em;color:var(--ink)}
 /* press + contact */
 .kit{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:48px}
@@ -744,10 +747,9 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
           <p>I grew up in Toronto, studied English Literature at York University, then moved to Zhengzhou to study Chinese. After years in Suzhou linking Western companies with Chinese suppliers, I joined Huawei in Shenzhen to lead global public affairs work.</p>
           <p>I founded iMpact in New York during COVID and opened our Shenzhen office in 2023. Today I'm based in Singapore and teach at Xi'an Jiaotong-Liverpool University's International Business School. MBA, HKUST.</p>
           <div class="books" id="books">
-            <div class="bk"><img src="img/book-trust.webp" width="400" height="604" alt="Cover of Trust 《信任》 by Chris Pereira"><div><h3>Trust <span class="zh" lang="zh-Hans">《信任》</span></h3><p>The Golden Key to Chinese Enterprises' Globalization<span class="pub">Shenzhen Publishing House, 2026</span></p></div></div>
+            <div class="bk"><img src="img/book-trust.webp" width="400" height="604" alt="Cover of Trust 《信任》 by Chris Pereira"><div><h3>Trust <span class="zh" lang="zh-Hans">《信任》</span></h3><p>The Golden Key to Chinese Enterprises' Globalization<span class="pub">Shenzhen Publishing House, 2026</span></p><a class="bkbuy" href="/books/">Buy a signed copy <span aria-hidden="true">→</span></a></div></div>
             <div class="bk"><img src="img/book-rebuild.webp" width="400" height="581" alt="Cover of Rebuild 《新出海》 by Chris Pereira"><div><h3>Rebuild <span class="zh" lang="zh-Hans">《新出海》</span></h3><p>A Practical Guide to Localizing Your Brand Overseas<span class="pub">China Renmin University Press, 2025</span></p></div></div>
           </div>
-          <p class="buybk"><a class="btn sm" href="/books/">Buy a signed copy of Trust 《信任》</a></p>
           <figure class="bklaunch"><img src="img/trust-launch.webp" width="900" height="696" loading="lazy" alt="Chris Pereira holding Trust 《信任》 at the book's launch"><figcaption>At the launch of <em>Trust</em> <span lang="zh-Hans">《信任》</span></figcaption></figure>
           <details>
             <summary>Full bio</summary>

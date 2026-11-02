@@ -217,6 +217,9 @@ h1 .zh{display:block;font-size:.3em;font-weight:500;letter-spacing:.32em;color:v
 .bklaunch{margin:24px 0 0}
 .bklaunch img{display:block;width:100%;height:auto;border-radius:4px}
 .bklaunch figcaption{margin-top:8px;font-family:var(--display);font-size:13px;letter-spacing:.02em;color:var(--muted)}
+.bk .bkbuy{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-family:var(--display);font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--red);text-decoration:none;padding-bottom:3px;border-bottom:1px solid currentColor}
+.bk .bkbuy:hover{color:var(--red-deep)}
+.bk .bkbuy span{transition:transform .2s}.bk .bkbuy:hover span{transform:translateX(3px)}
 .bk .pub{display:block;margin-top:6px;font-family:var(--display);font-size:13px;font-weight:500;letter-spacing:.02em;color:var(--ink)}
 /* press + contact */
 .kit{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:48px}
@@ -729,10 +732,9 @@ h1 .en{display:block;font-size:.3em;font-weight:500;letter-spacing:.06em;color:v
           <p>我在多伦多长大，在约克大学攻读英国文学，之后来到郑州学习中文，毕业于郑州大学汉语言文学专业。随后在苏州工作多年，帮助西方企业对接中国供应链伙伴，之后加入深圳华为，负责全球公共事务工作。</p>
           <p>疫情期间，我在纽约创立美讯 iMpact，2023年在深圳设立办公室。目前常驻新加坡，并在西交利物浦大学国际商学院授课。香港科技大学MBA。</p>
           <div class="books" id="books">
-            <div class="bk"><img src="../img/book-trust.webp" width="400" height="604" alt="彭家荣著作《信任》封面"><div><h3>《信任》</h3><p>中国企业全球化的黄金钥匙<span class="pub">深圳出版社，2026年</span></p></div></div>
+            <div class="bk"><img src="../img/book-trust.webp" width="400" height="604" alt="彭家荣著作《信任》封面"><div><h3>《信任》</h3><p>中国企业全球化的黄金钥匙<span class="pub">深圳出版社，2026年</span></p><a class="bkbuy" href="/zh/books/">购买签名版 <span aria-hidden="true">→</span></a></div></div>
             <div class="bk"><img src="../img/book-rebuild.webp" width="400" height="581" alt="彭家荣著作《新出海》封面"><div><h3>《新出海》</h3><p>中企海外本土化实战手册<span class="pub">中国人民大学出版社，2025年</span></p></div></div>
           </div>
-          <p class="buybk"><a class="btn sm" href="/zh/books/">购买《信任》签名版</a></p>
           <figure class="bklaunch"><img src="../img/trust-launch.webp" width="900" height="696" loading="lazy" alt="彭家荣在《信任》新书签售会"><figcaption>《信任》新书签售会</figcaption></figure>
           <details>
             <summary>完整简介</summary>
