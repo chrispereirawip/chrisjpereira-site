@@ -302,6 +302,7 @@ h1 .en{display:block;font-size:.3em;font-weight:500;letter-spacing:.06em;color:v
 .sum p.wxnote{margin:10px 0 0;padding-top:8px;border-top:1px solid var(--hair);font-family:var(--display);font-size:13.5px;color:var(--muted)}
 .sum p.wxnote a{font-size:inherit}
 .head>.hsplit{flex:1 1 100%;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);column-gap:56px;align-items:end}
+.subs{display:block;margin-top:8px;font-family:var(--display);font-size:14px;color:var(--ink)}.subs a{color:var(--red);text-decoration:none;font-weight:600}.subs a:hover{text-decoration:underline;text-underline-offset:3px}.subs .sep{margin:0 8px;color:var(--muted)}
 .hsplit .label,.hsplit h2{grid-column:1}
 .hsplit .lede{grid-column:2;grid-row:1/span 2;max-width:62ch;align-self:end;padding-bottom:6px}
 @media (max-width:900px){.head>.hsplit{grid-template-columns:1fr}.hsplit .lede{grid-column:1;grid-row:auto;margin-top:8px;padding-bottom:0}}
@@ -369,7 +370,7 @@ h1 .en{display:block;font-size:.3em;font-weight:500;letter-spacing:.06em;color:v
   <section id="writing">
     <div class="wrap">
       <div class="head">
-        <div class="hsplit"><span class="label">公众号、Substack 与领英</span><h2>文章</h2><p class="lede">中文公众号<span class="wxacct">「美讯彭家荣」</span>、英文周刊 Substack《Insights from China》以及领英上的文章，探讨中国企业出海，以及中国给西方的启示。</p></div>
+        <div class="hsplit"><span class="label">公众号、Substack 与领英</span><h2>文章</h2><p class="lede">中文公众号<span class="wxacct">「美讯彭家荣」</span>，以及在 Substack 和领英同步发布的英文周刊《Insights from China》，探讨中国企业出海，以及中国给西方的启示。<span class="subs">订阅英文周刊：<a href="https://insightsfromchina.substack.com" target="_blank" rel="noopener">Substack</a><span class="sep" aria-hidden="true">·</span><a href="https://www.linkedin.com/newsletters/insights-from-china-7523031887427301376/" target="_blank" rel="noopener">领英专栏</a></span></p></div>
       </div>
       <ul class="media wlist" id="writing-list">
 <li id="w-2dc3ff61"><time datetime="2026-10-20">2026年10月20日</time><span class="src" title="WeChat">公众号</span><span class="tcell"><a class="what zh" href="https://mp.weixin.qq.com/s/vXEBhj6yNi8dWg0qs0aQDg" target="_blank" rel="noopener">我对《金融时报》说：深圳的速率，正“席卷全球”</a><span class="en">Shenzhen Speed Is Sweeping the World</span></span><span class="dek">What I told the Financial Times about Shenzhen speed</span><button type="button" class="sumbtn" aria-expanded="false">摘要</button><div class="sum" hidden><p>Building on my Financial Times interview, I look at how DJI and Insta360 came to sell over 90% of the world&#x27;s handheld smart cameras while GoPro&#x27;s share fell to 3%. Shenzhen companies are taking their domestic &quot;civil war&quot; overseas, entering each other&#x27;s categories and suing each other over patents in the US. Shenzhen speed is largely forged by competition, and that competition is about product iteration and engineering more than price cuts. Next, Chinese companies will meet each other head-on in global markets.</p><a href="https://mp.weixin.qq.com/s/vXEBhj6yNi8dWg0qs0aQDg" target="_blank" rel="noopener">阅读全文 ↗</a></div></li>
@@ -776,7 +777,7 @@ h1 .en{display:block;font-size:.3em;font-weight:500;letter-spacing:.06em;color:v
   </section>
 </main>
 
-<footer><div class="wrap"><span>© 2026 彭家荣 <span lang="en">Chris Pereira</span></span><nav class="fnav" aria-label="联系方式与频道"><a href="mailto:inquiries@chrisjpereira.com">inquiries@chrisjpereira.com</a><a href="https://www.linkedin.com/in/chrisjpereira" rel="me">领英 LinkedIn</a><a href="https://insightsfromchina.substack.com" rel="me">Substack</a><a href="https://www.youtube.com/@OutsideLookingWest" rel="me">YouTube</a><a href="/agents/">AI 智能体接入</a></nav></div></footer>
+<footer><div class="wrap"><span>© 2026 彭家荣 <span lang="en">Chris Pereira</span></span><nav class="fnav" aria-label="联系方式与频道"><a href="mailto:inquiries@chrisjpereira.com">inquiries@chrisjpereira.com</a><a href="https://www.linkedin.com/in/chrisjpereira" rel="me">领英 LinkedIn</a><a href="https://insightsfromchina.substack.com" rel="me">Substack</a><a href="https://www.linkedin.com/newsletters/insights-from-china-7523031887427301376/" rel="me">领英专栏</a><a href="https://www.youtube.com/@OutsideLookingWest" rel="me">YouTube</a><a href="/agents/">AI 智能体接入</a></nav></div></footer>
 <script>
 function esc(s){var d=document.createElement("div");d.textContent=s;return d.innerHTML}
 function sumP(t){return t.split(/\n+/).filter(Boolean).map(function(x){if(x.indexOf('EN: ')===0)return '<p class="en">'+esc(x.slice(4))+'</p>';return '<p'+(/[一-鿿]/.test(x)?' class="zh"':'')+'>'+esc(x)+'</p>'}).join('')}

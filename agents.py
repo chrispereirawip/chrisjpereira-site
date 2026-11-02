@@ -108,7 +108,7 @@ PROFILE = {
     },
     "links": {
         "website": SITE + "/", "website_zh": SITE + "/zh/", "quotes": SITE + "/quotes/", "llms_txt": SITE + "/llms.txt",
-        "linkedin": "https://www.linkedin.com/in/chrisjpereira", "substack": "https://insightsfromchina.substack.com",
+        "linkedin": "https://www.linkedin.com/in/chrisjpereira", "substack": "https://insightsfromchina.substack.com", "linkedin_newsletter": "https://www.linkedin.com/newsletters/insights-from-china-7523031887427301376/",
         "youtube": "https://www.youtube.com/@OutsideLookingWest", "impact": "https://www.impact5r.com",
         "global_connect_show": "https://www.globalconnect.show", "cgbb": "https://cgbb.org", "scmp_author": "https://www.scmp.com/author/chris-pereira",
     },

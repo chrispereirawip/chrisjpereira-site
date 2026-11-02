@@ -1,14 +1,14 @@
 """One footer for every page of chrisjpereira.com (Chris, 2026-11-02: "if there is something there, it should have a reason and objective").
 Each item earns its place: the copyright line says whose words and photos these are; the email is the one contact route; LinkedIn,
-Substack and YouTube are where to follow him; "For AI agents" sends agents to the data and contact desk. Used by build.py (quotes),
+Substack, the LinkedIn newsletter (Insights from China, launched 2026-11-03) and YouTube are where to follow him; "For AI agents" sends agents to the data and contact desk. Used by build.py (quotes),
 shop.py (books), agents.py and inserted into index.html / zh/index.html by sync()."""
 import re
 
 LINKS = {
     "en": [("mailto:inquiries@chrisjpereira.com", "inquiries@chrisjpereira.com"), ("https://www.linkedin.com/in/chrisjpereira", "LinkedIn"),
-           ("https://insightsfromchina.substack.com", "Substack"), ("https://www.youtube.com/@OutsideLookingWest", "YouTube"), ("/agents/", "For AI agents")],
+           ("https://insightsfromchina.substack.com", "Substack"), ("https://www.linkedin.com/newsletters/insights-from-china-7523031887427301376/", "LinkedIn newsletter"), ("https://www.youtube.com/@OutsideLookingWest", "YouTube"), ("/agents/", "For AI agents")],
     "zh": [("mailto:inquiries@chrisjpereira.com", "inquiries@chrisjpereira.com"), ("https://www.linkedin.com/in/chrisjpereira", "领英 LinkedIn"),
-           ("https://insightsfromchina.substack.com", "Substack"), ("https://www.youtube.com/@OutsideLookingWest", "YouTube"), ("/agents/", "AI 智能体接入")],
+           ("https://insightsfromchina.substack.com", "Substack"), ("https://www.linkedin.com/newsletters/insights-from-china-7523031887427301376/", "领英专栏"), ("https://www.youtube.com/@OutsideLookingWest", "YouTube"), ("/agents/", "AI 智能体接入")],
 }
 CSS = ("footer{background:var(--red-deep);color:#fff}"
        "footer .wrap{padding-top:18px;padding-bottom:18px;display:flex;justify-content:space-between;align-items:center;gap:8px 24px;flex-wrap:wrap;font-family:var(--display);font-size:13px}"
