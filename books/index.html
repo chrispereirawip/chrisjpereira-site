@@ -100,6 +100,7 @@ textarea{resize:vertical;line-height:1.45;font-family:var(--display)}
 input:focus,select:focus,textarea:focus{outline:none;border-bottom-color:var(--red)}
 .sum{margin:0;padding:12px 24px 0;font-family:var(--display);font-size:13px;color:var(--muted)}
 .sum div{display:flex;justify-content:space-between;padding:2px 0}
+.gift{display:flex;justify-content:flex-end;gap:10px;align-items:center;padding:0 0 6px}.gift button.lnk{background:none;border:0;padding:0;font:inherit;color:var(--red);cursor:pointer;text-decoration:underline;text-underline-offset:3px}.gift input{width:120px;font-size:13px;padding:2px 0 3px;text-transform:uppercase}.gift .ap{background:none;border:1px solid var(--red);color:var(--red);border-radius:999px;font:600 12px var(--display);padding:3px 12px;cursor:pointer}.gift .ok{color:var(--ok);font-weight:500;margin-right:auto}
 .sum .tot{color:var(--ink);font-weight:600;font-size:15px;padding-top:6px;margin-top:4px;border-top:1px solid var(--hair)}
 .go{align-self:start;padding-top:14px;padding-bottom:20px}
 .go .btn{width:100%;font-size:14.5px;padding:10px 20px;letter-spacing:.02em}
@@ -175,9 +176,9 @@ footer{background:var(--red-deep);color:#fff}footer .wrap{padding-top:18px;paddi
           <div><label for="baddr">Delivery address</label><textarea id="baddr" rows="2" maxlength="200" autocomplete="shipping street-address" placeholder="Province, city, district, street, building and room" required></textarea></div>
           <div class="full"><label for="bemail">Email (for your receipt)</label><input id="bemail" type="email" autocomplete="email" maxlength="200" required></div>
         </div>
-        <div class="rS sum"><div><span>Trust 《信任》, signed</span><span id="sBook">–</span></div><div><span>Shipping to mainland China</span><span id="sShip">–</span></div><div class="tot"><span>Total</span><span id="tot">–</span></div></div>
+        <div class="rS sum"><div class="gift" id="giftBox"><button type="button" class="lnk" id="giftQ" aria-expanded="false">Have a gift code?</button><span id="giftIn" hidden><input id="gcode" maxlength="20" placeholder="Gift code" aria-label="Gift code" autocomplete="off"><button type="button" class="ap" id="gapply">Apply</button></span><span class="ok" id="giftOk" hidden>Gift code applied: a free signed copy, posted to you.</span><button type="button" class="lnk" id="giftOff" hidden>Remove</button></div><div><span>Trust 《信任》, signed</span><span id="sBook">–</span></div><div><span>Shipping to mainland China</span><span id="sShip">–</span></div><div class="tot"><span>Total</span><span id="tot">–</span></div></div>
         <div class="go"><input class="hp" id="bweb" tabindex="-1" autocomplete="off" aria-hidden="true"><button class="btn" id="buy" type="submit" disabled>Buy a signed copy</button>
-        <p class="small">Secure payment by Stripe on the next step.</p><p class="msg" id="bmsg" role="status"></p></div>
+        <p class="small" id="secure">Secure payment by Stripe on the next step.</p><p class="msg" id="bmsg" role="status"></p></div>
       </form>
     </article>
 
@@ -213,12 +214,12 @@ footer{background:var(--red-deep);color:#fff}footer .wrap{padding-top:18px;paddi
 </main>
 <footer><div class="wrap"><span>© 2026 Chris Pereira <span lang="zh-Hans">彭家荣</span></span><nav class="fnav" aria-label="Contact and channels"><a href="mailto:inquiries@chrisjpereira.com">inquiries@chrisjpereira.com</a><a href="https://www.linkedin.com/in/chrisjpereira" rel="me">LinkedIn</a><a href="https://insightsfromchina.substack.com" rel="me">Substack</a><a href="https://www.linkedin.com/newsletters/insights-from-china-7523031887427301376/" rel="me">LinkedIn newsletter</a><a href="https://www.youtube.com/@OutsideLookingWest" rel="me">YouTube</a><a href="/agents/">For AI agents</a></nav></div></footer>
 <script>(function(){
-var API="https://www.globalconnect.show/api/pay", L="en", T={"closed": "Orders open shortly. To reserve a copy, email", "err": "Something went wrong. Please try again, or email", "busy": "Opening secure checkout…", "fix": "Please add ", "fields": {"name": "the recipient's name", "phone": "a mainland China mobile number (11 digits)", "address": "the delivery address", "email": "your email", "qty": "copies", "zone": "where to ship", "dedication": "the dedication"}, "paidH": "Thank you, your order is confirmed.", "paidP": "A confirmation is on its way to your inbox. We'll email you the tracking number once your signed copy is posted.", "pend": "We're confirming your payment with Stripe. This will update in a moment.", "cancel": "Checkout was cancelled. You haven't been charged.", "joined": "Thanks. We'll email you the day the English edition goes on sale.", "already": "You're already signed up. We'll email you when it's out."}, SEP=L==='zh'?'、':', ';
+var API="https://www.globalconnect.show/api/pay", L="en", T={"closed": "Orders open shortly. To reserve a copy, email", "err": "Something went wrong. Please try again, or email", "busy": "Opening secure checkout…", "fix": "Please add ", "fields": {"name": "the recipient's name", "phone": "a mainland China mobile number (11 digits)", "address": "the delivery address", "email": "your email", "qty": "copies", "zone": "where to ship", "dedication": "the dedication"}, "paidH": "Thank you, your order is confirmed.", "paidP": "A confirmation is on its way to your inbox. We'll email you the tracking number once your signed copy is posted.", "pend": "We're confirming your payment with Stripe. This will update in a moment.", "cancel": "Checkout was cancelled. You haven't been charged.", "joined": "Thanks. We'll email you the day the English edition goes on sale.", "already": "You're already signed up. We'll email you when it's out.", "buy": "Buy a signed copy", "secure": "Secure payment by Stripe on the next step.", "giftBad": "That code isn't valid.", "giftFree": "Free", "giftBuy": "Request my free copy", "giftNote": "No payment needed. Email is optional.", "giftBusy": "Sending your request…", "giftDone": "Thank you! Your request is in. We'll post your signed copy soon.", "giftAlready": "A free copy has already been requested for this mobile number. Questions? Email"}, SEP=L==='zh'?'、':', ';
 var $=function(id){return document.getElementById(id)};
-var book=null, fmt=function(minor,cur){return (cur==='cny'?'¥':cur.toUpperCase()+' ')+(minor/100).toFixed(2).replace(/\.00$/,'')};
+var book=null, GIFT='', fmt=function(minor,cur){return (cur==='cny'?'¥':cur.toUpperCase()+' ')+(minor/100).toFixed(2).replace(/\.00$/,'')};
 var EM=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 function zone(){return book.shipping.filter(function(x){return x.id===$('zone').value})[0]||book.shipping[0]}
-function total(){if(!book)return;var q=+$('qty').value||1,z=zone();$('sBook').textContent=fmt(book.price*q,book.currency);$('sShip').textContent=fmt(z.amount,book.currency);$('tot').textContent=fmt(book.price*q+z.amount,book.currency)}
+function total(){if(!book)return;if(GIFT){$('sBook').textContent=T.giftFree;$('sShip').textContent=T.giftFree;$('tot').textContent=fmt(0,book.currency);return}var q=+$('qty').value||1,z=zone();$('sBook').textContent=fmt(book.price*q,book.currency);$('sShip').textContent=fmt(z.amount,book.currency);$('tot').textContent=fmt(book.price*q+z.amount,book.currency)}
 function say(id,text,cls){var m=$(id);m.className='msg'+(cls?' '+cls:'');m.textContent=text}
 function sayMail(id,lead){var m=$(id);m.className='msg bad';m.textContent=lead+' ';var a=document.createElement('a');a.href='mailto:inquiries@chrisjpereira.com';a.textContent='inquiries@chrisjpereira.com';m.appendChild(a)}
 fetch(API+'/books').then(function(r){return r.json()}).then(function(j){
@@ -230,9 +231,22 @@ fetch(API+'/books').then(function(r){return r.json()}).then(function(j){
   $('zoneBox').hidden=book.shipping.length<2;$('buy').disabled=false;total();
 }).catch(function(){$('buy').disabled=true;sayMail('bmsg',T.err)});
 document.addEventListener('change',function(e){if(e.target.id==='qty'||e.target.id==='zone')total()});
+function giftMode(code){GIFT=code;$('giftQ').hidden=!!code;$('giftIn').hidden=true;$('giftOk').hidden=!code;$('giftOff').hidden=!code;
+  $('qty').value='1';$('qty').disabled=!!code;$('buy').textContent=code?T.giftBuy:T.buy;$('secure').textContent=code?T.giftNote:T.secure;say('bmsg','');total()}
+$('giftQ').addEventListener('click',function(){var o=$('giftIn').hidden;$('giftIn').hidden=!o;this.setAttribute('aria-expanded',o?'true':'false');if(o)$('gcode').focus()});
+function applyGift(){var c=$('gcode').value.trim();if(!c)return;$('gapply').disabled=true;
+  fetch(API+'/book-gift',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({code:c,check:true})}).then(function(r){return r.json()})
+  .then(function(j){$('gapply').disabled=false;if(j.ok)giftMode(c);else say('bmsg',T.giftBad,'bad')}).catch(function(){$('gapply').disabled=false;sayMail('bmsg',T.err)})}
+$('gapply').addEventListener('click',applyGift);$('gcode').addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();applyGift()}});
+$('giftOff').addEventListener('click',function(){$('gcode').value='';giftMode('')});
 $('order').addEventListener('submit',function(e){e.preventDefault();if(!book)return;
-  var miss=[];if(!$('bname').value.trim())miss.push(T.fields.name);if(!/^(\+?86)?1[3-9]\d{9}$/.test($('bphone').value.replace(/[\s()-]/g,'')))miss.push(T.fields.phone);if($('baddr').value.trim().length<6)miss.push(T.fields.address);if(!EM.test($('bemail').value.trim()))miss.push(T.fields.email);
-  if(miss.length){say('bmsg',T.fix+miss.join(SEP),'bad');return}var b=$('buy');b.disabled=true;say('bmsg',T.busy);
+  var miss=[];if(!$('bname').value.trim())miss.push(T.fields.name);if(!/^(\+?86)?1[3-9]\d{9}$/.test($('bphone').value.replace(/[\s()-]/g,'')))miss.push(T.fields.phone);if($('baddr').value.trim().length<6)miss.push(T.fields.address);if(GIFT?($('bemail').value.trim()&&!EM.test($('bemail').value.trim())):!EM.test($('bemail').value.trim()))miss.push(T.fields.email);
+  if(miss.length){say('bmsg',T.fix+miss.join(SEP),'bad');return}var b=$('buy');b.disabled=true;
+  if(GIFT){say('bmsg',T.giftBusy);fetch(API+'/book-gift',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({code:GIFT,dedication:$('ded').value,name:$('bname').value,phone:$('bphone').value,address:$('baddr').value,email:$('bemail').value,lang:L,website:$('bweb').value})})
+    .then(function(r){return r.json()}).then(function(j){if(j.ok){say('bmsg',T.giftDone,'good');return}b.disabled=false;
+      if(j.error==='already')sayMail('bmsg',T.giftAlready);else if(j.fields&&j.fields.indexOf('code')>=0){giftMode('');say('bmsg',T.giftBad,'bad')}else if(j.fields)say('bmsg',T.fix+j.fields.map(function(f){return T.fields[f]||f}).join(SEP),'bad');else sayMail('bmsg',T.err)})
+    .catch(function(){b.disabled=false;sayMail('bmsg',T.err)});return}
+  say('bmsg',T.busy);
   fetch(API+'/book',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({book:'trust-zh',qty:+$('qty').value,zone:zone().id,dedication:$('ded').value,name:$('bname').value,phone:$('bphone').value,address:$('baddr').value,email:$('bemail').value,lang:L,website:$('bweb').value})})
   .then(function(r){return r.json()}).then(function(j){if(j.ok&&j.url){location.href=j.url;return}b.disabled=false;
     if(j.fields)say('bmsg',T.fix+j.fields.map(function(f){return T.fields[f]||f}).join(SEP),'bad');else sayMail('bmsg',T.err)})
