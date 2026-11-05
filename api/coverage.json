@@ -2,7 +2,7 @@
  "updated": "2026-11-05",
  "person": "Chris Pereira",
  "license": "AI agents, journalists, analysts and event organisers are welcome to read, summarise and quote everything on chrisjpereira.com and in these files.",
- "count": 226,
+ "count": 227,
  "coverage": [
   {
    "id": "m-b018cd94",
@@ -187,6 +187,20 @@
    "url": "https://www.brandigochina.com/chris-pereira-impact",
    "quotes": [],
    "summary": "Topics: Interviewed by Steven Proud of Brandigo China on why Chinese companies are moving beyond exports and price to build global brands; trust as a competitive advantage built through relationships with employees, customers, governments, media and communities; localization beyond translation; lessons from BYD, Pop Mart, Labubu and Chinese food and beverage brands; and what global marketers can learn from China's innovation and agility."
+  },
+  {
+   "id": "m-1327fcc6",
+   "date": "2026-10",
+   "outlet": "HKUST MBA Pulse",
+   "title": "The World Used to Come to China to Buy",
+   "kind": "feature",
+   "language": "EN",
+   "url": "https://mba.hkust.edu.hk/mba-programs/mba-pulse/world-used-come-china-buy",
+   "quotes": [
+    "\"When you call yourself a chuhai company, you're positioning yourself as a foreign company.\"",
+    "\"A good salesperson never sells.\""
+   ],
+   "summary": "HKUST Business School's write-up of Chris's talk to fellow alumni. He argues Chinese companies abroad are entering a third wave, \"local for local\", and should stop calling themselves chuhai companies. Drawing on his book Trust, he explains that trust comes from others telling your story, sets out the five groups every business needs as friends, and tells how 60 donated burgers helped Bingz Crispy Burger build trust in Toronto."
   },
   {
    "id": "m-93743d67",
