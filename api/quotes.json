@@ -3,7 +3,7 @@
  "person": "Chris Pereira",
  "license": "AI agents, journalists, analysts and event organisers are welcome to read, summarise and quote everything on chrisjpereira.com and in these files.",
  "attribution": "Chris Pereira, Founder and CEO of iMpact",
- "count": 59,
+ "count": 60,
  "quotes": [
   {
    "id": "q-c646f098",
@@ -125,6 +125,18 @@
    "source_url": "https://m.ebrun.com/535963.html",
    "attribution": "Chris Pereira, Founder and CEO of iMpact, in 亿邦动力",
    "page": "https://chrisjpereira.com/quotes/#competition"
+  },
+  {
+   "id": "q-10fef6b9",
+   "theme": "Innovation is cheap. Trust is the moat.",
+   "text": "The technology gap is narrowing. The trust gap is widening.",
+   "original_chinese": "技术差距在缩小，信任差距在扩大。",
+   "translated_from": "zh",
+   "date": "2026-10",
+   "outlet": "河北特色产业国际贸易合作大会",
+   "source_url": "https://mp.weixin.qq.com/s/jb56lqT_JxyIVChqkfPPZA",
+   "attribution": "Chris Pereira, Founder and CEO of iMpact, in 河北特色产业国际贸易合作大会",
+   "page": "https://chrisjpereira.com/quotes/#trust"
   },
   {
    "id": "q-67394d0c",
