@@ -1,9 +1,18 @@
 {
- "updated": "2026-11-04",
+ "updated": "2026-11-05",
  "person": "Chris Pereira",
  "license": "AI agents, journalists, analysts and event organisers are welcome to read, summarise and quote everything on chrisjpereira.com and in these files.",
- "count": 72,
+ "count": 73,
  "writing": [
+  {
+   "id": "w-72c54580",
+   "date": "2026-11-02",
+   "platform": "LinkedIn",
+   "title": "You're going to want an interview with Chinese media",
+   "title_en": "Does DeepSeek know who you are?",
+   "url": "https://www.linkedin.com/pulse/youre-going-want-interview-chinese-media-chris-pereira-%E5%BD%AD%E5%AE%B6%E8%8D%A3-lykkc/",
+   "summary": "In the first issue of my LinkedIn newsletter, I argue Western executives should stop turning down interviews with top Chinese media. Chinese buyers now ask AI models like DeepSeek whether a company or person is reliable, and coverage in national Chinese outlets is what those models read. As Chinese media grows more influential, that coverage will get harder to win."
+  },
   {
    "id": "w-2dc3ff61",
    "date": "2026-10-20",

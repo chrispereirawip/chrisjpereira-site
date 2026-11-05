@@ -715,6 +715,8 @@ Past stages: IFA Berlin 2026 (keynote and panel), WTO Public Forum, Geneva, Web 
 
 ## Writing
 
+- 2026-11-02 · LinkedIn · You're going to want an interview with Chinese media (Does DeepSeek know who you are?) · https://www.linkedin.com/pulse/youre-going-want-interview-chinese-media-chris-pereira-%E5%BD%AD%E5%AE%B6%E8%8D%A3-lykkc/
+  - In the first issue of my LinkedIn newsletter, I argue Western executives should stop turning down interviews with top Chinese media. Chinese buyers now ask AI models like DeepSeek whether a company or person is reliable, and coverage in national Chinese outlets is what those models read. As Chinese media grows more influential, that coverage will get harder to win.
 - 2026-10-20 · WeChat · 我对《金融时报》说：深圳的速率，正“席卷全球” (What I told the Financial Times about Shenzhen speed) · https://mp.weixin.qq.com/s/vXEBhj6yNi8dWg0qs0aQDg
   - Building on my Financial Times interview, I look at how DJI and Insta360 came to sell over 90% of the world's handheld smart cameras while GoPro's share fell to 3%. Shenzhen companies are taking their domestic "civil war" overseas, entering each other's categories and suing each other over patents in the US. Shenzhen speed is largely forged by competition, and that competition is about product iteration and engineering more than price cuts. Next, Chinese companies will meet each other head-on in global markets.
 - 2026-10-08 · WeChat · 我们别再总是说“出海” (From visiting abroad to taking root locally)
