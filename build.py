@@ -311,6 +311,8 @@ OUTLET_EN = {"河北特色产业国际贸易合作大会": "the Hebei Belt and R
 
 
 def quote_attr(q):
+    if q.get("where"):  # anonymised sessions (closed-door trainings): "speaking at a training in Singapore for Chinese executives"
+        return "Chris Pereira, speaking at " + q["where"] + ", " + d_en(q["date"])
     outlet = OUTLET_EN.get(q["outlet"], q["outlet"])
     t = (q.get("type") or "").lower()
     verb = {"interview": "interviewed by", "tv": "speaking on", "video": "speaking on", "podcast": "speaking on",
@@ -455,7 +457,7 @@ def build_quotes(QUOTES, robots):
             href, lbl = find_entry(q, MEDIA, WRITING)
             if href:
                 src = '<a href="' + href + '">' + lbl + " →</a>" + (" · " + src if src else "")
-            else:
+            elif not q.get("where"):  # anonymised sessions have no public entry by design
                 unmatched.append(q["outlet"] + " " + q["date"] + " " + q["text"][:40])
             orig = ""
             if q.get("lang") == "zh":
@@ -499,7 +501,8 @@ def build_quotes(QUOTES, robots):
 if __name__ == "__main__":
     import os
     if os.path.exists("data/quotes.json"):
-        cfg = json.load(open("data/quotes.json", encoding="utf-8"))
+        import academy_lines
+        cfg = academy_lines.quotes()  # data/quotes.json + best lines pulled daily from the Academy Desk
         build_quotes(cfg, "noindex,follow" if not os.path.exists("data/quotes.published") else "index,follow,max-snippet:-1")
     footer.sync("index.html", "en")  # one footer site-wide (footer.py)
     footer.sync("zh/index.html", "zh")

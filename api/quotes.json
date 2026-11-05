@@ -3,7 +3,7 @@
  "person": "Chris Pereira",
  "license": "AI agents, journalists, analysts and event organisers are welcome to read, summarise and quote everything on chrisjpereira.com and in these files.",
  "attribution": "Chris Pereira, Founder and CEO of iMpact",
- "count": 60,
+ "count": 77,
  "quotes": [
   {
    "id": "q-c646f098",
@@ -139,6 +139,18 @@
    "page": "https://chrisjpereira.com/quotes/#trust"
   },
   {
+   "id": "q-7d6be277",
+   "theme": "Innovation is cheap. Trust is the moat.",
+   "text": "Relationships may get you into a market. Local trust is what lets you stay.",
+   "original_chinese": "你能准入，可能是你的关系；你能留下来，是你的信任在本地。",
+   "translated_from": "zh",
+   "date": "2026-10",
+   "outlet": "Training, Singapore",
+   "source_url": "",
+   "attribution": "Chris Pereira, Founder and CEO of iMpact, speaking at a training in Singapore for Chinese executives",
+   "page": "https://chrisjpereira.com/quotes/#trust"
+  },
+  {
    "id": "q-67394d0c",
    "theme": "Innovation is cheap. Trust is the moat.",
    "text": "AI will give an answer, and that answer will decide whether overseas resources work with the company or not.",
@@ -267,6 +279,18 @@
    "page": "https://chrisjpereira.com/quotes/#trust"
   },
   {
+   "id": "q-1740f798",
+   "theme": "Innovation is cheap. Trust is the moat.",
+   "text": "Trust is built through other people. We can’t do it alone. We need third parties in the market to speak well of us.",
+   "original_chinese": "信任是通过别人去建立的。我们不能只靠自己；我们需要第三方市场背书，说我们的好话。",
+   "translated_from": "zh",
+   "date": "2026-10",
+   "outlet": "Training, Singapore",
+   "source_url": "",
+   "attribution": "Chris Pereira, Founder and CEO of iMpact, speaking at a training in Singapore for Chinese executives",
+   "page": "https://chrisjpereira.com/quotes/#trust"
+  },
+  {
    "id": "q-89e0be9d",
    "theme": "Exporting is over. Going local has begun.",
    "text": "This is no longer simply about exporting products. We have entered the stage of deep localization.",
@@ -276,6 +300,18 @@
    "outlet": "新浪财经",
    "source_url": "https://finance.sina.com.cn/hy/hyjz/2026-09-18/doc-inisfazm0219134.shtml",
    "attribution": "Chris Pereira, Founder and CEO of iMpact, in 新浪财经",
+   "page": "https://chrisjpereira.com/quotes/#localization"
+  },
+  {
+   "id": "q-9165bd15",
+   "theme": "Exporting is over. Going local has begun.",
+   "text": "I’ve never liked the word chuhai. Call yourself a company going overseas and you’ve already cast yourself as a foreigner.",
+   "original_chinese": "我一直很不喜欢“出海”这两个字：你说你是出海企业，已经把自己定位为外国人。",
+   "translated_from": "zh",
+   "date": "2026-10",
+   "outlet": "Training, Singapore",
+   "source_url": "",
+   "attribution": "Chris Pereira, Founder and CEO of iMpact, speaking at a training in Singapore for Chinese executives",
    "page": "https://chrisjpereira.com/quotes/#localization"
   },
   {
@@ -357,6 +393,30 @@
    "page": "https://chrisjpereira.com/quotes/#localization"
   },
   {
+   "id": "q-30102b83",
+   "theme": "Exporting is over. Going local has begun.",
+   "text": "An American company would never call itself a US company going overseas to Canada. It’s a Canadian company from America.",
+   "original_chinese": "美国企业绝对不会说“我们是美国出海企业到加拿大”，他们是来自美国的加拿大企业。",
+   "translated_from": "zh",
+   "date": "2026-10",
+   "outlet": "Training, Singapore",
+   "source_url": "",
+   "attribution": "Chris Pereira, Founder and CEO of iMpact, speaking at a training in Singapore for Chinese executives",
+   "page": "https://chrisjpereira.com/quotes/#localization"
+  },
+  {
+   "id": "q-b6b60936",
+   "theme": "Exporting is over. Going local has begun.",
+   "text": "Language translation can be replaced. What we need more are cultural translators.",
+   "original_chinese": "语言翻译可以被替代；我们更需要的是跨文化翻译官。",
+   "translated_from": "zh",
+   "date": "2026-10",
+   "outlet": "Training, Singapore",
+   "source_url": "",
+   "attribution": "Chris Pereira, Founder and CEO of iMpact, speaking at a training in Singapore for Chinese executives",
+   "page": "https://chrisjpereira.com/quotes/#localization"
+  },
+  {
    "id": "q-457cf31a",
    "theme": "China taught me speed. Europe taught me weekends.",
    "text": "China taught me speed. Europe taught me weekends. The winners will need both.",
@@ -414,6 +474,18 @@
    "outlet": "Business in Vancouver",
    "source_url": "https://biv.com/article/2022/10/chris-pereira-worsening-geopolitical-crisis-china-or-signs-stability",
    "attribution": "Chris Pereira, Founder and CEO of iMpact, in Business in Vancouver",
+   "page": "https://chrisjpereira.com/quotes/#geopolitics"
+  },
+  {
+   "id": "q-67e27e9e",
+   "theme": "Fear sells. It’s also making us poorer.",
+   "text": "This new trend is not deglobalization. It’s a new generation of globalization, driven by China.",
+   "original_chinese": "中国的全球化这个新趋势，不是逆全球化，而是中国推动的新一代的全球化。",
+   "translated_from": "zh",
+   "date": "2026-10",
+   "outlet": "Training, Singapore",
+   "source_url": "",
+   "attribution": "Chris Pereira, Founder and CEO of iMpact, speaking at a training in Singapore for Chinese executives",
    "page": "https://chrisjpereira.com/quotes/#geopolitics"
   },
   {
@@ -479,6 +551,18 @@
    "page": "https://chrisjpereira.com/quotes/#geopolitics"
   },
   {
+   "id": "q-3a3fee16",
+   "theme": "Fear sells. It’s also making us poorer.",
+   "text": "Going global isn’t really about making money. It’s about whether we have a peaceful world in the future.",
+   "original_chinese": "出海说白了不是赚钱的事情，是未来我们是不是有一个和平的世界。",
+   "translated_from": "zh",
+   "date": "2026-10",
+   "outlet": "Training, Singapore",
+   "source_url": "",
+   "attribution": "Chris Pereira, Founder and CEO of iMpact, speaking at a training in Singapore for Chinese executives",
+   "page": "https://chrisjpereira.com/quotes/#geopolitics"
+  },
+  {
    "id": "q-53d17e86",
    "theme": "No one vouching for you? Skip the ads.",
    "text": "If you don’t have the third-party endorsement, you shouldn’t do advertising.",
@@ -486,6 +570,18 @@
    "outlet": "Yanko Design",
    "source_url": "https://www.yankodesign.com/2025/11/23/why-huaweis-former-pr-leader-says-most-brands-get-global-marketing-completely-wrong/",
    "attribution": "Chris Pereira, Founder and CEO of iMpact, in Yanko Design",
+   "page": "https://chrisjpereira.com/quotes/#brand"
+  },
+  {
+   "id": "q-1693ba2e",
+   "theme": "No one vouching for you? Skip the ads.",
+   "text": "Advertising can buy awareness. It can’t buy credibility.",
+   "original_chinese": "广告可以解决知名度，但解决不了可信度。",
+   "translated_from": "zh",
+   "date": "2026-10",
+   "outlet": "Training, Singapore",
+   "source_url": "",
+   "attribution": "Chris Pereira, Founder and CEO of iMpact, speaking at a training in Singapore for Chinese executives",
    "page": "https://chrisjpereira.com/quotes/#brand"
   },
   {
@@ -539,6 +635,54 @@
    "page": "https://chrisjpereira.com/quotes/#brand"
   },
   {
+   "id": "q-39b9624b",
+   "theme": "No one vouching for you? Skip the ads.",
+   "text": "The more I tell you how good I am, the less you’ll believe it.",
+   "original_chinese": "我越说我优秀，你会越觉得我不优秀。",
+   "translated_from": "zh",
+   "date": "2026-10",
+   "outlet": "Training, Singapore",
+   "source_url": "",
+   "attribution": "Chris Pereira, Founder and CEO of iMpact, speaking at a training in Singapore for Chinese executives",
+   "page": "https://chrisjpereira.com/quotes/#brand"
+  },
+  {
+   "id": "q-807423b3",
+   "theme": "No one vouching for you? Skip the ads.",
+   "text": "Building trust means being able to survive a client’s background check. Until you can pass that check on AI or Google, don’t rush into advertising. Every ad may be hurting you.",
+   "original_chinese": "做信任这件事，是经得起客户背调的事情；在AI或Google上还经不起背调之前，不要急着做广告。你每做一次广告，可能在伤害自己。",
+   "translated_from": "zh",
+   "date": "2026-10",
+   "outlet": "Training, Singapore",
+   "source_url": "",
+   "attribution": "Chris Pereira, Founder and CEO of iMpact, speaking at a training in Singapore for Chinese executives",
+   "page": "https://chrisjpereira.com/quotes/#brand"
+  },
+  {
+   "id": "q-f29df627",
+   "theme": "No one vouching for you? Skip the ads.",
+   "text": "After a meeting, clients will always look you up on Google, ChatGPT or DeepSeek. What moves your conversion rate most is whether you and your company survive that check.",
+   "original_chinese": "客户开完会一定会去Google、ChatGPT、DeepSeek查你；转化率影响最大的，是你和公司经不经得起背调。",
+   "translated_from": "zh",
+   "date": "2026-10",
+   "outlet": "Training, Singapore",
+   "source_url": "",
+   "attribution": "Chris Pereira, Founder and CEO of iMpact, speaking at a training in Singapore for Chinese executives",
+   "page": "https://chrisjpereira.com/quotes/#brand"
+  },
+  {
+   "id": "q-8704b661",
+   "theme": "No one vouching for you? Skip the ads.",
+   "text": "In the age of AI, what we most need to protect is the human voice.",
+   "original_chinese": "在AI时代，我们最应该去维护的是人的声音。",
+   "translated_from": "zh",
+   "date": "2026-10",
+   "outlet": "Training, Singapore",
+   "source_url": "",
+   "attribution": "Chris Pereira, Founder and CEO of iMpact, speaking at a training in Singapore for Chinese executives",
+   "page": "https://chrisjpereira.com/quotes/#brand"
+  },
+  {
    "id": "q-4ab026eb",
    "theme": "Bosses, get on a plane and go drink coffee",
    "text": "My advice is that, as a boss, you need to go overseas, drink coffee, talk about the weather, make friends and build an intuition for the local market.",
@@ -548,6 +692,18 @@
    "outlet": "搜狐",
    "source_url": "https://www.sohu.com/a/902997485_121956368",
    "attribution": "Chris Pereira, Founder and CEO of iMpact, in 搜狐",
+   "page": "https://chrisjpereira.com/quotes/#leadership"
+  },
+  {
+   "id": "q-3515e1b0",
+   "theme": "Bosses, get on a plane and go drink coffee",
+   "text": "If you give someone responsibility, you’d better give them some power to decide.",
+   "original_chinese": "如果你给他责任，你最好让他有一点决策权。",
+   "translated_from": "zh",
+   "date": "2026-10",
+   "outlet": "Training, Singapore",
+   "source_url": "",
+   "attribution": "Chris Pereira, Founder and CEO of iMpact, speaking at a training in Singapore for Chinese executives",
    "page": "https://chrisjpereira.com/quotes/#leadership"
   },
   {
@@ -648,6 +804,54 @@
    "outlet": "新浪财经",
    "source_url": "https://finance.sina.com.cn/hy/hyjz/2026-09-18/doc-inisfazm0219134.shtml",
    "attribution": "Chris Pereira, Founder and CEO of iMpact, in 新浪财经",
+   "page": "https://chrisjpereira.com/quotes/#leadership"
+  },
+  {
+   "id": "q-61da39c8",
+   "theme": "Bosses, get on a plane and go drink coffee",
+   "text": "Whoever makes the decision should be accountable, not whoever carries it out.",
+   "original_chinese": "谁做决定是要负责，不是谁执行。",
+   "translated_from": "zh",
+   "date": "2026-10",
+   "outlet": "Training, Singapore",
+   "source_url": "",
+   "attribution": "Chris Pereira, Founder and CEO of iMpact, speaking at a training in Singapore for Chinese executives",
+   "page": "https://chrisjpereira.com/quotes/#leadership"
+  },
+  {
+   "id": "q-7452fb9e",
+   "theme": "Bosses, get on a plane and go drink coffee",
+   "text": "To me, culture is a tool for lowering the cost of communication.",
+   "original_chinese": "文化，在我的认知里，是一个降低沟通成本的工具。",
+   "translated_from": "zh",
+   "date": "2026-10",
+   "outlet": "Training, Singapore",
+   "source_url": "",
+   "attribution": "Chris Pereira, Founder and CEO of iMpact, speaking at a training in Singapore for Chinese executives",
+   "page": "https://chrisjpereira.com/quotes/#leadership"
+  },
+  {
+   "id": "q-1999dcd2",
+   "theme": "Bosses, get on a plane and go drink coffee",
+   "text": "We can’t have coffee with everyone in the world. We can choose where to build trust.",
+   "original_chinese": "我们不可能跟全世界的人喝咖啡，我们可以有针对性地去建立信任。",
+   "translated_from": "zh",
+   "date": "2026-10",
+   "outlet": "Training, Singapore",
+   "source_url": "",
+   "attribution": "Chris Pereira, Founder and CEO of iMpact, speaking at a training in Singapore for Chinese executives",
+   "page": "https://chrisjpereira.com/quotes/#leadership"
+  },
+  {
+   "id": "q-bbbb182d",
+   "theme": "Bosses, get on a plane and go drink coffee",
+   "text": "LinkedIn is the WeChat of the rest of the world.",
+   "original_chinese": "领英是海外的微信。",
+   "translated_from": "zh",
+   "date": "2026-10",
+   "outlet": "Training, Singapore",
+   "source_url": "",
+   "attribution": "Chris Pereira, Founder and CEO of iMpact, speaking at a training in Singapore for Chinese executives",
    "page": "https://chrisjpereira.com/quotes/#leadership"
   }
  ]

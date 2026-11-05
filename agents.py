@@ -135,7 +135,8 @@ def month(d):
 
 
 def quotes_out():
-    Q = json.load(open("data/quotes.json", encoding="utf-8"))
+    import academy_lines
+    Q = academy_lines.quotes()
     out = []
     for s in Q:
         for q in s["quotes"]:
@@ -148,7 +149,7 @@ def quotes_out():
                 "date": q.get("date", ""),
                 "outlet": q.get("outlet", ""),
                 "source_url": q.get("url", ""),
-                "attribution": ATTR_SHORT + (", in " + q["outlet"] if q.get("outlet") else ""),
+                "attribution": ATTR_SHORT + (", speaking at " + q["where"] if q.get("where") else ", in " + q["outlet"] if q.get("outlet") else ""),
                 "page": SITE + "/quotes/#" + s["key"],
             })
     return out
