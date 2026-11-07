@@ -22,8 +22,8 @@ def html(lang="en"):
     label = "Contact and channels" if lang == "en" else "联系方式与频道"
     links = "".join(f'<a href="{h}"{" rel=\"me\"" if h.startswith("https://") else ""}>{t}</a>' for h, t in LINKS[lang])
     # CGBB Website Trust Credential (Chris, 2026-11-07): the badge links to the live record on cgbb.org, so anyone can check it
-    alt = "CGBB Member · Website Trust Credential. Verify at cgbb.org" if lang == "en" else "CGBB 会员 · 网站信任凭证，点击在 cgbb.org 核验"
-    tip = "Verify at cgbb.org" if lang == "en" else "在 cgbb.org 核验"
+    alt = "CGBB Member · Website Trust Credential. Check at cgbb.org" if lang == "en" else "CGBB 会员 · 网站信任凭证，点击在 cgbb.org 核验"
+    tip = "Check at cgbb.org" if lang == "en" else "在 cgbb.org 核验"
     badge = (f'<a class="cgbb-badge" href="https://cgbb.org/verify/?d=chrisjpereira.com" target="_blank" rel="noopener" title="{tip}">'
              f'<img src="https://api.cgbb.org/badge/chrisjpereira.com.svg" alt="{alt}" height="74" loading="lazy"></a>')
     return f'<footer><div class="wrap"><span>{who}</span><nav class="fnav" aria-label="{label}">{links}</nav>{badge}</div></footer>'
