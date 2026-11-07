@@ -393,6 +393,7 @@ __FOOTCSS__
 @media (max-width:760px){.wrap{padding:0 16px}.nav{display:none}.ihead{grid-template-columns:1fr}.toc{margin-left:-16px;margin-right:-16px;padding:0 16px}.toc ul{flex-wrap:nowrap;overflow-x:auto}.qs li{grid-template-columns:auto minmax(0,1fr) auto;gap:2px 10px}.qs blockquote{grid-column:1/4;order:3;font-size:16px}.qs .more{grid-column:3;grid-row:1}.qs .det{grid-column:1/4;order:4}}
 </style>
 <script type="application/ld+json">__LD__</script>
+<link rel="alternate" type="application/json" title="CGBB Website Trust Credential" href="/.well-known/trust.json">
 </head>
 <body>
 <header class="bar"><div class="wrap">

@@ -11,6 +11,11 @@ import os
 
 import footer
 
+# CGBB line next to the Buy button (Chris, 2026-11-07)
+TRUST_EN = '<p class="small trustln"><span aria-hidden="true">✓</span> <a href="https://cgbb.org/verify/?d=chrisjpereira.com" target="_blank" rel="noopener">CGBB Member: verify this site at cgbb.org</a></p>'
+TRUST_ZH = '<p class="small trustln"><span aria-hidden="true">✓</span> <a href="https://cgbb.org/verify/?d=chrisjpereira.com" target="_blank" rel="noopener">CGBB 会员：在 cgbb.org 核验本网站</a></p>'
+TRUST_CSS = '.trustln{margin-top:6px}.trustln span{color:#A40706;font-weight:700}.trustln a{color:inherit;text-decoration:underline;text-underline-offset:2px}'
+
 API = "https://www.globalconnect.show/api/pay"
 HERE = os.path.dirname(os.path.abspath(__file__))
 
@@ -287,7 +292,8 @@ def page(k):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Tinos:ital,wght@0,400;0,700;1,400&display=swap">
 <script type="application/ld+json">{ld}</script>
-<style>{CSS}{footer.CSS}</style>
+<style>{CSS}{footer.CSS}{TRUST_CSS}</style>
+<link rel="alternate" type="application/json" title="CGBB Website Trust Credential" href="/.well-known/trust.json">
 </head>
 <body>
 <header class="bar"><div class="wrap">
@@ -333,7 +339,7 @@ def page(k):
         </div>
         <div class="rS sum"><div class="gift" id="giftBox"><button type="button" class="lnk" id="giftQ" aria-expanded="false">{t['gift_q']}</button><span id="giftIn" hidden><input id="gcode" maxlength="20" placeholder="{t['gift_ph']}" aria-label="{t['gift_ph']}" autocomplete="off"><button type="button" class="ap" id="gapply">{t['gift_apply']}</button></span><span class="ok" id="giftOk" hidden>{t['gift_on']}</span><button type="button" class="lnk" id="giftOff" hidden>{t['gift_off']}</button></div><div><span>{t['sum_book']}</span><span id="sBook">–</span></div><div><span>{t['ship_note']}</span><span id="sShip">–</span></div><div class="tot"><span>{t['total']}</span><span id="tot">–</span></div></div>
         <div class="go"><input class="hp" id="bweb" tabindex="-1" autocomplete="off" aria-hidden="true"><button class="btn" id="buy" type="submit" disabled>{t['buy']}</button>
-        <p class="small" id="secure">{t['secure']}</p><p class="msg" id="bmsg" role="status"></p></div>
+        <p class="small" id="secure">{t['secure']}</p><p class="msg" id="bmsg" role="status"></p>{TRUST_ZH if k == 'zh' else TRUST_EN}</div>
       </form>
     </article>
 

@@ -12,14 +12,21 @@ LINKS = {
 }
 CSS = ("footer{background:var(--red-deep);color:#fff}"
        "footer .wrap{padding-top:18px;padding-bottom:18px;display:flex;justify-content:space-between;align-items:center;gap:8px 24px;flex-wrap:wrap;font-family:var(--display);font-size:13px}"
-       ".fnav{display:flex;flex-wrap:wrap;gap:6px 20px}.fnav a{color:#fff;opacity:.85;text-decoration:none}.fnav a:hover{opacity:1;text-decoration:underline;text-underline-offset:3px}")
+       ".fnav{display:flex;flex-wrap:wrap;gap:6px 20px}.fnav a{color:#fff;opacity:.85;text-decoration:none}.fnav a:hover{opacity:1;text-decoration:underline;text-underline-offset:3px}"
+       ".cgbb-badge{display:inline-block;line-height:0;opacity:.95}.cgbb-badge:hover{opacity:1}.cgbb-badge img{width:180px;height:auto;display:block}"
+       "@media (max-width:640px){.cgbb-badge img{width:150px}}")
 
 
 def html(lang="en"):
     who = "© 2026 Chris Pereira <span lang=\"zh-Hans\">彭家荣</span>" if lang == "en" else "© 2026 彭家荣 <span lang=\"en\">Chris Pereira</span>"
     label = "Contact and channels" if lang == "en" else "联系方式与频道"
     links = "".join(f'<a href="{h}"{" rel=\"me\"" if h.startswith("https://") else ""}>{t}</a>' for h, t in LINKS[lang])
-    return f'<footer><div class="wrap"><span>{who}</span><nav class="fnav" aria-label="{label}">{links}</nav></div></footer>'
+    # CGBB Website Trust Credential (Chris, 2026-11-07): the badge links to the live record on cgbb.org, so anyone can check it
+    alt = "CGBB Member · Website Trust Credential. Verify at cgbb.org" if lang == "en" else "CGBB 会员 · 网站信任凭证，点击在 cgbb.org 核验"
+    tip = "Verify at cgbb.org" if lang == "en" else "在 cgbb.org 核验"
+    badge = (f'<a class="cgbb-badge" href="https://cgbb.org/verify/?d=chrisjpereira.com" target="_blank" rel="noopener" title="{tip}">'
+             f'<img src="https://cgbb.org/assets/badge/cgbb-member.png" alt="{alt}" width="180" height="52" loading="lazy"></a>')
+    return f'<footer><div class="wrap"><span>{who}</span><nav class="fnav" aria-label="{label}">{links}</nav>{badge}</div></footer>'
 
 
 def sync(path, lang):
