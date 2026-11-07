@@ -260,6 +260,7 @@ __EX__</pre>
 <tr><td><a href="/api/coverage.json">/api/coverage.json</a></td><td>Media coverage with summaries</td></tr>
 <tr><td><a href="/api/writing.json">/api/writing.json</a></td><td>His columns and articles</td></tr>
 <tr><td><a href="/llms.txt">/llms.txt</a> · <a href="/llms-full.txt">/llms-full.txt</a></td><td>Plain-text summary and full text for language models</td></tr>
+<tr><td><a href="/.well-known/trust.json">/.well-known/trust.json</a></td><td>CGBB Website Trust Credential (CGBB Member, signed). Live record: <a href="https://cgbb.org/verify/?d=chrisjpereira.com">cgbb.org/verify/?d=chrisjpereira.com</a></td></tr>
 </table>
 <p style="color:var(--mute);font-size:14px;margin-top:30px">Updated __TODAY__ · 中文版主页：<a href="/zh/">chrisjpereira.com/zh/</a></p>
 </div></body></html>""".replace("__LD__", json.dumps(ld, ensure_ascii=False, separators=(",", ":"))) \
