@@ -13,8 +13,8 @@ LINKS = {
 CSS = ("footer{background:var(--red-deep);color:#fff}"
        "footer .wrap{padding-top:18px;padding-bottom:18px;display:flex;justify-content:space-between;align-items:center;gap:8px 24px;flex-wrap:wrap;font-family:var(--display);font-size:13px}"
        ".fnav{display:flex;flex-wrap:wrap;gap:6px 20px}.fnav a{color:#fff;opacity:.85;text-decoration:none}.fnav a:hover{opacity:1;text-decoration:underline;text-underline-offset:3px}"
-       ".cgbb-badge{display:inline-block;line-height:0;opacity:.95}.cgbb-badge:hover{opacity:1}.cgbb-badge img{width:180px;height:auto;display:block}"
-       "@media (max-width:640px){.cgbb-badge img{width:150px}}")
+       ".cgbb-badge{display:inline-block;line-height:0;opacity:.95}.cgbb-badge:hover{opacity:1}.cgbb-badge img{width:234px;height:auto;display:block}"
+       "@media (max-width:640px){.cgbb-badge img{width:200px}}")
 
 
 def html(lang="en"):
@@ -25,7 +25,7 @@ def html(lang="en"):
     alt = "CGBB Member · Website Trust Credential. Verify at cgbb.org" if lang == "en" else "CGBB 会员 · 网站信任凭证，点击在 cgbb.org 核验"
     tip = "Verify at cgbb.org" if lang == "en" else "在 cgbb.org 核验"
     badge = (f'<a class="cgbb-badge" href="https://cgbb.org/verify/?d=chrisjpereira.com" target="_blank" rel="noopener" title="{tip}">'
-             f'<img src="https://cgbb.org/assets/badge/cgbb-member.png" alt="{alt}" width="180" height="52" loading="lazy"></a>')
+             f'<img src="https://api.cgbb.org/badge/chrisjpereira.com.svg" alt="{alt}" height="74" loading="lazy"></a>')
     return f'<footer><div class="wrap"><span>{who}</span><nav class="fnav" aria-label="{label}">{links}</nav>{badge}</div></footer>'
 
 
