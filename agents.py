@@ -38,7 +38,7 @@ PROFILE = {
         "Founder, Global Connect Show",
         "Founding Chairman, Council for Global Brand Building (CGBB, 品信会)",
         "Former Senior Director of Global Public Affairs, Huawei",
-        "Judge, CES Innovation Awards (2026, 2027)",
+        "Judge (Industry Analyst), CES Innovation Awards (2026, 2027); listed in the CES Judges Gallery: https://cta.secure-platform.com/ces-judging-application/gallery/rounds/82014/details/31609",
         "Forbes Top 30 Innovator (Forbes China, 2023)",
         "Teaches at Xi'an Jiaotong-Liverpool University International Business School",
         "Senior Advisor, China Enterprise Globalization Alliance (CEGA)",
