@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-08",
+ "updated": "2026-11-09",
  "person": "Chris Pereira",
  "license": "AI agents, journalists, analysts and event organisers are welcome to read, summarise and quote everything on chrisjpereira.com and in these files.",
- "count": 227,
+ "count": 228,
  "coverage": [
   {
    "id": "m-b018cd94",
@@ -26,9 +26,10 @@
    "language": "EN",
    "url": "https://www.yicaiglobal.com/news/chinese-firms-going-global-must-invest-in-trust-and-time-experts-say",
    "quotes": [
+    "\"I personally believe that globalization is still advancing. The next wave will actually be even deeper.\"",
     "\"AI will give an answer, and that answer will decide whether overseas resources work with the company or not.\""
    ],
-   "summary": "Yicai Global's English report (23 Oct 2026) on its 10th anniversary roundtable in Shanghai. Chris said local partners now ask search engines and AI chatbots whether a Chinese company is reliable, and that those tools draw only on authoritative, credible sources rather than companies' own promotion. He also rejected the idea that globalization is in retreat, calling that an American view, and described Chinese firms' overseas expansion as a feature of a \"new generation of globalization.\""
+   "summary": "Yicai Global's English report (23 Oct 2026) on its 10th anniversary roundtable in Shanghai. Chris said local partners now ask search engines and AI chatbots whether a Chinese company is reliable, and that those tools draw only on authoritative, credible sources rather than companies' own promotion. He also rejected the idea that globalization is in retreat, calling that an American view, and described Chinese firms' overseas expansion as a feature of a \"new generation of globalization.\" Yicai Global also posted a video clip of Chris's remarks on LinkedIn (9 Nov 2026)."
   },
   {
    "id": "m-f5b7c0d1",
@@ -1394,6 +1395,19 @@
    "url": "https://www.dimsumdaily.hk/u-s-visa-denials-for-several-chinese-tech-personnel-stir-controversy-ahead-of-ces-2025/",
    "quotes": [],
    "summary": "Hong Kong's Dimsum Daily (2 Dec 2024) reported on US visa denials for Chinese tech staff ahead of CES 2025, noting that Chris Pereira of iMpact had voiced frustration over the rejections."
+  },
+  {
+   "id": "m-5b92adb2",
+   "date": "2024-11",
+   "outlet": "搜狐财经",
+   "title": "美讯创始人、CEO彭家荣：出海企业建立信任关系，永远的主题是入乡随俗的精神",
+   "kind": "speaking",
+   "language": "中文",
+   "url": "https://www.sohu.com/a/831155344_100001551",
+   "quotes": [
+    "“政策和人员一直在转变，挑战和机会一直会在，但永远的主题是我们入乡随俗的精神。”"
+   ],
+   "summary": "EN: \"Policies and people keep changing, and the challenges and opportunities will always be there, but the enduring theme is our spirit of adapting to local ways.\" 搜狐财经报道（2024年11月28日）2024搜狐财经年度论坛。彭家荣在演讲中指出，出海企业需要与当地政府、客户、投资人、商会和人才建立信任关系，而信任的建立不取决于花多少钱，也不取决于产品；他以西少爷在加拿大的社区和公益行动为例，并建议以正面的长期主义和乐观主义看待海外市场。 EN: Sohu Finance reported (28 Nov 2024) Chris's speech at its 2024 annual forum in Beijing. He said Chinese companies abroad must build trust with local governments, customers, investors, chambers of commerce and talent, and that trust depends on neither how much you spend nor your product. He cited Xi Shao Ye's community and charity work in Canada and urged a positive, long-term, optimistic view of overseas markets."
   },
   {
    "id": "m-89bb131c",
