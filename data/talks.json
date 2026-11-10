@@ -1,1 +1,18 @@
-[]
+[
+ {
+  "id": 1,
+  "date": "2026-10-21",
+  "event": "一财全球十周年生态大会暨新十年战略发布",
+  "organizer": "一财网 / 第一财经",
+  "city": "上海",
+  "type": "panel",
+  "title_en": "Panel at Yicai Global's 10th Anniversary Ecosystem Conference, Shanghai",
+  "title_zh": "在一财全球十周年生态大会暨新十年战略发布（上海）参加圆桌讨论",
+  "summary_en": "Chris joined a Yicai panel in Shanghai with Jiang Yan, Chen Shuihai of BIPO and Lu Yao of the Shanghai Academy of Social Sciences. He said talk of a global retreat is inaccurate, since Chinese firms going abroad mark a new generation of globalisation.",
+  "summary_zh": "彭家荣在上海参加第一财经圆桌讨论，与云隙咨询的蒋燕、BIPO的陈水海、上海社科院的卢尧同台。他认为“全球化退潮”的说法并不准确，中国企业出海是新一代全球化的特征。",
+  "quote_en": "When Chinese companies go out into the world one by one, what stands behind them is further globalisation.",
+  "quote_zh": "一个个出海企业走向世界的时候，背后是进一步的全球化。",
+  "img": "talk-1.webp",
+  "caption": ""
+ }
+]
