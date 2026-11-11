@@ -23,7 +23,7 @@ T = {
     "en": {
         "lang": "en", "home": "/", "path": "/books/", "other": "/zh/books/", "other_label": "中文", "img": "/img/",
         "title": "Books by Chris Pereira | Trust 《信任》",
-        "desc": "Order a signed copy of Trust 《信任》 by Chris Pereira (Chinese edition, Shenzhen Publishing House, 2026), posted within mainland China. The English edition is out now on Kindle.",
+        "desc": "Order a signed copy of Trust 《信任》 by Chris Pereira (Chinese edition, Shenzhen Publishing House, 2026), posted within mainland China. The English edition is out now as an e-book.",
         "nav": [("/#ideas", "Ideas"), ("/#writing", "Writing"), ("/#media", "Commentary"), ("/#speaking", "Speaking"), ("/#training", "Training"), ("/books/", "Books"), ("/#about", "About")],
         "contact": "Contact", "label": "Books",
         "h1": "Trust <span class=\"zh\" lang=\"zh-Hans\">《信任》</span>",
@@ -40,9 +40,9 @@ T = {
         "fields": {"name": "the recipient's name", "phone": "a mainland China mobile number (11 digits)", "address": "the delivery address", "email": "your email", "qty": "copies", "zone": "where to ship", "dedication": "the dedication"},
         "paid_h": "Thank you, your order is confirmed.", "paid_p": "A confirmation is on its way to your inbox. We'll email you the tracking number once your signed copy is posted.",
         "pend_p": "We're confirming your payment with Stripe. This will update in a moment.", "cancel_p": "Checkout was cancelled. You haven't been charged.",
-        "en_tag": "Out now on Kindle", "en_buy": "Get the Kindle edition on Amazon", "en_h": "English edition", "en_title": "Trust",
+        "en_tag": "E-book out now", "en_buy": "or get the Kindle edition on Amazon", "en_ebuy": "Buy the e-book", "paid_ebook": "Your download link is on its way to your inbox.", "your_name": "your name", "en_h": "English edition", "en_title": "Trust",
         "en_meta": "Rewritten for readers outside China", "en_pts": ["A global view, rooted in real cases from China", "A system for breaking through the trust barrier abroad", "A guide to becoming a truly local global company"], "en_pts_h": "Inside the English edition",
-        "en_blurb": "What Western companies can learn from how China's best brands build trust across borders. The Kindle edition is out now. Leave your email and we'll tell you the day the paperback goes on sale.",
+        "en_blurb": "What Western companies can learn from how China's best brands build trust across borders. The e-book is out now, here or on Amazon Kindle. Leave your email and we'll tell you the day the paperback goes on sale.",
         "join": "Notify me when the paperback is out", "join_note": "One email when the paperback launches. No payment, no newsletter.",
         "joined": "Thanks. We'll email you the day the paperback goes on sale.", "already": "You're already signed up. We'll email you when the paperback is out.",
         "about_h": "About the book",
@@ -56,7 +56,7 @@ T = {
     "zh": {
         "lang": "zh-CN", "home": "/zh/", "path": "/zh/books/", "other": "/books/", "other_label": "EN", "img": "/img/",
         "title": "彭家荣著作 | 《信任》作者签名版",
-        "desc": "订购彭家荣《信任：中国企业全球化的黄金钥匙》作者签名版（深圳出版社，2026），寄送范围为中国大陆。英文版 Kindle 电子书已上市。",
+        "desc": "订购彭家荣《信任：中国企业全球化的黄金钥匙》作者签名版（深圳出版社，2026），寄送范围为中国大陆。英文版电子书已上市。",
         "nav": [("/zh/#ideas", "观点"), ("/zh/#writing", "文章"), ("/zh/#media", "媒体评论"), ("/zh/#speaking", "演讲"), ("/zh/#training", "培训"), ("/zh/books/", "书籍"), ("/zh/#about", "关于")],
         "contact": "联系", "label": "书籍",
         "h1": "<span class=\"hang\">《</span>信任》",
@@ -73,9 +73,9 @@ T = {
         "fields": {"name": "收件人", "phone": "11 位手机号", "address": "收货地址", "email": "邮箱", "qty": "数量", "zone": "寄送地区", "dedication": "题字"},
         "paid_h": "感谢订购，订单已确认。", "paid_p": "确认邮件已发送至您的邮箱。签名书寄出后，我们会再发邮件告知快递单号。",
         "pend_p": "正在向 Stripe 确认付款，稍后自动更新。", "cancel_p": "已取消支付，未产生任何费用。",
-        "en_tag": "Kindle 版已上市", "en_buy": "在亚马逊购买 Kindle 版", "en_h": "英文版", "en_title": "Trust",
+        "en_tag": "电子书已上市", "en_buy": "或在亚马逊购买 Kindle 版", "en_ebuy": "购买电子书", "paid_ebook": "下载链接已发送至您的邮箱。", "your_name": "您的姓名", "en_h": "英文版", "en_title": "Trust",
         "en_meta": "面向海外读者重新撰写", "en_pts": ["全球视野，扎根中国真实案例", "系统破解海外信任壁垒", "助力企业成为真正本土化的全球公司"], "en_pts_h": "英文版内容",
-        "en_blurb": "西方企业可以从中国顶尖品牌跨境建立信任的方式中学到什么。Kindle 电子书已上市。留下邮箱，纸质版开售当天我们会通知您。",
+        "en_blurb": "西方企业可以从中国顶尖品牌跨境建立信任的方式中学到什么。电子书已上市，可在本页或亚马逊 Kindle 购买。留下邮箱，纸质版开售当天我们会通知您。",
         "join": "纸质版上市时通知我", "join_note": "纸质版上市时只发一封邮件，无需付款，不订阅任何简报。",
         "joined": "谢谢！纸质版开售当天我们会邮件通知您。", "already": "您已登记，纸质版上市时我们会通知您。",
         "about_h": "关于本书",
@@ -141,7 +141,7 @@ html[lang="zh-CN"] .intro .sub{font-family:var(--zh);font-style:normal;font-weig
 .pts li:before{content:"";position:absolute;left:2px;top:15px;width:6px;height:6px;border-radius:50%;background:var(--red)}
 html[lang="zh-CN"] .pts .ptsh{letter-spacing:.02em;font-size:12px;text-transform:none}
 .ehd,.rA,.rB,.rC,.rS,.go{padding-left:24px;padding-right:24px}
-.ehd{padding-top:18px}.rA{padding-top:12px}.rB,.rC{padding-top:10px}.rS{padding-top:4px}.rS a.btn{display:flex;margin-top:10px}
+.ehd{padding-top:18px}.rA{padding-top:12px}.rB,.rC{padding-top:10px}.rS{padding-top:4px}.rS>.btn{margin-top:10px;width:100%}
 .vis{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0d1b33}
 .vis img{width:100%;height:100%;object-fit:cover}
 .tag{position:absolute;top:14px;left:14px;font-family:var(--display);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.94);color:var(--ink)}
@@ -203,13 +203,15 @@ input:focus,select:focus,textarea:focus{outline:none;border-bottom-color:var(--r
 JS = r"""(function(){
 var API=%(api)s, L=%(l)s, T=%(t)s, SEP=L==='zh'?'、':', ';
 var $=function(id){return document.getElementById(id)};
-var book=null, GIFT='', fmt=function(minor,cur){return (cur==='cny'?'¥':cur.toUpperCase()+' ')+(minor/100).toFixed(2).replace(/\.00$/,'')};
+var book=null, ebook=null, GIFT='', fmt=function(minor,cur){return (cur==='cny'?'¥':cur==='usd'?'US$':cur.toUpperCase()+' ')+(minor/100).toFixed(2).replace(/\.00$/,'')};
 var EM=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 function zone(){return book.shipping.filter(function(x){return x.id===$('zone').value})[0]||book.shipping[0]}
 function total(){if(!book)return;if(GIFT){$('sBook').textContent=T.giftFree;$('sShip').textContent=T.giftFree;$('tot').textContent=fmt(0,book.currency);return}var q=+$('qty').value||1,z=zone();$('sBook').textContent=fmt(book.price*q,book.currency);$('sShip').textContent=fmt(z.amount,book.currency);$('tot').textContent=fmt(book.price*q+z.amount,book.currency)}
 function say(id,text,cls){var m=$(id);m.className='msg'+(cls?' '+cls:'');m.textContent=text}
 function sayMail(id,lead){var m=$(id);m.className='msg bad';m.textContent=lead+' ';var a=document.createElement('a');a.href='mailto:inquiries@chrisjpereira.com';a.textContent='inquiries@chrisjpereira.com';m.appendChild(a)}
 fetch(API+'/books').then(function(r){return r.json()}).then(function(j){
+  ebook=(j.books||[]).filter(function(b){return b.id==='trust-en-ebook'})[0];
+  if(ebook&&ebook.open){$('ebuy').textContent=T.ebuy+' · '+fmt(ebook.price,ebook.currency);$('ebuy').disabled=false}
   book=(j.books||[]).filter(function(b){return b.id==='trust-zh'})[0];
   if(!book||!book.open){$('buy').disabled=true;$('price').textContent='';sayMail('bmsg',T.closed);return}
   $('price').firstChild.textContent=fmt(book.price,book.currency);
@@ -238,6 +240,13 @@ $('order').addEventListener('submit',function(e){e.preventDefault();if(!book)ret
   .then(function(r){return r.json()}).then(function(j){if(j.ok&&j.url){location.href=j.url;return}b.disabled=false;
     if(j.fields)say('bmsg',T.fix+j.fields.map(function(f){return T.fields[f]||f}).join(SEP),'bad');else sayMail('bmsg',T.err)})
   .catch(function(){b.disabled=false;sayMail('bmsg',T.err)})});
+$('ebuy').addEventListener('click',function(){if(!ebook)return;
+  var miss=[];if(!$('wname').value.trim())miss.push(T.yourName);if(!EM.test($('wemail').value.trim()))miss.push(T.fields.email);
+  if(miss.length){say('wmsg',T.fix+miss.join(SEP),'bad');(miss[0]===T.yourName?$('wname'):$('wemail')).focus();return}var b=this;b.disabled=true;say('wmsg',T.busy);
+  fetch(API+'/book-ebook',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({book:'trust-en-ebook',name:$('wname').value,email:$('wemail').value,lang:L,website:$('wweb').value})})
+  .then(function(r){return r.json()}).then(function(j){if(j.ok&&j.url){location.href=j.url;return}b.disabled=false;
+    if(j.fields)say('wmsg',T.fix+j.fields.map(function(f){return f==='name'?T.yourName:(T.fields[f]||f)}).join(SEP),'bad');else sayMail('wmsg',T.err)})
+  .catch(function(){b.disabled=false;sayMail('wmsg',T.err)})});
 $('wait').addEventListener('submit',function(e){e.preventDefault();
   if(!EM.test($('wemail').value.trim())){say('wmsg',T.fix+T.fields.email,'bad');return}var b=$('wbtn');b.disabled=true;
   fetch(API+'/book-waitlist',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({book:'trust-en',name:$('wname').value,email:$('wemail').value,lang:L,website:$('wweb').value})})
@@ -248,7 +257,7 @@ var p=new URLSearchParams(location.search), id=p.get('p'), n=$('notice');
 if(id&&p.get('cancelled')){n.hidden=false;n.className='notice warn';n.textContent=T.cancel}
 else if(id){n.hidden=false;n.innerHTML='<b></b> <span></span>';n.querySelector('b').textContent=T.paidH;n.querySelector('span').textContent=T.pend;
   var tries=0;(function check(){fetch(API+'/book-status?p='+encodeURIComponent(id)).then(function(r){return r.json()}).then(function(j){
-    if(j.status==='paid'){n.querySelector('span').textContent=T.paidP}else if(j.status==='pending'&&++tries<10){setTimeout(check,3000)}else if(j.status!=='pending'){n.className='notice warn';n.textContent=T.cancel}})})();
+    if(j.status==='paid'){n.querySelector('span').textContent=j.digital?T.paidEbook:T.paidP}else if(j.status==='pending'&&++tries<10){setTimeout(check,3000)}else if(j.status!=='pending'){n.className='notice warn';n.textContent=T.cancel}})})();
   try{history.replaceState(null,'',location.pathname)}catch(e){}}
 })();"""
 
@@ -256,7 +265,7 @@ else if(id){n.hidden=false;n.innerHTML='<b></b> <span></span>';n.querySelector('
 def page(k):
     t = T[k]
     js = JS % {"api": json.dumps(API), "l": json.dumps("zh" if k == "zh" else "en"), "t": json.dumps({
-        "closed": t["closed"], "err": t["err"], "busy": t["busy"], "fix": t["fix"], "fields": t["fields"], "paidH": t["paid_h"], "paidP": t["paid_p"],
+        "closed": t["closed"], "err": t["err"], "busy": t["busy"], "fix": t["fix"], "fields": t["fields"], "paidH": t["paid_h"], "paidP": t["paid_p"], "paidEbook": t["paid_ebook"], "ebuy": t["en_ebuy"], "yourName": t["your_name"],
         "pend": t["pend_p"], "cancel": t["cancel_p"], "joined": t["joined"], "already": t["already"], "buy": t["buy"], "secure": t["secure"],
         "giftBad": t["gift_bad"], "giftFree": t["gift_free"], "giftBuy": t["gift_buy"], "giftNote": t["gift_note"], "giftBusy": t["gift_busy"], "giftDone": t["gift_done"], "giftAlready": t["gift_already"]}, ensure_ascii=False)}
     csp = ("default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; "
@@ -356,7 +365,7 @@ def page(k):
           <div><label for="wemail">{t['email']}</label><input id="wemail" type="email" autocomplete="email" maxlength="200" required></div>
         </div>
         <div class="rC pts"><span class="ptsh">{t['en_pts_h']}</span><ul>{''.join(f'<li>{x}</li>' for x in t['en_pts'])}</ul></div>
-        <div class="rS"><a class="btn" href="https://www.amazon.com/dp/B0HR1MMVGQ" target="_blank" rel="noopener">{t['en_buy']}</a></div>
+        <div class="rS"><button class="btn" id="ebuy" type="button" disabled>{t['en_ebuy']}</button><p class="small"><a href="https://www.amazon.com/dp/B0HR1MMVGQ" target="_blank" rel="noopener">{t['en_buy']}</a></p></div>
         <div class="go"><input class="hp" id="wweb" tabindex="-1" autocomplete="off" aria-hidden="true"><button class="btn ghost" id="wbtn" type="submit">{t['join']}</button>
         <p class="join-note">{t['join_note']}</p><p class="msg" id="wmsg" role="status"></p></div>
       </form>

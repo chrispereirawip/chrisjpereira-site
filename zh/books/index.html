@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://stats.chrisjpereira.com https://www.globalconnect.show; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>彭家荣著作 | 《信任》作者签名版</title>
-<meta name="description" content="订购彭家荣《信任：中国企业全球化的黄金钥匙》作者签名版（深圳出版社，2026），寄送范围为中国大陆。英文版 Kindle 电子书已上市。">
+<meta name="description" content="订购彭家荣《信任：中国企业全球化的黄金钥匙》作者签名版（深圳出版社，2026），寄送范围为中国大陆。英文版电子书已上市。">
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#A40706">
 <link rel="canonical" href="https://chrisjpereira.com/zh/books/">
@@ -14,7 +14,7 @@
 <link rel="alternate" hreflang="zh-CN" href="https://chrisjpereira.com/zh/books/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="彭家荣著作 | 《信任》作者签名版">
-<meta property="og:description" content="订购彭家荣《信任：中国企业全球化的黄金钥匙》作者签名版（深圳出版社，2026），寄送范围为中国大陆。英文版 Kindle 电子书已上市。">
+<meta property="og:description" content="订购彭家荣《信任：中国企业全球化的黄金钥匙》作者签名版（深圳出版社，2026），寄送范围为中国大陆。英文版电子书已上市。">
 <meta property="og:image" content="https://chrisjpereira.com/img/trust-books.webp">
 <meta property="og:url" content="https://chrisjpereira.com/zh/books/">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -75,7 +75,7 @@ html[lang="zh-CN"] .intro .sub{font-family:var(--zh);font-style:normal;font-weig
 .pts li:before{content:"";position:absolute;left:2px;top:15px;width:6px;height:6px;border-radius:50%;background:var(--red)}
 html[lang="zh-CN"] .pts .ptsh{letter-spacing:.02em;font-size:12px;text-transform:none}
 .ehd,.rA,.rB,.rC,.rS,.go{padding-left:24px;padding-right:24px}
-.ehd{padding-top:18px}.rA{padding-top:12px}.rB,.rC{padding-top:10px}.rS{padding-top:4px}.rS a.btn{display:flex;margin-top:10px}
+.ehd{padding-top:18px}.rA{padding-top:12px}.rB,.rC{padding-top:10px}.rS{padding-top:4px}.rS>.btn{margin-top:10px;width:100%}
 .vis{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0d1b33}
 .vis img{width:100%;height:100%;object-fit:cover}
 .tag{position:absolute;top:14px;left:14px;font-family:var(--display);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.94);color:var(--ink)}
@@ -184,19 +184,19 @@ footer{background:var(--red-deep);color:#fff}footer .wrap{padding-top:18px;paddi
     </article>
 
     <article class="ed" id="english">
-      <div class="vis"><div class="encov"><img src="/img/trust-en-cover.webp" width="800" height="1200" alt="Cover of the English edition of Trust by Chris Pereira"></div><span class="tag live">Kindle 版已上市</span></div>
+      <div class="vis"><div class="encov"><img src="/img/trust-en-cover.webp" width="800" height="1200" alt="Cover of the English edition of Trust by Chris Pereira"></div><span class="tag live">电子书已上市</span></div>
       <div class="ehd">
         <div class="ehead"><div><span class="ekicker">英文版</span><h2>Trust</h2></div></div>
         <p class="emeta">面向海外读者重新撰写</p>
       </div>
       <form id="wait" novalidate>
-        <div class="rA"><p class="eblurb">西方企业可以从中国顶尖品牌跨境建立信任的方式中学到什么。Kindle 电子书已上市。留下邮箱，纸质版开售当天我们会通知您。</p></div>
+        <div class="rA"><p class="eblurb">西方企业可以从中国顶尖品牌跨境建立信任的方式中学到什么。电子书已上市，可在本页或亚马逊 Kindle 购买。留下邮箱，纸质版开售当天我们会通知您。</p></div>
         <div class="rB row2">
           <div><label for="wname">您的姓名</label><input id="wname" autocomplete="name" maxlength="120"></div>
           <div><label for="wemail">邮箱</label><input id="wemail" type="email" autocomplete="email" maxlength="200" required></div>
         </div>
         <div class="rC pts"><span class="ptsh">英文版内容</span><ul><li>全球视野，扎根中国真实案例</li><li>系统破解海外信任壁垒</li><li>助力企业成为真正本土化的全球公司</li></ul></div>
-        <div class="rS"><a class="btn" href="https://www.amazon.com/dp/B0HR1MMVGQ" target="_blank" rel="noopener">在亚马逊购买 Kindle 版</a></div>
+        <div class="rS"><button class="btn" id="ebuy" type="button" disabled>购买电子书</button><p class="small"><a href="https://www.amazon.com/dp/B0HR1MMVGQ" target="_blank" rel="noopener">或在亚马逊购买 Kindle 版</a></p></div>
         <div class="go"><input class="hp" id="wweb" tabindex="-1" autocomplete="off" aria-hidden="true"><button class="btn ghost" id="wbtn" type="submit">纸质版上市时通知我</button>
         <p class="join-note">纸质版上市时只发一封邮件，无需付款，不订阅任何简报。</p><p class="msg" id="wmsg" role="status"></p></div>
       </form>
@@ -215,15 +215,17 @@ footer{background:var(--red-deep);color:#fff}footer .wrap{padding-top:18px;paddi
 </main>
 <footer><div class="wrap"><span>© 2026 彭家荣 <span lang="en">Chris Pereira</span></span><nav class="fnav" aria-label="联系方式与频道"><a href="mailto:inquiries@chrisjpereira.com">inquiries@chrisjpereira.com</a><a href="https://www.linkedin.com/in/chrisjpereira" rel="me">领英 LinkedIn</a><a href="https://insightsfromchina.substack.com" rel="me">Substack</a><a href="https://www.linkedin.com/newsletters/insights-from-china-7523031887427301376/" rel="me">领英专栏</a><a href="https://www.youtube.com/@OutsideLookingWest" rel="me">YouTube</a><a href="/agents/">AI 智能体接入</a></nav><a class="cgbb-badge" href="https://cgbb.org/verify/?d=chrisjpereira.com" target="_blank" rel="noopener" title="在 cgbb.org 核验"><img src="https://api.cgbb.org/badge/chrisjpereira.com.svg" alt="CGBB 会员 · 网站信任凭证，点击在 cgbb.org 核验" height="74" loading="lazy"></a></div></footer>
 <script>(function(){
-var API="https://www.globalconnect.show/api/pay", L="zh", T={"closed": "即将开放订购。如需预留，请发邮件至", "err": "出了点问题，请重试，或发邮件至", "busy": "正在打开安全支付页面…", "fix": "请填写", "fields": {"name": "收件人", "phone": "11 位手机号", "address": "收货地址", "email": "邮箱", "qty": "数量", "zone": "寄送地区", "dedication": "题字"}, "paidH": "感谢订购，订单已确认。", "paidP": "确认邮件已发送至您的邮箱。签名书寄出后，我们会再发邮件告知快递单号。", "pend": "正在向 Stripe 确认付款，稍后自动更新。", "cancel": "已取消支付，未产生任何费用。", "joined": "谢谢！纸质版开售当天我们会邮件通知您。", "already": "您已登记，纸质版上市时我们会通知您。", "buy": "购买签名版", "secure": "下一步由 Stripe 安全支付。", "giftBad": "赠书码无效。", "giftFree": "免费", "giftBuy": "提交赠书申请", "giftNote": "无需付款，邮箱可不填。", "giftBusy": "正在提交…", "giftDone": "谢谢！申请已收到，我们会尽快寄出签名书。", "giftAlready": "该手机号已申请过赠书。如有问题，请发邮件至"}, SEP=L==='zh'?'、':', ';
+var API="https://www.globalconnect.show/api/pay", L="zh", T={"closed": "即将开放订购。如需预留，请发邮件至", "err": "出了点问题，请重试，或发邮件至", "busy": "正在打开安全支付页面…", "fix": "请填写", "fields": {"name": "收件人", "phone": "11 位手机号", "address": "收货地址", "email": "邮箱", "qty": "数量", "zone": "寄送地区", "dedication": "题字"}, "paidH": "感谢订购，订单已确认。", "paidP": "确认邮件已发送至您的邮箱。签名书寄出后，我们会再发邮件告知快递单号。", "paidEbook": "下载链接已发送至您的邮箱。", "ebuy": "购买电子书", "yourName": "您的姓名", "pend": "正在向 Stripe 确认付款，稍后自动更新。", "cancel": "已取消支付，未产生任何费用。", "joined": "谢谢！纸质版开售当天我们会邮件通知您。", "already": "您已登记，纸质版上市时我们会通知您。", "buy": "购买签名版", "secure": "下一步由 Stripe 安全支付。", "giftBad": "赠书码无效。", "giftFree": "免费", "giftBuy": "提交赠书申请", "giftNote": "无需付款，邮箱可不填。", "giftBusy": "正在提交…", "giftDone": "谢谢！申请已收到，我们会尽快寄出签名书。", "giftAlready": "该手机号已申请过赠书。如有问题，请发邮件至"}, SEP=L==='zh'?'、':', ';
 var $=function(id){return document.getElementById(id)};
-var book=null, GIFT='', fmt=function(minor,cur){return (cur==='cny'?'¥':cur.toUpperCase()+' ')+(minor/100).toFixed(2).replace(/\.00$/,'')};
+var book=null, ebook=null, GIFT='', fmt=function(minor,cur){return (cur==='cny'?'¥':cur==='usd'?'US$':cur.toUpperCase()+' ')+(minor/100).toFixed(2).replace(/\.00$/,'')};
 var EM=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 function zone(){return book.shipping.filter(function(x){return x.id===$('zone').value})[0]||book.shipping[0]}
 function total(){if(!book)return;if(GIFT){$('sBook').textContent=T.giftFree;$('sShip').textContent=T.giftFree;$('tot').textContent=fmt(0,book.currency);return}var q=+$('qty').value||1,z=zone();$('sBook').textContent=fmt(book.price*q,book.currency);$('sShip').textContent=fmt(z.amount,book.currency);$('tot').textContent=fmt(book.price*q+z.amount,book.currency)}
 function say(id,text,cls){var m=$(id);m.className='msg'+(cls?' '+cls:'');m.textContent=text}
 function sayMail(id,lead){var m=$(id);m.className='msg bad';m.textContent=lead+' ';var a=document.createElement('a');a.href='mailto:inquiries@chrisjpereira.com';a.textContent='inquiries@chrisjpereira.com';m.appendChild(a)}
 fetch(API+'/books').then(function(r){return r.json()}).then(function(j){
+  ebook=(j.books||[]).filter(function(b){return b.id==='trust-en-ebook'})[0];
+  if(ebook&&ebook.open){$('ebuy').textContent=T.ebuy+' · '+fmt(ebook.price,ebook.currency);$('ebuy').disabled=false}
   book=(j.books||[]).filter(function(b){return b.id==='trust-zh'})[0];
   if(!book||!book.open){$('buy').disabled=true;$('price').textContent='';sayMail('bmsg',T.closed);return}
   $('price').firstChild.textContent=fmt(book.price,book.currency);
@@ -252,6 +254,13 @@ $('order').addEventListener('submit',function(e){e.preventDefault();if(!book)ret
   .then(function(r){return r.json()}).then(function(j){if(j.ok&&j.url){location.href=j.url;return}b.disabled=false;
     if(j.fields)say('bmsg',T.fix+j.fields.map(function(f){return T.fields[f]||f}).join(SEP),'bad');else sayMail('bmsg',T.err)})
   .catch(function(){b.disabled=false;sayMail('bmsg',T.err)})});
+$('ebuy').addEventListener('click',function(){if(!ebook)return;
+  var miss=[];if(!$('wname').value.trim())miss.push(T.yourName);if(!EM.test($('wemail').value.trim()))miss.push(T.fields.email);
+  if(miss.length){say('wmsg',T.fix+miss.join(SEP),'bad');(miss[0]===T.yourName?$('wname'):$('wemail')).focus();return}var b=this;b.disabled=true;say('wmsg',T.busy);
+  fetch(API+'/book-ebook',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({book:'trust-en-ebook',name:$('wname').value,email:$('wemail').value,lang:L,website:$('wweb').value})})
+  .then(function(r){return r.json()}).then(function(j){if(j.ok&&j.url){location.href=j.url;return}b.disabled=false;
+    if(j.fields)say('wmsg',T.fix+j.fields.map(function(f){return f==='name'?T.yourName:(T.fields[f]||f)}).join(SEP),'bad');else sayMail('wmsg',T.err)})
+  .catch(function(){b.disabled=false;sayMail('wmsg',T.err)})});
 $('wait').addEventListener('submit',function(e){e.preventDefault();
   if(!EM.test($('wemail').value.trim())){say('wmsg',T.fix+T.fields.email,'bad');return}var b=$('wbtn');b.disabled=true;
   fetch(API+'/book-waitlist',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({book:'trust-en',name:$('wname').value,email:$('wemail').value,lang:L,website:$('wweb').value})})
@@ -262,7 +271,7 @@ var p=new URLSearchParams(location.search), id=p.get('p'), n=$('notice');
 if(id&&p.get('cancelled')){n.hidden=false;n.className='notice warn';n.textContent=T.cancel}
 else if(id){n.hidden=false;n.innerHTML='<b></b> <span></span>';n.querySelector('b').textContent=T.paidH;n.querySelector('span').textContent=T.pend;
   var tries=0;(function check(){fetch(API+'/book-status?p='+encodeURIComponent(id)).then(function(r){return r.json()}).then(function(j){
-    if(j.status==='paid'){n.querySelector('span').textContent=T.paidP}else if(j.status==='pending'&&++tries<10){setTimeout(check,3000)}else if(j.status!=='pending'){n.className='notice warn';n.textContent=T.cancel}})})();
+    if(j.status==='paid'){n.querySelector('span').textContent=j.digital?T.paidEbook:T.paidP}else if(j.status==='pending'&&++tries<10){setTimeout(check,3000)}else if(j.status!=='pending'){n.className='notice warn';n.textContent=T.cancel}})})();
   try{history.replaceState(null,'',location.pathname)}catch(e){}}
 })();</script>
 <script defer src="/a.js"></script>
