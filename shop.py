@@ -32,7 +32,12 @@ T = {
         "lede": "Companies that last abroad are the ones local people come to trust. Two editions: the English second edition, rewritten for readers outside China, and the original Chinese edition.",
         "facts": [("Author", "Chris Pereira"), ("English", "English second edition, November 2026"), ("Chinese", "Chinese edition, February 2026")],
         "zh_tag": "Available now", "zh_h": "Chinese edition", "zh_title": "<span lang=\"zh-Hans\"><span class=\"hang\">《</span>信任》</span>",
-        "zh_meta": "Paperback · signed by the author · ships within mainland China",
+        "zh_meta": "Paperback · Shenzhen Publishing House, February 2026",
+        "zh_blurb": "The original edition, written for Chinese companies going global: trust decides whether a brand is welcomed abroad, and it can be built on purpose. Every copy is signed by Chris.",
+        "zh_pts_h": "What you get", "zh_pts": ["Signed by Chris, with a dedication of your choice", "Posted within mainland China, tracking number by email", "The original Chinese text, as published in 2026"],
+        "zh_open": "Order a signed copy", "pay": "Continue to secure payment", "back": "Close", "ship_small": "+ shipping", "eb_small": "e-book",
+        "steps_zh": ["Your delivery details", "Secure payment", "Signed copy posted"], "steps_en": ["Your name and email", "Secure payment", "Download link by email"],
+        "n_open": "Tell me when the paperback is out", "n_btn": "Notify me", "n_h": "Paperback: one email on the day it goes on sale",
         "qty": "Copies", "ded": "Dedication (optional)", "ded_ph": "e.g. To Anna", "name": "Your name", "email": "Email", "rname": "Recipient", "phone": "Mobile (China)", "addr": "Delivery address", "addr_ph": "Province, city, district, street, building and room", "remail": "Email (for your receipt)",
         "ship_note": "Shipping to mainland China", "sum_book": "Trust 《信任》, signed", "total": "Total", "buy": "Buy a signed copy", "secure": "Secure payment by Stripe on the next step.",
         "gift_q": "Have a gift code?", "gift_ph": "Gift code", "gift_apply": "Apply", "gift_bad": "That code isn't valid.", "gift_on": "Gift code applied: a free signed copy, posted to you.", "gift_free": "Free", "gift_buy": "Request my free copy", "gift_note": "No payment needed. Email is optional.", "gift_busy": "Sending your request…", "gift_done": "Thank you! Your request is in. We'll post your signed copy soon.", "gift_already": "A free copy has already been requested for this mobile number. Questions? Email", "gift_off": "Remove",
@@ -41,10 +46,10 @@ T = {
         "fields": {"name": "the recipient's name", "phone": "a mainland China mobile number (11 digits)", "address": "the delivery address", "email": "your email", "qty": "copies", "zone": "where to ship", "dedication": "the dedication"},
         "paid_h": "Thank you, your order is confirmed.", "paid_p": "A confirmation is on its way to your inbox. We'll email you the tracking number once your signed copy is posted.",
         "pend_p": "We're confirming your payment with Stripe. This will update in a moment.", "cancel_p": "Checkout was cancelled. You haven't been charged.",
-        "en_tag": "E-book out now", "en_buy": "or get the Kindle edition on Amazon", "en_ebuy": "Buy the e-book", "paid_ebook": "Your download link is on its way to your inbox.", "your_name": "your name", "en_h": "English edition", "en_title": "Trust",
-        "en_meta": "Second edition, November 2026 · rewritten for readers outside China", "en_pts": ["Four pillars: where trust is missing", "Five gaps between business cultures", "The playbook: checklists and scripts"], "en_pts_h": "Inside the English edition",
+        "en_tag": "E-book out now", "en_buy": "Kindle edition on Amazon", "en_ebuy": "Buy the e-book", "paid_ebook": "Your download link is on its way to your inbox.", "your_name": "your name", "en_h": "English edition", "en_title": "Trust",
+        "en_meta": "E-book · second edition, November 2026", "en_pts": ["Win customers and partners who start out sceptical", "Close the five gaps that stall deals between business cultures", "Use the playbook for media, trade shows, selling and crisis"], "en_pts_h": "What it helps you do",
         "cov_k": "Second English edition", "cov_q": "Companies that last abroad are the ones local people come to trust.",
-        "en_blurb": "What Western companies can learn from how China's best brands build trust across borders. The e-book is out now, here or on Amazon Kindle. Leave your email and we'll tell you the day the paperback goes on sale.",
+        "en_blurb": "Trust is what turns a foreign company into a welcome one. This book shows how to build it on purpose, with customers, partners and governments, so your business can grow and last in any market that is not your own.",
         "join": "Paperback: notify me when it is out", "es_book": "Trust, English e-book", "es_del": "Download link sent by email", "es_free": "Free", "es_tot": "Total", "join_note": "One email when the paperback launches. No payment, no newsletter.",
         "joined": "Thanks. We'll email you the day the paperback goes on sale.", "already": "You're already signed up. We'll email you when the paperback is out.",
         "about_h": "About the Chinese edition", "zh_facts": "Shenzhen Publishing House · February 2026",
@@ -74,7 +79,12 @@ T = {
         "lede": "中国企业如何在海外市场赢得信任。本书凝结了作者在中国二十多年的经验，从华为全球公共事务到今天服务的出海品牌。",
         "facts": [("作者", "彭家荣 Chris Pereira"), ("出版社", "深圳出版社"), ("出版时间", "2026年2月")],
         "zh_tag": "现已上市", "zh_h": "中文版", "zh_title": "<span class=\"hang\">《</span>信任》",
-        "zh_meta": "平装 · 作者亲笔签名 · 仅限中国大陆寄送",
+        "zh_meta": "平装 · 深圳出版社，2026年2月",
+        "zh_blurb": "原版写给出海的中国企业：信任决定品牌在海外是否被接纳，而信任可以有意识地建立。每本均由作者亲笔签名。",
+        "zh_pts_h": "您将收到", "zh_pts": ["作者亲笔签名，可加您指定的题字", "寄往中国大陆，寄出后邮件告知快递单号", "2026年出版的中文原版"],
+        "zh_open": "订购签名版", "pay": "前往安全支付", "back": "收起", "ship_small": "另加运费", "eb_small": "电子书",
+        "steps_zh": ["填写收货信息", "安全支付", "签名书寄出"], "steps_en": ["填写姓名和邮箱", "安全支付", "邮件发送下载链接"],
+        "n_open": "纸质版上市时通知我", "n_btn": "通知我", "n_h": "纸质版：开售当天只发一封邮件",
         "qty": "数量", "ded": "签名题字（选填）", "ded_ph": "例如：致小明", "name": "您的姓名", "email": "邮箱", "rname": "收件人", "phone": "手机号", "addr": "收货地址", "addr_ph": "省、市、区、街道、楼栋及门牌号", "remail": "邮箱（接收订单确认）",
         "ship_note": "中国大陆运费", "sum_book": "《信任》签名版", "total": "合计", "buy": "购买签名版", "secure": "下一步由 Stripe 安全支付。",
         "gift_q": "有赠书码？", "gift_ph": "赠书码", "gift_apply": "使用", "gift_bad": "赠书码无效。", "gift_on": "已使用赠书码：免费赠送签名版，包邮寄出。", "gift_free": "免费", "gift_buy": "提交赠书申请", "gift_note": "无需付款，邮箱可不填。", "gift_busy": "正在提交…", "gift_done": "谢谢！申请已收到，我们会尽快寄出签名书。", "gift_already": "该手机号已申请过赠书。如有问题，请发邮件至", "gift_off": "取消",
@@ -83,10 +93,10 @@ T = {
         "fields": {"name": "收件人", "phone": "11 位手机号", "address": "收货地址", "email": "邮箱", "qty": "数量", "zone": "寄送地区", "dedication": "题字"},
         "paid_h": "感谢订购，订单已确认。", "paid_p": "确认邮件已发送至您的邮箱。签名书寄出后，我们会再发邮件告知快递单号。",
         "pend_p": "正在向 Stripe 确认付款，稍后自动更新。", "cancel_p": "已取消支付，未产生任何费用。",
-        "en_tag": "电子书已上市", "en_buy": "或在亚马逊购买 Kindle 版", "en_ebuy": "购买电子书", "paid_ebook": "下载链接已发送至您的邮箱。", "your_name": "您的姓名", "en_h": "英文版", "en_title": "Trust",
-        "en_meta": "第二版，2026年11月 · 面向海外读者重新撰写", "en_pts": ["四大支柱：找出信任缺在哪里", "五大鸿沟：不同商业文化之间的差距", "实战手册：清单与话术"], "en_pts_h": "英文版内容",
+        "en_tag": "电子书已上市", "en_buy": "亚马逊 Kindle 版", "en_ebuy": "购买电子书", "paid_ebook": "下载链接已发送至您的邮箱。", "your_name": "您的姓名", "en_h": "英文版", "en_title": "Trust",
+        "en_meta": "电子书 · 第二版，2026年11月", "en_pts": ["赢得起初心存疑虑的客户与伙伴", "跨越让合作停滞的五大商业文化鸿沟", "实战手册：媒体、展会、销售与危机应对"], "en_pts_h": "这本书能帮您做到",
         "cov_k": "英文第二版", "cov_q": "能在海外长久立足的企业，是当地人愿意信任的企业。",
-        "en_blurb": "西方企业可以从中国顶尖品牌跨境建立信任的方式中学到什么。电子书已上市，可在本页或亚马逊 Kindle 购买。留下邮箱，纸质版开售当天我们会通知您。",
+        "en_blurb": "信任能让一家外来企业变成受欢迎的企业。本书讲的是如何有意识地建立信任，赢得客户、伙伴和政府的支持，让业务在任何异国市场发展壮大、长久立足。",
         "join": "纸质版：上市时通知我", "es_book": "Trust 英文版电子书", "es_del": "下载链接通过邮件发送", "es_free": "免费", "es_tot": "合计", "join_note": "纸质版上市时只发一封邮件，无需付款，不订阅任何简报。",
         "joined": "谢谢！纸质版开售当天我们会邮件通知您。", "already": "您已登记，纸质版上市时我们会通知您。",
         "about_h": "关于中文版", "zh_facts": "深圳出版社 · 2026年2月",
@@ -150,16 +160,36 @@ html[lang="zh-CN"] .intro .sub{font-family:var(--zh);font-style:normal;font-weig
 /* the two editions */
 .eds{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:22px 0 26px;align-items:stretch}
 .ed{background:var(--surface);border:1px solid var(--hair);border-radius:12px;overflow:hidden;box-shadow:0 14px 34px -30px rgba(21,19,19,.4);
- display:grid;grid-row:span 7;grid-template-rows:subgrid;row-gap:0}
-/* both cards share the same rows (subgrid), so photo, title, first fields, second fields and button line up across the two */
-.ed form{display:contents}
+ display:grid;grid-row:span 6;grid-template-rows:subgrid;row-gap:0}
+/* both cards share the same rows (subgrid): photo, title, introduction, points, button, then the order form that opens in place (12 Nov 2026:
+   each card is an introduction first; the form appears only after the reader presses the button) */
+.front{padding:14px 24px 20px;align-self:start}
+.front .btn{width:100%;font-size:14.5px;padding:10px 20px;letter-spacing:.02em}
+.front .small button.lnk,.panel button.lnk{background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+.front .small button.lnk:hover,.panel button.lnk:hover,.front .small a:hover{color:var(--red)}.front .small a{color:inherit;text-underline-offset:2px}
+.front .small .dot{margin:0 8px;color:#b7b0a3}
+.ed[data-open] .front{display:none}
+.panel{padding:14px 24px 20px;border-top:1px solid var(--hair);background:#FDFCF9;align-self:start}
+.panel[hidden]{display:none}
+.panel .row,.panel .row2,.panel .blk{margin-top:10px}
+.panel .sum{padding:12px 0 0}
+.panel .go{padding:14px 0 0}
+.steps{display:flex;gap:6px 14px;flex-wrap:wrap;margin:0;padding:0;list-style:none;font-family:var(--display);font-size:12px;color:var(--muted);counter-reset:st}
+.steps li{counter-increment:st;display:flex;align-items:center;gap:6px}
+.steps li:before{content:counter(st);display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;border:1px solid #B5AC9B;font-size:11px;font-weight:600;color:var(--muted)}
+.steps li.on{color:var(--ink);font-weight:600}.steps li.on:before{background:var(--red);border-color:var(--red);color:#fff}
+.panel .nh{font-family:var(--display);font-size:13.5px;font-weight:600;margin:0}
+#wait[data-mode="buy"] .onlynotify,#wait[data-mode="notify"] .onlybuy{display:none}
+#wait[data-mode="notify"] .row2{grid-template-columns:1fr}
+.panel button.back{display:block;margin:10px auto 0;font:12px var(--display);color:var(--muted)}
+.ed[data-open] .rB{padding-bottom:16px}
 .pts .ptsh{display:block;font-family:var(--display);font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:14px}
 .pts ul{list-style:none;margin:8px 0 0;padding:0;font-family:var(--display);font-size:14px;color:#2e2b2b}
 .pts li{padding:7px 0 7px 18px;border-top:1px solid var(--hair);position:relative}.pts li:last-child{border-bottom:1px solid var(--hair)}
 .pts li:before{content:"";position:absolute;left:2px;top:15px;width:6px;height:6px;border-radius:50%;background:var(--red)}
 html[lang="zh-CN"] .pts .ptsh{letter-spacing:.02em;font-size:12px;text-transform:none}
-.ehd,.rA,.rB,.rC,.rS,.go{padding-left:24px;padding-right:24px}
-.ehd{padding-top:18px}.rA{padding-top:12px}.rB,.rC{padding-top:10px}.rS{padding-top:4px}.go button.lnk{background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:2px}.go button.lnk:hover{color:var(--red)}.go .small a{color:inherit;text-underline-offset:2px}
+.ehd,.rA,.rB{padding-left:24px;padding-right:24px}
+.ehd{padding-top:18px}.rA{padding-top:12px}.rB{padding-top:2px}
 .vis{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0d1b33}
 .vis img{width:100%;height:100%;object-fit:cover}
 .tag{position:absolute;top:14px;left:14px;font-family:var(--display);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.94);color:var(--ink)}
@@ -182,11 +212,11 @@ input::placeholder{color:#a9a39a}
 textarea{resize:vertical;line-height:1.45;font-family:var(--display)}
 .full{margin-top:10px}
 input:focus,select:focus,textarea:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(164,7,6,.12);background-color:#fff}
-.sum{margin:0;padding:12px 24px 0;font-family:var(--display);font-size:13px;color:var(--muted)}
+.sum{margin:0;padding:12px 0 0;font-family:var(--display);font-size:13px;color:var(--muted)}
 .sum div{display:flex;justify-content:space-between;padding:2px 0}
 .gift[hidden]{display:none}.gift{display:flex;justify-content:flex-end;gap:10px;align-items:center;padding:0 0 6px}.gift button.lnk{background:none;border:0;padding:0;font:inherit;color:var(--red);cursor:pointer;text-decoration:underline;text-underline-offset:3px}.gift input{width:120px;font-size:13px;padding:2px 0 3px;text-transform:uppercase}.gift .ap{background:none;border:1px solid var(--red);color:var(--red);border-radius:999px;font:600 12px var(--display);padding:3px 12px;cursor:pointer}.gift .ok{color:var(--ok);font-weight:500;margin-right:auto}
 .sum .tot{color:var(--ink);font-weight:600;font-size:15px;padding-top:6px;margin-top:4px;border-top:1px solid var(--hair)}
-.go{align-self:start;padding-top:14px;padding-bottom:20px}
+.go{align-self:start}
 .go .btn{width:100%;font-size:14.5px;padding:10px 20px;letter-spacing:.02em}
 .small{font-family:var(--display);font-size:11.5px;color:var(--muted);margin:8px 0 0;text-align:center}
 .msg{font-family:var(--display);font-size:14px;margin:8px 0 0;min-height:0;text-align:center}
@@ -236,7 +266,7 @@ html[lang="zh-CN"] .inrows b{font-family:var(--zh);font-weight:600}
 .about .qline{font-family:var(--display);font-size:12.5px;color:var(--muted);margin:10px 0 0}
 
 @media (max-width:900px){.intro{grid-template-columns:1fr;align-items:start;padding-top:24px}.eds{grid-template-columns:1fr;gap:22px;padding-top:28px}.about{grid-template-columns:1fr;gap:16px;padding:20px 0}}
-@media (max-width:760px){.nav{display:none}.langsw{margin-left:auto;padding:5px 9px;font-size:13px}.wrap{padding:0 16px}.ehd,.rA,.rB,.rC,.rS,.go{padding-left:20px;padding-right:20px}.ed{grid-row:auto;display:block}.rC:empty,.rS:empty{display:none}.row{grid-template-columns:80px 1fr}.facts{font-size:12.5px}.facts li+li:before{margin:0 7px}.ed h2{font-size:22px}}
+@media (max-width:760px){.nav{display:none}.langsw{margin-left:auto;padding:5px 9px;font-size:13px}.wrap{padding:0 16px}.ehd,.rA,.rB,.front,.panel{padding-left:20px;padding-right:20px}.ed{grid-row:auto;display:block}.row{grid-template-columns:80px 1fr}.facts{font-size:12.5px}.facts li+li:before{margin:0 7px}.ed h2{font-size:22px}}
 """
 
 JS = r"""(function(){
@@ -250,14 +280,14 @@ function say(id,text,cls){var m=$(id);m.className='msg'+(cls?' '+cls:'');m.textC
 function sayMail(id,lead){var m=$(id);m.className='msg bad';m.textContent=lead+' ';var a=document.createElement('a');a.href='mailto:inquiries@chrisjpereira.com';a.textContent='inquiries@chrisjpereira.com';m.appendChild(a)}
 fetch(API+'/books').then(function(r){return r.json()}).then(function(j){
   ebook=(j.books||[]).filter(function(b){return b.id==='trust-en-ebook'})[0];
-  if(ebook&&ebook.open){$('eBook').textContent=$('eTot').textContent=fmt(ebook.price,ebook.currency);$('ebuy').disabled=false}
+  if(ebook&&ebook.open){$('eBook').textContent=$('eTot').textContent=$('eprice').firstChild.textContent=fmt(ebook.price,ebook.currency);$('ebuy').disabled=false}else{$('eprice').textContent='';$('eOpen').disabled=true}
   book=(j.books||[]).filter(function(b){return b.id==='trust-zh'})[0];
-  if(!book||!book.open){$('buy').disabled=true;$('price').textContent='';sayMail('bmsg',T.closed);return}
+  if(!book||!book.open){$('buy').disabled=true;$('price').textContent='';$('order').hidden=false;$('chinese').setAttribute('data-open','1');sayMail('bmsg',T.closed);return}
   $('price').firstChild.textContent=fmt(book.price,book.currency);
   var q=$('qty');q.innerHTML='';for(var i=1;i<=book.maxQty;i++){var o=document.createElement('option');o.value=i;o.textContent=i;q.appendChild(o)}
   var z=$('zone');z.innerHTML='';book.shipping.forEach(function(s){var o=document.createElement('option');o.value=s.id;o.textContent=(L==='zh'?s.zh:s.en);z.appendChild(o)});
   $('zoneBox').hidden=book.shipping.length<2;$('buy').disabled=false;total();
-}).catch(function(){$('buy').disabled=true;sayMail('bmsg',T.err)});
+}).catch(function(){$('buy').disabled=true;$('price').textContent='';$('eprice').textContent='';sayMail('bmsg',T.err);sayMail('wmsg',T.err)});
 document.addEventListener('change',function(e){if(e.target.id==='qty'||e.target.id==='zone')total()});
 function giftMode(code){GIFT=code;$('giftQ').hidden=!!code;$('giftIn').hidden=true;$('giftOk').hidden=!code;$('giftOff').hidden=!code;
   $('qty').value='1';$('qty').disabled=!!code;$('buy').textContent=code?T.giftBuy:T.buy;$('secure').textContent=code?T.giftNote:T.secure;say('bmsg','');total()}
@@ -292,6 +322,13 @@ $('wait').addEventListener('submit',function(e){e.preventDefault();
   .then(function(r){return r.json()}).then(function(j){if(j.ok){say('wmsg',j.already?T.already:T.joined,'good');return}b.disabled=false;
     if(j.fields)say('wmsg',T.fix+j.fields.map(function(f){return T.fields[f]||f}).join(SEP),'bad');else sayMail('wmsg',T.err)})
   .catch(function(){b.disabled=false;sayMail('wmsg',T.err)})});
+function openEd(art,form,mode,first){if(mode)$(form).setAttribute('data-mode',mode);$(art).setAttribute('data-open',mode||'1');$(form).hidden=false;var f=$(first);if(f){try{f.focus({preventScroll:true})}catch(e){f.focus()}}
+  var r=$(form).getBoundingClientRect();if(r.bottom>innerHeight||r.top<70)$(form).scrollIntoView({block:'center',behavior:'smooth'})}
+$('eOpen').addEventListener('click',function(){say('wmsg','');openEd('english','wait','buy','wname')});
+$('nOpen').addEventListener('click',function(){say('wmsg','');openEd('english','wait','notify','wemail')});
+$('zOpen').addEventListener('click',function(){openEd('chinese','order','','ded')});
+[].forEach.call(document.querySelectorAll('[data-close]'),function(b){b.addEventListener('click',function(){var a=$(b.getAttribute('data-close'));a.removeAttribute('data-open');a.querySelector('form').hidden=true;a.querySelector('.front .btn').focus()})});
+if(location.hash==='#buy-ebook')openEd('english','wait','buy','wname');if(location.hash==='#buy-signed')openEd('chinese','order','','ded');
 var p=new URLSearchParams(location.search), id=p.get('p'), n=$('notice');
 if(id&&p.get('cancelled')){n.hidden=false;n.className='notice warn';n.textContent=T.cancel}
 else if(id){n.hidden=false;n.innerHTML='<b></b> <span></span>';n.querySelector('b').textContent=T.paidH;n.querySelector('span').textContent=T.pend;
@@ -305,7 +342,7 @@ def page(k):
     t = T[k]
     js = JS % {"api": json.dumps(API), "l": json.dumps("zh" if k == "zh" else "en"), "t": json.dumps({
         "closed": t["closed"], "err": t["err"], "busy": t["busy"], "fix": t["fix"], "fields": t["fields"], "paidH": t["paid_h"], "paidP": t["paid_p"], "paidEbook": t["paid_ebook"], "ebuy": t["en_ebuy"], "yourName": t["your_name"],
-        "pend": t["pend_p"], "cancel": t["cancel_p"], "joined": t["joined"], "already": t["already"], "buy": t["buy"], "secure": t["secure"],
+        "pend": t["pend_p"], "cancel": t["cancel_p"], "joined": t["joined"], "already": t["already"], "buy": t["pay"], "secure": t["secure"],
         "giftBad": t["gift_bad"], "giftFree": t["gift_free"], "giftBuy": t["gift_buy"], "giftNote": t["gift_note"], "giftBusy": t["gift_busy"], "giftDone": t["gift_done"], "giftAlready": t["gift_already"]}, ensure_ascii=False)}
     csp = ("default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; "
            "img-src 'self' data: https:; connect-src 'self' https://stats.chrisjpereira.com https://www.globalconnect.show; object-src 'none'; base-uri 'self'; "
@@ -316,47 +353,55 @@ def page(k):
     ld = json.dumps({"@context": "https://schema.org", "@type": "Book", "name": "信任：中国企业全球化的黄金钥匙", "alternateName": "Trust: The Golden Key to Chinese Enterprises' Globalization",
                      "inLanguage": "zh-CN", "bookFormat": "https://schema.org/Paperback", "author": {"@type": "Person", "name": "Chris Pereira", "alternateName": "彭家荣", "url": "https://chrisjpereira.com/"},
                      "publisher": {"@type": "Organization", "name": "Shenzhen Publishing House 深圳出版社"}, "datePublished": "2026-02", "image": "https://chrisjpereira.com/img/trust-books.webp", "url": url}, ensure_ascii=False)
+    steps = lambda key: '<ol class="steps">' + "".join(f'<li{" class=\"on\"" if n == 0 else ""}>{x}</li>' for n, x in enumerate(t[key])) + '</ol>'
+    trust = TRUST_ZH if k == 'zh' else TRUST_EN
     zh_art = f"""    <article class="ed" id="chinese">
       <div class="vis"><img src="{t['img']}trust-books.webp" width="1000" height="750" alt="{t['photo_alt']}"><span class="tag live">{t['zh_tag']}</span></div>
       <div class="ehd">
-        <div class="ehead"><div><span class="ekicker">{t['zh_h']}</span><h2>{t['zh_title']}</h2></div><div class="price" id="price"><span>{t['loading']}</span></div></div>
+        <div class="ehead"><div><span class="ekicker">{t['zh_h']}</span><h2>{t['zh_title']}</h2></div><div class="price" id="price"><span>{t['loading']}</span><small>{t['ship_small']}</small></div></div>
         <p class="emeta">{t['zh_meta']}</p>
       </div>
-      <form id="order" novalidate>
-        <div class="rA row">
+      <div class="rA"><p class="eblurb">{t['zh_blurb']}</p></div>
+      <div class="rB pts"><span class="ptsh">{t['zh_pts_h']}</span><ul>{''.join(f'<li>{x}</li>' for x in t['zh_pts'])}</ul></div>
+      <div class="front"><button class="btn" id="zOpen" type="button" aria-controls="order">{t['zh_open']}</button>{trust}</div>
+      <form id="order" class="panel" novalidate hidden>
+        {steps('steps_zh')}
+        <div class="row">
           <div><label for="qty">{t['qty']}</label><select id="qty"><option>1</option></select></div>
           <div><label for="ded">{t['ded']}</label><input id="ded" maxlength="80" placeholder="{t['ded_ph']}"></div>
           <div id="zoneBox" hidden><label for="zone">Ship to</label><select id="zone"></select></div>
         </div>
-        <div class="rB row2">
+        <div class="row2">
           <div><label for="bname">{t['rname']}</label><input id="bname" autocomplete="shipping name" maxlength="60" required></div>
           <div><label for="bphone">{t['phone']}</label><input id="bphone" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="20" placeholder="138 0000 0000" required></div>
         </div>
-        <div class="rC">
-          <div><label for="baddr">{t['addr']}</label><textarea id="baddr" rows="2" maxlength="200" autocomplete="shipping street-address" placeholder="{t['addr_ph']}" required></textarea></div>
-          <div class="full"><label for="bemail">{t['remail']}</label><input id="bemail" type="email" autocomplete="email" maxlength="200" required></div>
-        </div>
-        <div class="rS sum"><div class="gift" id="giftBox" hidden><button type="button" class="lnk" id="giftQ" aria-expanded="false">{t['gift_q']}</button><span id="giftIn" hidden><input id="gcode" maxlength="20" placeholder="{t['gift_ph']}" aria-label="{t['gift_ph']}" autocomplete="off"><button type="button" class="ap" id="gapply">{t['gift_apply']}</button></span><span class="ok" id="giftOk" hidden>{t['gift_on']}</span><button type="button" class="lnk" id="giftOff" hidden>{t['gift_off']}</button></div><div><span>{t['sum_book']}</span><span id="sBook">–</span></div><div><span>{t['ship_note']}</span><span id="sShip">–</span></div><div class="tot"><span>{t['total']}</span><span id="tot">–</span></div></div>
-        <div class="go"><input class="hp" id="bweb" tabindex="-1" autocomplete="off" aria-hidden="true"><button class="btn" id="buy" type="submit" disabled>{t['buy']}</button>
-        <p class="small" id="secure">{t['secure']}</p><p class="msg" id="bmsg" role="status"></p>{TRUST_ZH if k == 'zh' else TRUST_EN}</div>
+        <div class="blk"><label for="baddr">{t['addr']}</label><textarea id="baddr" rows="2" maxlength="200" autocomplete="shipping street-address" placeholder="{t['addr_ph']}" required></textarea></div>
+        <div class="blk"><label for="bemail">{t['remail']}</label><input id="bemail" type="email" autocomplete="email" maxlength="200" required></div>
+        <div class="sum"><div class="gift" id="giftBox" hidden><button type="button" class="lnk" id="giftQ" aria-expanded="false">{t['gift_q']}</button><span id="giftIn" hidden><input id="gcode" maxlength="20" placeholder="{t['gift_ph']}" aria-label="{t['gift_ph']}" autocomplete="off"><button type="button" class="ap" id="gapply">{t['gift_apply']}</button></span><span class="ok" id="giftOk" hidden>{t['gift_on']}</span><button type="button" class="lnk" id="giftOff" hidden>{t['gift_off']}</button></div><div><span>{t['sum_book']}</span><span id="sBook">–</span></div><div><span>{t['ship_note']}</span><span id="sShip">–</span></div><div class="tot"><span>{t['total']}</span><span id="tot">–</span></div></div>
+        <div class="go"><input class="hp" id="bweb" tabindex="-1" autocomplete="off" aria-hidden="true"><button class="btn" id="buy" type="submit" disabled>{t['pay']}</button>
+        <p class="small" id="secure">{t['secure']}</p><p class="msg" id="bmsg" role="status"></p><button type="button" class="lnk back" data-close="chinese">{t['back']}</button></div>
       </form>
     </article>"""
     en_art = f"""    <article class="ed" id="english">
       <div class="vis"><div class="encov"><div class="ct"><span>{t['cov_k']}</span><b>{t['cov_q']}</b></div><img src="{t['img']}trust-en-cover.webp" width="800" height="1200" alt="Cover of the English edition of Trust by Chris Pereira"></div><span class="tag live">{t['en_tag']}</span></div>
       <div class="ehd">
-        <div class="ehead"><div><span class="ekicker">{t['en_h']}</span><h2>{t['en_title']}</h2></div></div>
+        <div class="ehead"><div><span class="ekicker">{t['en_h']}</span><h2>{t['en_title']}</h2></div><div class="price" id="eprice"><span>{t['loading']}</span><small>{t['eb_small']}</small></div></div>
         <p class="emeta">{t['en_meta']}</p>
       </div>
-      <form id="wait" novalidate>
-        <div class="rA"><p class="eblurb">{t['en_blurb']}</p></div>
-        <div class="rB row2">
-          <div><label for="wname">{t['name']}</label><input id="wname" autocomplete="name" maxlength="120"></div>
+      <div class="rA"><p class="eblurb">{t['en_blurb']}</p></div>
+      <div class="rB pts"><span class="ptsh">{t['en_pts_h']}</span><ul>{''.join(f'<li>{x}</li>' for x in t['en_pts'])}</ul></div>
+      <div class="front"><button class="btn" id="eOpen" type="button" aria-controls="wait">{t['en_ebuy']}</button>
+        <p class="small"><a href="https://www.amazon.com/dp/B0HR1MMVGQ" target="_blank" rel="noopener" style="white-space:nowrap">{t['en_buy']}</a><span class="dot">·</span><button class="lnk" id="nOpen" type="button" aria-controls="wait" title="{t['join_note']}">{t['n_open']}</button></p>{trust}</div>
+      <form id="wait" class="panel" data-mode="buy" novalidate hidden>
+        <div class="onlybuy">{steps('steps_en')}</div>
+        <p class="nh onlynotify">{t['n_h']}</p>
+        <div class="row2">
+          <div class="onlybuy"><label for="wname">{t['name']}</label><input id="wname" autocomplete="name" maxlength="120"></div>
           <div><label for="wemail">{t['email']}</label><input id="wemail" type="email" autocomplete="email" maxlength="200" required></div>
         </div>
-        <div class="rC pts"><span class="ptsh">{t['en_pts_h']}</span><ul>{''.join(f'<li>{x}</li>' for x in t['en_pts'])}</ul></div>
-        <div class="rS sum"><div><span>{t['es_book']}</span><span id="eBook">–</span></div><div><span>{t['es_del']}</span><span>{t['es_free']}</span></div><div class="tot"><span>{t['es_tot']}</span><span id="eTot">–</span></div></div>
-        <div class="go"><input class="hp" id="wweb" tabindex="-1" autocomplete="off" aria-hidden="true"><button class="btn" id="ebuy" type="button" disabled>{t['en_ebuy']}</button>
-        <p class="small"><a href="https://www.amazon.com/dp/B0HR1MMVGQ" target="_blank" rel="noopener">{t['en_buy']}</a></p><p class="msg" id="wmsg" role="status"></p><p class="small trustln"><button class="lnk" id="wbtn" type="submit" title="{t['join_note']}">{t['join']}</button></p></div>
+        <div class="sum onlybuy"><div><span>{t['es_book']}</span><span id="eBook">–</span></div><div><span>{t['es_del']}</span><span>{t['es_free']}</span></div><div class="tot"><span>{t['es_tot']}</span><span id="eTot">–</span></div></div>
+        <div class="go"><input class="hp" id="wweb" tabindex="-1" autocomplete="off" aria-hidden="true"><button class="btn onlybuy" id="ebuy" type="button" disabled>{t['pay']}</button><button class="btn onlynotify" id="wbtn" type="submit">{t['n_btn']}</button>
+        <p class="small onlybuy">{t['secure']}</p><p class="small onlynotify">{t['join_note']}</p><p class="msg" id="wmsg" role="status"></p><button type="button" class="lnk back" data-close="english">{t['back']}</button></div>
       </form>
     </article>"""
     n = [0]

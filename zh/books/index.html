@@ -66,16 +66,36 @@ html[lang="zh-CN"] .intro .sub{font-family:var(--zh);font-style:normal;font-weig
 /* the two editions */
 .eds{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:22px 0 26px;align-items:stretch}
 .ed{background:var(--surface);border:1px solid var(--hair);border-radius:12px;overflow:hidden;box-shadow:0 14px 34px -30px rgba(21,19,19,.4);
- display:grid;grid-row:span 7;grid-template-rows:subgrid;row-gap:0}
-/* both cards share the same rows (subgrid), so photo, title, first fields, second fields and button line up across the two */
-.ed form{display:contents}
+ display:grid;grid-row:span 6;grid-template-rows:subgrid;row-gap:0}
+/* both cards share the same rows (subgrid): photo, title, introduction, points, button, then the order form that opens in place (12 Nov 2026:
+   each card is an introduction first; the form appears only after the reader presses the button) */
+.front{padding:14px 24px 20px;align-self:start}
+.front .btn{width:100%;font-size:14.5px;padding:10px 20px;letter-spacing:.02em}
+.front .small button.lnk,.panel button.lnk{background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+.front .small button.lnk:hover,.panel button.lnk:hover,.front .small a:hover{color:var(--red)}.front .small a{color:inherit;text-underline-offset:2px}
+.front .small .dot{margin:0 8px;color:#b7b0a3}
+.ed[data-open] .front{display:none}
+.panel{padding:14px 24px 20px;border-top:1px solid var(--hair);background:#FDFCF9;align-self:start}
+.panel[hidden]{display:none}
+.panel .row,.panel .row2,.panel .blk{margin-top:10px}
+.panel .sum{padding:12px 0 0}
+.panel .go{padding:14px 0 0}
+.steps{display:flex;gap:6px 14px;flex-wrap:wrap;margin:0;padding:0;list-style:none;font-family:var(--display);font-size:12px;color:var(--muted);counter-reset:st}
+.steps li{counter-increment:st;display:flex;align-items:center;gap:6px}
+.steps li:before{content:counter(st);display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;border:1px solid #B5AC9B;font-size:11px;font-weight:600;color:var(--muted)}
+.steps li.on{color:var(--ink);font-weight:600}.steps li.on:before{background:var(--red);border-color:var(--red);color:#fff}
+.panel .nh{font-family:var(--display);font-size:13.5px;font-weight:600;margin:0}
+#wait[data-mode="buy"] .onlynotify,#wait[data-mode="notify"] .onlybuy{display:none}
+#wait[data-mode="notify"] .row2{grid-template-columns:1fr}
+.panel button.back{display:block;margin:10px auto 0;font:12px var(--display);color:var(--muted)}
+.ed[data-open] .rB{padding-bottom:16px}
 .pts .ptsh{display:block;font-family:var(--display);font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:14px}
 .pts ul{list-style:none;margin:8px 0 0;padding:0;font-family:var(--display);font-size:14px;color:#2e2b2b}
 .pts li{padding:7px 0 7px 18px;border-top:1px solid var(--hair);position:relative}.pts li:last-child{border-bottom:1px solid var(--hair)}
 .pts li:before{content:"";position:absolute;left:2px;top:15px;width:6px;height:6px;border-radius:50%;background:var(--red)}
 html[lang="zh-CN"] .pts .ptsh{letter-spacing:.02em;font-size:12px;text-transform:none}
-.ehd,.rA,.rB,.rC,.rS,.go{padding-left:24px;padding-right:24px}
-.ehd{padding-top:18px}.rA{padding-top:12px}.rB,.rC{padding-top:10px}.rS{padding-top:4px}.go button.lnk{background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:2px}.go button.lnk:hover{color:var(--red)}.go .small a{color:inherit;text-underline-offset:2px}
+.ehd,.rA,.rB{padding-left:24px;padding-right:24px}
+.ehd{padding-top:18px}.rA{padding-top:12px}.rB{padding-top:2px}
 .vis{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0d1b33}
 .vis img{width:100%;height:100%;object-fit:cover}
 .tag{position:absolute;top:14px;left:14px;font-family:var(--display);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.94);color:var(--ink)}
@@ -98,11 +118,11 @@ input::placeholder{color:#a9a39a}
 textarea{resize:vertical;line-height:1.45;font-family:var(--display)}
 .full{margin-top:10px}
 input:focus,select:focus,textarea:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(164,7,6,.12);background-color:#fff}
-.sum{margin:0;padding:12px 24px 0;font-family:var(--display);font-size:13px;color:var(--muted)}
+.sum{margin:0;padding:12px 0 0;font-family:var(--display);font-size:13px;color:var(--muted)}
 .sum div{display:flex;justify-content:space-between;padding:2px 0}
 .gift[hidden]{display:none}.gift{display:flex;justify-content:flex-end;gap:10px;align-items:center;padding:0 0 6px}.gift button.lnk{background:none;border:0;padding:0;font:inherit;color:var(--red);cursor:pointer;text-decoration:underline;text-underline-offset:3px}.gift input{width:120px;font-size:13px;padding:2px 0 3px;text-transform:uppercase}.gift .ap{background:none;border:1px solid var(--red);color:var(--red);border-radius:999px;font:600 12px var(--display);padding:3px 12px;cursor:pointer}.gift .ok{color:var(--ok);font-weight:500;margin-right:auto}
 .sum .tot{color:var(--ink);font-weight:600;font-size:15px;padding-top:6px;margin-top:4px;border-top:1px solid var(--hair)}
-.go{align-self:start;padding-top:14px;padding-bottom:20px}
+.go{align-self:start}
 .go .btn{width:100%;font-size:14.5px;padding:10px 20px;letter-spacing:.02em}
 .small{font-family:var(--display);font-size:11.5px;color:var(--muted);margin:8px 0 0;text-align:center}
 .msg{font-family:var(--display);font-size:14px;margin:8px 0 0;min-height:0;text-align:center}
@@ -152,7 +172,7 @@ html[lang="zh-CN"] .inrows b{font-family:var(--zh);font-weight:600}
 .about .qline{font-family:var(--display);font-size:12.5px;color:var(--muted);margin:10px 0 0}
 
 @media (max-width:900px){.intro{grid-template-columns:1fr;align-items:start;padding-top:24px}.eds{grid-template-columns:1fr;gap:22px;padding-top:28px}.about{grid-template-columns:1fr;gap:16px;padding:20px 0}}
-@media (max-width:760px){.nav{display:none}.langsw{margin-left:auto;padding:5px 9px;font-size:13px}.wrap{padding:0 16px}.ehd,.rA,.rB,.rC,.rS,.go{padding-left:20px;padding-right:20px}.ed{grid-row:auto;display:block}.rC:empty,.rS:empty{display:none}.row{grid-template-columns:80px 1fr}.facts{font-size:12.5px}.facts li+li:before{margin:0 7px}.ed h2{font-size:22px}}
+@media (max-width:760px){.nav{display:none}.langsw{margin-left:auto;padding:5px 9px;font-size:13px}.wrap{padding:0 16px}.ehd,.rA,.rB,.front,.panel{padding-left:20px;padding-right:20px}.ed{grid-row:auto;display:block}.row{grid-template-columns:80px 1fr}.facts{font-size:12.5px}.facts li+li:before{margin:0 7px}.ed h2{font-size:22px}}
 footer{background:var(--red-deep);color:#fff}footer .wrap{padding-top:18px;padding-bottom:18px;display:flex;justify-content:space-between;align-items:center;gap:8px 24px;flex-wrap:wrap;font-family:var(--display);font-size:13px}.fnav{display:flex;flex-wrap:wrap;gap:6px 20px}.fnav a{color:#fff;opacity:.85;text-decoration:none}.fnav a:hover{opacity:1;text-decoration:underline;text-underline-offset:3px}.cgbb-badge{display:inline-block;line-height:0;}.cgbb-badge:hover{opacity:1}.cgbb-badge img{width:234px;height:auto;display:block}@media (max-width:640px){.cgbb-badge img{width:200px}}.trustln{margin-top:6px}.trustln span{color:#A40706;font-weight:700}.trustln a{color:inherit;text-decoration:underline;text-underline-offset:2px}</style>
 <link rel="alternate" type="application/json" title="CGBB Website Trust Credential" href="/.well-known/trust.json">
 </head>
@@ -181,44 +201,50 @@ footer{background:var(--red-deep);color:#fff}footer .wrap{padding-top:18px;paddi
     <article class="ed" id="chinese">
       <div class="vis"><img src="/img/trust-books.webp" width="1000" height="750" alt="彭家荣《信任》新书摆放在桌上"><span class="tag live">现已上市</span></div>
       <div class="ehd">
-        <div class="ehead"><div><span class="ekicker">中文版</span><h2><span class="hang">《</span>信任》</h2></div><div class="price" id="price"><span>…</span></div></div>
-        <p class="emeta">平装 · 作者亲笔签名 · 仅限中国大陆寄送</p>
+        <div class="ehead"><div><span class="ekicker">中文版</span><h2><span class="hang">《</span>信任》</h2></div><div class="price" id="price"><span>…</span><small>另加运费</small></div></div>
+        <p class="emeta">平装 · 深圳出版社，2026年2月</p>
       </div>
-      <form id="order" novalidate>
-        <div class="rA row">
+      <div class="rA"><p class="eblurb">原版写给出海的中国企业：信任决定品牌在海外是否被接纳，而信任可以有意识地建立。每本均由作者亲笔签名。</p></div>
+      <div class="rB pts"><span class="ptsh">您将收到</span><ul><li>作者亲笔签名，可加您指定的题字</li><li>寄往中国大陆，寄出后邮件告知快递单号</li><li>2026年出版的中文原版</li></ul></div>
+      <div class="front"><button class="btn" id="zOpen" type="button" aria-controls="order">订购签名版</button><p class="small trustln"><span aria-hidden="true">✓</span> <a href="https://cgbb.org/verify/?d=chrisjpereira.com" target="_blank" rel="noopener">CGBB 会员：在 cgbb.org 核验本网站</a></p></div>
+      <form id="order" class="panel" novalidate hidden>
+        <ol class="steps"><li class="on">填写收货信息</li><li>安全支付</li><li>签名书寄出</li></ol>
+        <div class="row">
           <div><label for="qty">数量</label><select id="qty"><option>1</option></select></div>
           <div><label for="ded">签名题字（选填）</label><input id="ded" maxlength="80" placeholder="例如：致小明"></div>
           <div id="zoneBox" hidden><label for="zone">Ship to</label><select id="zone"></select></div>
         </div>
-        <div class="rB row2">
+        <div class="row2">
           <div><label for="bname">收件人</label><input id="bname" autocomplete="shipping name" maxlength="60" required></div>
           <div><label for="bphone">手机号</label><input id="bphone" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="20" placeholder="138 0000 0000" required></div>
         </div>
-        <div class="rC">
-          <div><label for="baddr">收货地址</label><textarea id="baddr" rows="2" maxlength="200" autocomplete="shipping street-address" placeholder="省、市、区、街道、楼栋及门牌号" required></textarea></div>
-          <div class="full"><label for="bemail">邮箱（接收订单确认）</label><input id="bemail" type="email" autocomplete="email" maxlength="200" required></div>
-        </div>
-        <div class="rS sum"><div class="gift" id="giftBox" hidden><button type="button" class="lnk" id="giftQ" aria-expanded="false">有赠书码？</button><span id="giftIn" hidden><input id="gcode" maxlength="20" placeholder="赠书码" aria-label="赠书码" autocomplete="off"><button type="button" class="ap" id="gapply">使用</button></span><span class="ok" id="giftOk" hidden>已使用赠书码：免费赠送签名版，包邮寄出。</span><button type="button" class="lnk" id="giftOff" hidden>取消</button></div><div><span>《信任》签名版</span><span id="sBook">–</span></div><div><span>中国大陆运费</span><span id="sShip">–</span></div><div class="tot"><span>合计</span><span id="tot">–</span></div></div>
-        <div class="go"><input class="hp" id="bweb" tabindex="-1" autocomplete="off" aria-hidden="true"><button class="btn" id="buy" type="submit" disabled>购买签名版</button>
-        <p class="small" id="secure">下一步由 Stripe 安全支付。</p><p class="msg" id="bmsg" role="status"></p><p class="small trustln"><span aria-hidden="true">✓</span> <a href="https://cgbb.org/verify/?d=chrisjpereira.com" target="_blank" rel="noopener">CGBB 会员：在 cgbb.org 核验本网站</a></p></div>
+        <div class="blk"><label for="baddr">收货地址</label><textarea id="baddr" rows="2" maxlength="200" autocomplete="shipping street-address" placeholder="省、市、区、街道、楼栋及门牌号" required></textarea></div>
+        <div class="blk"><label for="bemail">邮箱（接收订单确认）</label><input id="bemail" type="email" autocomplete="email" maxlength="200" required></div>
+        <div class="sum"><div class="gift" id="giftBox" hidden><button type="button" class="lnk" id="giftQ" aria-expanded="false">有赠书码？</button><span id="giftIn" hidden><input id="gcode" maxlength="20" placeholder="赠书码" aria-label="赠书码" autocomplete="off"><button type="button" class="ap" id="gapply">使用</button></span><span class="ok" id="giftOk" hidden>已使用赠书码：免费赠送签名版，包邮寄出。</span><button type="button" class="lnk" id="giftOff" hidden>取消</button></div><div><span>《信任》签名版</span><span id="sBook">–</span></div><div><span>中国大陆运费</span><span id="sShip">–</span></div><div class="tot"><span>合计</span><span id="tot">–</span></div></div>
+        <div class="go"><input class="hp" id="bweb" tabindex="-1" autocomplete="off" aria-hidden="true"><button class="btn" id="buy" type="submit" disabled>前往安全支付</button>
+        <p class="small" id="secure">下一步由 Stripe 安全支付。</p><p class="msg" id="bmsg" role="status"></p><button type="button" class="lnk back" data-close="chinese">收起</button></div>
       </form>
     </article>
     <article class="ed" id="english">
       <div class="vis"><div class="encov"><div class="ct"><span>英文第二版</span><b>能在海外长久立足的企业，是当地人愿意信任的企业。</b></div><img src="/img/trust-en-cover.webp" width="800" height="1200" alt="Cover of the English edition of Trust by Chris Pereira"></div><span class="tag live">电子书已上市</span></div>
       <div class="ehd">
-        <div class="ehead"><div><span class="ekicker">英文版</span><h2>Trust</h2></div></div>
-        <p class="emeta">第二版，2026年11月 · 面向海外读者重新撰写</p>
+        <div class="ehead"><div><span class="ekicker">英文版</span><h2>Trust</h2></div><div class="price" id="eprice"><span>…</span><small>电子书</small></div></div>
+        <p class="emeta">电子书 · 第二版，2026年11月</p>
       </div>
-      <form id="wait" novalidate>
-        <div class="rA"><p class="eblurb">西方企业可以从中国顶尖品牌跨境建立信任的方式中学到什么。电子书已上市，可在本页或亚马逊 Kindle 购买。留下邮箱，纸质版开售当天我们会通知您。</p></div>
-        <div class="rB row2">
-          <div><label for="wname">您的姓名</label><input id="wname" autocomplete="name" maxlength="120"></div>
+      <div class="rA"><p class="eblurb">信任能让一家外来企业变成受欢迎的企业。本书讲的是如何有意识地建立信任，赢得客户、伙伴和政府的支持，让业务在任何异国市场发展壮大、长久立足。</p></div>
+      <div class="rB pts"><span class="ptsh">这本书能帮您做到</span><ul><li>赢得起初心存疑虑的客户与伙伴</li><li>跨越让合作停滞的五大商业文化鸿沟</li><li>实战手册：媒体、展会、销售与危机应对</li></ul></div>
+      <div class="front"><button class="btn" id="eOpen" type="button" aria-controls="wait">购买电子书</button>
+        <p class="small"><a href="https://www.amazon.com/dp/B0HR1MMVGQ" target="_blank" rel="noopener" style="white-space:nowrap">亚马逊 Kindle 版</a><span class="dot">·</span><button class="lnk" id="nOpen" type="button" aria-controls="wait" title="纸质版上市时只发一封邮件，无需付款，不订阅任何简报。">纸质版上市时通知我</button></p><p class="small trustln"><span aria-hidden="true">✓</span> <a href="https://cgbb.org/verify/?d=chrisjpereira.com" target="_blank" rel="noopener">CGBB 会员：在 cgbb.org 核验本网站</a></p></div>
+      <form id="wait" class="panel" data-mode="buy" novalidate hidden>
+        <div class="onlybuy"><ol class="steps"><li class="on">填写姓名和邮箱</li><li>安全支付</li><li>邮件发送下载链接</li></ol></div>
+        <p class="nh onlynotify">纸质版：开售当天只发一封邮件</p>
+        <div class="row2">
+          <div class="onlybuy"><label for="wname">您的姓名</label><input id="wname" autocomplete="name" maxlength="120"></div>
           <div><label for="wemail">邮箱</label><input id="wemail" type="email" autocomplete="email" maxlength="200" required></div>
         </div>
-        <div class="rC pts"><span class="ptsh">英文版内容</span><ul><li>四大支柱：找出信任缺在哪里</li><li>五大鸿沟：不同商业文化之间的差距</li><li>实战手册：清单与话术</li></ul></div>
-        <div class="rS sum"><div><span>Trust 英文版电子书</span><span id="eBook">–</span></div><div><span>下载链接通过邮件发送</span><span>免费</span></div><div class="tot"><span>合计</span><span id="eTot">–</span></div></div>
-        <div class="go"><input class="hp" id="wweb" tabindex="-1" autocomplete="off" aria-hidden="true"><button class="btn" id="ebuy" type="button" disabled>购买电子书</button>
-        <p class="small"><a href="https://www.amazon.com/dp/B0HR1MMVGQ" target="_blank" rel="noopener">或在亚马逊购买 Kindle 版</a></p><p class="msg" id="wmsg" role="status"></p><p class="small trustln"><button class="lnk" id="wbtn" type="submit" title="纸质版上市时只发一封邮件，无需付款，不订阅任何简报。">纸质版：上市时通知我</button></p></div>
+        <div class="sum onlybuy"><div><span>Trust 英文版电子书</span><span id="eBook">–</span></div><div><span>下载链接通过邮件发送</span><span>免费</span></div><div class="tot"><span>合计</span><span id="eTot">–</span></div></div>
+        <div class="go"><input class="hp" id="wweb" tabindex="-1" autocomplete="off" aria-hidden="true"><button class="btn onlybuy" id="ebuy" type="button" disabled>前往安全支付</button><button class="btn onlynotify" id="wbtn" type="submit">通知我</button>
+        <p class="small onlybuy">下一步由 Stripe 安全支付。</p><p class="small onlynotify">纸质版上市时只发一封邮件，无需付款，不订阅任何简报。</p><p class="msg" id="wmsg" role="status"></p><button type="button" class="lnk back" data-close="english">收起</button></div>
       </form>
     </article>
   </section>
@@ -246,7 +272,7 @@ footer{background:var(--red-deep);color:#fff}footer .wrap{padding-top:18px;paddi
 </main>
 <footer><div class="wrap"><span>© 2026 彭家荣 <span lang="en">Chris Pereira</span></span><nav class="fnav" aria-label="联系方式与频道"><a href="mailto:inquiries@chrisjpereira.com">inquiries@chrisjpereira.com</a><a href="https://www.linkedin.com/in/chrisjpereira" rel="me">领英 LinkedIn</a><a href="https://insightsfromchina.substack.com" rel="me">Substack</a><a href="https://www.linkedin.com/newsletters/insights-from-china-7523031887427301376/" rel="me">领英专栏</a><a href="https://www.youtube.com/@OutsideLookingWest" rel="me">YouTube</a><a href="/agents/">AI 智能体接入</a></nav><a class="cgbb-badge" href="https://cgbb.org/verify/?d=chrisjpereira.com" target="_blank" rel="noopener" title="在 cgbb.org 核验"><img src="https://api.cgbb.org/badge/chrisjpereira.com.svg" alt="CGBB 会员 · 网站信任凭证，点击在 cgbb.org 核验" height="74" loading="lazy"></a></div></footer>
 <script>(function(){
-var API="https://www.globalconnect.show/api/pay", L="zh", T={"closed": "即将开放订购。如需预留，请发邮件至", "err": "出了点问题，请重试，或发邮件至", "busy": "正在打开安全支付页面…", "fix": "请填写", "fields": {"name": "收件人", "phone": "11 位手机号", "address": "收货地址", "email": "邮箱", "qty": "数量", "zone": "寄送地区", "dedication": "题字"}, "paidH": "感谢订购，订单已确认。", "paidP": "确认邮件已发送至您的邮箱。签名书寄出后，我们会再发邮件告知快递单号。", "paidEbook": "下载链接已发送至您的邮箱。", "ebuy": "购买电子书", "yourName": "您的姓名", "pend": "正在向 Stripe 确认付款，稍后自动更新。", "cancel": "已取消支付，未产生任何费用。", "joined": "谢谢！纸质版开售当天我们会邮件通知您。", "already": "您已登记，纸质版上市时我们会通知您。", "buy": "购买签名版", "secure": "下一步由 Stripe 安全支付。", "giftBad": "赠书码无效。", "giftFree": "免费", "giftBuy": "提交赠书申请", "giftNote": "无需付款，邮箱可不填。", "giftBusy": "正在提交…", "giftDone": "谢谢！申请已收到，我们会尽快寄出签名书。", "giftAlready": "该手机号已申请过赠书。如有问题，请发邮件至"}, SEP=L==='zh'?'、':', ';
+var API="https://www.globalconnect.show/api/pay", L="zh", T={"closed": "即将开放订购。如需预留，请发邮件至", "err": "出了点问题，请重试，或发邮件至", "busy": "正在打开安全支付页面…", "fix": "请填写", "fields": {"name": "收件人", "phone": "11 位手机号", "address": "收货地址", "email": "邮箱", "qty": "数量", "zone": "寄送地区", "dedication": "题字"}, "paidH": "感谢订购，订单已确认。", "paidP": "确认邮件已发送至您的邮箱。签名书寄出后，我们会再发邮件告知快递单号。", "paidEbook": "下载链接已发送至您的邮箱。", "ebuy": "购买电子书", "yourName": "您的姓名", "pend": "正在向 Stripe 确认付款，稍后自动更新。", "cancel": "已取消支付，未产生任何费用。", "joined": "谢谢！纸质版开售当天我们会邮件通知您。", "already": "您已登记，纸质版上市时我们会通知您。", "buy": "前往安全支付", "secure": "下一步由 Stripe 安全支付。", "giftBad": "赠书码无效。", "giftFree": "免费", "giftBuy": "提交赠书申请", "giftNote": "无需付款，邮箱可不填。", "giftBusy": "正在提交…", "giftDone": "谢谢！申请已收到，我们会尽快寄出签名书。", "giftAlready": "该手机号已申请过赠书。如有问题，请发邮件至"}, SEP=L==='zh'?'、':', ';
 var $=function(id){return document.getElementById(id)};
 var book=null, ebook=null, GIFT='', fmt=function(minor,cur){return (cur==='cny'?'¥':cur==='usd'?'US$':cur.toUpperCase()+' ')+(minor/100).toFixed(2).replace(/\.00$/,'')};
 var EM=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
@@ -256,14 +282,14 @@ function say(id,text,cls){var m=$(id);m.className='msg'+(cls?' '+cls:'');m.textC
 function sayMail(id,lead){var m=$(id);m.className='msg bad';m.textContent=lead+' ';var a=document.createElement('a');a.href='mailto:inquiries@chrisjpereira.com';a.textContent='inquiries@chrisjpereira.com';m.appendChild(a)}
 fetch(API+'/books').then(function(r){return r.json()}).then(function(j){
   ebook=(j.books||[]).filter(function(b){return b.id==='trust-en-ebook'})[0];
-  if(ebook&&ebook.open){$('eBook').textContent=$('eTot').textContent=fmt(ebook.price,ebook.currency);$('ebuy').disabled=false}
+  if(ebook&&ebook.open){$('eBook').textContent=$('eTot').textContent=$('eprice').firstChild.textContent=fmt(ebook.price,ebook.currency);$('ebuy').disabled=false}else{$('eprice').textContent='';$('eOpen').disabled=true}
   book=(j.books||[]).filter(function(b){return b.id==='trust-zh'})[0];
-  if(!book||!book.open){$('buy').disabled=true;$('price').textContent='';sayMail('bmsg',T.closed);return}
+  if(!book||!book.open){$('buy').disabled=true;$('price').textContent='';$('order').hidden=false;$('chinese').setAttribute('data-open','1');sayMail('bmsg',T.closed);return}
   $('price').firstChild.textContent=fmt(book.price,book.currency);
   var q=$('qty');q.innerHTML='';for(var i=1;i<=book.maxQty;i++){var o=document.createElement('option');o.value=i;o.textContent=i;q.appendChild(o)}
   var z=$('zone');z.innerHTML='';book.shipping.forEach(function(s){var o=document.createElement('option');o.value=s.id;o.textContent=(L==='zh'?s.zh:s.en);z.appendChild(o)});
   $('zoneBox').hidden=book.shipping.length<2;$('buy').disabled=false;total();
-}).catch(function(){$('buy').disabled=true;sayMail('bmsg',T.err)});
+}).catch(function(){$('buy').disabled=true;$('price').textContent='';$('eprice').textContent='';sayMail('bmsg',T.err);sayMail('wmsg',T.err)});
 document.addEventListener('change',function(e){if(e.target.id==='qty'||e.target.id==='zone')total()});
 function giftMode(code){GIFT=code;$('giftQ').hidden=!!code;$('giftIn').hidden=true;$('giftOk').hidden=!code;$('giftOff').hidden=!code;
   $('qty').value='1';$('qty').disabled=!!code;$('buy').textContent=code?T.giftBuy:T.buy;$('secure').textContent=code?T.giftNote:T.secure;say('bmsg','');total()}
@@ -298,6 +324,13 @@ $('wait').addEventListener('submit',function(e){e.preventDefault();
   .then(function(r){return r.json()}).then(function(j){if(j.ok){say('wmsg',j.already?T.already:T.joined,'good');return}b.disabled=false;
     if(j.fields)say('wmsg',T.fix+j.fields.map(function(f){return T.fields[f]||f}).join(SEP),'bad');else sayMail('wmsg',T.err)})
   .catch(function(){b.disabled=false;sayMail('wmsg',T.err)})});
+function openEd(art,form,mode,first){if(mode)$(form).setAttribute('data-mode',mode);$(art).setAttribute('data-open',mode||'1');$(form).hidden=false;var f=$(first);if(f){try{f.focus({preventScroll:true})}catch(e){f.focus()}}
+  var r=$(form).getBoundingClientRect();if(r.bottom>innerHeight||r.top<70)$(form).scrollIntoView({block:'center',behavior:'smooth'})}
+$('eOpen').addEventListener('click',function(){say('wmsg','');openEd('english','wait','buy','wname')});
+$('nOpen').addEventListener('click',function(){say('wmsg','');openEd('english','wait','notify','wemail')});
+$('zOpen').addEventListener('click',function(){openEd('chinese','order','','ded')});
+[].forEach.call(document.querySelectorAll('[data-close]'),function(b){b.addEventListener('click',function(){var a=$(b.getAttribute('data-close'));a.removeAttribute('data-open');a.querySelector('form').hidden=true;a.querySelector('.front .btn').focus()})});
+if(location.hash==='#buy-ebook')openEd('english','wait','buy','wname');if(location.hash==='#buy-signed')openEd('chinese','order','','ded');
 var p=new URLSearchParams(location.search), id=p.get('p'), n=$('notice');
 if(id&&p.get('cancelled')){n.hidden=false;n.className='notice warn';n.textContent=T.cancel}
 else if(id){n.hidden=false;n.innerHTML='<b></b> <span></span>';n.querySelector('b').textContent=T.paidH;n.querySelector('span').textContent=T.pend;
