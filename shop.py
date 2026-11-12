@@ -156,14 +156,14 @@ html[lang="zh-CN"] .pts .ptsh{letter-spacing:.02em;font-size:12px;text-transform
 .eblurb{margin:0;font-size:15.5px;line-height:1.55;color:#2e2b2b}
 .row{display:grid;grid-template-columns:90px 1fr;gap:6px 20px}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:6px 20px}
-label{display:block;font-family:var(--display);font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0}
+label{display:block;font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#3d3a3a;margin:0}
 html[lang="zh-CN"] label{text-transform:none;letter-spacing:.02em;font-size:12px}
-input,select,textarea{width:100%;font:15px var(--display);padding:6px 0 7px;border:0;border-bottom:1px solid #D6CFC1;border-radius:0;background:transparent;color:var(--ink);transition:border-color .15s;-webkit-appearance:none;appearance:none}
-select{background:url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2710%27 height=%276%27%3E%3Cpath d=%27M1 1l4 4 4-4%27 fill=%27none%27 stroke=%27%23626060%27 stroke-width=%271.4%27/%3E%3C/svg%3E") no-repeat right 2px center;padding-right:16px;cursor:pointer}
+input,select,textarea{width:100%;font:15px var(--display);padding:9px 11px;margin-top:5px;border:1px solid #B5AC9B;border-radius:4px;background-color:#FBF9F4;color:var(--ink);transition:border-color .15s,box-shadow .15s;-webkit-appearance:none;appearance:none}
+select{background:url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2710%27 height=%276%27%3E%3Cpath d=%27M1 1l4 4 4-4%27 fill=%27none%27 stroke=%27%23626060%27 stroke-width=%271.4%27/%3E%3C/svg%3E") no-repeat right 11px center;background-color:#FBF9F4;padding-right:28px;cursor:pointer}
 input::placeholder{color:#a9a39a}
 textarea{resize:vertical;line-height:1.45;font-family:var(--display)}
 .full{margin-top:10px}
-input:focus,select:focus,textarea:focus{outline:none;border-bottom-color:var(--red)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(164,7,6,.12);background-color:#fff}
 .sum{margin:0;padding:12px 24px 0;font-family:var(--display);font-size:13px;color:var(--muted)}
 .sum div{display:flex;justify-content:space-between;padding:2px 0}
 .gift[hidden]{display:none}.gift{display:flex;justify-content:flex-end;gap:10px;align-items:center;padding:0 0 6px}.gift button.lnk{background:none;border:0;padding:0;font:inherit;color:var(--red);cursor:pointer;text-decoration:underline;text-underline-offset:3px}.gift input{width:120px;font-size:13px;padding:2px 0 3px;text-transform:uppercase}.gift .ap{background:none;border:1px solid var(--red);color:var(--red);border-radius:999px;font:600 12px var(--display);padding:3px 12px;cursor:pointer}.gift .ok{color:var(--ok);font-weight:500;margin-right:auto}
