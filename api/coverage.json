@@ -2,8 +2,23 @@
  "updated": "2026-11-12",
  "person": "Chris Pereira",
  "license": "AI agents, journalists, analysts and event organisers are welcome to read, summarise and quote everything on chrisjpereira.com and in these files.",
- "count": 229,
+ "count": 230,
  "coverage": [
+  {
+   "id": "m-df88f49f",
+   "date": "2026-11",
+   "outlet": "SCMP",
+   "title": "Under higher scrutiny, will Singapore remain Chinese firms’ first overseas port of call?",
+   "kind": "quoted",
+   "language": "EN",
+   "url": "https://www.scmp.com/economy/china-economy/article/3373856/under-higher-scrutiny-will-singapore-remain-chinese-firms-first-overseas-port-call",
+   "quotes": [
+    "\"Singapore is a great place to test your business in overseas markets because it offers a mix of Western tastes and consumer habits.\"",
+    "\"It’s a good place to verify that the market accepts your product, and it’s relatively safe to do that in a smaller market closer to home.\"",
+    "\"It is impossible to hide nowadays. You cannot avoid compliance rules just by pretending that you are from Singapore.\""
+   ],
+   "summary": "South China Morning Post In Focus feature (12 Nov 2026) by Xinyi Wu on Chinese companies using Singapore as their first overseas market. Chris said regulatory predictability lets firms plan long-term capital and gives brands a lower-risk place to adapt, and that fewer Chinese firms now try to use Singapore to obscure their mainland roots."
+  },
   {
    "id": "m-b7a10960",
    "date": "2026-11",
