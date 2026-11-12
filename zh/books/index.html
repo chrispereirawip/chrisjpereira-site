@@ -75,7 +75,7 @@ html[lang="zh-CN"] .intro .sub{font-family:var(--zh);font-style:normal;font-weig
 .pts li:before{content:"";position:absolute;left:2px;top:15px;width:6px;height:6px;border-radius:50%;background:var(--red)}
 html[lang="zh-CN"] .pts .ptsh{letter-spacing:.02em;font-size:12px;text-transform:none}
 .ehd,.rA,.rB,.rC,.rS,.go{padding-left:24px;padding-right:24px}
-.ehd{padding-top:18px}.rA{padding-top:12px}.rB,.rC{padding-top:10px}.rS{padding-top:4px}.rS>.btn{margin-top:10px;width:100%}
+.ehd{padding-top:18px}.rA{padding-top:12px}.rB,.rC{padding-top:10px}.rS{padding-top:4px}.go button.lnk{background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:2px}.go button.lnk:hover{color:var(--red)}.go .small a{color:inherit;text-underline-offset:2px}
 .vis{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0d1b33}
 .vis img{width:100%;height:100%;object-fit:cover}
 .tag{position:absolute;top:14px;left:14px;font-family:var(--display);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.94);color:var(--ink)}
@@ -196,9 +196,9 @@ footer{background:var(--red-deep);color:#fff}footer .wrap{padding-top:18px;paddi
           <div><label for="wemail">邮箱</label><input id="wemail" type="email" autocomplete="email" maxlength="200" required></div>
         </div>
         <div class="rC pts"><span class="ptsh">英文版内容</span><ul><li>全球视野，扎根中国真实案例</li><li>系统破解海外信任壁垒</li><li>助力企业成为真正本土化的全球公司</li></ul></div>
-        <div class="rS"><button class="btn" id="ebuy" type="button" disabled>购买电子书</button><p class="small"><a href="https://www.amazon.com/dp/B0HR1MMVGQ" target="_blank" rel="noopener">或在亚马逊购买 Kindle 版</a></p></div>
-        <div class="go"><input class="hp" id="wweb" tabindex="-1" autocomplete="off" aria-hidden="true"><button class="btn ghost" id="wbtn" type="submit">纸质版上市时通知我</button>
-        <p class="join-note">纸质版上市时只发一封邮件，无需付款，不订阅任何简报。</p><p class="msg" id="wmsg" role="status"></p></div>
+        <div class="rS sum"><div><span>Trust 英文版电子书</span><span id="eBook">–</span></div><div><span>下载链接通过邮件发送</span><span>免费</span></div><div class="tot"><span>合计</span><span id="eTot">–</span></div></div>
+        <div class="go"><input class="hp" id="wweb" tabindex="-1" autocomplete="off" aria-hidden="true"><button class="btn" id="ebuy" type="button" disabled>购买电子书</button>
+        <p class="small"><a href="https://www.amazon.com/dp/B0HR1MMVGQ" target="_blank" rel="noopener">或在亚马逊购买 Kindle 版</a></p><p class="msg" id="wmsg" role="status"></p><p class="small trustln"><button class="lnk" id="wbtn" type="submit" title="纸质版上市时只发一封邮件，无需付款，不订阅任何简报。">纸质版：上市时通知我</button></p></div>
       </form>
     </article>
   </section>
@@ -225,7 +225,7 @@ function say(id,text,cls){var m=$(id);m.className='msg'+(cls?' '+cls:'');m.textC
 function sayMail(id,lead){var m=$(id);m.className='msg bad';m.textContent=lead+' ';var a=document.createElement('a');a.href='mailto:inquiries@chrisjpereira.com';a.textContent='inquiries@chrisjpereira.com';m.appendChild(a)}
 fetch(API+'/books').then(function(r){return r.json()}).then(function(j){
   ebook=(j.books||[]).filter(function(b){return b.id==='trust-en-ebook'})[0];
-  if(ebook&&ebook.open){$('ebuy').textContent=T.ebuy+' · '+fmt(ebook.price,ebook.currency);$('ebuy').disabled=false}
+  if(ebook&&ebook.open){$('eBook').textContent=$('eTot').textContent=fmt(ebook.price,ebook.currency);$('ebuy').disabled=false}
   book=(j.books||[]).filter(function(b){return b.id==='trust-zh'})[0];
   if(!book||!book.open){$('buy').disabled=true;$('price').textContent='';sayMail('bmsg',T.closed);return}
   $('price').firstChild.textContent=fmt(book.price,book.currency);

@@ -43,7 +43,7 @@ T = {
         "en_tag": "E-book out now", "en_buy": "or get the Kindle edition on Amazon", "en_ebuy": "Buy the e-book", "paid_ebook": "Your download link is on its way to your inbox.", "your_name": "your name", "en_h": "English edition", "en_title": "Trust",
         "en_meta": "Rewritten for readers outside China", "en_pts": ["A global view, rooted in real cases from China", "A system for breaking through the trust barrier abroad", "A guide to becoming a truly local global company"], "en_pts_h": "Inside the English edition",
         "en_blurb": "What Western companies can learn from how China's best brands build trust across borders. The e-book is out now, here or on Amazon Kindle. Leave your email and we'll tell you the day the paperback goes on sale.",
-        "join": "Notify me when the paperback is out", "join_note": "One email when the paperback launches. No payment, no newsletter.",
+        "join": "Paperback: notify me when it is out", "es_book": "Trust, English e-book", "es_del": "Download link sent by email", "es_free": "Free", "es_tot": "Total", "join_note": "One email when the paperback launches. No payment, no newsletter.",
         "joined": "Thanks. We'll email you the day the paperback goes on sale.", "already": "You're already signed up. We'll email you when the paperback is out.",
         "about_h": "About the book",
         "about": ["<i>Trust</i> argues that for Chinese companies going global, trust is the asset that decides whether a brand is welcomed or resisted abroad, and that it can be built deliberately.",
@@ -76,7 +76,7 @@ T = {
         "en_tag": "电子书已上市", "en_buy": "或在亚马逊购买 Kindle 版", "en_ebuy": "购买电子书", "paid_ebook": "下载链接已发送至您的邮箱。", "your_name": "您的姓名", "en_h": "英文版", "en_title": "Trust",
         "en_meta": "面向海外读者重新撰写", "en_pts": ["全球视野，扎根中国真实案例", "系统破解海外信任壁垒", "助力企业成为真正本土化的全球公司"], "en_pts_h": "英文版内容",
         "en_blurb": "西方企业可以从中国顶尖品牌跨境建立信任的方式中学到什么。电子书已上市，可在本页或亚马逊 Kindle 购买。留下邮箱，纸质版开售当天我们会通知您。",
-        "join": "纸质版上市时通知我", "join_note": "纸质版上市时只发一封邮件，无需付款，不订阅任何简报。",
+        "join": "纸质版：上市时通知我", "es_book": "Trust 英文版电子书", "es_del": "下载链接通过邮件发送", "es_free": "免费", "es_tot": "合计", "join_note": "纸质版上市时只发一封邮件，无需付款，不订阅任何简报。",
         "joined": "谢谢！纸质版开售当天我们会邮件通知您。", "already": "您已登记，纸质版上市时我们会通知您。",
         "about_h": "关于本书",
         "about": ["《信任》认为，对出海的中国企业而言，信任是决定品牌在海外被接纳还是被抵触的关键资产，而且可以有意识地建立。",
@@ -141,7 +141,7 @@ html[lang="zh-CN"] .intro .sub{font-family:var(--zh);font-style:normal;font-weig
 .pts li:before{content:"";position:absolute;left:2px;top:15px;width:6px;height:6px;border-radius:50%;background:var(--red)}
 html[lang="zh-CN"] .pts .ptsh{letter-spacing:.02em;font-size:12px;text-transform:none}
 .ehd,.rA,.rB,.rC,.rS,.go{padding-left:24px;padding-right:24px}
-.ehd{padding-top:18px}.rA{padding-top:12px}.rB,.rC{padding-top:10px}.rS{padding-top:4px}.rS>.btn{margin-top:10px;width:100%}
+.ehd{padding-top:18px}.rA{padding-top:12px}.rB,.rC{padding-top:10px}.rS{padding-top:4px}.go button.lnk{background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:2px}.go button.lnk:hover{color:var(--red)}.go .small a{color:inherit;text-underline-offset:2px}
 .vis{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0d1b33}
 .vis img{width:100%;height:100%;object-fit:cover}
 .tag{position:absolute;top:14px;left:14px;font-family:var(--display);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.94);color:var(--ink)}
@@ -211,7 +211,7 @@ function say(id,text,cls){var m=$(id);m.className='msg'+(cls?' '+cls:'');m.textC
 function sayMail(id,lead){var m=$(id);m.className='msg bad';m.textContent=lead+' ';var a=document.createElement('a');a.href='mailto:inquiries@chrisjpereira.com';a.textContent='inquiries@chrisjpereira.com';m.appendChild(a)}
 fetch(API+'/books').then(function(r){return r.json()}).then(function(j){
   ebook=(j.books||[]).filter(function(b){return b.id==='trust-en-ebook'})[0];
-  if(ebook&&ebook.open){$('ebuy').textContent=T.ebuy+' · '+fmt(ebook.price,ebook.currency);$('ebuy').disabled=false}
+  if(ebook&&ebook.open){$('eBook').textContent=$('eTot').textContent=fmt(ebook.price,ebook.currency);$('ebuy').disabled=false}
   book=(j.books||[]).filter(function(b){return b.id==='trust-zh'})[0];
   if(!book||!book.open){$('buy').disabled=true;$('price').textContent='';sayMail('bmsg',T.closed);return}
   $('price').firstChild.textContent=fmt(book.price,book.currency);
@@ -365,9 +365,9 @@ def page(k):
           <div><label for="wemail">{t['email']}</label><input id="wemail" type="email" autocomplete="email" maxlength="200" required></div>
         </div>
         <div class="rC pts"><span class="ptsh">{t['en_pts_h']}</span><ul>{''.join(f'<li>{x}</li>' for x in t['en_pts'])}</ul></div>
-        <div class="rS"><button class="btn" id="ebuy" type="button" disabled>{t['en_ebuy']}</button><p class="small"><a href="https://www.amazon.com/dp/B0HR1MMVGQ" target="_blank" rel="noopener">{t['en_buy']}</a></p></div>
-        <div class="go"><input class="hp" id="wweb" tabindex="-1" autocomplete="off" aria-hidden="true"><button class="btn ghost" id="wbtn" type="submit">{t['join']}</button>
-        <p class="join-note">{t['join_note']}</p><p class="msg" id="wmsg" role="status"></p></div>
+        <div class="rS sum"><div><span>{t['es_book']}</span><span id="eBook">–</span></div><div><span>{t['es_del']}</span><span>{t['es_free']}</span></div><div class="tot"><span>{t['es_tot']}</span><span id="eTot">–</span></div></div>
+        <div class="go"><input class="hp" id="wweb" tabindex="-1" autocomplete="off" aria-hidden="true"><button class="btn" id="ebuy" type="button" disabled>{t['en_ebuy']}</button>
+        <p class="small"><a href="https://www.amazon.com/dp/B0HR1MMVGQ" target="_blank" rel="noopener">{t['en_buy']}</a></p><p class="msg" id="wmsg" role="status"></p><p class="small trustln"><button class="lnk" id="wbtn" type="submit" title="{t['join_note']}">{t['join']}</button></p></div>
       </form>
     </article>
   </section>
