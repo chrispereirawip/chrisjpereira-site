@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://stats.chrisjpereira.com https://www.globalconnect.show; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Books by Chris Pereira | Trust 《信任》</title>
-<meta name="description" content="Order a signed copy of Trust 《信任》 by Chris Pereira (Chinese edition, Shenzhen Publishing House, 2026), posted within mainland China. The English edition is out now as an e-book.">
+<meta name="description" content="Trust by Chris Pereira. The second English edition, rewritten for readers outside China, is out now as an e-book. Signed copies of the Chinese edition 《信任》 (Shenzhen Publishing House, 2026) ship within mainland China.">
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#A40706">
 <link rel="canonical" href="https://chrisjpereira.com/books/">
@@ -14,7 +14,7 @@
 <link rel="alternate" hreflang="zh-CN" href="https://chrisjpereira.com/zh/books/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Books by Chris Pereira | Trust 《信任》">
-<meta property="og:description" content="Order a signed copy of Trust 《信任》 by Chris Pereira (Chinese edition, Shenzhen Publishing House, 2026), posted within mainland China. The English edition is out now as an e-book.">
+<meta property="og:description" content="Trust by Chris Pereira. The second English edition, rewritten for readers outside China, is out now as an e-book. Signed copies of the Chinese edition 《信任》 (Shenzhen Publishing House, 2026) ship within mainland China.">
 <meta property="og:image" content="https://chrisjpereira.com/img/trust-books.webp">
 <meta property="og:url" content="https://chrisjpereira.com/books/">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -112,7 +112,13 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--red);box
 
 /* English edition: the draft cover (Trust English Edition Cover canvas), on a navy panel */
 .encov{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:radial-gradient(120% 90% at 30% 10%,#2a5ba0 0%,#173a6e 45%,#0d1f3d 100%)}
-.encov img{height:84%;width:auto;border-radius:2px 5px 5px 2px;box-shadow:-5px 0 0 rgba(0,0,0,.14) inset,0 30px 50px -20px rgba(0,0,0,.65),0 4px 10px rgba(0,0,0,.25)}
+.encov{gap:6%;padding:0 6%}
+.encov .ct{flex:1 1 0;min-width:0;color:#fff;padding-top:26px}
+.encov .ct span{display:block;font-family:var(--display);font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#FFB48A}
+html[lang="zh-CN"] .encov .ct span{letter-spacing:.04em;font-size:12px}
+.encov .ct b{display:block;font-family:var(--head);font-weight:600;font-size:clamp(15px,1.75vw,21px);line-height:1.3;margin-top:8px;text-wrap:balance}
+html[lang="zh-CN"] .encov .ct b{font-family:var(--zh)}
+.encov img{flex:0 0 auto;height:90%;width:auto;border-radius:2px 5px 5px 2px;box-shadow:-5px 0 0 rgba(0,0,0,.14) inset,0 30px 50px -20px rgba(0,0,0,.65),0 4px 10px rgba(0,0,0,.25)}
 .join-note{font-family:var(--display);font-size:11.5px;color:var(--muted);margin:8px 0 0;text-align:center}
 
 /* about */
@@ -128,6 +134,21 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--red);box
 .also b [lang]{font-family:var(--zh);font-weight:600}
 .also span{font-family:var(--display);font-size:12px;color:var(--muted);line-height:1.4}
 .also .k{font-family:var(--display);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.about.en{grid-template-columns:minmax(0,5fr) minmax(0,6fr);align-items:start}
+.inrows{margin:12px 0 0;padding:0;list-style:none}
+.inrows li{display:grid;grid-template-columns:120px 1fr;gap:4px 16px;padding:9px 0;border-top:1px solid var(--hair);align-items:baseline}
+.inrows li:last-child{border-bottom:1px solid var(--hair)}
+.inrows b{font-family:var(--head);font-size:16px}.inrows span{font-family:var(--display);font-size:14px;color:#2e2b2b;line-height:1.45}
+html[lang="zh-CN"] .inrows b{font-family:var(--zh);font-weight:600}
+.toc{background:var(--surface);border:1px solid var(--hair);border-radius:12px;padding:16px 20px}
+.toc h3{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin:0 0 6px}
+.toc .pt{font-family:var(--head);font-weight:700;font-size:14.5px;margin:10px 0 2px}
+.toc ol{margin:0;padding:0;list-style:none;font-family:var(--display);font-size:13.5px;line-height:1.5;color:#2e2b2b;columns:2;column-gap:20px}
+.toc ol li{break-inside:avoid;padding:1px 0 1px 24px;position:relative}.toc ol li i{position:absolute;left:0;font-style:normal;color:var(--muted);font-variant-numeric:tabular-nums}
+.toc .end{font-family:var(--display);font-size:12.5px;color:var(--muted);margin:10px 0 0}
+.about .zf{font-family:var(--display);font-size:12.5px;color:var(--muted);margin:-4px 0 8px}
+@media (max-width:900px){.about.en{grid-template-columns:1fr}}
+@media (max-width:520px){.toc ol{columns:1}.inrows li{grid-template-columns:1fr}.encov .ct b{font-size:14px}}
 .about .qline{font-family:var(--display);font-size:12.5px;color:var(--muted);margin:10px 0 0}
 
 @media (max-width:900px){.intro{grid-template-columns:1fr;align-items:start;padding-top:24px}.eds{grid-template-columns:1fr;gap:22px;padding-top:28px}.about{grid-template-columns:1fr;gap:16px;padding:20px 0}}
@@ -147,16 +168,34 @@ footer{background:var(--red-deep);color:#fff}footer .wrap{padding-top:18px;paddi
     <span class="label">Books</span>
     <div>
       <h1>Trust <span class="zh" lang="zh-Hans">《信任》</span></h1>
-      <p class="sub">The Golden Key to Chinese Enterprises' Globalization</p>
+      <p class="sub">The Golden Key to Going Global</p>
     </div>
     <div>
-      <p class="lede">How Chinese companies earn trust in foreign markets, drawn from 20+ years in China, from Huawei's global public affairs to the brands Chris advises.</p>
-      <ul class="facts"><li><b>Author</b><span>Chris Pereira</span></li><li><b>Publisher</b><span>Shenzhen Publishing House</span></li><li><b>Published</b><span>February 2026</span></li></ul>
+      <p class="lede">Companies that last abroad are the ones local people come to trust. Two editions: the English second edition, rewritten for readers outside China, and the original Chinese edition.</p>
+      <ul class="facts"><li><b>Author</b><span>Chris Pereira</span></li><li><b>English</b><span>English second edition, November 2026</span></li><li><b>Chinese</b><span>Chinese edition, February 2026</span></li></ul>
     </div>
     <div class="notice" id="notice" role="status" hidden></div>
   </section>
 
   <section class="eds">
+    <article class="ed" id="english">
+      <div class="vis"><div class="encov"><div class="ct"><span>Second English edition</span><b>Companies that last abroad are the ones local people come to trust.</b></div><img src="/img/trust-en-cover.webp" width="800" height="1200" alt="Cover of the English edition of Trust by Chris Pereira"></div><span class="tag live">E-book out now</span></div>
+      <div class="ehd">
+        <div class="ehead"><div><span class="ekicker">English edition</span><h2>Trust</h2></div></div>
+        <p class="emeta">Second edition, November 2026 · rewritten for readers outside China</p>
+      </div>
+      <form id="wait" novalidate>
+        <div class="rA"><p class="eblurb">What Western companies can learn from how China's best brands build trust across borders. The e-book is out now, here or on Amazon Kindle. Leave your email and we'll tell you the day the paperback goes on sale.</p></div>
+        <div class="rB row2">
+          <div><label for="wname">Your name</label><input id="wname" autocomplete="name" maxlength="120"></div>
+          <div><label for="wemail">Email</label><input id="wemail" type="email" autocomplete="email" maxlength="200" required></div>
+        </div>
+        <div class="rC pts"><span class="ptsh">Inside the English edition</span><ul><li>Four pillars: where trust is missing</li><li>Five gaps between business cultures</li><li>The playbook: checklists and scripts</li></ul></div>
+        <div class="rS sum"><div><span>Trust, English e-book</span><span id="eBook">–</span></div><div><span>Download link sent by email</span><span>Free</span></div><div class="tot"><span>Total</span><span id="eTot">–</span></div></div>
+        <div class="go"><input class="hp" id="wweb" tabindex="-1" autocomplete="off" aria-hidden="true"><button class="btn" id="ebuy" type="button" disabled>Buy the e-book</button>
+        <p class="small"><a href="https://www.amazon.com/dp/B0HR1MMVGQ" target="_blank" rel="noopener">or get the Kindle edition on Amazon</a></p><p class="msg" id="wmsg" role="status"></p><p class="small trustln"><button class="lnk" id="wbtn" type="submit" title="One email when the paperback launches. No payment, no newsletter.">Paperback: notify me when it is out</button></p></div>
+      </form>
+    </article>
     <article class="ed" id="chinese">
       <div class="vis"><img src="/img/trust-books.webp" width="1000" height="750" alt="Copies of Trust 《信任》 by Chris Pereira stacked on a table"><span class="tag live">Available now</span></div>
       <div class="ehd">
@@ -182,32 +221,24 @@ footer{background:var(--red-deep);color:#fff}footer .wrap{padding-top:18px;paddi
         <p class="small" id="secure">Secure payment by Stripe on the next step.</p><p class="msg" id="bmsg" role="status"></p><p class="small trustln"><span aria-hidden="true">✓</span> <a href="https://cgbb.org/verify/?d=chrisjpereira.com" target="_blank" rel="noopener">CGBB Member: verify this site at cgbb.org</a></p></div>
       </form>
     </article>
+  </section>
 
-    <article class="ed" id="english">
-      <div class="vis"><div class="encov"><img src="/img/trust-en-cover.webp" width="800" height="1200" alt="Cover of the English edition of Trust by Chris Pereira"></div><span class="tag live">E-book out now</span></div>
-      <div class="ehd">
-        <div class="ehead"><div><span class="ekicker">English edition</span><h2>Trust</h2></div></div>
-        <p class="emeta">Rewritten for readers outside China</p>
-      </div>
-      <form id="wait" novalidate>
-        <div class="rA"><p class="eblurb">What Western companies can learn from how China's best brands build trust across borders. The e-book is out now, here or on Amazon Kindle. Leave your email and we'll tell you the day the paperback goes on sale.</p></div>
-        <div class="rB row2">
-          <div><label for="wname">Your name</label><input id="wname" autocomplete="name" maxlength="120"></div>
-          <div><label for="wemail">Email</label><input id="wemail" type="email" autocomplete="email" maxlength="200" required></div>
-        </div>
-        <div class="rC pts"><span class="ptsh">Inside the English edition</span><ul><li>A global view, rooted in real cases from China</li><li>A system for breaking through the trust barrier abroad</li><li>A guide to becoming a truly local global company</li></ul></div>
-        <div class="rS sum"><div><span>Trust, English e-book</span><span id="eBook">–</span></div><div><span>Download link sent by email</span><span>Free</span></div><div class="tot"><span>Total</span><span id="eTot">–</span></div></div>
-        <div class="go"><input class="hp" id="wweb" tabindex="-1" autocomplete="off" aria-hidden="true"><button class="btn" id="ebuy" type="button" disabled>Buy the e-book</button>
-        <p class="small"><a href="https://www.amazon.com/dp/B0HR1MMVGQ" target="_blank" rel="noopener">or get the Kindle edition on Amazon</a></p><p class="msg" id="wmsg" role="status"></p><p class="small trustln"><button class="lnk" id="wbtn" type="submit" title="One email when the paperback launches. No payment, no newsletter.">Paperback: notify me when it is out</button></p></div>
-      </form>
-    </article>
+  <section class="about en">
+    <div>
+      <span class="ekicker">English edition</span>
+      <h2>Inside the second English edition</h2>
+      <p>A good product and a fair price open the door to a new market. Staying there takes trust, from partners, employees and governments as much as from customers. The English edition is rewritten for any company working in a market that is not its own.</p>
+      <ul class="inrows"><li><b>Four pillars</b><span>A way to diagnose where trust is missing in any cross-cultural relationship</span></li><li><b>Five gaps</b><span>Communication, sales, management, relationships and disputes between business cultures</span></li><li><b>The playbook</b><span>Checklists and scripts for media, trade shows, awards, selling and crisis</span></li></ul>
+    </div>
+    <div class="toc"><h3>Contents</h3><p class="pt">Part One: What Trust Is</p><ol><li><i>1</i>Why Trust Decides Who Wins Abroad</li><li><i>2</i>The Four Pillars of Trust</li></ol><p class="pt">Part Two: Who You Earn It From</p><ol><li><i>3</i>The 5R Map</li></ol><p class="pt">Part Three: The Five Gaps</p><ol><li><i>4</i>Why Neither Side Trusts the Other Yet</li><li><i>5</i>The Second Gap Is Sales</li><li><i>6</i>The Third Gap Is Management</li><li><i>7</i>The Fourth Gap Is Relationships</li><li><i>8</i>The Fifth Gap Is Disputes</li></ol><p class="pt">Part Four: The Playbook</p><ol><li><i>9</i>Look Reliable at First Glance</li><li><i>10</i>Let Others Speak for You</li><li><i>11</i>Drills, and the Digital Handshake</li><li><i>12</i>Say the Right Thing for Your Stage</li><li><i>13</i>Where the Money and the Time Go</li><li><i>14</i>Trade Shows</li><li><i>15</i>Awards</li><li><i>16</i>Sell by Making Friends</li><li><i>17</i>Giving Back</li><li><i>18</i>When Crisis Comes</li></ol><p class="end">Plus a conclusion, exercises and an invitation to readers.</p></div>
   </section>
 
   <section class="about">
     <figure><img src="/img/trust-launch.webp" width="900" height="696" loading="lazy" alt="Chris Pereira holding Trust 《信任》 at the book launch"><figcaption>At the launch of <i>Trust</i> <span lang="zh-Hans">《信任》</span></figcaption></figure>
     <div>
-      <h2>About the book</h2>
-      <p><i>Trust</i> argues that for Chinese companies going global, trust is the asset that decides whether a brand is welcomed or resisted abroad, and that it can be built deliberately.</p><p>It brings together the lessons from Chris's years leading global public affairs at Huawei and from iMpact's work with hundreds of Chinese brands entering new markets.</p>
+      <h2>About the Chinese edition</h2>
+      <p class="zf">Shenzhen Publishing House · February 2026</p>
+      <p><span lang="zh-Hans">《信任》</span> argues that for Chinese companies going global, trust is the asset that decides whether a brand is welcomed or resisted abroad, and that it can be built deliberately.</p><p>It brings together the lessons from Chris's years leading global public affairs at Huawei and from iMpact's work with hundreds of Chinese brands entering new markets.</p>
       <div class="also"><img src="/img/book-rebuild.webp" width="400" height="581" loading="lazy" alt="Cover of Rebuild 《新出海》 by Chris Pereira"><div><span class="k">Also by Chris</span><b><i>Rebuild</i> <span lang="zh-Hans">《新出海》</span></b><span>A Practical Guide to Localizing Your Brand Overseas · China Renmin University Press, 2025</span></div></div>
       <p class="qline">Questions about an order? Email <a href="mailto:inquiries@chrisjpereira.com">inquiries@chrisjpereira.com</a></p>
     </div>
