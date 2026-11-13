@@ -507,6 +507,9 @@ if __name__ == "__main__":
         build_quotes(cfg, "noindex,follow" if not os.path.exists("data/quotes.published") else "index,follow,max-snippet:-1")
     footer.sync("index.html", "en")  # one footer site-wide (footer.py)
     footer.sync("zh/index.html", "zh")
+    import annc  # announcement bar above the header (annc.py)
+    for _p, _l in annc.PAGES:
+        annc.sync(_p, _l)
     import agents  # agent-friendly layer: api/*.json, agents/, llms-full.txt (agents.py)
     agents.build()
     import shop  # book shop pages /books/ and /zh/books/ (shop.py; prices come live from the GCS site)
