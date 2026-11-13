@@ -6,9 +6,9 @@ import re
 
 LINKS = {
     "en": [("mailto:inquiries@chrisjpereira.com", "inquiries@chrisjpereira.com"), ("https://www.linkedin.com/in/chrisjpereira", "LinkedIn"),
-           ("https://insightsfromchina.substack.com", "Substack"), ("https://www.linkedin.com/newsletters/insights-from-china-7523031887427301376/", "LinkedIn newsletter"), ("https://www.youtube.com/@OutsideLookingWest", "YouTube"), ("/agents/", "For AI agents")],
+           ("https://insightsfromchina.substack.com", "Substack"), ("https://www.linkedin.com/newsletters/insights-from-china-7523031887427301376/", "LinkedIn newsletter"), ("https://www.youtube.com/@OutsideLookingWest", "YouTube")],
     "zh": [("mailto:inquiries@chrisjpereira.com", "inquiries@chrisjpereira.com"), ("https://www.linkedin.com/in/chrisjpereira", "领英 LinkedIn"),
-           ("https://insightsfromchina.substack.com", "Substack"), ("https://www.linkedin.com/newsletters/insights-from-china-7523031887427301376/", "领英专栏"), ("https://www.youtube.com/@OutsideLookingWest", "YouTube"), ("/agents/", "AI 智能体接入")],
+           ("https://insightsfromchina.substack.com", "Substack"), ("https://www.linkedin.com/newsletters/insights-from-china-7523031887427301376/", "领英专栏"), ("https://www.youtube.com/@OutsideLookingWest", "YouTube")],
 }
 CSS = ("footer{background:var(--red-deep);color:#fff}"
        "footer .wrap{padding-top:18px;padding-bottom:18px;display:flex;justify-content:space-between;align-items:center;gap:8px 24px;flex-wrap:wrap;font-family:var(--display);font-size:13px}"
