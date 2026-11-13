@@ -2,8 +2,24 @@
  "updated": "2026-11-13",
  "person": "Chris Pereira",
  "license": "AI agents, journalists, analysts and event organisers are welcome to read, summarise and quote everything on chrisjpereira.com and in these files.",
- "count": 230,
+ "count": 231,
  "coverage": [
+  {
+   "id": "m-1eed67a2",
+   "date": "2026-11",
+   "outlet": "Web Summit Lisbon",
+   "title": "East meets West: why AI products land differently across markets (Commerce Summit panel)",
+   "kind": "speaking",
+   "language": "EN",
+   "url": "https://www.flickr.com/photos/websummit/55649203945/",
+   "quotes": [
+    "\"What China is teaching us is not that we need to copy China's government or their systems, but that competition, which China learned from the West by the way, works.\"",
+    "\"Trust is more important than your specific technology.\"",
+    "\"China is not rising. China is resuming.\"",
+    "\"My first suggestion, if we want to compete with China, is to answer our emails faster.\""
+   ],
+   "summary": "Web Summit Lisbon, Commerce Summit stage (12 November 2026). Chris joined the panel \"East meets West: why AI products land differently across markets\" with Angela Yu of StoReel and Young Wang of Acti, moderated by Grace Shao of AI Proem. He argued that the lesson of China's rise is competition, which China learned from the West, that the Shenzhen civil war is now overflowing into global markets, and that personal trust matters more than any specific technology. The link goes to Web Summit's official photo from the session (photo: Hugo Moreira / Web Summit)."
+  },
   {
    "id": "m-df88f49f",
    "date": "2026-11",

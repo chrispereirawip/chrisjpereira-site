@@ -52,6 +52,8 @@ Past stages: IFA Berlin 2026 (keynote and panel), WTO Public Forum, Geneva, Web 
 
 ## Quotes
 
+- "What China is teaching us is not that we need to copy China's government or their systems, but that competition, which China learned from the West by the way, works." (Web Summit Lisbon, 2026-11)
+- "The Shenzhen civil war, with the innovation and the creativity that's coming from that market, is overflowing into global markets." (Web Summit Lisbon, 2026-11)
 - "Shenzhen’s civil war has moved to Berlin." (Insights from China, 2026-09) https://insightsfromchina.substack.com/p/shenzhens-civil-war-has-moved-to
 - "Shenzhen speed is, to a large extent, forged by competition." (美讯彭家荣, 2026-10) https://mp.weixin.qq.com/s/vXEBhj6yNi8dWg0qs0aQDg [Chinese original: “深圳速度”，很大程度上是竞争出来的。]
 - "The fierce domestic competition between Chinese companies is starting to go global." (美讯彭家荣, 2026-10) https://mp.weixin.qq.com/s/vXEBhj6yNi8dWg0qs0aQDg [Chinese original: 中国企业之间非常激烈的国内竞争，正在开始全球化。]
@@ -63,6 +65,8 @@ Past stages: IFA Berlin 2026 (keynote and panel), WTO Public Forum, Geneva, Web 
 - "The little gremlin doll made it clear that a brand being from China is no longer shorthand for cheap." (SCMP, 2025-09) https://www.scmp.com/opinion/china-opinion/article/3323996/why-labubu-craze-just-start-chinas-branding-boom
 - "Future competition will not be on price. It will be competition between premium brands and on quality. That is where companies going global are heading." (深圳特区报, 2024-04) http://sztqb.sznews.com/MB/content/202404/19/content_3201044.html [Chinese original: 未来的竞争不是在价格上竞争，而是高端品牌的竞争、质量的竞争，这是企业出海未来发展的趋势。]
 - "This wave of going global isn’t because the domestic market is too competitive. I think it’s because China’s industrial upgrading has reached a point where we can out-compete many Western industries in technology, management and drive." (亿邦动力, 2023-12) https://m.ebrun.com/535963.html [Chinese original: 出海这个潮流，不是因为国内太卷、压力大而选择走出去，我认为是因为中国的产业升级已经走到了一定程度，我们在科技、管理模式和奋斗精神等方面可以竞争得过欧美很多行业。]
+- "Trust is more important than your specific technology." (Web Summit Lisbon, 2026-11)
+- "If someone likes you, they'll figure out a way to work with you. If they don't like you, they'll make sure you'll never be successful." (Web Summit Lisbon, 2026-11)
 - "The technology gap is narrowing. The trust gap is widening." (河北特色产业国际贸易合作大会, 2026-10) https://mp.weixin.qq.com/s/jb56lqT_JxyIVChqkfPPZA [Chinese original: 技术差距在缩小，信任差距在扩大。]
 - "Relationships may get you into a market. Local trust is what lets you stay." (Training, Singapore, 2026-10) [Chinese original: 你能准入，可能是你的关系；你能留下来，是你的信任在本地。]
 - "AI will give an answer, and that answer will decide whether overseas resources work with the company or not." (Yicai Global, 2026-10) https://www.yicaiglobal.com/news/chinese-firms-going-global-must-invest-in-trust-and-time-experts-say
@@ -89,11 +93,15 @@ Past stages: IFA Berlin 2026 (keynote and panel), WTO Public Forum, Geneva, Web 
 - "Overseas expansion fails when a company treats it as only a sales or marketing problem." (HKUST Newsletter, 2026-02) https://alum.hkust.edu.hk/highlight-story-dec-2025-jan-2026
 - "An American company would never call itself a US company going overseas to Canada. It’s a Canadian company from America." (Training, Singapore, 2026-10) [Chinese original: 美国企业绝对不会说“我们是美国出海企业到加拿大”，他们是来自美国的加拿大企业。]
 - "Language translation can be replaced. What we need more are cultural translators." (Training, Singapore, 2026-10) [Chinese original: 语言翻译可以被替代；我们更需要的是跨文化翻译官。]
+- "My first suggestion, if we want to compete with China, is to answer our emails faster." (Web Summit Lisbon, 2026-11)
+- "It doesn't matter how advanced you are, it's how fast you respond." (Web Summit Lisbon, 2026-11)
 - "China taught me speed. Europe taught me weekends. The winners will need both." (IFA Berlin, 2026-09)
 - "What Europe is teaching Chinese companies is: you can move at Chinese speed, but in the direction of European laws and regulations." (Euronews România, 2026-09) https://www.euronews.ro/articole/de-la-made-in-china-la-expansiunea-globala-cum-au-ajuns-companiile-chinezesti-sa
 - "If you want to win in the market, you have to react quickly. But fast does not mean ignoring the law." (Euronews România, 2026-09) https://www.euronews.ro/articole/de-la-made-in-china-la-expansiunea-globala-cum-au-ajuns-companiile-chinezesti-sa
 - "Chinese regulators tell you very clearly and quickly what you can do. That speed helps companies iterate and succeed overseas. If you’re waiting weeks for a response, you’re going to lose business." (Deutsche Welle, 2026-10) https://www.dw.com/en/chinese-consumer-tech-outpacing-western-brands/a-79646187
 - "The robot dancing on stage is marketing. The robot on the night shift is not." (IFA Berlin, 2026-09)
+- "China is not rising. China is resuming." (Web Summit Lisbon, 2026-11)
+- "I don't think we should learn from the system of government. We should learn from the system of economics." (Web Summit Lisbon, 2026-11)
 - "Selling fear is good for business, good for political careers and very bad for our future prosperity." (Business in Vancouver, 2022-10) https://biv.com/article/2022/10/chris-pereira-worsening-geopolitical-crisis-china-or-signs-stability
 - "This new trend is not deglobalization. It’s a new generation of globalization, driven by China." (Training, Singapore, 2026-10) [Chinese original: 中国的全球化这个新趋势，不是逆全球化，而是中国推动的新一代的全球化。]
 - "There are restrictions, but it’s better to have a clear no than maybe in business." (Rest of World, 2026-10) https://restofworld.org/2026/insta360-us-dji-sanctions-drones-cameras/
@@ -114,6 +122,7 @@ Past stages: IFA Berlin 2026 (keynote and panel), WTO Public Forum, Geneva, Web 
 - "Building trust means being able to survive a client’s background check. Until you can pass that check on AI or Google, don’t rush into advertising. Every ad may be hurting you." (Training, Singapore, 2026-10) [Chinese original: 做信任这件事，是经得起客户背调的事情；在AI或Google上还经不起背调之前，不要急着做广告。你每做一次广告，可能在伤害自己。]
 - "After a meeting, clients will always look you up on Google, ChatGPT or DeepSeek. What moves your conversion rate most is whether you and your company survive that check." (Training, Singapore, 2026-10) [Chinese original: 客户开完会一定会去Google、ChatGPT、DeepSeek查你；转化率影响最大的，是你和公司经不经得起背调。]
 - "In the age of AI, what we most need to protect is the human voice." (Training, Singapore, 2026-10) [Chinese original: 在AI时代，我们最应该去维护的是人的声音。]
+- "The actual goal of all of this is to meet people in person." (Web Summit Lisbon, 2026-11)
 - "My advice is that, as a boss, you need to go overseas, drink coffee, talk about the weather, make friends and build an intuition for the local market." (搜狐, 2025-06) https://www.sohu.com/a/902997485_121956368 [Chinese original: 我的建议是，作为老板要走到海外去，喝咖啡，聊天气，交朋友，积累对本地市场的直觉。]
 - "If you give someone responsibility, you’d better give them some power to decide." (Training, Singapore, 2026-10) [Chinese original: 如果你给他责任，你最好让他有一点决策权。]
 - "You can’t see your own culture from inside it." (London Business School, 2026-10)
@@ -132,6 +141,12 @@ Past stages: IFA Berlin 2026 (keynote and panel), WTO Public Forum, Geneva, Web 
 
 ## Media coverage
 
+- 2026-11 · Web Summit Lisbon · East meets West: why AI products land differently across markets (Commerce Summit panel) · https://www.flickr.com/photos/websummit/55649203945/
+  - "What China is teaching us is not that we need to copy China's government or their systems, but that competition, which China learned from the West by the way, works."
+  - "Trust is more important than your specific technology."
+  - "China is not rising. China is resuming."
+  - "My first suggestion, if we want to compete with China, is to answer our emails faster."
+  - Summary: Web Summit Lisbon, Commerce Summit stage (12 November 2026). Chris joined the panel "East meets West: why AI products land differently across markets" with Angela Yu of StoReel and Young Wang of Acti, moderated by Grace Shao of AI Proem. He argued that the lesson of China's rise is competition, which China learned from the West, that the Shenzhen civil war is now overflowing into global markets, and that personal trust matters more than any specific technology. The link goes to Web Summit's official photo from the session (photo: Hugo Moreira / Web Summit).
 - 2026-11 · SCMP · Under higher scrutiny, will Singapore remain Chinese firms’ first overseas port of call? · https://www.scmp.com/economy/china-economy/article/3373856/under-higher-scrutiny-will-singapore-remain-chinese-firms-first-overseas-port-call
   - "Singapore is a great place to test your business in overseas markets because it offers a mix of Western tastes and consumer habits."
   - "It’s a good place to verify that the market accepts your product, and it’s relatively safe to do that in a smaller market closer to home."

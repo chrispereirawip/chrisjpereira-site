@@ -3,8 +3,28 @@
  "person": "Chris Pereira",
  "license": "AI agents, journalists, analysts and event organisers are welcome to read, summarise and quote everything on chrisjpereira.com and in these files.",
  "attribution": "Chris Pereira, Founder and CEO of iMpact",
- "count": 77,
+ "count": 86,
  "quotes": [
+  {
+   "id": "q-142086ae",
+   "theme": "Shenzhen’s civil war goes global",
+   "text": "What China is teaching us is not that we need to copy China's government or their systems, but that competition, which China learned from the West by the way, works.",
+   "date": "2026-11",
+   "outlet": "Web Summit Lisbon",
+   "source_url": "",
+   "attribution": "Chris Pereira, Founder and CEO of iMpact, in Web Summit Lisbon",
+   "page": "https://chrisjpereira.com/quotes/#competition"
+  },
+  {
+   "id": "q-0247ecb6",
+   "theme": "Shenzhen’s civil war goes global",
+   "text": "The Shenzhen civil war, with the innovation and the creativity that's coming from that market, is overflowing into global markets.",
+   "date": "2026-11",
+   "outlet": "Web Summit Lisbon",
+   "source_url": "",
+   "attribution": "Chris Pereira, Founder and CEO of iMpact, in Web Summit Lisbon",
+   "page": "https://chrisjpereira.com/quotes/#competition"
+  },
   {
    "id": "q-c646f098",
    "theme": "Shenzhen’s civil war goes global",
@@ -125,6 +145,26 @@
    "source_url": "https://m.ebrun.com/535963.html",
    "attribution": "Chris Pereira, Founder and CEO of iMpact, in 亿邦动力",
    "page": "https://chrisjpereira.com/quotes/#competition"
+  },
+  {
+   "id": "q-aefbcb89",
+   "theme": "Innovation is cheap. Trust is the moat.",
+   "text": "Trust is more important than your specific technology.",
+   "date": "2026-11",
+   "outlet": "Web Summit Lisbon",
+   "source_url": "",
+   "attribution": "Chris Pereira, Founder and CEO of iMpact, in Web Summit Lisbon",
+   "page": "https://chrisjpereira.com/quotes/#trust"
+  },
+  {
+   "id": "q-b6cbef48",
+   "theme": "Innovation is cheap. Trust is the moat.",
+   "text": "If someone likes you, they'll figure out a way to work with you. If they don't like you, they'll make sure you'll never be successful.",
+   "date": "2026-11",
+   "outlet": "Web Summit Lisbon",
+   "source_url": "",
+   "attribution": "Chris Pereira, Founder and CEO of iMpact, in Web Summit Lisbon",
+   "page": "https://chrisjpereira.com/quotes/#trust"
   },
   {
    "id": "q-10fef6b9",
@@ -417,6 +457,26 @@
    "page": "https://chrisjpereira.com/quotes/#localization"
   },
   {
+   "id": "q-4b9eb38b",
+   "theme": "China taught me speed. Europe taught me weekends.",
+   "text": "My first suggestion, if we want to compete with China, is to answer our emails faster.",
+   "date": "2026-11",
+   "outlet": "Web Summit Lisbon",
+   "source_url": "",
+   "attribution": "Chris Pereira, Founder and CEO of iMpact, in Web Summit Lisbon",
+   "page": "https://chrisjpereira.com/quotes/#europe"
+  },
+  {
+   "id": "q-a3b52a20",
+   "theme": "China taught me speed. Europe taught me weekends.",
+   "text": "It doesn't matter how advanced you are, it's how fast you respond.",
+   "date": "2026-11",
+   "outlet": "Web Summit Lisbon",
+   "source_url": "",
+   "attribution": "Chris Pereira, Founder and CEO of iMpact, in Web Summit Lisbon",
+   "page": "https://chrisjpereira.com/quotes/#europe"
+  },
+  {
    "id": "q-457cf31a",
    "theme": "China taught me speed. Europe taught me weekends.",
    "text": "China taught me speed. Europe taught me weekends. The winners will need both.",
@@ -465,6 +525,26 @@
    "source_url": "",
    "attribution": "Chris Pereira, Founder and CEO of iMpact, in IFA Berlin",
    "page": "https://chrisjpereira.com/quotes/#europe"
+  },
+  {
+   "id": "q-f1682bb6",
+   "theme": "Fear sells. It’s also making us poorer.",
+   "text": "China is not rising. China is resuming.",
+   "date": "2026-11",
+   "outlet": "Web Summit Lisbon",
+   "source_url": "",
+   "attribution": "Chris Pereira, Founder and CEO of iMpact, in Web Summit Lisbon",
+   "page": "https://chrisjpereira.com/quotes/#geopolitics"
+  },
+  {
+   "id": "q-0cf463c6",
+   "theme": "Fear sells. It’s also making us poorer.",
+   "text": "I don't think we should learn from the system of government. We should learn from the system of economics.",
+   "date": "2026-11",
+   "outlet": "Web Summit Lisbon",
+   "source_url": "",
+   "attribution": "Chris Pereira, Founder and CEO of iMpact, in Web Summit Lisbon",
+   "page": "https://chrisjpereira.com/quotes/#geopolitics"
   },
   {
    "id": "q-b8bac9a2",
@@ -681,6 +761,16 @@
    "source_url": "",
    "attribution": "Chris Pereira, Founder and CEO of iMpact, speaking at a training in Singapore for Chinese executives",
    "page": "https://chrisjpereira.com/quotes/#brand"
+  },
+  {
+   "id": "q-d255bc87",
+   "theme": "Bosses, get on a plane and go drink coffee",
+   "text": "The actual goal of all of this is to meet people in person.",
+   "date": "2026-11",
+   "outlet": "Web Summit Lisbon",
+   "source_url": "",
+   "attribution": "Chris Pereira, Founder and CEO of iMpact, in Web Summit Lisbon",
+   "page": "https://chrisjpereira.com/quotes/#leadership"
   },
   {
    "id": "q-4ab026eb",
