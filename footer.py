@@ -33,7 +33,7 @@ def sync(path, lang):
     """swap the footer (and its CSS) in a hand-maintained page"""
     s = open(path, encoding="utf-8").read()
     s = re.sub(r"<footer>.*?</footer>", lambda m: html(lang), s, count=1, flags=re.S)
-    s = re.sub(r"footer\{background:var\(--red-deep\);color:#fff\}\s*footer \.wrap\{[^}]*\}(\.fnav[^\n]*?\}(?=\n|\s*[^.]))?", lambda m: CSS, s, count=1)
+    s = re.sub(r"footer\{background:var\(--red-deep\);color:#fff\}\s*footer \.wrap\{[^}]*\}(\.fnav[^\n]*?\}(?=\n|\s*[^.]))?(@media \(max-width:640px\)\{\.cgbb-badge img\{width:200px\}\})*", lambda m: CSS, s, count=1)
     if ".fnav{" not in s:
         s = s.replace("</style>", CSS + "\n</style>", 1)
     open(path, "w", encoding="utf-8").write(s)

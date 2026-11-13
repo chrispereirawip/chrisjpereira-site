@@ -1,5 +1,21 @@
 [
  {
+  "id": 3,
+  "date": "2026-11-20",
+  "event": "Hongqiao Tech Week 2026",
+  "organizer": "Informa Markets",
+  "city": "Shanghai",
+  "type": "speaker",
+  "title_en": "Upcoming: speaking at Hongqiao Tech Week, Shanghai (20–22 Nov)",
+  "title_zh": "即将登场：上海虹桥科技周（11月20–22日）演讲嘉宾",
+  "summary_en": "Chris is a confirmed speaker at Hongqiao Tech Week, held at the National Exhibition and Convention Center (NECC) in Shanghai from 20 to 22 November 2026. Session details will be added once the agenda is published.",
+  "summary_zh": "彭家荣已确认担任虹桥科技周演讲嘉宾。活动于2026年11月20日至22日在上海国家会展中心举行，具体场次将在议程公布后更新。",
+  "quote_en": "",
+  "quote_zh": "",
+  "img": "talk-3.webp",
+  "caption": "Chris Pereira, speaker at Hongqiao Tech Week 2026, Shanghai"
+ },
+ {
   "id": 2,
   "date": "2026-11-12",
   "event": "Web Summit Lisbon 2026 (Commerce Summit)",
