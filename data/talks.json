@@ -1,37 +1,5 @@
 [
  {
-  "id": 3,
-  "date": "2026-11-20",
-  "event": "Hongqiao Tech Week 2026",
-  "organizer": "Informa Markets",
-  "city": "Shanghai",
-  "type": "moderator",
-  "title_en": "Upcoming: hosting the AI Stage at Hongqiao Tech Week, Shanghai",
-  "title_zh": "即将登场：主持上海虹桥科技周 AI 舞台",
-  "summary_en": "On Friday 20 November, Chris hosts the afternoon session on the AI Stage (Hall 1.1, NECC Shanghai), from 13:25. The line-up includes speakers from 01.AI, Standard Chartered, Hitachi, Rezolve AI and MatrixOrigin, on building AI-native businesses, AI governance and the infrastructure behind global AI growth.",
-  "summary_zh": "11月20日（周五）13:25起，彭家荣将在国家会展中心（上海）1.1馆 AI 舞台主持下午场。嘉宾来自零一万物、渣打银行、日立、Rezolve AI 和矩阵起源等，议题涵盖 AI Native 实践、AI 治理以及支撑全球 AI 发展的基础设施。",
-  "quote_en": "",
-  "quote_zh": "",
-  "img": "talk-3.webp",
-  "caption": "Chris Pereira, host of the AI Stage at Hongqiao Tech Week 2026, Shanghai"
- },
- {
-  "id": 2,
-  "date": "2026-11-12",
-  "event": "Web Summit Lisbon 2026 (Commerce Summit)",
-  "organizer": "Web Summit",
-  "city": "Lisbon",
-  "type": "panel",
-  "title_en": "“East meets West” panel at Web Summit Lisbon",
-  "title_zh": "在里斯本 Web Summit 参加“东西方相遇”圆桌讨论",
-  "summary_en": "Chris joined the Commerce Summit panel “East meets West: why AI products land differently across markets” with Angela Yu of StoReel and Young Wang of Acti, moderated by Grace Shao of AI Proem. He said the lesson of China's rise is competition, and that trust matters more than any specific technology.",
-  "summary_zh": "彭家荣参加 Commerce Summit 圆桌“东西方相遇：AI 产品为何在不同市场表现不同”，与 StoReel 的 Angela Yu、Acti 的 Young Wang 同台，由 AI Proem 的 Grace Shao 主持。他认为中国崛起带来的启示是竞争，信任比任何具体的技术都更重要。",
-  "quote_en": "What China is teaching us is not that we need to copy China's government or their systems, but that competition, which China learned from the West by the way, works.",
-  "quote_zh": "中国教给我们的，不是要照搬中国的政府或制度，而是竞争是有效的。顺便说一句，这是中国向西方学来的。",
-  "img": "talk-2.webp",
-  "caption": "Chris Pereira speaking on stage at Web Summit Lisbon, November 2026. Photo: Hugo Moreira / Web Summit"
- },
- {
   "id": 1,
   "date": "2026-10-21",
   "event": "一财全球十周年生态大会暨新十年战略发布",
