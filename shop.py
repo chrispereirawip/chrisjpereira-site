@@ -24,7 +24,7 @@ T = {
     "en": {
         "lang": "en", "home": "/", "path": "/books/", "other": "/zh/books/", "other_label": "中文", "img": "/img/",
         "title": "Books by Chris Pereira | Trust 《信任》",
-        "desc": "Trust by Chris Pereira. The second English edition, rewritten for readers outside China, is out now as an e-book. Signed copies of the Chinese edition 《信任》 (Shenzhen Publishing House, 2026) ship within mainland China.",
+        "desc": "Trust by Chris Pereira. The second English edition, rewritten for readers outside China, is out now as an e-book and a paperback. Signed copies of the Chinese edition 《信任》 (Shenzhen Publishing House, 2026) ship within mainland China.",
         "nav": [("/#ideas", "Ideas"), ("/#writing", "Writing"), ("/#media", "Commentary"), ("/#speaking", "Speaking"), ("/#training", "Training"), ("/books/", "Books"), ("/#about", "About")],
         "contact": "Contact", "label": "Books",
         "h1": "Trust <span class=\"zh\" lang=\"zh-Hans\">《信任》</span>",
@@ -46,8 +46,8 @@ T = {
         "fields": {"name": "the recipient's name", "phone": "a mainland China mobile number (11 digits)", "address": "the delivery address", "email": "your email", "qty": "copies", "zone": "where to ship", "dedication": "the dedication"},
         "paid_h": "Thank you, your order is confirmed.", "paid_p": "A confirmation is on its way to your inbox. We'll email you the tracking number once your signed copy is posted.",
         "pend_p": "We're confirming your payment with Stripe. This will update in a moment.", "cancel_p": "Checkout was cancelled. You haven't been charged.",
-        "en_tag": "E-book out now", "en_buy": "Kindle edition on Amazon", "en_ebuy": "Buy the e-book", "paid_ebook": "Your download link is on its way to your inbox.", "your_name": "your name", "en_h": "English edition", "en_title": "Trust",
-        "en_meta": "E-book · second edition, November 2026", "en_pts": ["Win customers and partners who start out sceptical", "Close the five gaps that stall deals between business cultures", "Use the playbook for media, trade shows, selling and crisis"], "en_pts_h": "What it helps you do",
+        "en_tag": "E-book and paperback out now", "en_buy": "Kindle edition on Amazon", "en_ebuy": "Buy the e-book", "en_pbuy": "Buy the paperback", "en_fmt_note": "E-book: instant download here. Paperback: US$16.99, printed and shipped by Amazon.", "paid_ebook": "Your download link is on its way to your inbox.", "your_name": "your name", "en_h": "English edition", "en_title": "Trust",
+        "en_meta": "E-book and paperback · second edition, November 2026", "en_pts": ["Win customers and partners who start out sceptical", "Close the five gaps that stall deals between business cultures", "Use the playbook for media, trade shows, selling and crisis"], "en_pts_h": "What it helps you do",
         "cov_k": "Second English edition", "cov_q": "Companies that last abroad are the ones local people come to trust.",
         "en_blurb": "Trust is what turns a foreign company into a welcome one. This book shows how to build it on purpose, with customers, partners and governments, so your business can grow and last in any market that is not your own.",
         "join": "Paperback: notify me when it is out", "es_book": "Trust, English e-book", "es_del": "Download link sent by email", "es_free": "Free", "es_tot": "Total", "join_note": "One email when the paperback launches. No payment, no newsletter.",
@@ -71,7 +71,7 @@ T = {
     "zh": {
         "lang": "zh-CN", "home": "/zh/", "path": "/zh/books/", "other": "/books/", "other_label": "EN", "img": "/img/",
         "title": "彭家荣著作 | 《信任》作者签名版",
-        "desc": "订购彭家荣《信任：中国企业全球化的黄金钥匙》作者签名版（深圳出版社，2026），寄送范围为中国大陆。英文版电子书已上市。",
+        "desc": "订购彭家荣《信任：中国企业全球化的黄金钥匙》作者签名版（深圳出版社，2026），寄送范围为中国大陆。英文版电子书与纸质版已上市。",
         "nav": [("/zh/#ideas", "观点"), ("/zh/#writing", "文章"), ("/zh/#media", "媒体评论"), ("/zh/#speaking", "演讲"), ("/zh/#training", "培训"), ("/zh/books/", "书籍"), ("/zh/#about", "关于")],
         "contact": "联系", "label": "书籍",
         "h1": "<span class=\"hang\">《</span>信任》",
@@ -93,8 +93,8 @@ T = {
         "fields": {"name": "收件人", "phone": "11 位手机号", "address": "收货地址", "email": "邮箱", "qty": "数量", "zone": "寄送地区", "dedication": "题字"},
         "paid_h": "感谢订购，订单已确认。", "paid_p": "确认邮件已发送至您的邮箱。签名书寄出后，我们会再发邮件告知快递单号。",
         "pend_p": "正在向 Stripe 确认付款，稍后自动更新。", "cancel_p": "已取消支付，未产生任何费用。",
-        "en_tag": "电子书已上市", "en_buy": "亚马逊 Kindle 版", "en_ebuy": "购买电子书", "paid_ebook": "下载链接已发送至您的邮箱。", "your_name": "您的姓名", "en_h": "英文版", "en_title": "Trust",
-        "en_meta": "电子书 · 第二版，2026年11月", "en_pts": ["赢得起初心存疑虑的客户与伙伴", "跨越让合作停滞的五大商业文化鸿沟", "实战手册：媒体、展会、销售与危机应对"], "en_pts_h": "这本书能帮您做到",
+        "en_tag": "电子书与纸质版已上市", "en_buy": "亚马逊 Kindle 版", "en_ebuy": "购买电子书", "en_pbuy": "购买纸质版", "en_fmt_note": "电子书：本站即时下载。纸质版：US$16.99，由亚马逊印刷并寄送。", "paid_ebook": "下载链接已发送至您的邮箱。", "your_name": "您的姓名", "en_h": "英文版", "en_title": "Trust",
+        "en_meta": "电子书与纸质版 · 第二版，2026年11月", "en_pts": ["赢得起初心存疑虑的客户与伙伴", "跨越让合作停滞的五大商业文化鸿沟", "实战手册：媒体、展会、销售与危机应对"], "en_pts_h": "这本书能帮您做到",
         "cov_k": "英文第二版", "cov_q": "能在海外长久立足的企业，是当地人愿意信任的企业。",
         "en_blurb": "信任能让一家外来企业变成受欢迎的企业。本书讲的是如何有意识地建立信任，赢得客户、伙伴和政府的支持，让业务在任何异国市场发展壮大、长久立足。",
         "join": "纸质版：上市时通知我", "es_book": "Trust 英文版电子书", "es_del": "下载链接通过邮件发送", "es_free": "免费", "es_tot": "合计", "join_note": "纸质版上市时只发一封邮件，无需付款，不订阅任何简报。",
@@ -165,6 +165,8 @@ html[lang="zh-CN"] .intro .sub{font-family:var(--zh);font-style:normal;font-weig
    each card is an introduction first; the form appears only after the reader presses the button) */
 .front{padding:14px 24px 20px;align-self:start}
 .front .btn{width:100%;font-size:14.5px;padding:10px 20px;letter-spacing:.02em}
+.fmts{display:grid;grid-template-columns:1fr 1fr;gap:10px}.fmts .btn{padding:10px 10px;white-space:nowrap}
+@media (max-width:420px){.fmts{grid-template-columns:1fr}}
 .front .small button.lnk,.panel button.lnk{background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
 .front .small button.lnk:hover,.panel button.lnk:hover,.front .small a:hover{color:var(--red)}.front .small a{color:inherit;text-underline-offset:2px}
 .front .small .dot{margin:0 8px;color:#b7b0a3}
@@ -390,8 +392,8 @@ def page(k):
       </div>
       <div class="rA"><p class="eblurb">{t['en_blurb']}</p></div>
       <div class="rB pts"><span class="ptsh">{t['en_pts_h']}</span><ul>{''.join(f'<li>{x}</li>' for x in t['en_pts'])}</ul></div>
-      <div class="front"><button class="btn" id="eOpen" type="button" aria-controls="wait">{t['en_ebuy']}</button>
-        <p class="small"><a href="https://www.amazon.com/dp/B0HR1MMVGQ" target="_blank" rel="noopener" style="white-space:nowrap">{t['en_buy']}</a><span class="dot">·</span><button class="lnk" id="nOpen" type="button" aria-controls="wait" title="{t['join_note']}">{t['n_open']}</button></p>{trust}</div>
+      <div class="front"><div class="fmts"><button class="btn" id="eOpen" type="button" aria-controls="wait">{t['en_ebuy']}</button><a class="btn ghost" href="https://www.amazon.com/dp/9819485347" target="_blank" rel="noopener">{t['en_pbuy']}</a></div>
+        <p class="small">{t['en_fmt_note']} <a href="https://www.amazon.com/dp/B0HR1MMVGQ" target="_blank" rel="noopener" style="white-space:nowrap">{t['en_buy']}</a><button class="lnk" id="nOpen" type="button" hidden>{t['n_open']}</button></p>{trust}</div>
       <form id="wait" class="panel" data-mode="buy" novalidate hidden>
         <div class="onlybuy">{steps('steps_en')}</div>
         <p class="nh onlynotify">{t['n_h']}</p>

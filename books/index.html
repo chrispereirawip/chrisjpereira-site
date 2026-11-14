@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://stats.chrisjpereira.com https://www.globalconnect.show; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Books by Chris Pereira | Trust 《信任》</title>
-<meta name="description" content="Trust by Chris Pereira. The second English edition, rewritten for readers outside China, is out now as an e-book. Signed copies of the Chinese edition 《信任》 (Shenzhen Publishing House, 2026) ship within mainland China.">
+<meta name="description" content="Trust by Chris Pereira. The second English edition, rewritten for readers outside China, is out now as an e-book and a paperback. Signed copies of the Chinese edition 《信任》 (Shenzhen Publishing House, 2026) ship within mainland China.">
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#A40706">
 <link rel="canonical" href="https://chrisjpereira.com/books/">
@@ -14,7 +14,7 @@
 <link rel="alternate" hreflang="zh-CN" href="https://chrisjpereira.com/zh/books/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Books by Chris Pereira | Trust 《信任》">
-<meta property="og:description" content="Trust by Chris Pereira. The second English edition, rewritten for readers outside China, is out now as an e-book. Signed copies of the Chinese edition 《信任》 (Shenzhen Publishing House, 2026) ship within mainland China.">
+<meta property="og:description" content="Trust by Chris Pereira. The second English edition, rewritten for readers outside China, is out now as an e-book and a paperback. Signed copies of the Chinese edition 《信任》 (Shenzhen Publishing House, 2026) ship within mainland China.">
 <meta property="og:image" content="https://chrisjpereira.com/img/trust-books.webp">
 <meta property="og:url" content="https://chrisjpereira.com/books/">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -71,6 +71,8 @@ html[lang="zh-CN"] .intro .sub{font-family:var(--zh);font-style:normal;font-weig
    each card is an introduction first; the form appears only after the reader presses the button) */
 .front{padding:14px 24px 20px;align-self:start}
 .front .btn{width:100%;font-size:14.5px;padding:10px 20px;letter-spacing:.02em}
+.fmts{display:grid;grid-template-columns:1fr 1fr;gap:10px}.fmts .btn{padding:10px 10px;white-space:nowrap}
+@media (max-width:420px){.fmts{grid-template-columns:1fr}}
 .front .small button.lnk,.panel button.lnk{background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
 .front .small button.lnk:hover,.panel button.lnk:hover,.front .small a:hover{color:var(--red)}.front .small a{color:inherit;text-underline-offset:2px}
 .front .small .dot{margin:0 8px;color:#b7b0a3}
@@ -199,15 +201,15 @@ footer{background:var(--red-deep);color:#fff}footer .wrap{padding-top:18px;paddi
 
   <section class="eds">
     <article class="ed" id="english">
-      <div class="vis"><div class="encov"><div class="ct"><span>Second English edition</span><b>Companies that last abroad are the ones local people come to trust.</b></div><img src="/img/trust-en-cover.webp" width="800" height="1200" alt="Cover of the English edition of Trust by Chris Pereira"></div><span class="tag live">E-book out now</span></div>
+      <div class="vis"><div class="encov"><div class="ct"><span>Second English edition</span><b>Companies that last abroad are the ones local people come to trust.</b></div><img src="/img/trust-en-cover.webp" width="800" height="1200" alt="Cover of the English edition of Trust by Chris Pereira"></div><span class="tag live">E-book and paperback out now</span></div>
       <div class="ehd">
         <div class="ehead"><div><span class="ekicker">English edition</span><h2>Trust</h2></div><div class="price" id="eprice"><span>…</span><small>e-book</small></div></div>
-        <p class="emeta">E-book · second edition, November 2026</p>
+        <p class="emeta">E-book and paperback · second edition, November 2026</p>
       </div>
       <div class="rA"><p class="eblurb">Trust is what turns a foreign company into a welcome one. This book shows how to build it on purpose, with customers, partners and governments, so your business can grow and last in any market that is not your own.</p></div>
       <div class="rB pts"><span class="ptsh">What it helps you do</span><ul><li>Win customers and partners who start out sceptical</li><li>Close the five gaps that stall deals between business cultures</li><li>Use the playbook for media, trade shows, selling and crisis</li></ul></div>
-      <div class="front"><button class="btn" id="eOpen" type="button" aria-controls="wait">Buy the e-book</button>
-        <p class="small"><a href="https://www.amazon.com/dp/B0HR1MMVGQ" target="_blank" rel="noopener" style="white-space:nowrap">Kindle edition on Amazon</a><span class="dot">·</span><button class="lnk" id="nOpen" type="button" aria-controls="wait" title="One email when the paperback launches. No payment, no newsletter.">Tell me when the paperback is out</button></p><p class="small trustln"><span aria-hidden="true">✓</span> <a href="https://cgbb.org/verify/?d=chrisjpereira.com" target="_blank" rel="noopener">CGBB Member: verify this site at cgbb.org</a></p></div>
+      <div class="front"><div class="fmts"><button class="btn" id="eOpen" type="button" aria-controls="wait">Buy the e-book</button><a class="btn ghost" href="https://www.amazon.com/dp/9819485347" target="_blank" rel="noopener">Buy the paperback</a></div>
+        <p class="small">E-book: instant download here. Paperback: US$16.99, printed and shipped by Amazon. <a href="https://www.amazon.com/dp/B0HR1MMVGQ" target="_blank" rel="noopener" style="white-space:nowrap">Kindle edition on Amazon</a><button class="lnk" id="nOpen" type="button" hidden>Tell me when the paperback is out</button></p><p class="small trustln"><span aria-hidden="true">✓</span> <a href="https://cgbb.org/verify/?d=chrisjpereira.com" target="_blank" rel="noopener">CGBB Member: verify this site at cgbb.org</a></p></div>
       <form id="wait" class="panel" data-mode="buy" novalidate hidden>
         <div class="onlybuy"><ol class="steps"><li class="on">Your name and email</li><li>Secure payment</li><li>Download link by email</li></ol></div>
         <p class="nh onlynotify">Paperback: one email on the day it goes on sale</p>

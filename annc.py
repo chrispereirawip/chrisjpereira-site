@@ -4,10 +4,10 @@ Edit TEXT to change or retire the announcement; set KEY to a new value so people
 build.py calls sync() for every page that has the site header. Not shown on the Books pages themselves."""
 import re
 
-KEY = "annc-trust-en-2026-11"
+KEY = "annc-trust-en-pb-2026-11"
 TEXT = {
-    "en": ("/books/", "New: <b>Trust</b>, the English edition, is out.", "Get the e-book →", "Dismiss"),
-    "zh": ("/zh/books/", "新书：《信任》英文版电子书已上线。", "前往购买 →", "关闭"),
+    "en": ("/books/", "New: <b>Trust</b>, the English edition, is out in paperback and e-book.", "Get your copy →", "Dismiss"),
+    "zh": ("/zh/books/", "新书：《信任》英文版纸质版与电子书已上市。", "前往购买 →", "关闭"),
 }
 CSS = (".annc{background:var(--red-deep);color:#fff;font-family:var(--display);font-size:13.5px;line-height:1.35}"
        ".annc .wrap{display:flex;align-items:center;justify-content:center;gap:6px 14px;padding-top:7px;padding-bottom:7px;position:relative;flex-wrap:wrap;text-align:center}"
