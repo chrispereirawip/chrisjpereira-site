@@ -48,7 +48,7 @@ T = {
         "pend_p": "We're confirming your payment with Stripe. This will update in a moment.", "cancel_p": "Checkout was cancelled. You haven't been charged.",
         "en_tag": "E-book and paperback out now", "en_buy": "Kindle edition on Amazon", "en_ebuy": "Buy the e-book", "en_pbuy": "Buy the paperback", "en_fmt_note": "E-book: instant download here. Paperback: US$16.99, printed and shipped by Amazon.", "paid_ebook": "Your download link is on its way to your inbox.", "your_name": "your name", "en_h": "English edition", "en_title": "Trust",
         "en_meta": "E-book and paperback · second edition, November 2026", "en_pts": ["Win customers and partners who start out sceptical", "Close the five gaps that stall deals between business cultures", "Use the playbook for media, trade shows, selling and crisis"], "en_pts_h": "What it helps you do",
-        "cov_k": "Second English edition", "cov_q": "Companies that last abroad are the ones local people come to trust.",
+        "fm_pb": "Paperback", "fm_eb": "E-book", "fm_pb_alt": "Paperback of the English edition of Trust by Chris Pereira", "fm_eb_alt": "Trust shown as an e-book on a tablet", "cov_k": "Second English edition", "cov_q": "Companies that last abroad are the ones local people come to trust.",
         "en_blurb": "Trust is what turns a foreign company into a welcome one. This book shows how to build it on purpose, with customers, partners and governments, so your business can grow and last in any market that is not your own.",
         "join": "Paperback: notify me when it is out", "es_book": "Trust, English e-book", "es_del": "Download link sent by email", "es_free": "Free", "es_tot": "Total", "join_note": "One email when the paperback launches. No payment, no newsletter.",
         "joined": "Thanks. We'll email you the day the paperback goes on sale.", "already": "You're already signed up. We'll email you when the paperback is out.",
@@ -95,7 +95,7 @@ T = {
         "pend_p": "正在向 Stripe 确认付款，稍后自动更新。", "cancel_p": "已取消支付，未产生任何费用。",
         "en_tag": "电子书与纸质版已上市", "en_buy": "亚马逊 Kindle 版", "en_ebuy": "购买电子书", "en_pbuy": "购买纸质版", "en_fmt_note": "电子书：本站即时下载。纸质版：US$16.99，由亚马逊印刷并寄送。", "paid_ebook": "下载链接已发送至您的邮箱。", "your_name": "您的姓名", "en_h": "英文版", "en_title": "Trust",
         "en_meta": "电子书与纸质版 · 第二版，2026年11月", "en_pts": ["赢得起初心存疑虑的客户与伙伴", "跨越让合作停滞的五大商业文化鸿沟", "实战手册：媒体、展会、销售与危机应对"], "en_pts_h": "这本书能帮您做到",
-        "cov_k": "英文第二版", "cov_q": "能在海外长久立足的企业，是当地人愿意信任的企业。",
+        "fm_pb": "纸质版", "fm_eb": "电子书", "fm_pb_alt": "彭家荣《信任》英文版纸质书", "fm_eb_alt": "平板电脑上的《信任》英文版电子书", "cov_k": "英文第二版", "cov_q": "能在海外长久立足的企业，是当地人愿意信任的企业。",
         "en_blurb": "信任能让一家外来企业变成受欢迎的企业。本书讲的是如何有意识地建立信任，赢得客户、伙伴和政府的支持，让业务在任何异国市场发展壮大、长久立足。",
         "join": "纸质版：上市时通知我", "es_book": "Trust 英文版电子书", "es_del": "下载链接通过邮件发送", "es_free": "免费", "es_tot": "合计", "join_note": "纸质版上市时只发一封邮件，无需付款，不订阅任何简报。",
         "joined": "谢谢！纸质版开售当天我们会邮件通知您。", "already": "您已登记，纸质版上市时我们会通知您。",
@@ -234,7 +234,18 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--red);box
 html[lang="zh-CN"] .encov .ct span{letter-spacing:.04em;font-size:12px}
 .encov .ct b{display:block;font-family:var(--head);font-weight:600;font-size:clamp(15px,1.75vw,21px);line-height:1.3;margin-top:8px;text-wrap:balance}
 html[lang="zh-CN"] .encov .ct b{font-family:var(--zh)}
-.encov img{flex:0 0 auto;height:90%;width:auto;border-radius:2px 5px 5px 2px;box-shadow:-5px 0 0 rgba(0,0,0,.14) inset,0 30px 50px -20px rgba(0,0,0,.65),0 4px 10px rgba(0,0,0,.25)}
+/* English card image (Chris, 2026-11-14): paperback and e-book side by side over the cover's mountain */
+.encov{background:linear-gradient(90deg,rgba(13,31,66,.95) 0,rgba(13,31,66,.84) 42%,rgba(13,31,66,.2) 78%,rgba(13,31,66,0) 100%),url(/img/trust-mountain.webp) center 60%/cover #16305c;gap:2%;padding:0 4% 0 5%}
+.encov .fm{position:relative;flex:0 0 52%;align-self:stretch}
+.encov figure{position:absolute;margin:0}
+.encov figcaption{position:absolute;left:0;right:0;top:100%;margin-top:5px;text-align:center;font-family:var(--display);font-size:8.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#fff;white-space:nowrap}
+.encov .pb{left:2%;top:17%;height:65%;aspect-ratio:2/3;transform:perspective(900px) rotateY(22deg);transform-origin:0 50%}
+.encov .pb img{width:100%;height:100%;object-fit:cover;border-radius:1px 3px 3px 1px;box-shadow:-4px 0 0 #2b4f8f,-5px 0 0 rgba(0,0,0,.35),0 22px 34px -14px rgba(0,0,0,.6)}
+.encov .pb figcaption{transform:perspective(900px) rotateY(-22deg)}
+.encov .eb{right:0;top:33%;height:50%;aspect-ratio:196/284;transform:rotate(4deg)}
+.encov .eb div{width:100%;height:100%;background:#111;border-radius:9px;padding:5.5% 5%;box-shadow:0 18px 30px -10px rgba(0,0,0,.6)}
+.encov .eb img{width:100%;height:100%;object-fit:cover;border-radius:3px}
+html[lang="zh-CN"] .encov figcaption{letter-spacing:.06em;font-size:10px}
 .join-note{font-family:var(--display);font-size:11.5px;color:var(--muted);margin:8px 0 0;text-align:center}
 
 /* about */
@@ -385,7 +396,7 @@ def page(k):
       </form>
     </article>"""
     en_art = f"""    <article class="ed" id="english">
-      <div class="vis"><div class="encov"><div class="ct"><span>{t['cov_k']}</span><b>{t['cov_q']}</b></div><img src="{t['img']}trust-en-cover.webp" width="800" height="1200" alt="Cover of the English edition of Trust by Chris Pereira"></div><span class="tag live">{t['en_tag']}</span></div>
+      <div class="vis"><div class="encov"><div class="ct"><span>{t['cov_k']}</span><b>{t['cov_q']}</b></div><div class="fm"><figure class="pb"><img src="{t['img']}trust-en-cover.webp" width="800" height="1200" alt="{t['fm_pb_alt']}"><figcaption>{t['fm_pb']}</figcaption></figure><figure class="eb"><div><img src="{t['img']}trust-en-cover.webp" width="800" height="1200" alt="{t['fm_eb_alt']}" loading="lazy"></div><figcaption>{t['fm_eb']}</figcaption></figure></div></div><span class="tag live">{t['en_tag']}</span></div>
       <div class="ehd">
         <div class="ehead"><div><span class="ekicker">{t['en_h']}</span><h2>{t['en_title']}</h2></div><div class="price" id="eprice"><span>{t['loading']}</span><small>{t['eb_small']}</small></div></div>
         <p class="emeta">{t['en_meta']}</p>
