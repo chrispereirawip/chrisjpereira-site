@@ -279,7 +279,7 @@ html[lang="zh-CN"] .inrows b{font-family:var(--zh);font-weight:600}
 .about .qline{font-family:var(--display);font-size:12.5px;color:var(--muted);margin:10px 0 0}
 
 @media (max-width:900px){.intro{grid-template-columns:1fr;align-items:start;padding-top:24px}.eds{grid-template-columns:1fr;gap:22px;padding-top:28px}.about{grid-template-columns:1fr;gap:16px;padding:20px 0}}
-@media (max-width:760px){.nav{display:none}.langsw{margin-left:auto;padding:5px 9px;font-size:13px}.wrap{padding:0 16px}.ehd,.rA,.rB,.front,.panel{padding-left:20px;padding-right:20px}.ed{grid-row:auto;display:block}.row{grid-template-columns:80px 1fr}.facts{font-size:12.5px}.facts li+li:before{margin:0 7px}.ed h2{font-size:22px}}
+@media (max-width:760px){.nav{display:none}.langsw{margin-left:auto;padding:5px 9px;font-size:13px}.wrap{padding-left:16px;padding-right:16px}.ehd,.rA,.rB,.front,.panel{padding-left:20px;padding-right:20px}.ed{grid-row:auto;display:block}.row{grid-template-columns:80px 1fr}.facts{font-size:12.5px}.facts li+li:before{margin:0 7px}.ed h2{font-size:22px}}
 """
 
 JS = r"""(function(){

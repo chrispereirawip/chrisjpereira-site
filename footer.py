@@ -14,7 +14,7 @@ CSS = ("footer{background:var(--red-deep);color:#fff}"
        "footer .wrap{padding-top:18px;padding-bottom:18px;display:flex;justify-content:space-between;align-items:center;gap:8px 24px;flex-wrap:wrap;font-family:var(--display);font-size:13px}"
        ".fnav{display:flex;flex-wrap:wrap;gap:6px 20px}.fnav a{color:#fff;opacity:.85;text-decoration:none}.fnav a:hover{opacity:1;text-decoration:underline;text-underline-offset:3px}"
        ".cgbb-badge{display:inline-block;line-height:0;}.cgbb-badge:hover{opacity:1}.cgbb-badge img{width:234px;height:auto;display:block}"
-       "@media (max-width:640px){.cgbb-badge img{width:200px}}")
+       "@media (max-width:640px){.cgbb-badge{margin-left:auto}.cgbb-badge img{width:200px}}")
 
 
 def html(lang="en"):
