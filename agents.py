@@ -42,6 +42,7 @@ PROFILE = {
         "Forbes Top 30 Innovator (Forbes China, 2023)",
         "Teaches at Xi'an Jiaotong-Liverpool University International Business School",
         "Senior Advisor, China Enterprise Globalization Alliance (CEGA)",
+        "First Prize, \"Echoes of Friendship\" (四海友声) 2026 Chinese Poetry Recital by International Friends in Beijing, Beijing People's Association for Friendship with Foreign Countries, for reciting Cao Cao's 《观沧海》 (Nov 2026): https://mp.weixin.qq.com/s/EYtNCwUbRWMrC0hctXLj8Q",
     ],
     "books": [
         {"title": "Trust: The Golden Key to Chinese Enterprises' Globalization", "title_zh": "《信任：中国企业全球化的黄金钥匙》", "publisher": "Shenzhen Publishing House", "date": "2026-02", "isbn": "9787550744516"},
