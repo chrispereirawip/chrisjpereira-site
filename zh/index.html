@@ -241,7 +241,7 @@ details.cert{border:0;padding:0;margin:6px 0 0}details.cert summary{font-family:
 .socials a{font-family:var(--display);font-weight:600;font-size:19px;color:var(--ink);text-decoration:none}
 .socials a:hover{color:var(--red)}
 .emailrow{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-footer{background:var(--red-deep);color:#fff}footer .wrap{padding-top:18px;padding-bottom:18px;display:flex;justify-content:space-between;align-items:center;gap:8px 24px;flex-wrap:wrap;font-family:var(--display);font-size:13px}.fnav{display:flex;flex-wrap:wrap;gap:6px 20px}.fnav a{color:#fff;opacity:.85;text-decoration:none}.fnav a:hover{opacity:1;text-decoration:underline;text-underline-offset:3px}.cgbb-badge{display:inline-block;line-height:0;}.cgbb-badge:hover{opacity:1}.cgbb-badge img{width:234px;height:auto;display:block}@media (max-width:640px){.cgbb-badge{margin-left:auto}.cgbb-badge img{width:200px}}@media (max-width:640px){.cgbb-badge{margin-left:auto}.cgbb-badge img{width:200px}}@media (max-width:640px){.cgbb-badge{margin-left:auto}.cgbb-badge img{width:200px}}@media (max-width:640px){.cgbb-badge{margin-left:auto}.cgbb-badge img{width:200px}}@media (max-width:640px){.cgbb-badge{margin-left:auto}.cgbb-badge img{width:200px}}@media (max-width:640px){.cgbb-badge{margin-left:auto}.cgbb-badge img{width:200px}}@media (max-width:640px){.cgbb-badge{margin-left:auto}.cgbb-badge img{width:200px}}@media (max-width:640px){.cgbb-badge{margin-left:auto}.cgbb-badge img{width:200px}}@media (max-width:640px){.cgbb-badge{margin-left:auto}.cgbb-badge img{width:200px}}@media (max-width:640px){.cgbb-badge{margin-left:auto}.cgbb-badge img{width:200px}}@media (max-width:640px){.cgbb-badge{margin-left:auto}.cgbb-badge img{width:200px}}@media (max-width:640px){.cgbb-badge{margin-left:auto}.cgbb-badge img{width:200px}}@media (max-width:640px){.cgbb-badge{margin-left:auto}.cgbb-badge img{width:200px}}
+footer{background:var(--red-deep);color:#fff}footer .wrap{padding-top:18px;padding-bottom:18px;display:flex;justify-content:space-between;align-items:center;gap:8px 24px;flex-wrap:wrap;font-family:var(--display);font-size:13px}.fnav{display:flex;flex-wrap:wrap;gap:6px 20px}.fnav a{color:#fff;opacity:.85;text-decoration:none}.fnav a:hover{opacity:1;text-decoration:underline;text-underline-offset:3px}.cgbb-badge{display:inline-block;line-height:0;}.cgbb-badge:hover{opacity:1}.cgbb-badge img{width:234px;height:auto;display:block}@media (max-width:640px){.cgbb-badge{margin-left:auto}.cgbb-badge img{width:200px}}@media (max-width:640px){.cgbb-badge{margin-left:auto}.cgbb-badge img{width:200px}}@media (max-width:640px){.cgbb-badge{margin-left:auto}.cgbb-badge img{width:200px}}@media (max-width:640px){.cgbb-badge{margin-left:auto}.cgbb-badge img{width:200px}}@media (max-width:640px){.cgbb-badge{margin-left:auto}.cgbb-badge img{width:200px}}@media (max-width:640px){.cgbb-badge{margin-left:auto}.cgbb-badge img{width:200px}}@media (max-width:640px){.cgbb-badge{margin-left:auto}.cgbb-badge img{width:200px}}@media (max-width:640px){.cgbb-badge{margin-left:auto}.cgbb-badge img{width:200px}}@media (max-width:640px){.cgbb-badge{margin-left:auto}.cgbb-badge img{width:200px}}@media (max-width:640px){.cgbb-badge{margin-left:auto}.cgbb-badge img{width:200px}}@media (max-width:640px){.cgbb-badge{margin-left:auto}.cgbb-badge img{width:200px}}@media (max-width:640px){.cgbb-badge{margin-left:auto}.cgbb-badge img{width:200px}}@media (max-width:640px){.cgbb-badge{margin-left:auto}.cgbb-badge img{width:200px}}@media (max-width:640px){.cgbb-badge{margin-left:auto}.cgbb-badge img{width:200px}}@media (max-width:640px){.cgbb-badge{margin-left:auto}.cgbb-badge img{width:200px}}
 
 @media (max-width:900px){
   .outlets{flex-wrap:wrap;justify-content:flex-start;gap:4px 16px}
@@ -350,6 +350,46 @@ h1 .en{display:block;font-size:.3em;font-weight:500;letter-spacing:.06em;color:v
 .tlist p{margin:0;font-size:15.5px}
 .tlist blockquote{margin:2px 0 0;padding-left:12px;border-left:3px solid var(--red);font-style:italic}
 @media (max-width:900px){.tlist{grid-template-columns:1fr}}
+
+/* finder: quick access for media, organizers, researchers */
+.finder{background:var(--surface);border-bottom:1px solid var(--hair);padding-block:0}
+.finder .wrap{padding-block:26px 28px;display:grid;gap:18px}
+.finder .ftop{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:14px 40px;align-items:end}
+.finder h2{font-size:clamp(22px,2.4vw,28px)}
+.finder .ftop p{margin:6px 0 0;color:var(--muted);font-size:16px;line-height:1.45}
+.fsearch{position:relative}
+.fsearch input{width:100%;font:500 16px var(--display);padding:13px 44px 13px 18px;border:1.5px solid var(--ink);border-radius:999px;background:var(--paper);color:var(--ink)}
+.fsearch input:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px var(--blush)}
+.fsearch svg{position:absolute;right:16px;top:50%;transform:translateY(-50%);width:18px;height:18px;stroke:var(--muted);fill:none;stroke-width:2;pointer-events:none}
+.fchips{display:flex;flex-wrap:wrap;gap:6px 8px;margin-top:10px}
+.fchips button{font:600 12.5px var(--display);padding:5px 12px;border-radius:999px;border:1px solid var(--hair);background:var(--paper);color:var(--ink);cursor:pointer}
+.fchips button:hover,.fchips button[aria-pressed=true]{border-color:var(--red);color:var(--red)}
+.fres{border-top:1px solid var(--hair)}
+.fres p.fcount{margin:10px 0 2px;font:600 12.5px var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.fres ol{list-style:none;margin:0;padding:0}
+.fres li a{display:grid;grid-template-columns:92px 110px minmax(0,1fr);gap:4px 16px;padding:10px 0;border-bottom:1px solid var(--hair);text-decoration:none;color:var(--ink);align-items:baseline}
+.fres li a:hover .ft{color:var(--red)}
+.fres .fk{font:600 11.5px var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+.fres .fd{font:14px var(--display);color:var(--muted)}
+.fres .ft{font:600 15.5px var(--display);line-height:1.35}
+.fres .fx{grid-column:3;font-size:15px;color:var(--muted);line-height:1.45}
+.fres mark{background:var(--blush);color:inherit;padding:0 1px;border-radius:2px}
+.ftiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.ftiles a{display:grid;gap:4px;align-content:start;padding:16px 18px;border:1px solid var(--hair);border-radius:8px;background:var(--paper);text-decoration:none;color:var(--ink);transition:border-color .15s}
+.ftiles a:hover{border-color:var(--red)}
+.ftiles b{font:600 15.5px var(--display);color:var(--red)}
+.ftiles span{font-size:15px;color:var(--muted);line-height:1.4}
+@media (max-width:860px){.finder .ftop{grid-template-columns:1fr}.ftiles{grid-template-columns:repeat(2,minmax(0,1fr))}.fres li a{grid-template-columns:auto auto minmax(0,1fr)}.fres .ft,.fres .fx{grid-column:1/-1}}
+@media (max-width:700px){
+ .ideas>li>div>p:not(.ilinks){display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+ .ideas>li>div>.ilinks{display:none}
+ .ideas>li{cursor:pointer}
+ .ideas>li .imore{display:inline-block;margin-top:6px;font:600 13.5px var(--display);color:var(--red)}
+ .ideas>li.open>div>p:not(.ilinks){display:block;-webkit-line-clamp:unset}
+ .ideas>li.open>div>.ilinks{display:flex}
+ .ideas>li.open .imore{display:none}
+}
+@media (min-width:701px){.ideas .imore{display:none}}
 </style>
 <link rel="alternate" type="application/json" title="CGBB Website Trust Credential" href="/.well-known/trust.json">
 </head>
@@ -397,6 +437,15 @@ h1 .en{display:block;font-size:.3em;font-weight:500;letter-spacing:.06em;color:v
       <div class="outlets"><a href="#m-a305cff3">金融时报</a><a href="#m-2e6e9fcb">华尔街日报</a><a href="#m-f1f8d8de">BBC</a><a href="#media">加拿大广播公司</a><a href="#m-67840a95">彭博社</a><a href="#m-0f24f678">路透社</a><a href="#m-cc2f4c69">CNBC</a><a href="#m-376d5384">日经亚洲</a><a href="#m-df88f49f">南华早报</a><a href="#m-1ad533d9">央视</a><a href="#m-110380da">CGTN</a><a href="#m-392470c8">凤凰卫视</a><a href="#m-b9338227">新华社</a></div>
     </div>
   </div>
+
+  <section class="finder" id="find" aria-labelledby="find-h">
+    <div class="wrap">
+      <div class="ftop"><div><span class="label">媒体、活动主办方与研究人员</span><h2 id="find-h">按话题查找我的观点</h2><p>检索 300 多篇文章、采访、演讲与核心观点，中英文均可。点击结果即可展开摘要和原文出处。</p></div>
+        <div><div class="fsearch"><input type="search" id="fq" placeholder="搜索：信任、比亚迪、关税、AI、深圳……" aria-label="按话题查找我的观点" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></div><div class="fchips"><button type="button" aria-pressed="false">信任</button><button type="button" aria-pressed="false">深圳</button><button type="button" aria-pressed="false">AI</button><button type="button" aria-pressed="false">关税</button><button type="button" aria-pressed="false">品牌</button><button type="button" aria-pressed="false">欧洲</button><button type="button" aria-pressed="false">媒体</button></div></div></div>
+      <div class="fres" id="fres" hidden aria-live="polite"></div>
+      <div class="ftiles"><a href="#contact"><b>采访与评论 →</b><span>中英文均可，请通过邮件联系</span></a><a href="#speaking"><b>演讲与培训 →</b><span>演讲主题、过往舞台与近期演讲</span></a><a href="#contact"><b>简介与照片 →</b><span>可直接复制的简介、头像及演讲照片</span></a><a href="/quotes/"><b>按主题查看金句 →</b><span>可引用的原话，均附出处</span></a></div>
+    </div>
+  </section>
 
   <section id="ideas">
     <div class="wrap">
@@ -841,5 +890,29 @@ document.querySelectorAll("button[data-copy]").forEach(function(b){b.addEventLis
 (function(){function sumToggle(e){var t=e.target.closest(".sumbtn");if(!t)return;var sm=t.parentNode.querySelector(".sum"),open=sm.hidden;sm.hidden=!open;t.setAttribute("aria-expanded",open?"true":"false");t.textContent=open?"收起摘要":"摘要"}function wire(ul,btn,sec,label){ul=document.getElementById(ul);btn=document.getElementById(btn);ul.addEventListener("click",sumToggle);if(!btn)return;btn.addEventListener("click",function(){var on=ul.classList.toggle("all");btn.textContent=on?"收起":label;if(!on)document.getElementById(sec).scrollIntoView({behavior:"smooth"})})}wire("writing-list","wmore","writing","查看更多");wire("media-list","more","media","查看全部 234 条");function deep(){var h=location.hash.slice(1);if(!/^[mw]-[0-9a-f]{8}$/.test(h))return;var li=document.getElementById(h);if(!li)return;var ul=li.parentNode;if(li.classList.contains("x")&&!ul.classList.contains("all")){ul.classList.add("all");var b=document.getElementById(ul.id==="media-list"?"more":"wmore");if(b)b.textContent="收起"}var sb=li.querySelector(".sumbtn"),sm=li.querySelector(".sum");if(sb&&sm&&sm.hidden)sb.click();li.classList.add("hit");setTimeout(function(){li.scrollIntoView({block:"center"})},60);setTimeout(function(){li.classList.remove("hit")},2600)}deep();window.addEventListener("hashchange",deep);})();
 </script>
 <script defer src="/a.js"></script>
+<script>/* finder */
+(function(){var K={"i": "观点", "w": "文章", "m": "媒体"},NONE="没有找到结果。请换一个更宽泛的关键词，或发邮件至 inquiries@chrisjpereira.com。",CNT="{n} 条结果",MORE="展开全文";
+var q=document.getElementById("fq"),box=document.getElementById("fres");if(!q)return;
+var idx=[];function tx(el,s){var n=el&&el.querySelector(s);return n?n.textContent.trim():""}
+document.querySelectorAll(".ideas>li").forEach(function(li,i){var id="idea-"+(i+1);li.id=li.id||id;idx.push({k:"i",id:li.id,d:"",t:tx(li,"h3"),x:tx(li,"p"),all:li.textContent})});
+document.querySelectorAll("#writing-list>li").forEach(function(li){idx.push({k:"w",id:li.id,d:tx(li,"time"),t:tx(li,".what"),x:tx(li,".en")||tx(li,".dek"),all:li.textContent})});
+document.querySelectorAll("#media-list>li").forEach(function(li){idx.push({k:"m",id:li.id,d:tx(li,"time"),t:tx(li,".what"),x:tx(li,".outlet")+(tx(li,".en")?" · "+tx(li,".en"):""),all:li.textContent})});
+idx.forEach(function(r){r.L=r.all.toLowerCase();r.T=(r.t+" "+r.x).toLowerCase()});
+function esc(s){return s.replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function hl(s,ws){s=esc(s);ws.forEach(function(w){if(!w)return;var re=new RegExp("("+w.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+")","ig");s=s.replace(re,"<mark>$1</mark>")});return s}
+function run(){var v=q.value.trim().toLowerCase();document.querySelectorAll(".fchips button").forEach(function(b){b.setAttribute("aria-pressed",b.textContent.toLowerCase()===v?"true":"false")});
+if(v.length<2){box.hidden=true;box.innerHTML="";return}
+var ws=v.split(/\s+/).filter(Boolean),hits=[];
+idx.forEach(function(r,i){if(!ws.every(function(w){return r.L.indexOf(w)>=0}))return;var s=(r.k==="i"?3:0)+ws.filter(function(w){return r.T.indexOf(w)>=0}).length*2;hits.push([s,i,r])});
+hits.sort(function(a,b){return b[0]-a[0]||a[1]-b[1]});
+var h='<p class="fcount">'+CNT.replace("{n}",hits.length)+'</p>';
+if(!hits.length)h+='<p>'+NONE+'</p>';
+else h+="<ol>"+hits.slice(0,10).map(function(x){var r=x[2];return '<li><a href="#'+r.id+'" data-id="'+r.id+'"><span class="fk">'+K[r.k]+'</span><span class="fd">'+esc(r.d)+'</span><span class="ft">'+hl(r.t,ws)+'</span>'+(r.x?'<span class="fx">'+hl(r.x.slice(0,180),ws)+'</span>':"")+'</a></li>'}).join("")+"</ol>";
+box.innerHTML=h;box.hidden=false}
+var tm;q.addEventListener("input",function(){clearTimeout(tm);tm=setTimeout(run,120)});
+document.querySelector(".fchips").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;q.value=b.getAttribute("aria-pressed")==="true"?"":b.textContent;run()});
+box.addEventListener("click",function(e){var a=e.target.closest("a[data-id]");if(!a)return;var id=a.dataset.id;if(id.indexOf("idea-")===0){e.preventDefault();var li=document.getElementById(id);li.classList.add("open","hit");li.scrollIntoView({behavior:"smooth",block:"center"});setTimeout(function(){li.classList.remove("hit")},2600)}});
+document.querySelectorAll(".ideas>li").forEach(function(li){var d=li.querySelector(":scope>div");if(d&&!d.querySelector(".imore")){var s=document.createElement("span");s.className="imore";s.textContent=MORE+" ▾";d.appendChild(s)}li.addEventListener("click",function(e){if(e.target.closest("a"))return;li.classList.add("open")})});
+})();</script>
 </body>
 </html>
