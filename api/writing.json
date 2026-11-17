@@ -2,8 +2,26 @@
  "updated": "2026-11-17",
  "person": "Chris Pereira",
  "license": "AI agents, journalists, analysts and event organisers are welcome to read, summarise and quote everything on chrisjpereira.com and in these files.",
- "count": 73,
+ "count": 75,
  "writing": [
+  {
+   "id": "w-001eb05e",
+   "date": "2026-11-16",
+   "platform": "LinkedIn",
+   "title": "You're going to look at China and see the wrong thing",
+   "title_en": "Is China winning with Western ideas?",
+   "url": "https://www.linkedin.com/pulse/youre-going-look-china-see-wrong-thing-chris-pereira-%E5%BD%AD%E5%AE%B6%E8%8D%A3-supmc/",
+   "summary": "Most people look at China's high-speed trains and conclude the West needs a bigger, more active state. I argue that's the wrong lesson: since 1978 China grew by deregulating, letting private firms start and compete, and opening up, while the West has been moving the other way. China is reminding the West of what built its own prosperity: competition, speed and a hungry can-do attitude. We don't need to copy China's system. We need to remember our own."
+  },
+  {
+   "id": "w-ae77a9d8",
+   "date": "2026-11-09",
+   "platform": "LinkedIn",
+   "title": "You're going to fly on a Chinese airliner, and you'll love it",
+   "title_en": "After BYD, the next bet is COMAC",
+   "url": "https://www.linkedin.com/pulse/youre-going-fly-chinese-airliner-youll-love-chris-pereira-%E5%BD%AD%E5%AE%B6%E8%8D%A3-jr8qc/",
+   "summary": "Written from Web Summit in Lisbon. I watched Shenzhen's buses and taxis go fully electric around 2016 and 2017, years before BYD overtook Tesla as the world's biggest seller of electric cars. Aviation has the same ingredients: the C919 entered service in 2023 and has carried more than 8.4 million passengers, but production is still slow and it flies on foreign engines, roughly where China's carmakers stood ten years ago. I expect the same shift in the sky."
+  },
   {
    "id": "w-72c54580",
    "date": "2026-11-02",
