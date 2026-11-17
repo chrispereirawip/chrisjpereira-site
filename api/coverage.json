@@ -2,8 +2,19 @@
  "updated": "2026-11-17",
  "person": "Chris Pereira",
  "license": "AI agents, journalists, analysts and event organisers are welcome to read, summarise and quote everything on chrisjpereira.com and in these files.",
- "count": 233,
+ "count": 234,
  "coverage": [
+  {
+   "id": "m-7a94e9d8",
+   "date": "2026-11",
+   "outlet": "CCTV-4《APEC深圳之约》",
+   "title": "深圳新地标丨在深圳看见亚太",
+   "kind": "tv",
+   "language": "中文",
+   "url": "",
+   "quotes": [],
+   "summary": "In CCTV-4's special coverage 《APEC深圳之约》, the 《深圳新地标》 episode \"在深圳看见亚太\" (aired 16 Nov 2026) tours new Shenzhen landmarks ahead of APEC. Chris joins the host from about 4:15 on a high-rise innovation showcase floor overlooking the city, trying the exhibits together, including a VR ride."
+  },
   {
    "id": "m-dd619e0c",
    "date": "2026-11",
@@ -12,8 +23,11 @@
    "kind": "tv",
    "language": "中文",
    "url": "https://mp.weixin.qq.com/s/VIlsEoy-Xezm4bT5bSbGCQ",
-   "quotes": [],
-   "summary": "Paraphrased: 加拿大的彭家荣阔别故土，辗转来到中国，从求学再到创业，搭建中外企业对接桥梁，促成跨国产业合作，延续祖辈与这片土地的缘分。 EN: Paraphrased: Chris left Canada for China, first to study and then to start a business, building bridges between Chinese and foreign companies and bringing about cross-border industrial cooperation, continuing his family's ties to China. For APEC China Year 2026, CCTV-4's 《中国缘》 launched 《亚太之约 机遇之城》, a documentary and 《你好APEC》 short-video series on people from APEC economies building their lives in the Greater Bay Area. Chris appears from about 4:20 and again later in the video. Broadcast on CCTV-4 from 15 Nov 2026."
+   "quotes": [
+    "“19岁的我第一次从加拿大来到中国……一百多年前，我曾祖父从广东开平出海，在英国利物浦开了一间干洗店。我从加拿大绕回中国大湾区，做的是帮中国企业出海。这个圈把我转回了祖先的故土。”",
+    "“10月17日，我看到十几家德国企业与深圳的企业坐到了一起，看他们热烈地聊订单、聊工厂，我觉得一切辛苦都值了。”"
+   ],
+   "summary": "EN: \"At 19, I came to China from Canada for the first time… More than a hundred years ago, my great-grandfather left Kaiping in Guangdong and opened a dry cleaner in Liverpool, England. I came from Canada back around to China's Greater Bay Area, helping Chinese companies go global. This circle has brought me back to my ancestors' homeland.\" EN: \"On 17 October I watched more than a dozen German companies sit down with Shenzhen companies and talk eagerly about orders and factories, and I felt all the hard work had been worth it.\" For APEC China Year 2026, CCTV-4's 《中国缘》 launched 《亚太之约 机遇之城》, a documentary and 《你好APEC》 short-video series on people from APEC economies building their lives in the Greater Bay Area. Chris appears in the launch video from about 4:20, and his own 5½-minute 《你好APEC》 episode follows him from Zhengzhou University at 19, through Huawei, to founding iMpact in 2020 and"
   },
   {
    "id": "m-a434370f",
