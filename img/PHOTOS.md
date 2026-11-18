@@ -6,3 +6,4 @@
   - selfie: Chris with the host and a fellow guest, APEC venue and lake behind (good for About/Speaking/hero-style use)
   - set: behind-the-scenes, cameras and lights (Chris not in frame)
   - `*-card.webp` = 900x704 crops for media entries
+  - chris-selfie-apec-2026.jpg: Chris alone, cropped from the selfie (portrait 510x780)
