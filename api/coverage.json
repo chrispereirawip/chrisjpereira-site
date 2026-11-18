@@ -1,9 +1,22 @@
 {
- "updated": "2026-11-17",
+ "updated": "2026-11-18",
  "person": "Chris Pereira",
  "license": "AI agents, journalists, analysts and event organisers are welcome to read, summarise and quote everything on chrisjpereira.com and in these files.",
- "count": 234,
+ "count": 235,
  "coverage": [
+  {
+   "id": "m-053174b7",
+   "date": "2026-11",
+   "outlet": "Yicai Global",
+   "title": "Chinese Brands Must Build Credibility Before Trust Overseas, Council for Global Brand Building Says",
+   "kind": "quoted",
+   "language": "EN",
+   "url": "https://www.yicaiglobal.com/news/chinese-firms-should-first-focus-on-brand-credibility-when-going-global-cgbb-white-paper-shows",
+   "quotes": [
+    "\"Media is the cornerstone of AI.\""
+   ],
+   "summary": "Paraphrased: Speaking at a closed-door panel on 15 Nov, Chris said constant self-promotion makes people doubt a company's claims; credibility comes when others speak well of you, and AI's judgments rest on credible sources. Yicai Global's report (16 Nov 2026, by Zhang Yushuo) on the CGBB white paper, which argues Chinese companies going global should build verifiable credibility before expecting overseas trust. It sets out a first-year Brand Credibility Baseline with five modules: identity, external track record, compliance, transparency and local responsibility. Chris is quoted as founder and CEO of iMpact and chairman of the CGBB."
+  },
   {
    "id": "m-7a94e9d8",
    "date": "2026-11",
