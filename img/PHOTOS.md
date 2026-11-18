@@ -7,3 +7,4 @@
   - set: behind-the-scenes, cameras and lights (Chris not in frame)
   - `*-card.webp` = 900x704 crops for media entries
   - chris-selfie-apec-2026.jpg: Chris alone, cropped from the selfie (portrait 510x780)
+  - impact-mascot-512.png: iMpact mascot 小美式 (from Team Desk media/xm-512.png), reference for illustrations
