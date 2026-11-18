@@ -2,8 +2,19 @@
  "updated": "2026-11-18",
  "person": "Chris Pereira",
  "license": "AI agents, journalists, analysts and event organisers are welcome to read, summarise and quote everything on chrisjpereira.com and in these files.",
- "count": 235,
+ "count": 236,
  "coverage": [
+  {
+   "id": "m-f1e5aff6",
+   "date": "2026-11",
+   "outlet": "CMG《APEC聊会儿》",
+   "title": "《APEC聊会儿》国际嘉宾访谈",
+   "kind": "tv",
+   "language": "中文",
+   "url": "",
+   "quotes": [],
+   "summary": "彭家荣作为国际嘉宾，参加中央广播电视总台（CMG）APEC中国年特别节目《APEC聊会儿》圆桌访谈，节目在深圳APEC会场对面的屋顶演播室录制。 EN: Chris joined an international guest panel on China Media Group's APEC China 2026 talk show \"APEC Liao Hui'er\", filmed in a rooftop studio overlooking the APEC venue in Shenzhen."
+  },
   {
    "id": "m-053174b7",
    "date": "2026-11",
