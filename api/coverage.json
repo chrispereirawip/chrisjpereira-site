@@ -2,7 +2,7 @@
  "updated": "2026-11-19",
  "person": "Chris Pereira",
  "license": "AI agents, journalists, analysts and event organisers are welcome to read, summarise and quote everything on chrisjpereira.com and in these files.",
- "count": 236,
+ "count": 237,
  "coverage": [
   {
    "id": "m-f1e5aff6",
@@ -416,6 +416,20 @@
    "url": "https://youtu.be/nBkQas6syKE",
    "quotes": [],
    "summary": "Topics: Guest on CGTN's The Heat discussing China's strategy at the 2026 World AI Conference in Shanghai, where Xi spoke at the opening for the first time (openness, secure and controllable AI, global AI governance)."
+  },
+  {
+   "id": "m-8ffc29bc",
+   "date": "2026-06",
+   "outlet": "Yicai Global",
+   "title": "New Foreign Investment Wave Is Heading to China Over Next 18 Months, iMpact CEO Says",
+   "kind": "interview",
+   "language": "EN",
+   "url": "https://www.yicaiglobal.com/news/new-wave-of-foreign-investment-about-to-start-in-china-expert-says",
+   "quotes": [
+    "\"Goodwill and curiosity toward China are surging.\"",
+    "\"Their children will be the next generation of bridges between China and the world.\""
+   ],
+   "summary": "Paraphrased: Chris expects companies from the UK, Germany, France, Spain, Canada, Southeast Asia and the Middle East to form a new wave of investment into China over the next 18 months, and sees the APEC summit in Shenzhen in November as a possible turning point. Yicai Global's interview (5 Jun 2026, by Zhang Yushuo). Chris said iMpact has begun receiving inquiries from overseas companies that want to enter China, which was rare before. He pointed to expanded visa-free entry, foreign visitors seeing China's drones, robotics and consumer electronics for themselves, and Chinese companies hiring locally overseas. Any market entry, he said, depends on building trust through direct human contact."
   },
   {
    "id": "m-1cbecb3f",
