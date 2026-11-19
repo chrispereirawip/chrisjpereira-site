@@ -250,7 +250,7 @@ def lists_js(lang, wmore, more):
             "})();\n</script>")
 
 
-CITY_EN = {"上海": "Shanghai", "深圳": "Shenzhen", "北京": "Beijing", "广州": "Guangzhou", "杭州": "Hangzhou", "苏州": "Suzhou", "香港": "Hong Kong", "新加坡": "Singapore", "成都": "Chengdu", "郑州": "Zhengzhou", "三亚": "Sanya", "迪拜": "Dubai", "里斯本": "Lisbon", "柏林": "Berlin", "伦敦": "London", "纽约": "New York", "拉斯维加斯": "Las Vegas"}
+CITY_EN = {"上海": "Shanghai", "深圳": "Shenzhen", "北京": "Beijing", "广州": "Guangzhou", "杭州": "Hangzhou", "苏州": "Suzhou", "香港": "Hong Kong", "新加坡": "Singapore", "成都": "Chengdu", "郑州": "Zhengzhou", "三亚": "Sanya", "迪拜": "Dubai", "里斯本": "Lisbon", "柏林": "Berlin", "伦敦": "London", "纽约": "New York", "拉斯维加斯": "Las Vegas", "线上": "Online"}
 
 
 def talk_li(t, lang):
@@ -260,7 +260,7 @@ def talk_li(t, lang):
     q = (t["quote_zh"] if zh else t["quote_en"]) or ""
     city = t.get("city") or ""
     if not zh:
-        city = CITY_EN.get(city, "" if has_zh(city) else city)
+        city = CITY_EN.get(city) or re.sub(r"[一-鿿]+", " ", city).strip()
     meta = " · ".join(x for x in ((d_zh(t["date"]) if zh else d_en(t["date"])) if t.get("date") else "", city) if x)
     img = ('<img src="' + ("../" if zh else "") + "img/talks/" + esc(t["img"]) + '" alt="' + esc(t.get("caption") or title) + '" loading="lazy">') if t.get("img") else ""
     return ("        <li>" + img + '<span class="tmeta">' + esc(meta) + "</span><h3>" + esc(title) + "</h3>"
