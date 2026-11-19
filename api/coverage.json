@@ -2,8 +2,19 @@
  "updated": "2026-11-19",
  "person": "Chris Pereira",
  "license": "AI agents, journalists, analysts and event organisers are welcome to read, summarise and quote everything on chrisjpereira.com and in these files.",
- "count": 237,
+ "count": 238,
  "coverage": [
+  {
+   "id": "m-ee54eb9c",
+   "date": "2026-11",
+   "outlet": "Nikkei Asia",
+   "title": "US visa denials hit Xpeng, other Chinese robot makers ahead of CES",
+   "kind": "quoted",
+   "language": "EN",
+   "url": "https://asia.nikkei.com/business/technology/us-visa-denials-hit-xpeng-other-chinese-robot-makers-ahead-of-ces",
+   "quotes": [],
+   "summary": "Paraphrased: Chris Pereira, founder of consultancy iMpact, which helps Chinese companies expand overseas, said around 40% of his clients planning to attend CES in early January had been denied U.S. visas. Most of those affected were executives and technical staff in the artificial intelligence and robotics sectors. Nikkei Asia reports that Chinese robot makers and other tech companies, including Xpeng, have had U.S. visa applications refused ahead of CES in Las Vegas, and that a long-standing visa problem for Chinese companies has intensified."
+  },
   {
    "id": "m-f1e5aff6",
    "date": "2026-11",
