@@ -20,7 +20,10 @@ CSS = """
 .ideas.acc li.sx h3::after{content:"\\2212"}
 .ideas.acc li:not(.sx) p{display:none}
 .ideas.acc li:hover h3{color:var(--red)}
-.ideas.acc .n{padding-top:3px}
+.ideas.acc .n{display:none}
+.ideas.acc li{grid-template-columns:minmax(0,1fr)}
+.ideas.acc h3{text-wrap:wrap}
+.ideas.acc h3>*{text-wrap:wrap}
 .ideas.acc .imore{display:none!important}
 .sall{font:600 14px var(--display);color:var(--red);background:none;border:0;padding:0;margin:12px 0 0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
 .scap>li:nth-child(n+6){display:none!important}
@@ -54,7 +57,7 @@ JS = """
 (function(){var L=document.documentElement.lang.indexOf('zh')===0,M=window.matchMedia('(max-width:700px)').matches,$=function(s,r){return (r||document).querySelector(s)};
 function key(el,fn){el.setAttribute('tabindex','0');el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){if(e.target.closest('a,button')&&e.target!==el)return;e.preventDefault();fn()}})}
 var ideas=$('ol.ideas');if(ideas){ideas.classList.add('acc');var lis=[].slice.call(ideas.children);lis.forEach(function(li){var t=function(){li.classList.toggle('sx')};li.addEventListener('click',function(e){if(e.target.closest('a'))return;t()});key(li,t)});
- var b=document.createElement('button');b.type='button';b.className='sall';var all=false;var lab=function(){b.textContent=all?(L?'收起全部':'Close all'):(L?'展开全部观点':'Open all '+lis.length+' ideas')};lab();b.onclick=function(){all=!all;lis.forEach(function(li){li.classList.toggle('sx',all)});lab()};ideas.parentNode.insertBefore(b,ideas.nextSibling)}
+ var b=document.createElement('button');b.type='button';b.className='sall';var all=false;var lab=function(){b.textContent=all?(L?'收起全部':'Close all'):(L?'展开全部观点':'Open all ideas')};lab();b.onclick=function(){all=!all;lis.forEach(function(li){li.classList.toggle('sx',all)});lab()};ideas.parentNode.insertBefore(b,ideas.nextSibling)}
 if(!M){[['#writing-list','#wmore'],['#media-list','#more']].forEach(function(x){var u=$(x[0]),m=$(x[1]);if(!u||!m)return;u.classList.add('scap');m.addEventListener('click',function(){u.classList.remove('scap')},true)})}
 [].forEach.call(document.querySelectorAll('.tlist li'),function(li){var p=$('p',li);if(p)p.addEventListener('click',function(){li.classList.toggle('sx')})});
 function fold(el,title,sub){if(!el)return null;var f=document.createElement('div');f.className='fold';var h=document.createElement('button');h.type='button';h.className='foldh';h.setAttribute('aria-expanded','false');var s=document.createElement('span');s.textContent=title;if(sub){var sm=document.createElement('small');sm.textContent=sub;s.appendChild(sm)}h.appendChild(s);var b=document.createElement('div');b.className='foldb';b.appendChild(el);f.appendChild(h);f.appendChild(b);h.onclick=function(){var o=f.classList.toggle('sx');h.setAttribute('aria-expanded',o?'true':'false')};return f}
