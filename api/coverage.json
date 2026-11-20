@@ -5,17 +5,6 @@
  "count": 238,
  "coverage": [
   {
-   "id": "m-ee54eb9c",
-   "date": "2026-11",
-   "outlet": "Nikkei Asia",
-   "title": "US visa denials hit Xpeng, other Chinese robot makers ahead of CES",
-   "kind": "quoted",
-   "language": "EN",
-   "url": "https://asia.nikkei.com/business/technology/us-visa-denials-hit-xpeng-other-chinese-robot-makers-ahead-of-ces",
-   "quotes": [],
-   "summary": "Paraphrased: Chris Pereira, founder of consultancy iMpact, which helps Chinese companies expand overseas, said around 40% of his clients planning to attend CES in early January had been denied U.S. visas. Most of those affected were executives and technical staff in the artificial intelligence and robotics sectors. Nikkei Asia reports that Chinese robot makers and other tech companies, including Xpeng, have had U.S. visa applications refused ahead of CES in Las Vegas, and that a long-standing visa problem for Chinese companies has intensified."
-  },
-  {
    "id": "m-e430e28f",
    "date": "2026-11",
    "outlet": "CCTV-13《聊会儿APEC》",
@@ -30,6 +19,17 @@
     "“22年前，每一个出租车司机在郑州的街头听到我是加拿大人的时候，有两句话都会说：白求恩。第二是大山。”"
    ],
    "summary": "EN: \"If you want to do overseas business well, you're still missing a third thing, which is trust: relationships with friends overseas.\" EN: \"Companies plan investment, hiring and trade on a three- or five-year horizon... So China is a model the world really needs; in this respect it is very stable.\" EN: \"If you sent a robot to a meeting with a client, they would block you... What AI cannot replace is meeting more often.\" EN: \"Twenty-two years ago, every taxi driver on the streets of Zhengzhou who heard I was Canadian would say two things: Bethune, and Dashan.\" 中央广播电视总台新闻频道（CCTV-13）APEC特别节目《聊会儿APEC》（2026年11月20日播出，约25分钟），彭家荣作为加拿大嘉宾在深圳香蜜湖畔屋顶演播室与主持人及中外嘉宾对谈，谈企业最看重的政策稳定性、中加友好往来、中国企业出海缺少的“信任”，以及AI替代不了面对面交流。 EN:  CCTV-13 News aired the APEC special \"Liao Hui'er APEC\" on 20 Nov 2026 (about 25 minutes). Chris joined the host and Chinese and international guests in a rooftop studio by Xiangmi Lake"
+  },
+  {
+   "id": "m-ee54eb9c",
+   "date": "2026-11",
+   "outlet": "Nikkei Asia",
+   "title": "US visa denials hit Xpeng, other Chinese robot makers ahead of CES",
+   "kind": "quoted",
+   "language": "EN",
+   "url": "https://asia.nikkei.com/business/technology/us-visa-denials-hit-xpeng-other-chinese-robot-makers-ahead-of-ces",
+   "quotes": [],
+   "summary": "Paraphrased: Chris Pereira, founder of consultancy iMpact, which helps Chinese companies expand overseas, said around 40% of his clients planning to attend CES in early January had been denied U.S. visas. Most of those affected were executives and technical staff in the artificial intelligence and robotics sectors. Nikkei Asia reports that Chinese robot makers and other tech companies, including Xpeng, have had U.S. visa applications refused ahead of CES in Las Vegas, and that a long-standing visa problem for Chinese companies has intensified."
   },
   {
    "id": "m-053174b7",

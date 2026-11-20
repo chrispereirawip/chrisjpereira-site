@@ -122,6 +122,9 @@ def media_li(m, i, lang):
         pic = ""
         if len(m) > 10 and m[10]:
             pic = '<img class="mthumb" src="' + ("" if lang == "en" else "../") + esc(m[10]) + '" alt="' + esc(("Chris Pereira interviewed by " + ({"第一财经": "Yicai"}.get(m[2], m[2]))) if lang == "en" else ("彭家荣接受" + m[2] + "采访")) + '" width="900" height="704" loading="lazy">'
+        if len(m) > 12 and m[12]:
+            alt = ("Chris Pereira on " + m[2]) if lang == "en" else ("彭家荣在" + m[2])
+            pic = '<div class="mpics">' + "".join('<img src="' + ("" if lang == "en" else "../") + esc(p) + '" alt="' + esc(alt) + '" width="1000" height="562" loading="lazy">' for p in m[12]) + "</div>"
         sm = '<div class="sum" hidden>' + pic + sum_p(q) + attr + links + "</div>"
     date = d_en(m[0]) if lang == "en" else d_zh(m[0])
     cls = ' class="x"' if i >= MLIMIT else ""
