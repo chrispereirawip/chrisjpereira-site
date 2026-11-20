@@ -18,7 +18,7 @@ CSS = """
  .outlets::-webkit-scrollbar{display:none}
  .finder .label,.finder .ftop p,.fchips,.ftiles{display:none!important}
  .finder h2{font-size:22px;margin-bottom:10px}
- .head .lede,.picks,.gallery .g2,.speak .venues,.speak>div:last-child,.logowall,.bklaunch,.aboutphoto,.venture>p,.tr span,.trhead p{display:none!important}
+ .head .lede,.picks,.gallery .g2,.bklaunch,.aboutphoto{display:none!important}
  .mcap>li:nth-child(n+4){display:none!important}
  #talks-list.mcap>li:nth-child(n+2){display:none!important}
  .mmore{display:block;margin:14px 0 0;font:600 15px var(--display);color:var(--red);background:none;border:1px solid var(--red);border-radius:999px;padding:9px 18px;cursor:pointer}
@@ -29,7 +29,7 @@ CSS = """
 JS = """
 (function(){if(!window.matchMedia('(max-width:700px)').matches)return;var L=document.documentElement.lang.indexOf('zh')===0;
 var bar=document.querySelector('header.bar'),nav=bar&&bar.querySelector('.nav');if(bar&&nav){var b=document.createElement('button');b.type='button';b.className='menubtn';b.setAttribute('aria-expanded','false');b.innerHTML='<svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>'+(L?'菜单':'Menu');var c=document.createElement('a');c.className='mcontact';c.href='#contact';c.textContent=L?'联系':'Contact';nav.appendChild(c);bar.querySelector('.wrap').appendChild(b);b.onclick=function(){var o=bar.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false')};nav.addEventListener('click',function(e){if(e.target.closest('a')){bar.classList.remove('open');b.setAttribute('aria-expanded','false')}})}
-[['.ideas',L?'展开全部观点':'All ideas',null],['#writing-list',L?'展开更多':'Show more','#wmore'],['#media-list',L?'展开更多':'Show more','.mbtns'],['#talks-list',L?'更多演讲':'More talks',null]].forEach(function(x){var u=document.querySelector(x[0]);if(!u||u.children.length<2)return;u.classList.add('mcap');var o=x[2]&&document.querySelector(x[2]);if(o)o.classList.add('mhide');var m=document.createElement('button');m.type='button';m.className='mmore';m.textContent=x[1];u.parentNode.insertBefore(m,u.nextSibling);m.onclick=function(){u.classList.remove('mcap');m.remove();if(o)o.classList.remove('mhide')}});
+[['#writing-list',L?'展开更多':'Show more','#wmore'],['#media-list',L?'展开更多':'Show more','.mbtns'],['#talks-list',L?'更多演讲':'More talks',null]].forEach(function(x){var u=document.querySelector(x[0]);if(!u||u.children.length<2)return;u.classList.add('mcap');var o=x[2]&&document.querySelector(x[2]);if(o)o.classList.add('mhide');var m=document.createElement('button');m.type='button';m.className='mmore';m.textContent=x[1];u.parentNode.insertBefore(m,u.nextSibling);m.onclick=function(){u.classList.remove('mcap');m.remove();if(o)o.classList.remove('mhide')}});
 })();
 """
 BLOCK = "<!--mobile--><style>" + CSS.strip() + "</style><script>" + JS.strip() + "</script><!--/mobile-->"

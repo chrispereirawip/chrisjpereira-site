@@ -517,6 +517,7 @@ if __name__ == "__main__":
     footer.sync("zh/index.html", "zh")
     import annc  # announcement bar above the header (annc.py)
     import mobile  # simplified phone layout (mobile.py)
+    import simple  # simpler homepage, all widths (simple.py)
     for _p, _l in annc.PAGES:
         annc.sync(_p, _l)
     import agents  # agent-friendly layer: api/*.json, agents/, llms-full.txt (agents.py)
