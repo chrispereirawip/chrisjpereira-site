@@ -116,6 +116,8 @@ def media_li(m, i, lang):
             links += '<a href="' + esc(m[6]) + '" target="_blank" rel="noopener">' + LBL[lang][kind(m[6], m[4])] + "</a>"
         if len(m) > 9 and m[9]:
             links += '<a href="' + esc(m[9]) + '" target="_blank" rel="noopener">' + LBL[lang][kind(m[9], "video")] + "</a>"
+        for rp in (m[11] if len(m) > 11 and m[11] else []):
+            links += '<a href="' + esc(rp[1]) + '" target="_blank" rel="noopener">' + (("Also in " + esc(rp[0])) if lang == "en" else ("转载：" + esc(rp[0]))) + "</a>"
         attr = ('<p class="attr">' + esc(attribution(m, lang)) + "</p>") if any(is_quote_line(l) for l in q.split("\n")) else ""
         pic = ""
         if len(m) > 10 and m[10]:
