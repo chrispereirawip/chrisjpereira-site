@@ -1,9 +1,23 @@
 {
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "person": "Chris Pereira",
  "license": "AI agents, journalists, analysts and event organisers are welcome to read, summarise and quote everything on chrisjpereira.com and in these files.",
- "count": 241,
+ "count": 242,
  "coverage": [
+  {
+   "id": "m-0db98f21",
+   "date": "2026-11",
+   "outlet": "Cyrus Janssen (YouTube)",
+   "title": "China Is Already Living in 2050...I Went to See It Myself",
+   "kind": "video",
+   "language": "EN",
+   "url": "https://www.youtube.com/watch?v=S4Z68sca-Sw&t=333s",
+   "quotes": [
+    "\"In China, if you have an idea, if you have something that you want to do in business, in your life, you come here and things happen fast.\"",
+    "\"When you want to achieve great things and when you're thinking big, you come to Shenzhen.\""
+   ],
+   "summary": "In his Shenzhen documentary filmed during APEC 2026, YouTuber Cyrus Janssen interviews Chris in Huaqiangbei (from about 5:33). Chris explains why Shenzhen matters to iMpact, how open the city is to foreign founders, and how its location between Hong Kong's finance and the Pearl River Delta's factories lets a company go from idea to product faster than Silicon Valley. iMpact has helped 500+ Chinese companies go overseas."
+  },
   {
    "id": "m-5050951f",
    "date": "2026-11",
