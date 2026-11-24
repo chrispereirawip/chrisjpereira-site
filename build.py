@@ -113,8 +113,8 @@ def media_li(m, i, lang):
     if q:
         links = ""
         if m[6]:
-            links += '<a href="' + esc(m[6]) + '" target="_blank" rel="noopener">' + LBL[lang][kind(m[6], m[4])] + "</a>"
-        if len(m) > 9 and m[9]:
+            links += '<a href="' + esc(m[6]) + '" target="_blank" rel="noopener">' + LBL[lang][kind(m[6], "" if (len(m) > 9 and m[9]) else m[4])] + "</a>"
+        if len(m) > 9 and m[9] and m[9] != m[6]:
             links += '<a href="' + esc(m[9]) + '" target="_blank" rel="noopener">' + LBL[lang][kind(m[9], "video")] + "</a>"
         for rp in (m[11] if len(m) > 11 and m[11] else []):
             links += '<a href="' + esc(rp[1]) + '" target="_blank" rel="noopener">' + (("Also in " + esc(rp[0])) if lang == "en" else ("转载：" + esc(rp[0]))) + "</a>"
