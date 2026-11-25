@@ -101,7 +101,35 @@ def writing_id(w):
     return eid("w", w[4] or (w[1] + w[2]))
 
 
+POST_UI = {"en": ("My take", "Read more", "Hide"), "zh": ("我的观点", "阅读全文", "收起")}
+
+
+def md_p(t):
+    """Own posts: one paragraph per line, [text](url) becomes a link."""
+    out = []
+    for x in [l for l in t.split("\n") if l.strip()]:
+        h = esc(x)
+        h = re.sub(r"\[([^\]]+)\]\((https?://[^)\s]+)\)", lambda mo: '<a class="inl" href="' + mo.group(2) + '" target="_blank" rel="noopener">' + mo.group(1) + "</a>", h)
+        out.append("<p" + (' class="zh"' if has_zh(x) else "") + ">" + h + "</p>")
+    return "".join(out)
+
+
+def post_li(m, i, lang):
+    """Chris's own commentary posted directly on the site (type "post"): m[7] English text, m[13] Chinese text, m[8] Chinese title."""
+    lbl, b_off, b_on = POST_UI[lang]
+    title = m[8] if (lang == "zh" and len(m) > 8 and m[8]) else m[3]
+    body = m[13] if (lang == "zh" and len(m) > 13 and m[13]) else m[7]
+    b = '<button type="button" class="sumbtn" aria-expanded="false" data-off="' + b_off + '" data-on="' + b_on + '">' + b_off + "</button>"
+    sm = '<div class="sum post" hidden>' + md_p(body) + '<p class="attr">' + esc(("Chris Pereira (彭家荣), " + d_en(m[0])) if lang == "en" else ("彭家荣 · " + d_zh(m[0]))) + "</p></div>"
+    date = d_en(m[0]) if lang == "en" else d_zh(m[0])
+    cls = ' class="x"' if i >= MLIMIT else ""
+    return ("<li" + cls + ' id="' + media_id(m) + '"><time datetime="' + m[0] + '">' + date + '</time><span class="outlet" title="' + lbl + '">'
+            + lbl + '</span><span class="what' + (" zh" if lang == "zh" else "") + '">' + esc(title) + "</span>" + b + sm + "</li>")
+
+
 def media_li(m, i, lang):
+    if (m[4] or "") == "post":
+        return post_li(m, i, lang)
     zh = " zh" if m[5] == "中文" else ""
     d = ('<a class="what' + zh + '" href="' + esc(m[6]) + '" target="_blank" rel="noopener">' + esc(m[3]) + "</a>") if m[6] \
         else '<span class="what' + zh + '">' + esc(m[3]) + "</span>"
@@ -138,7 +166,24 @@ def src_label(s, lang):
     return s
 
 
+def writing_post_li(w, i, lang):
+    """Chris's own piece posted directly on the site: w[7]=="post", w[8] English text, w[9] Chinese text, w[10] Chinese title, w[11] Chinese dek."""
+    lbl, b_off, b_on = POST_UI[lang]
+    zh = lang == "zh"
+    title = w[10] if zh and w[10] else w[2]
+    dek = w[11] if zh and len(w) > 11 and w[11] else w[3]
+    body = w[9] if zh and w[9] else w[8]
+    b = '<button type="button" class="sumbtn" aria-expanded="false" data-off="' + b_off + '" data-on="' + b_on + '">' + b_off + "</button>"
+    sm = '<div class="sum post" hidden>' + md_p(body) + '<p class="attr">' + esc(("Chris Pereira (彭家荣), " + d_en(w[0])) if not zh else ("彭家荣 · " + d_zh(w[0]))) + "</p></div>"
+    date = d_zh(w[0]) if zh else d_en(w[0])
+    cls = ' class="x"' if i >= WLIMIT else ""
+    return ("<li" + cls + ' id="' + writing_id(w) + '"><time datetime="' + w[0] + '">' + date + '</time><span class="src" title="' + lbl + '">'
+            + lbl + '</span><span class="what' + (" zh" if zh else "") + '">' + esc(title) + '</span><span class="dek">' + esc(dek) + "</span>" + b + sm + "</li>")
+
+
 def writing_li(w, i, lang):
+    if len(w) > 7 and w[7] == "post":
+        return writing_post_li(w, i, lang)
     zh = " zh" if has_zh(w[2]) else ""
     t = ('<a class="what' + zh + '" href="' + esc(w[4]) + '" target="_blank" rel="noopener">' + esc(w[2]) + "</a>") if w[4] \
         else '<span class="what' + zh + '">' + esc(w[2]) + "</span>"
@@ -201,10 +246,10 @@ def coverage_ld(MEDIA, WRITING):
 
 TOGGLE_JS = {
     "en": ('function sumToggle(e){var t=e.target.closest(".sumbtn");if(!t)return;var sm=t.parentNode.querySelector(".sum"),open=sm.hidden;'
-           'sm.hidden=!open;t.setAttribute("aria-expanded",open?"true":"false");t.textContent=open?"Hide summary":"Short summary"}',
+           'sm.hidden=!open;t.setAttribute("aria-expanded",open?"true":"false");t.textContent=open?(t.dataset.on||"Hide summary"):(t.dataset.off||"Short summary")}',
            "Show less"),
     "zh": ('function sumToggle(e){var t=e.target.closest(".sumbtn");if(!t)return;var sm=t.parentNode.querySelector(".sum"),open=sm.hidden;'
-           'sm.hidden=!open;t.setAttribute("aria-expanded",open?"true":"false");t.textContent=open?"收起摘要":"摘要"}',
+           'sm.hidden=!open;t.setAttribute("aria-expanded",open?"true":"false");t.textContent=open?(t.dataset.on||"收起摘要"):(t.dataset.off||"摘要")}',
            "收起"),
 }
 
