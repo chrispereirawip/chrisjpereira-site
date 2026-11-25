@@ -120,7 +120,12 @@ def post_li(m, i, lang):
     title = m[8] if (lang == "zh" and len(m) > 8 and m[8]) else m[3]
     body = m[13] if (lang == "zh" and len(m) > 13 and m[13]) else m[7]
     b = '<button type="button" class="sumbtn" aria-expanded="false" data-off="' + b_off + '" data-on="' + b_on + '">' + b_off + "</button>"
-    sm = '<div class="sum post" hidden>' + md_p(body) + '<p class="attr">' + esc(("Chris Pereira (彭家荣), " + d_en(m[0])) if lang == "en" else ("彭家荣 · " + d_zh(m[0]))) + "</p></div>"
+    paras = md_p(body)
+    if len(w) > 12 and w[12]:  # optional photo, shown after the first paragraph
+        img = '<img src="/' + esc(w[12]) + '" alt="' + esc(w[13] if len(w) > 13 else "") + '" loading="lazy" width="1200" height="900">'
+        k = paras.find("</p>") + 4
+        paras = paras[:k] + img + paras[k:]
+    sm = '<div class="sum post" hidden>' + paras + '<p class="attr">' + esc(("Chris Pereira (彭家荣), " + d_en(m[0])) if lang == "en" else ("彭家荣 · " + d_zh(m[0]))) + "</p></div>"
     date = d_en(m[0]) if lang == "en" else d_zh(m[0])
     cls = ' class="x"' if i >= MLIMIT else ""
     return ("<li" + cls + ' id="' + media_id(m) + '"><time datetime="' + m[0] + '">' + date + '</time><span class="outlet" title="' + lbl + '">'
@@ -174,7 +179,12 @@ def writing_post_li(w, i, lang):
     dek = w[11] if zh and len(w) > 11 and w[11] else w[3]
     body = w[9] if zh and w[9] else w[8]
     b = '<button type="button" class="sumbtn" aria-expanded="false" data-off="' + b_off + '" data-on="' + b_on + '">' + b_off + "</button>"
-    sm = '<div class="sum post" hidden>' + md_p(body) + '<p class="attr">' + esc(("Chris Pereira (彭家荣), " + d_en(w[0])) if not zh else ("彭家荣 · " + d_zh(w[0]))) + "</p></div>"
+    paras = md_p(body)
+    if len(w) > 12 and w[12]:  # optional photo, shown after the first paragraph
+        img = '<img src="/' + esc(w[12]) + '" alt="' + esc(w[13] if len(w) > 13 else "") + '" loading="lazy" width="1200" height="900">'
+        k = paras.find("</p>") + 4
+        paras = paras[:k] + img + paras[k:]
+    sm = '<div class="sum post" hidden>' + paras + '<p class="attr">' + esc(("Chris Pereira (彭家荣), " + d_en(w[0])) if not zh else ("彭家荣 · " + d_zh(w[0]))) + "</p></div>"
     date = d_zh(w[0]) if zh else d_en(w[0])
     cls = ' class="x"' if i >= WLIMIT else ""
     return ("<li" + cls + ' id="' + writing_id(w) + '"><time datetime="' + w[0] + '">' + date + '</time><span class="src" title="' + lbl + '">'
