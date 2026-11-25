@@ -105,12 +105,22 @@ POST_UI = {"en": ("My take", "Read more", "Hide"), "zh": ("我的观点", "阅�
 
 
 def md_p(t):
-    """Own posts: one paragraph per line, [text](url) becomes a link."""
-    out = []
-    for x in [l for l in t.split("\n") if l.strip()]:
+    """Own posts: one paragraph per line, [text](url) becomes a link, lines starting "> " become a quote block."""
+    def mostly_zh(x):
+        c = len(re.findall(r"[\u4e00-\u9fff]", x)); l = len(re.findall(r"[A-Za-z]", x))
+        return c > 0 and c * 2 >= l
+    def para(x):
         h = esc(x)
         h = re.sub(r"\[([^\]]+)\]\((https?://[^)\s]+)\)", lambda mo: '<a class="inl" href="' + mo.group(2) + '" target="_blank" rel="noopener">' + mo.group(1) + "</a>", h)
-        out.append("<p" + (' class="zh"' if has_zh(x) else "") + ">" + h + "</p>")
+        return "<p" + (' class="zh"' if mostly_zh(x) else "") + ">" + h + "</p>"
+    out, q = [], []
+    for x in [l for l in t.split("\n") if l.strip()] + [""]:
+        if x.startswith("> "):
+            q.append(para(x[2:])); continue
+        if q:
+            out.append("<blockquote>" + "".join(q) + "</blockquote>"); q = []
+        if x:
+            out.append(para(x))
     return "".join(out)
 
 
@@ -122,7 +132,9 @@ def post_li(m, i, lang):
     b = '<button type="button" class="sumbtn" aria-expanded="false" data-off="' + b_off + '" data-on="' + b_on + '">' + b_off + "</button>"
     paras = md_p(body)
     if len(w) > 12 and w[12]:  # optional photo, shown after the first paragraph
-        img = '<img src="/' + esc(w[12]) + '" alt="' + esc(w[13] if len(w) > 13 else "") + '" loading="lazy" width="1200" height="900">'
+        cap = (w[15] if zh and len(w) > 15 and w[15] else (w[14] if len(w) > 14 else ""))
+        img = ('<figure><img src="/' + esc(w[12]) + '" alt="' + esc(w[13] if len(w) > 13 else "") + '" loading="lazy" width="1200" height="900">'
+               + ('<figcaption>' + esc(cap) + '</figcaption>' if cap else "") + "</figure>")
         k = paras.find("</p>") + 4
         paras = paras[:k] + img + paras[k:]
     sm = '<div class="sum post" hidden>' + paras + '<p class="attr">' + esc(("Chris Pereira (彭家荣), " + d_en(m[0])) if lang == "en" else ("彭家荣 · " + d_zh(m[0]))) + "</p></div>"
@@ -181,7 +193,9 @@ def writing_post_li(w, i, lang):
     b = '<button type="button" class="sumbtn" aria-expanded="false" data-off="' + b_off + '" data-on="' + b_on + '">' + b_off + "</button>"
     paras = md_p(body)
     if len(w) > 12 and w[12]:  # optional photo, shown after the first paragraph
-        img = '<img src="/' + esc(w[12]) + '" alt="' + esc(w[13] if len(w) > 13 else "") + '" loading="lazy" width="1200" height="900">'
+        cap = (w[15] if zh and len(w) > 15 and w[15] else (w[14] if len(w) > 14 else ""))
+        img = ('<figure><img src="/' + esc(w[12]) + '" alt="' + esc(w[13] if len(w) > 13 else "") + '" loading="lazy" width="1200" height="900">'
+               + ('<figcaption>' + esc(cap) + '</figcaption>' if cap else "") + "</figure>")
         k = paras.find("</p>") + 4
         paras = paras[:k] + img + paras[k:]
     sm = '<div class="sum post" hidden>' + paras + '<p class="attr">' + esc(("Chris Pereira (彭家荣), " + d_en(w[0])) if not zh else ("彭家荣 · " + d_zh(w[0]))) + "</p></div>"
