@@ -572,3 +572,5 @@ if __name__ == "__main__":
     agents.build()
     import shop  # book shop pages /books/ and /zh/books/ (shop.py; prices come live from the GCS site)
     shop.build()
+    import ideas  # Ideas page /ideas/ and /zh/ideas/ (ideas.py; content in data/ideas_*.html)
+    ideas.build()
