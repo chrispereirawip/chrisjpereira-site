@@ -157,7 +157,7 @@ def media_li(m, i, lang):
     sm = ""
     if q:
         links = ""
-        if m[6]:
+        if m[6] and not (len(m) > 13 and m[13] and m[6].lstrip("/") == m[13].lstrip("/")):
             links += '<a href="' + esc(m[6]) + '" target="_blank" rel="noopener">' + LBL[lang][kind(m[6], "" if (len(m) > 9 and m[9]) else m[4])] + "</a>"
         if len(m) > 9 and m[9] and m[9] != m[6]:
             links += '<a href="' + esc(m[9]) + '" target="_blank" rel="noopener">' + LBL[lang][kind(m[9], "video")] + "</a>"
@@ -170,7 +170,12 @@ def media_li(m, i, lang):
         if len(m) > 12 and m[12]:
             alt = ("Chris Pereira on " + m[2]) if lang == "en" else ("彭家荣在" + m[2])
             pic = '<div class="mpics">' + "".join('<img src="' + ("" if lang == "en" else "../") + esc(p) + '" alt="' + esc(alt) + '" width="1000" height="562" loading="lazy">' for p in m[12]) + "</div>"
-        sm = '<div class="sum" hidden>' + pic + sum_p(q) + attr + links + "</div>"
+        aud = ""
+        if len(m) > 13 and m[13]:
+            src = "/" + m[13].lstrip("/")
+            aud = ('<audio class="maud" controls preload="none" src="' + esc(src) + '"></audio>'
+                   + '<a href="' + esc(src) + '" download>' + ("Download the audio ↓" if lang == "en" else "下载音频 ↓") + "</a>")
+        sm = '<div class="sum" hidden>' + pic + aud + sum_p(q) + attr + links + "</div>"
     date = d_en(m[0]) if lang == "en" else d_zh(m[0])
     cls = ' class="x"' if i >= MLIMIT else ""
     return ("<li" + cls + ' id="' + media_id(m) + '"><time datetime="' + m[0] + '">' + date + '</time><span class="outlet" title="' + esc(m[2]) + '">'
