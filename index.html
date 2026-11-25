@@ -918,7 +918,7 @@ footer{background:var(--red-deep);color:#fff}footer .wrap{padding-top:18px;paddi
           <div class="kitfacts"><div><span class="k">Response time</span><span class="v">Within 24 hours</span></div><div><span class="k">Languages</span><span class="v">English and Mandarin</span></div></div>
           <div><span class="k">Available for</span><span class="v" style="font-size:16.5px;line-height:1.4">Interviews, comment, keynotes, panels and training, in person or by video</span></div>
           
-          <div class="socials"><a href="https://www.linkedin.com/in/chrisjpereira" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://insightsfromchina.substack.com" target="_blank" rel="noopener">Substack ↗</a><a href="https://www.youtube.com/@OutsideLookingWest" target="_blank" rel="noopener">YouTube ↗</a><a href="/ideas/">Ideas</a></div>
+          <div class="socials"><a href="https://www.linkedin.com/in/chrisjpereira" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://insightsfromchina.substack.com" target="_blank" rel="noopener">Substack ↗</a><a href="https://www.youtube.com/@OutsideLookingWest" target="_blank" rel="noopener">YouTube ↗</a><a href="/ideas/">Ideas ↗</a></div>
           <div class="qrow"><span class="k">For journalists</span><a class="v" href="/quotes/">Quotes by theme, with sources →</a></div>
         </div>
       </div>
@@ -969,6 +969,7 @@ document.querySelector(".fchips").addEventListener("click",function(e){var b=e.t
 box.addEventListener("click",function(e){var a=e.target.closest("a[data-id]");if(!a)return;var id=a.dataset.id;if(id.indexOf("idea-")===0){e.preventDefault();var li=document.getElementById(id);li.classList.add("open","hit");li.scrollIntoView({behavior:"smooth",block:"center"});setTimeout(function(){li.classList.remove("hit")},2600)}});
 document.querySelectorAll(".ideas>li").forEach(function(li){var d=li.querySelector(":scope>div");if(d&&!d.querySelector(".imore")){var s=document.createElement("span");s.className="imore";s.textContent=MORE+" ▾";d.appendChild(s)}li.addEventListener("click",function(e){if(e.target.closest("a"))return;li.classList.add("open")})});
 })();</script>
+
 
 
 
