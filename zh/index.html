@@ -396,8 +396,8 @@ h1 .en{display:block;font-size:.3em;font-weight:500;letter-spacing:.06em;color:v
 .kit .bio summary{cursor:pointer;font-family:var(--display);font-weight:600;font-size:15px;color:var(--red)}
 .kit .bio details p{margin:12px 0 0}
 .kit .bio details .row{margin-top:12px}
-.pphotos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:10px;max-width:480px}
-.pphotos a{display:grid;gap:6px;text-decoration:none;color:var(--ink)}
+.pphotos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:10px;max-width:640px}@media (max-width:700px){.pphotos{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.pphotos a{display:grid;gap:6px;align-content:start;text-decoration:none;color:var(--ink)}
 .pphotos img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:6px;border:1px solid var(--hair)}
 .pphotos a:hover img{border-color:var(--red)}
 .pphotos span{font-family:var(--display);font-size:13.5px;font-weight:600;line-height:1.3}
@@ -893,8 +893,8 @@ h1 .en{display:block;font-size:.3em;font-weight:500;letter-spacing:.06em;color:v
             <div class="row"><button class="btn sm" type="button" data-copy="long">复制完整简介</button></div>
           </details>
           <details id="pressphotos">
-            <summary>新闻照片（3张）</summary>
-            <div class="pphotos"><a href="../img/press-headshot.jpg" download><img src="../img/press-headshot-thumb.webp" width="360" height="360" loading="lazy" alt="标准照"><span>标准照<small>1600 × 2000 · JPG</small></span></a><a href="../img/press-portrait.jpg" download><img src="../img/press-portrait-thumb.webp" width="360" height="360" loading="lazy" alt="演讲照片"><span>演讲照片<small>900 × 1100 · JPG</small></span></a><a href="../img/press-stage.jpg" download><img src="../img/press-stage-thumb.webp" width="360" height="360" loading="lazy" alt="CIDPEX舞台照"><span>CIDPEX舞台照<small>1216 × 832 · JPG</small></span></a></div>
+            <summary>新闻照片（4张）</summary>
+            <div class="pphotos"><a href="../img/press-headshot.jpg" download><img src="../img/press-headshot-thumb.webp" width="360" height="360" loading="lazy" alt="标准照"><span>标准照<small>1600 × 2000 · JPG</small></span></a><a href="../img/press-portrait.jpg" download><img src="../img/press-portrait-thumb.webp" width="360" height="360" loading="lazy" alt="演讲照片"><span>演讲照片<small>900 × 1100 · JPG</small></span></a><a href="../img/press-websummit.jpg" download><img src="../img/press-websummit-thumb.webp" width="360" height="360" loading="lazy" alt="Web Summit舞台照"><span>Web Summit舞台照<small>3000 × 2000 · JPG</small></span></a><a href="../img/press-gcsx-hk.jpg" download><img src="../img/press-gcsx-hk-thumb.webp" width="360" height="360" loading="lazy" alt="GCSx 香港 2026 致辞"><span>GCSx 香港 2026 致辞<small>1280 × 853 · JPG</small></span></a></div>
           </details>
         </div>
         <div class="contact" id="contact">
@@ -947,6 +947,9 @@ document.querySelector(".fchips").addEventListener("click",function(e){var b=e.t
 box.addEventListener("click",function(e){var a=e.target.closest("a[data-id]");if(!a)return;var id=a.dataset.id;if(id.indexOf("idea-")===0){e.preventDefault();var li=document.getElementById(id);li.classList.add("open","hit");li.scrollIntoView({behavior:"smooth",block:"center"});setTimeout(function(){li.classList.remove("hit")},2600)}});
 document.querySelectorAll(".ideas>li").forEach(function(li){var d=li.querySelector(":scope>div");if(d&&!d.querySelector(".imore")){var s=document.createElement("span");s.className="imore";s.textContent=MORE+" ▾";d.appendChild(s)}li.addEventListener("click",function(e){if(e.target.closest("a"))return;li.classList.add("open")})});
 })();</script>
+
+
+
 
 
 

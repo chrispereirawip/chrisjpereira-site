@@ -391,8 +391,8 @@ h1 .en{display:block;font-size:.3em;font-weight:500;letter-spacing:.06em;color:v
 .kit .bio summary{cursor:pointer;font-family:var(--display);font-weight:600;font-size:15px;color:var(--red)}
 .kit .bio details p{margin:12px 0 0}
 .kit .bio details .row{margin-top:12px}
-.pphotos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:10px;max-width:480px}
-.pphotos a{display:grid;gap:6px;text-decoration:none;color:var(--ink)}
+.pphotos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:10px;max-width:640px}@media (max-width:700px){.pphotos{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.pphotos a{display:grid;gap:6px;align-content:start;text-decoration:none;color:var(--ink)}
 .pphotos img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:6px;border:1px solid var(--hair)}
 .pphotos a:hover img{border-color:var(--red)}
 .pphotos span{font-family:var(--display);font-size:13.5px;font-weight:600;line-height:1.3}

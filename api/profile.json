@@ -174,8 +174,12 @@
    "use": "speaking portrait"
   },
   {
-   "url": "https://chrisjpereira.com/img/press-stage.jpg",
-   "use": "on stage"
+   "url": "https://chrisjpereira.com/img/press-websummit.jpg",
+   "use": "on stage, Web Summit Lisbon 2026"
+  },
+  {
+   "url": "https://chrisjpereira.com/img/press-gcsx-hk.jpg",
+   "use": "speaking, GCSx Hong Kong 2026"
   }
  ],
  "contact": {
