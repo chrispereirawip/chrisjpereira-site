@@ -439,7 +439,7 @@ footer{background:var(--red-deep);color:#fff}footer .wrap{padding-top:18px;paddi
       <div class="copy">
         <span class="label">Author, commentator and founder of iMpact 美讯</span>
         <h1>Chris Pereira<span class="zh" lang="zh-Hans">彭家荣</span></h1>
-        <p class="identity">British Canadian entrepreneur and author. I write weekly about competition, trust and markets, and comment on China business, drawing on 20+ years of living and working there.</p>
+        <p class="identity">British Canadian entrepreneur and author. I write weekly about competition, trust and markets, and comment on China, drawing on 20+ years of living and working there.</p>
         <div class="cta">
           <a class="btn solid" href="#writing">Read my latest work</a>
           <a class="btn" href="#contact">Invite Chris to speak</a>
@@ -969,6 +969,7 @@ document.querySelector(".fchips").addEventListener("click",function(e){var b=e.t
 box.addEventListener("click",function(e){var a=e.target.closest("a[data-id]");if(!a)return;var id=a.dataset.id;if(id.indexOf("idea-")===0){e.preventDefault();var li=document.getElementById(id);li.classList.add("open","hit");li.scrollIntoView({behavior:"smooth",block:"center"});setTimeout(function(){li.classList.remove("hit")},2600)}});
 document.querySelectorAll(".ideas>li").forEach(function(li){var d=li.querySelector(":scope>div");if(d&&!d.querySelector(".imore")){var s=document.createElement("span");s.className="imore";s.textContent=MORE+" ▾";d.appendChild(s)}li.addEventListener("click",function(e){if(e.target.closest("a"))return;li.classList.add("open")})});
 })();</script>
+
 
 
 

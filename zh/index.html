@@ -429,7 +429,7 @@ h1 .en{display:block;font-size:.3em;font-weight:500;letter-spacing:.06em;color:v
       <div class="copy">
         <span class="label">作家、评论人、美讯 iMpact 创始人</span>
         <h1>彭家荣<span class="en" lang="en">Chris Pereira</span></h1>
-        <p class="identity">英籍加拿大裔企业家、作家。每周撰文探讨竞争、信任与市场，并结合在中国生活和工作20多年的经历评论中国商业。</p>
+        <p class="identity">英籍加拿大裔企业家、作家。每周撰文探讨竞争、信任与市场，并结合在中国生活和工作20多年的经历评论中国。</p>
         <div class="cta">
           <a class="btn solid" href="#writing">阅读最新文章</a>
           <a class="btn" href="#contact">邀请演讲</a>
@@ -947,6 +947,7 @@ document.querySelector(".fchips").addEventListener("click",function(e){var b=e.t
 box.addEventListener("click",function(e){var a=e.target.closest("a[data-id]");if(!a)return;var id=a.dataset.id;if(id.indexOf("idea-")===0){e.preventDefault();var li=document.getElementById(id);li.classList.add("open","hit");li.scrollIntoView({behavior:"smooth",block:"center"});setTimeout(function(){li.classList.remove("hit")},2600)}});
 document.querySelectorAll(".ideas>li").forEach(function(li){var d=li.querySelector(":scope>div");if(d&&!d.querySelector(".imore")){var s=document.createElement("span");s.className="imore";s.textContent=MORE+" ▾";d.appendChild(s)}li.addEventListener("click",function(e){if(e.target.closest("a"))return;li.classList.add("open")})});
 })();</script>
+
 
 
 
