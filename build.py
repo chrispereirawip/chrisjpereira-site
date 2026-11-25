@@ -43,7 +43,7 @@ def d_zh(d):
 
 
 def kind(url, typ):
-    if re.search(r"podcast", typ or "", re.I) or re.search(r"podcast|spotify|apple\.com/podcast", url or "", re.I):
+    if re.search(r"podcast|radio", typ or "", re.I) or re.search(r"podcast|spotify|apple\.com/podcast|bbc\.co\.uk/(programmes|sounds)/", url or "", re.I):
         return "p"
     if re.match(r"^(tv|video)$", typ or "", re.I) or re.search(
             r"youtube\.com|youtu\.be|bilibili\.com|weibo\.com|dailymotion\.com|channels\.weixin", url or "", re.I):
