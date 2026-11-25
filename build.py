@@ -454,7 +454,7 @@ __FOOTCSS__
 <body>
 <header class="bar"><div class="wrap">
   <a class="mark" href="/"><span class="seal" lang="zh-Hans">彭家荣</span>Chris Pereira</a>
-  <nav class="nav" aria-label="Sections"><a href="/#media">Commentary</a><a href="/#writing">Writing</a><a href="/#speaking">Speaking</a><a href="/#training">Training</a><a href="/books/">Books</a><a href="/#about">About</a></nav>
+  <nav class="nav" aria-label="Sections"><a href="/#media">In the media</a><a href="/#writing">My writing</a><a href="/#speaking">Speaking</a><a href="/#training">Training</a><a href="/books/">Books</a><a href="/#about">About</a></nav>
   <a class="btn" href="/#contact">Contact</a>
 </div></header>
 <main>
@@ -492,11 +492,11 @@ def find_entry(q, MEDIA, WRITING):
                 return "/#" + writing_id(w), "See it in Writing"
         for m in MEDIA:
             if (m[6] and norm_url(m[6]) == u) or (len(m) > 9 and m[9] and norm_url(m[9]) == u):
-                return "/#" + media_id(m), "See it in Commentary"
+                return "/#" + media_id(m), "See it in the media list"
     cands = [m for m in MEDIA if m[0][:7] == q["date"][:7] and (m[2] == q["outlet"] or OUTLET_EN.get(m[2], m[2]) == OUTLET_EN.get(q["outlet"], q["outlet"]))]
     if cands:
         best = next((m for m in cands if q["text"][:25].lower() in (m[7] if len(m) > 7 else "").lower()), cands[0])
-        return "/#" + media_id(best), "See it in Commentary"
+        return "/#" + media_id(best), "See it in the media list"
     return None, None
 
 
