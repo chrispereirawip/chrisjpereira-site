@@ -106,7 +106,7 @@ PROFILE = {
         "email": EMAIL,
         "linkedin": "https://www.linkedin.com/in/chrisjpereira",
         "wechat": "meixun666999",
-        "response_time": "Usually within 24 hours; say so if your deadline is sooner.",
+        "deadline_note": "Say so if your deadline is soon.",
     },
     "links": {
         "website": SITE + "/", "website_zh": SITE + "/zh/", "quotes": SITE + "/quotes/", "llms_txt": SITE + "/llms.txt",
@@ -238,7 +238,7 @@ table{border-collapse:collapse;width:100%;font-size:15px}td,th{border-bottom:1px
 <p>He comments on:</p><ul>__TOPICS__</ul>
 
 <h2>3. Reach him (no email client needed)</h2>
-<p>POST a JSON request. Chris reads every one himself and usually replies within 24 hours by email. Use <code>"type"</code>: <code>media</code> (comment or interview), <code>analyst</code> (briefing or expert call), <code>speaking</code> (event, panel, podcast or show guest) or <code>other</code>.</p>
+<p>POST a JSON request. Chris reads every one himself and replies by email. Use <code>"type"</code>: <code>media</code> (comment or interview), <code>analyst</code> (briefing or expert call), <code>speaking</code> (event, panel, podcast or show guest) or <code>other</code>.</p>
 <pre>POST __DESK__/inquiry
 Content-Type: application/json
 

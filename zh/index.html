@@ -899,7 +899,7 @@ h1 .en{display:block;font-size:.3em;font-weight:500;letter-spacing:.06em;color:v
         </div>
         <div class="contact" id="contact">
           <div><span class="k">邮箱</span><div class="emailrow"><span class="v" id="em"><a href="mailto:inquiries@chrisjpereira.com">inquiries@chrisjpereira.com</a></span><button class="btn sm" type="button" data-copy="em">复制</button></div></div>
-          <div class="kitfacts"><div><span class="k">回复时间</span><span class="v">24小时内回复</span></div><div><span class="k">语言</span><span class="v">中文（普通话）与英文</span></div></div>
+          <div class="kitfacts"><div><span class="k">语言</span><span class="v">中文（普通话）与英文</span></div></div>
           <div><span class="k">可安排</span><span class="v" style="font-size:16.5px;line-height:1.4">采访、评论、主题演讲、圆桌对话与企业培训，线下或视频均可</span></div>
           <div><span class="k">微信公众号</span><span class="v">美讯彭家荣</span></div>
           <div class="socials"><a href="https://www.linkedin.com/in/chrisjpereira" target="_blank" rel="noopener">领英 ↗</a><a href="https://insightsfromchina.substack.com" target="_blank" rel="noopener">Substack ↗</a><a href="https://www.youtube.com/@OutsideLookingWest" target="_blank" rel="noopener">YouTube ↗</a><a href="/zh/ideas/">观点 ↗</a><a href="https://baike.baidu.com/item/%E5%BD%AD%E5%AE%B6%E8%8D%A3/57120710" target="_blank" rel="noopener">百度百科 ↗</a></div>
@@ -947,6 +947,8 @@ document.querySelector(".fchips").addEventListener("click",function(e){var b=e.t
 box.addEventListener("click",function(e){var a=e.target.closest("a[data-id]");if(!a)return;var id=a.dataset.id;if(id.indexOf("idea-")===0){e.preventDefault();var li=document.getElementById(id);li.classList.add("open","hit");li.scrollIntoView({behavior:"smooth",block:"center"});setTimeout(function(){li.classList.remove("hit")},2600)}});
 document.querySelectorAll(".ideas>li").forEach(function(li){var d=li.querySelector(":scope>div");if(d&&!d.querySelector(".imore")){var s=document.createElement("span");s.className="imore";s.textContent=MORE+" ▾";d.appendChild(s)}li.addEventListener("click",function(e){if(e.target.closest("a"))return;li.classList.add("open")})});
 })();</script>
+
+
 
 
 
