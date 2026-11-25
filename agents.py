@@ -97,6 +97,7 @@ PROFILE = {
         {"url": SITE + "/img/press-headshot.jpg", "use": "headshot (preferred)"},
         {"url": SITE + "/img/press-portrait.jpg", "use": "speaking portrait"},
         {"url": SITE + "/img/press-websummit.jpg", "use": "on stage, Web Summit Lisbon 2026"},
+        {"url": SITE + "/img/press-cmiic.jpg", "use": "keynote, CMIIC 2026 (China construction machinery industry conference)"},
         {"url": SITE + "/img/press-gcsx-hk.jpg", "use": "speaking, GCSx Hong Kong 2026"},
     ],
     "contact": {
@@ -252,7 +253,7 @@ __EX__</pre>
 <p>Available for __AVAIL__. __FORMATS__ Based in Singapore; travels globally.</p>
 <ul>__TALKS__</ul>
 <p>Past stages include __STAGES__.</p>
-<p>Send the event name, date, city, audience and format with <code>"type": "speaking"</code> to the endpoint above. Press photos: <a href="/img/press-headshot.jpg">headshot</a>, <a href="/img/press-portrait.jpg">speaking portrait</a>, <a href="/img/press-websummit.jpg">on stage at Web Summit</a>, <a href="/img/press-gcsx-hk.jpg">speaking in Hong Kong</a> (credit “Chris Pereira”).</p>
+<p>Send the event name, date, city, audience and format with <code>"type": "speaking"</code> to the endpoint above. Press photos: <a href="/img/press-headshot.jpg">headshot</a>, <a href="/img/press-portrait.jpg">speaking portrait</a>, <a href="/img/press-websummit.jpg">on stage at Web Summit</a>, <a href="/img/press-cmiic.jpg">keynote at CMIIC 2026</a>, <a href="/img/press-gcsx-hk.jpg">speaking in Hong Kong</a> (credit “Chris Pereira”).</p>
 
 <h2>5. All machine-readable files</h2>
 <table><tr><th>File</th><th>What it is</th></tr>
