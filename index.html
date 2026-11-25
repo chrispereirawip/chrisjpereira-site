@@ -425,7 +425,7 @@ footer{background:var(--red-deep);color:#fff}footer .wrap{padding-top:18px;paddi
   <div class="wrap">
     <a class="mark" href="#top"><span class="seal" lang="zh-Hans">彭家荣</span>Chris Pereira</a>
     <nav class="nav" aria-label="Sections">
-      <a href="#media">In the media</a><a href="#writing">My writing</a><a href="#speaking">Speaking</a><a href="#training">Training</a><a href="/books/">Books</a><a href="#about">About</a>
+      <a href="#media">In the Media</a><a href="#writing">My Writing</a><a href="#speaking">Speaking</a><a href="#training">Training</a><a href="/books/">Books</a><a href="#about">About</a>
     </nav>
     <a class="langsw" href="/zh/" hreflang="zh-CN" lang="zh-CN">中文</a>
     <a class="btn solid" href="#contact">Contact</a>
@@ -475,7 +475,7 @@ footer{background:var(--red-deep);color:#fff}footer .wrap{padding-top:18px;paddi
   <section id="media" class="alt">
     <div class="wrap">
       <div class="head">
-        <div class="hsplit"><span class="label">Op-eds, interviews, quotes and TV</span><h2>In the media</h2><p class="lede">Hundreds of op-eds, interviews and quotes across TV, print, radio and podcasts, in English and Chinese. The full record:</p></div>
+        <div class="hsplit"><span class="label">Op-eds, interviews, quotes and TV</span><h2>In the Media</h2><p class="lede">Hundreds of op-eds, interviews and quotes across TV, print, radio and podcasts, in English and Chinese. The full record:</p></div>
       </div>
       <ul class="picks"><li><blockquote>“The U.S. is losing ground not because of China’s rise, but because it has drifted away from the very principles that once made it great.”</blockquote><a href="#m-376d5384">Nikkei Asia <span>· my op-ed, Jun 2025</span></a></li><li><blockquote>“The more connections we remove from the relationship, the easier it is for conflict to arise.”</blockquote><a href="#m-565a3162">South China Morning Post <span>· Nov 2024</span></a></li><li><blockquote>“Chinese regulators tell you very clearly and quickly what you can do. If you’re waiting weeks for a response, you’re going to lose business.”</blockquote><a href="#m-d505930e">Deutsche Welle <span>· Oct 2026</span></a></li></ul>
       <ul class="media" id="media-list">
@@ -732,7 +732,7 @@ footer{background:var(--red-deep);color:#fff}footer .wrap{padding-top:18px;paddi
   <section id="writing">
     <div class="wrap">
       <div class="head">
-        <div class="hsplit"><span class="label">Essays and posts</span><h2>My writing</h2><p class="lede">My weekly newsletter <em>Insights from China</em> on Substack and LinkedIn, plus my Chinese-language WeChat account 美讯彭家荣, on what China reveals about the West.<span class="subs"><a class="sbtn solid" href="https://insightsfromchina.substack.com/subscribe" target="_blank" rel="noopener">Subscribe on Substack</a><a class="sbtn" href="https://www.linkedin.com/newsletters/insights-from-china-7523031887427301376/" target="_blank" rel="noopener">Subscribe on LinkedIn</a></span></p></div>
+        <div class="hsplit"><span class="label">Essays and posts</span><h2>My Writing</h2><p class="lede">My weekly newsletter <em>Insights from China</em> on Substack and LinkedIn, plus my Chinese-language WeChat account 美讯彭家荣, on what China reveals about the West.<span class="subs"><a class="sbtn solid" href="https://insightsfromchina.substack.com/subscribe" target="_blank" rel="noopener">Subscribe on Substack</a><a class="sbtn" href="https://www.linkedin.com/newsletters/insights-from-china-7523031887427301376/" target="_blank" rel="noopener">Subscribe on LinkedIn</a></span></p></div>
       </div>
       <ul class="media wlist" id="writing-list">
 <li id="w-f6972d59"><time datetime="2026-11-25">25 Nov 2026</time><span class="src" title="My take">My take</span><span class="what">Nvidia and the wrong lesson from China</span><span class="dek">China grew when the state stepped back. The West is copying the wrong part.</span><button type="button" class="sumbtn" aria-expanded="false" data-off="Read more" data-on="Hide">Read more</button><div class="sum post" hidden><p>On 16 November <a class="inl" href="https://www.linkedin.com/pulse/youre-going-look-china-see-wrong-thing-chris-pereira-%E5%BD%AD%E5%AE%B6%E8%8D%A3-supmc/" target="_blank" rel="noopener">I wrote that you&#x27;re going to look at China and see the wrong thing</a>. A week later, the Wall Street Journal&#x27;s editorial board ran a piece called &quot;Nvidia and Trump&#x27;s State Capitalism&quot;, after President Trump said he was directly involved in Nvidia&#x27;s board bringing Jensen Huang back as CEO.</p><p>Too many people in the West look at China&#x27;s success and decide the answer is a bigger, more active state. I think that&#x27;s exactly backwards. China&#x27;s growth since 1978 came when the state stepped back. It deregulated, let private companies start and compete, and opened up to the world. The Chinese companies the world talks about today, like BYD, DJI and Xiaomi, grew up in the most competitive market on earth, not in a government office.</p><p>So when a government starts deciding who runs a company, it isn&#x27;t borrowing China&#x27;s strength. It&#x27;s borrowing the part of China that didn&#x27;t make China rich.</p><p>Nvidia is one of the greatest companies America has ever built. It got there through competition, speed and engineers who were allowed to take risks. That&#x27;s the same thing I&#x27;ve watched drive Shenzhen for twenty years.</p><p>We don&#x27;t need to copy China&#x27;s system. We need to remember our own: competition, speed and getting out of the way.</p><p class="attr">Chris Pereira (彭家荣), 25 Nov 2026</p></div></li>
@@ -969,6 +969,7 @@ document.querySelector(".fchips").addEventListener("click",function(e){var b=e.t
 box.addEventListener("click",function(e){var a=e.target.closest("a[data-id]");if(!a)return;var id=a.dataset.id;if(id.indexOf("idea-")===0){e.preventDefault();var li=document.getElementById(id);li.classList.add("open","hit");li.scrollIntoView({behavior:"smooth",block:"center"});setTimeout(function(){li.classList.remove("hit")},2600)}});
 document.querySelectorAll(".ideas>li").forEach(function(li){var d=li.querySelector(":scope>div");if(d&&!d.querySelector(".imore")){var s=document.createElement("span");s.className="imore";s.textContent=MORE+" ▾";d.appendChild(s)}li.addEventListener("click",function(e){if(e.target.closest("a"))return;li.classList.add("open")})});
 })();</script>
+
 
 
 

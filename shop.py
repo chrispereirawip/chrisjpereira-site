@@ -25,7 +25,7 @@ T = {
         "lang": "en", "home": "/", "path": "/books/", "other": "/zh/books/", "other_label": "中文", "img": "/img/",
         "title": "Books by Chris Pereira | Trust 《信任》",
         "desc": "Trust by Chris Pereira. The second English edition, rewritten for readers outside China, is out now as an e-book and a paperback. Signed copies of the Chinese edition 《信任》 (Shenzhen Publishing House, 2026) ship within mainland China.",
-        "nav": [("/#media", "In the media"), ("/#writing", "My writing"), ("/#speaking", "Speaking"), ("/#training", "Training"), ("/books/", "Books"), ("/#about", "About")],
+        "nav": [("/#media", "In the Media"), ("/#writing", "My Writing"), ("/#speaking", "Speaking"), ("/#training", "Training"), ("/books/", "Books"), ("/#about", "About")],
         "contact": "Contact", "label": "Books",
         "h1": "Trust <span class=\"zh\" lang=\"zh-Hans\">《信任》</span>",
         "sub": "The Golden Key to Going Global",

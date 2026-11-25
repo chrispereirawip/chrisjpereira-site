@@ -454,7 +454,7 @@ __FOOTCSS__
 <body>
 <header class="bar"><div class="wrap">
   <a class="mark" href="/"><span class="seal" lang="zh-Hans">彭家荣</span>Chris Pereira</a>
-  <nav class="nav" aria-label="Sections"><a href="/#media">In the media</a><a href="/#writing">My writing</a><a href="/#speaking">Speaking</a><a href="/#training">Training</a><a href="/books/">Books</a><a href="/#about">About</a></nav>
+  <nav class="nav" aria-label="Sections"><a href="/#media">In the Media</a><a href="/#writing">My Writing</a><a href="/#speaking">Speaking</a><a href="/#training">Training</a><a href="/books/">Books</a><a href="/#about">About</a></nav>
   <a class="btn" href="/#contact">Contact</a>
 </div></header>
 <main>
