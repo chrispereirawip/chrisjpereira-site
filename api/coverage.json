@@ -2,7 +2,7 @@
  "updated": "2026-11-28",
  "person": "Chris Pereira",
  "license": "AI agents, journalists, analysts and event organisers are welcome to read, summarise and quote everything on chrisjpereira.com and in these files.",
- "count": 246,
+ "count": 247,
  "coverage": [
   {
    "id": "m-78d7a738",
@@ -104,6 +104,17 @@
    "url": "https://asia.nikkei.com/business/technology/us-visa-denials-hit-xpeng-other-chinese-robot-makers-ahead-of-ces",
    "quotes": [],
    "summary": "Paraphrased: Chris Pereira, founder of consultancy iMpact, which helps Chinese companies expand overseas, said around 40% of his clients planning to attend CES in early January had been denied U.S. visas. Most of those affected were executives and technical staff in the artificial intelligence and robotics sectors. Nikkei Asia reports that Chinese robot makers and other tech companies, including Xpeng, have had U.S. visa applications refused ahead of CES in Las Vegas, and that a long-standing visa problem for Chinese companies has intensified."
+  },
+  {
+   "id": "m-ed251608",
+   "date": "2026-11",
+   "outlet": "观察者网",
+   "title": "美国签证限制波及中国机器人企业，小鹏汽车参展CES或受影响",
+   "kind": "quoted",
+   "language": "中文",
+   "url": "https://www.guancha.cn/qiche/2026_11_19_909087.shtml",
+   "quotes": [],
+   "summary": "转述：为中国企业提供海外拓展服务的咨询机构iMpact创始人克里斯·佩雷拉（Chris Pereira）表示，其客户中计划参加2027年1月CES的企业约有40%遭遇签证拒签，受影响人员主要集中在人工智能和机器人领域的管理人员及技术人员。 EN: Paraphrased: Chris Pereira, founder of iMpact, said about 40% of his clients planning to attend CES in January 2027 had been refused US visas, mostly executives and technical staff in AI and robotics. 观察者网（2026年11月19日，同花顺财经等转载）援引日经亚洲报道，美国签证限制波及小鹏等中国机器人企业参展CES。 EN: Guancha (19 Nov 2026, republished by 10jqka and others), citing Nikkei Asia, reports that US visa restrictions are hitting Xpeng and other Chinese robot makers ahead of CES."
   },
   {
    "id": "m-053174b7",
